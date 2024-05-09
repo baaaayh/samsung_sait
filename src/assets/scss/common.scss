@@ -1,0 +1,75 @@
+@charset "UTF-8";
+@import 'common/base';
+@import 'common/font';
+@import 'common/variables';
+@import 'common/mixin';
+@import 'common/media';
+
+body {
+    background-color: transparent;
+}
+
+a {
+    color: inherit;
+}
+
+.scroll-lock {
+    overflow-y: hidden;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    z-index: 2;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1920px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 100px;
+        box-sizing: border-box;
+    }
+    &__logo {
+        display: inline-block;
+        flex-shrink: 0;
+        a {
+            display: block;
+        }
+    }
+}
+
+#gnb {
+    float: none;
+    margin: 0;
+    padding: 0;
+    > ul {
+        display: flex;
+        align-items: center;
+        > li {
+            > a {
+                display: block;
+                padding: 0 40px;
+                font-family: "SamsungSharpSans";
+                font-weight: 500;
+                line-height: 80px;
+            }
+        }
+    }
+}
+
+.util {
+    &__search {
+        button {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background: url("../images/icons/icon_search.svg") center / auto no-repeat;
+            font-size: 0;
+        }
+    }
+}
