@@ -154,8 +154,10 @@ a {
     }
     &__bottom {
         position: absolute;
+        width: 100%;
         bottom: 0;
         padding: 0 20px;
+        box-sizing: border-box;
         .footer__wrap {
             padding: 30px;
             background-color: #010914;

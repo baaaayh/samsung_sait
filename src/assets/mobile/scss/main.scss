@@ -565,17 +565,10 @@
             background: url(../images/icons/icon_nav_next.svg) center / 16px auto no-repeat;
         }
     }
-    &__left {
-        position: relative;
-    }
-    &__right {
-    }
     &__box {
         padding: 48px 0 70px;
     }
-    
     &__slide {
-        display: flex;
         padding: 0 10px;
         box-sizing: border-box;
     }
@@ -598,8 +591,9 @@
             overflow: hidden;
             text-overflow: ellipsis;
             display: -webkit-box;
-            -webkit-line-clamp: 2;
+            -webkit-line-clamp: 3;
             -webkit-box-orient: vertical;
+            min-height: 90px;
         }
         span {
             margin-top: 35px;
