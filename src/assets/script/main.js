@@ -218,7 +218,7 @@ $(function () {
             init: function () {
                 this.isOverFlow();
                 $('.main-section').eq(currentIndex).addClass('active');
-                $(window).on('wheel scroll', (e) => this.handleWheel(e));
+                $(window).on('wheel', (e) => this.handleWheel(e));
                 $(window).on('touchstart', (e) => this.handleTouch(e));
                 $(window).on('touchend', (e) => this.handleTouchMove(e));
                 $(window).on('resize', () => this.isOverFlow());
@@ -227,6 +227,7 @@ $(function () {
                 $(window).on('keydown', (e) => this.keyDownHandler(e));
                 $('.indicator li a').on('click', (e) => this.indicatorHandler(e));
                 $('.scroll-down').on('click', () => this.setTransitionSection(1));
+                $(window).on('resize', () => this.setTransitionSection());
             },
         };
         onePageScroll.init();
@@ -235,11 +236,10 @@ $(function () {
     const main = {
         mainKvInit() {
             let mainKV = new Swiper('.main-kv', {
+                slidesPerView: 1,
                 autoplay: {
                     delay: 7000,
-                    disableOnInteraction: false,
                 },
-
                 loop: true,
                 pagination: {
                     el: '.main-kv__control',
@@ -253,7 +253,7 @@ $(function () {
                 hashNavigation: {
                     watchState: true,
                 },
-                watchSlidesProgress: true,
+                resizeObserver: false,
                 touchRatio: 0,
                 on: {
                     autoplayTimeLeft(s, time, progress) {
@@ -263,7 +263,7 @@ $(function () {
             });
         },
         sliderInit() {
-            const researchArr = ['AI Algorithms', 'Computing Platform', 'Human Augmentation', 'Metaphotonics', 'Nano Electronics', 'Display Materials', 'Battery Materials', 'Semiconductor Materials', 'Environmental Research'];
+            // const researchArr = ['AI Algorithms', 'Computing Platform', 'Human Augmentation', 'Metaphotonics', 'Nano Electronics', 'Display Materials', 'Battery Materials', 'Semiconductor Materials', 'Environmental Research'];
             const bgSlider = new Swiper('.bg-slider', {
                 autoplay: false,
                 loop: true,
@@ -273,26 +273,42 @@ $(function () {
                     watchState: true,
                 },
                 touchRatio: 0,
-                pagination: {
-                    el: '.research__list',
-                    clickable: true,
-                    renderBullet: function (index, className) {
-                        return '<li class="' + className + '"><span>' + (index < 9 ? '0' : '') + (index + 1) + '</span><button type="button">' + researchArr[index] + '</button></li>';
-                    },
-                },
+                // pagination: {
+                //     el: '.research__list',
+                //     clickable: true,
+                //     renderBullet: function (index, className) {
+                //         return '<li class="' + className + '"><span>' + (index < 9 ? '0' : '') + (index + 1) + '</span><button type="button">' + researchArr[index] + '</button><a href="javascript:;"></a></li>';
+                //     },
+                // },
                 speed: 1200,
+                observer: true,
+                observeParents: true,
             });
+
             const textSlider = new Swiper('.text-slider', {
                 autoplay: false,
                 loop: true,
                 effect: 'fade',
+                touchRatio: 0,
                 fadeEffect: { crossFade: true },
             });
             const imageSlider = new Swiper('.image-slider', {
-                autoplay: false,
-                loop: true,
+                parallax: true,
+                speed: 1200,
+                // slidesPerView: '1',
+                // autoplay: false,
+                touchRatio: 0,
+                // loop: true,
             });
             bgSlider.controller.control = [textSlider, imageSlider];
+
+            $('.research__list li').on('click', function () {
+                const idx = $(this).index();
+                $(this).addClass('active').siblings('li').removeClass('active');
+                bgSlider.slideTo(idx);
+                textSlider.slideTo(idx);
+                imageSlider.slideTo(idx);
+            });
 
             const pressSlider = new Swiper('.press__slider', {
                 slidesPerView: 2,
@@ -328,5 +344,5 @@ $(function () {
         },
     };
 
-    return [main.init()];
+    main.init();
 });

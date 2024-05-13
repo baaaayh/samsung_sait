@@ -266,15 +266,15 @@
                                         </div>
                                         <div class="research__control">
                                             <ul class="research__list">
-                                                <li><span>01</span><button type="button">AI Algorithms</button></li>
-                                                <li><span>02</span><button type="button">Computing Platform</button></li>
-                                                <li><span>03</span><button type="button">Human Augmentation</button></li>
-                                                <li><span>04</span><button type="button">Metaphotonics</button></li>
-                                                <li><span>05</span><button type="button">Nano Electronics</button></li>
-                                                <li><span>06</span><button type="button">Display Materials</button></li>
-                                                <li><span>07</span><button type="button">Battery Materials</button></li>
-                                                <li><span>08</span><button type="button">Semiconductor Materials</button></li>
-                                                <li><span>09</span><button type="button">Environmental Research</button></li>
+                                                <li class="active"><button type="button">AI Algorithms</button><a href="javascript:;"></a></li>
+                                                <li><button type="button">Computing Platform</button><a href="javascript:;"></a></li>
+                                                <li><button type="button">Human Augmentation</button><a href="javascript:;"></a></li>
+                                                <li><button type="button">Metaphotonics</button><a href="javascript:;"></a></li>
+                                                <li><button type="button">Nano Electronics</button><a href="javascript:;"></a></li>
+                                                <li><button type="button">Display Materials</button><a href="javascript:;"></a></li>
+                                                <li><button type="button">Battery Materials</button><a href="javascript:;"></a></li>
+                                                <li><button type="button">Semiconductor Materials</button><a href="javascript:;"></a></li>
+                                                <li><button type="button">Environmental Research</button><a href="javascript:;"></a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -294,13 +294,14 @@
                                                 <h3>Application Process</h3>
                                                 <p>SAIT is looking for highly creative people to lead the future. The institute's world-class lab facilities and broad scope of research provides a rich environment for conducting cutting-edge scientific and technological innovation.</p>
                                                 <div class="btn-wrap">
-                                                    <a href="javascript:;" class="btn btn-default btn-default--white">
+                                                    <a href="javascript:;" class="btn btn-default">
                                                         <span class="btn-default__text">Read More</span>
                                                     </a>
                                                 </div>
                                             </div>
                                             <div class="join__right">
                                                 <img src="../resources/assets/images/main/img_section03.jpg" alt="" />
+                                                <div class="join__image"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -309,7 +310,7 @@
                         </div>
                     </section>
                     <section class="main-section main-section--04">
-                        <img src="../resources/assets/images/main/kv01.jpg" alt="" />
+                        <img src="../resources/assets/images/main/section04_bg.jpg" alt="" />
                         <div class="main-section__inner">
                             <div class="press">
                                 <div class="press__wrap">
@@ -401,9 +402,7 @@
                             </div>
                         </div>
                     </section>
-                    <section class="main-section main-section--05">
-                        <div class="main-section__inner">section05</div>
-                    </section>
+                    <section class="main-section main-section--05"><%- include("./include/footer.html") %></section>
                 </main>
                 <nav class="indicator">
                     <ul class="indicator__list">
@@ -423,9 +422,12 @@
                             <a href="javascript:;">04</a>
                             <div><span>- PRESS &amp; PAPER</span></div>
                         </li>
+                        <li class="hidden">
+                            <a href="javascript:;">05</a>
+                            <div><span>- BANNER &amp; FOOTER</span></div>
+                        </li>
                     </ul>
                 </nav>
-                <%- include("./include/footer.html") %>
             </div>
         </div>
     </body>
