@@ -96,15 +96,25 @@ $(function () {
             const curr = event.realIndex + 1;
             $('.press__bar').css({ width: (curr / total) * 100 + '%' });
         },
-        handleAccordion(e) {
+        toggleAccordion(e) {
             $(e.target).parents('.research__control').toggleClass('active');
             $(e.target).siblings('.research__list').slideToggle();
         },
         closeAccordion(e) {
-            const text = $(e.target).text();
-            $(e.target).parents('.research__list').siblings('button').text(text);
-            $(e.target).parents('.research__list').slideUp();
+            function closeAccordionMenu() {
+                $('.research__list').slideUp();
+                $('.research__control').removeClass('active');
+            }
+            if ($(e.target).parents().hasClass('research__list')) {
+                const text = $(e.target).text();
+                $(e.target).parents('.research__list').siblings('button').text(text);
+                closeAccordionMenu();
+            }
+            if (!$(e.target).parents().hasClass('research__control')) {
+                closeAccordionMenu();
+            }
         },
+        clickDocument(e) {},
         scrollNextSection() {
             const topV = $('.research__contents').offset().top;
             $('html, body').animate({ scrollTop: topV }, { duration: 1000, easing: 'easeInOutCubic' });
@@ -118,8 +128,9 @@ $(function () {
             }
         },
         init() {
-            $('.research__control > button').on('click', (e) => this.handleAccordion(e));
+            $('.research__control > button').on('click', (e) => this.toggleAccordion(e));
             $('.research__list button').on('click', (e) => this.closeAccordion(e));
+            $(document).on('click', (e) => this.closeAccordion(e));
             $('.scroll-down').on('click', () => this.scrollNextSection());
             $(window).on('scroll', () => this.changeHeader());
             this.mainKvInit();
