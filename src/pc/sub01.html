@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("./include/sub_head.html") %>
+    <body>
+        <div id="wrap" role="main">
+            <!-- header-->
+            <%- include("./include/sub_header.html") %>
+
+            <!-- //header-->
+
+            <!-- container-->
+            <section id="container" class="about">
+                <!-- subVisual-->
+                <div id="subVisual" style="background-image: url(https://www.sait.samsung.co.kr/saithome/images/about/about_visual.jpg)">
+                    <div class="tit_wrap">
+                        <h3>
+                            <span>Samsung Advanced Institute of Technology</span>
+                        </h3>
+                    </div>
+                </div>
+                <!-- //subVisual-->
+                <!-- subLocation-->
+                <div id="subLocation">
+                    <div class="location_box">
+                        <ul class="location_list">
+                            <li class="home" style="height: 76px"><a href="../main/main.do">main page</a></li>
+                            <li class="depth1" style="height: 76px">
+                                <button type="button">About SAIT</button>
+                                <ul class="under_depth">
+                                    <li><a href="../about/who.do">About SAIT</a></li>
+                                    <li><a href="../research/what.do">Research Areas</a></li>
+                                    <li><a href="../about/press.do">News &amp; Events</a></li>
+                                    <li><a href="../join/application.do">Join Us</a></li>
+                                </ul>
+                            </li>
+                            <li class="depth2" style="height: 76px">
+                                <button type="button" class="">Who We Are</button>
+                                <ul class="under_depth">
+                                    <li><a href="../about/who.do" class="active">Who We Are</a></li>
+                                    <li><a href="../about/history.do">History of Progress</a></li>
+                                    <li><a href="../about/labs.do">Global Labs</a></li>
+                                    <li><a href="../about/collabo_overview.do">Global Collaboration</a></li>
+                                    <li><a href="../about/social.do">Social Engagement</a></li>
+                                    <!--
+							<li><a href="../about/press.do" >Press</a></li>
+							-->
+                                    <li><a href="../about/contact.do">Contact us</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- //subLocation-->
+
+                <!-- subContent-->
+                <section id="content" class="who">
+                    <div id="subTitle" class="js-scr-sec">
+                        <h4 class="js-scr-box js-motion-end">Who We Are</h4>
+                    </div>
+                    <div class="who_wrap">
+                        <div class="vice_box js-scr-sec">
+                            <img src="https://www.sait.samsung.co.kr/saithome/images/about/who_img.jpg" class="js-scr-box" alt="Vice President,  S.W. Hwang image" />
+                            <div class="greetings js-scr-box">
+                                <strong>SAIT,</strong> Samsung Advanced Institute of Technology is Samsung Group's R&amp;D hub, established as the incubator for cutting-edge technologies under the founding philosophy of <em>Boundless search for breakthroughs.</em> And guided by the vision of
+                                <em>Changing the World through Creative Research.</em>
+                            </div>
+                        </div>
+                        <section class="embraces_box js-scr-sec">
+                            <h5 class="js-scr-box">
+                                SAIT embraces <br />
+                                the following missions
+                            </h5>
+                            <div class="bg_wrap js-scr-box"></div>
+                            <div class="embraces_step js-scr-box">
+                                <p class="step01">
+                                    <strong>First,</strong> we develop the world's best or world's first technologies for new markets.<br />
+                                    <strong>Second,</strong> we create new convergence technologies.<br />
+                                    <strong>Third,</strong> we advance science-based nanotechnology research.<br />
+                                    <strong>Fourth,</strong> we develop disruptive technologies going beyond current paradigms.
+                                </p>
+                                <p class="step02">SAIT also functions as the Chief Technology Office (CTO) for the Samsung group including Samsung Electronics, establishing the group's overall R&amp;D outlook and strategy.</p>
+                            </div>
+                        </section>
+                    </div>
+                </section>
+                <!-- //subContent-->
+                <!-- subAside-->
+                <aside id="relatedContents" class="js-scr-sec">
+                    <h1 class="js-scr-box">Related Contents</h1>
+                    <div class="related_wrap">
+                        <article class="js-scr-box">
+                            <a href="../about/history.do">
+                                <figure><img src="https://www.sait.samsung.co.kr/saithome/images/layout/related_history.jpg" alt="History" /></figure>
+                                <h1>History Of Progress <i></i></h1>
+                            </a>
+                        </article>
+                        <article class="js-scr-box">
+                            <a href="../research/what.do">
+                                <figure><img src="https://www.sait.samsung.co.kr/saithome/images/layout/related_what.jpg" alt="Global" /></figure>
+                                <h1>What We Do <i></i></h1>
+                            </a>
+                        </article>
+                    </div>
+                </aside>
+                <!-- //subAside-->
+            </section>
+            <!-- //container-->
+
+            <%- include("./include/sub_footer.html") %>
+            <div id="gnbDimmed" class="dimmed"></div>
+
+            <!-- Global site tag (gtag.js) - Google Analytics -->
+            <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-123575008-1"></script>
+            <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag() {
+                    dataLayer.push(arguments);
+                }
+                gtag('js', new Date());
+
+                gtag('config', 'UA-167217135-1');
+            </script>
+            <!-- //footer -->
+        </div>
+        <script type="text/javascript" src="https://www.sait.samsung.co.kr/saithome/javascripts/lib/TweenMax/TweenMax.min.js"></script>
+        <script type="text/javascript" src="https://www.sait.samsung.co.kr/saithome/javascripts/lib/TweenMax/easing/EasePack.min.js"></script>
+        <script type="text/javascript" src="https://www.sait.samsung.co.kr/saithome/javascripts/design_common.js"></script>
+    </body>
+</html>

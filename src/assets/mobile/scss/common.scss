@@ -25,12 +25,13 @@ a {
     width: 100%;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     z-index: 2;
+    
     &__inner {
         display: flex;
         justify-content: space-between;
         align-items: center;
         width: 100%;
-        height: 70px;
+        height: 50px;
         margin: 0 auto;
         padding: 0 20px;
         box-sizing: border-box;
@@ -47,70 +48,109 @@ a {
     }
 
     &.active {}
+    
+    
 }
 
-#gnb {
-    position: absolute;
-    top: 0;
-    right: -100%;
-    margin: 0;
-    padding: 0;
-    > ul {
-        > li {
-            > a {
-                display: block;
-                padding: 0 40px;
-                font-family: "SamsungSharpSans";
-                font-weight: 500;
-                line-height: 80px;
+#header {
+    height: auto;
+    background-color: transparent;
+    .header_wrap {
+    }
+    h1 {
+        padding: 0;
+    }
+    #gnb {
+        > ul {
+            > li {
+                > a {
+                    display: block;
+                    padding: 0 40px;
+                    font-family: "SamsungSharpSans";
+                    font-weight: 500;
+                    line-height: 80px;
+                    box-sizing: border-box;
+                }
+            }
+        }
+        .gnb_wrap {
+            nav {
+                padding-top: 50px;
                 box-sizing: border-box;
+            }
+            #gnbClose {
+                position: absolute;
+                top: 30px;
+                right: 30px;
+                margin-top: 0;
             }
         }
     }
-}
-
-.util {
-    display: flex;
-    gap: 20px;
-    &__search {
-        button {
-            display: inline-block;
-            width: 28px;
-            height: 28px;
-            background: url("../images/icons/icon_search.svg") center / auto no-repeat;
-            font-size: 0;
+    .depth2 {
+        li {
+            a {
+                color: #636363;
+            }
         }
     }
-}
-
-.all-menu {
-    button {
-        position: relative;
-        display: inline-flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-        width: 28px;
-        height: 28px;
-        padding: 5px 0;
-        box-sizing: border-box;
-        &::before {
-            content:'';
-            width: 21px;
-            height: 1px;
-            background-color: #fff;
+    
+    .util {
+        display: flex;
+        gap: 20px;
+        &__search {
+            button {
+                &#searchBtn {
+                    position: relative;
+                    top: auto;
+                    right: auto;
+                    display: inline-block;
+                    width: 28px;
+                    height: 28px;
+                    background: url("../images/icons/icon_search.svg") center / auto no-repeat;
+                    font-size: 0;
+                }
+            }
         }
-        span {
-            display: inline-block;
-            width: 21px;
-            height: 1px;
-            background-color: #fff;
-        }
-        &::after {
-            content:'';
-            width: 21px;
-            height: 1px;
-            background-color: #fff;
+    }
+    
+    .all-menu {
+        font-size: 0;
+        button {
+            &#gnbBtn {
+                position: relative;
+                top: auto;
+                left: auto;
+                display: inline-flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
+                width: 28px;
+                height: 28px;
+                padding: 5px 0;
+                box-sizing: border-box;
+                background: none;
+                font-size: 0;
+                &::before {
+                    content:'';
+                    display: inline-block;
+                    width: 21px;
+                    height: 1px;
+                    background-color: #fff;
+                }
+                span {
+                    display: inline-block;
+                    width: 21px;
+                    height: 1px;
+                    background-color: #fff;
+                }
+                &::after {
+                    content:'';
+                    display: inline-block;
+                    width: 21px;
+                    height: 1px;
+                    background-color: #fff;
+                }
+            }
         }
     }
 }

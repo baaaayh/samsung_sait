@@ -53,6 +53,12 @@
     position: relative;
 }
 
+#main {
+    #container {
+        padding: 0;
+    }
+}
+
 .main-section {
     position: relative;
     box-sizing: border-box;
@@ -180,6 +186,7 @@
         height: 1px;
         background-color: rgba(255, 255, 255, 0.3);
         transition: 0.34s ease;
+        font-size: 0;
         .main-kv__bar {
             display: inline-block;
             width: 0;
@@ -211,6 +218,7 @@
         font-size: 12px;
         font-weight: 700;
         text-align: left;
+        color: #fff;
     }
 }
 .indicator {
@@ -309,11 +317,12 @@
             padding: 0 40px 0 20px;
             font-size: 16px;
             line-height: 38px;
-            box-sizing: border-box;
             text-align: left;
             border-radius: 20px;
             border: 1px solid rgba(255, 255, 255, 0.4);
             overflow: hidden;
+            color: #fff;
+            box-sizing: border-box;
             &::before {
                 content:'';
                 display: inline-block;
@@ -482,8 +491,7 @@
         align-items: center;
         gap: 70px;
         height: 100%;
-        padding: 46px 30px;
-        background-color: #fff;
+        padding: 46px 30px 60px;
         box-sizing: border-box;
         > div {
             width: 100%;
@@ -499,21 +507,18 @@
             font-size: 20px;
             font-weight: 700;
             margin-bottom: 20px;
-            color: #000;
         }
         h3 {
             margin-top: 20px;
             font-family: "SamsungSharpSans";
             font-size: 40px;
             font-weight: 700;
-            color: #000;
         }
         p {
             margin-top: 10px;
             font-size: 16px;
             font-weight: 400;
             line-height: 26px;
-            color: #000;
         }
         .btn-wrap {
             margin-top: 20px;
@@ -537,6 +542,8 @@
 .press {
     width: auto;
     height: 100%;
+    padding: 0px 0 50px;
+    box-sizing: border-box;
     &__wrap {
         font-size: 0;
         > div {
@@ -575,7 +582,7 @@
         }
     }
     &__box {
-        padding: 48px 0 70px;
+        padding: 48px 0 20px;
     }
     &__slide {
         padding: 0 10px;

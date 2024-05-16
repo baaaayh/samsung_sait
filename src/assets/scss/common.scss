@@ -10,10 +10,6 @@
     display: none;
 }
 
-body {
-    background-color: transparent;
-}
-
 a {
     color: inherit;
 }
@@ -30,6 +26,10 @@ a {
     min-width: 1510px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     z-index: 2;
+    font-family: "SamsungOneKR", "맑은 고딕", "Malgun Gothic", sans-serif;
+    font-weight: 400;
+    line-height: 1.36;
+    color: #fff;
     &__inner {
         display: flex;
         justify-content: space-between;
@@ -72,21 +72,31 @@ a {
 .util {
     &__search {
         button {
-            display: inline-block;
-            width: 30px;
-            height: 30px;
-            background: url("../images/icons/icon_search.svg") center / auto no-repeat;
-            font-size: 0;
+            &#searchBtn {
+                display: inline-block;
+                width: 30px;
+                height: 30px;
+                margin: 0;
+                background: url("../images/icons/icon_search.svg") center / auto no-repeat;
+                font-size: 0;
+                border: none;
+            }
         }
     }
 }
 
-
+#headerSearch {
+    top: 81px;
+}
 
 .footer {
     &#footer {
         padding: 0;
         background-color: #000;
+        font-family: "SamsungOneKR", "맑은 고딕", "Malgun Gothic", sans-serif;
+        font-weight: 400;
+        line-height: 1.36;
+        color: #fff;
     }
     &__inner {
     }
@@ -107,6 +117,7 @@ a {
             position: relative;
             padding: 130px 210px 145px;
             box-sizing: border-box;
+            color: #fff;
             h2 {
                 font-family: "SamsungSharpSans";
                 font-size: 60px;
@@ -155,6 +166,7 @@ a {
         }
         span {    
             font-size: 14px;
+            line-height: 1;
             color: #7D8794;
         }
     }

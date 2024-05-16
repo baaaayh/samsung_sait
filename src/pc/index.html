@@ -1,10 +1,25 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
     <%- include("./include/head.html") %>
     <body class="scroll-lock">
         <div class="wrap">
             <div class="container">
                 <%- include("./include/header.html") %>
+                <div id="headerSearch">
+                    <!-- <form action="../etc/search.do" method="get" name="allSearchFrm"> -->
+                    <fieldset>
+                        <legend>headerSearch form</legend>
+                        <div id="globalInput">
+                            <label for="globalSearch" class="hidden-txt">search string</label>
+                            <input type="text" id="searchKeyword2" name="searchKeyword" placeholder="Input text" />
+                            <div class="submit_wrap" onclick="AllSearch();" onkeypress="AllSearch()" tabindex="0" title="search button">
+                                <!-- <input type="submit" value="search"> -->
+                                <!--<a href="javascript:void(0);" type="submit" value="search"></a>-->
+                            </div>
+                        </div>
+                    </fieldset>
+                    <!-- </form> -->
+                </div>
                 <main class="main">
                     <section class="main-section main-section--01">
                         <div class="main-kv swiper">
@@ -430,5 +445,8 @@
                 </nav>
             </div>
         </div>
+        <script type="text/javascript" src="https://www.sait.samsung.co.kr/saithome/javascripts/lib/TweenMax/TweenMax.min.js"></script>
+        <script type="text/javascript" src="https://www.sait.samsung.co.kr/saithome/javascripts/lib/TweenMax/easing/EasePack.min.js"></script>
+        <script type="text/javascript" src="https://www.sait.samsung.co.kr/saithome/javascripts/design_common.js"></script>
     </body>
 </html>

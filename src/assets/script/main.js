@@ -118,7 +118,8 @@ $(function () {
                 currentSection.addClass('active').siblings('.main-section').removeClass('active');
                 $('.main-section').find('.aos-init').removeClass('aos-animate');
                 $('.main-section.active').find('.aos-init').addClass('aos-animate');
-                $('.indicator li.active span').slideDown(700).parents('li').siblings('li').find('span').slideUp(700);
+                // $('.indicator li.active span').slideDown(700).parents('li').siblings('li').find('span').slideUp(700);
+                $('.indicator li').eq(currentIndex).find('span').slideDown().parents('li').siblings('li').find('span').slideUp();
                 //currentSection.siblings('.main-section').find('.aos-init').removeClass('aos-animate');
                 // 섹션 컬러라이징
                 if (currentSection.data('color') === 'white') {

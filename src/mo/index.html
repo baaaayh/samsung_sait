@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en" id="main">
     <%- include("./include/head.html") %>
     <body>
-        <div class="wrap">
-            <div class="container">
+        <div class="wrap" role="main">
+            <div class="container" id="container">
                 <%- include("./include/header.html") %>
                 <main class="main">
                     <section class="main-section main-section--01">
@@ -298,7 +298,7 @@
                                                 <h3>Application Process</h3>
                                                 <p>SAIT is looking for highly creative people to lead the future. The institute's world-class lab facilities and broad scope of research provides a rich environment for conducting cutting-edge scientific and technological innovation.</p>
                                                 <div class="btn-wrap">
-                                                    <a href="javascript:;" class="btn btn-default btn-default--white">
+                                                    <a href="javascript:;" class="btn btn-default">
                                                         <span class="btn-default__text">Read More</span>
                                                     </a>
                                                 </div>
@@ -430,5 +430,10 @@
                 </nav> -->
             </div>
         </div>
+        <div id="gnbDimmed" class="dimmed"></div>
+        <script type="text/javascript" src="https://www.sait.samsung.co.kr/saithome/mobile/javascripts/lib/TweenMax/TweenMax.min.js"></script>
+        <script type="text/javascript" src="https://www.sait.samsung.co.kr/saithome/mobile/javascripts/lib/TweenMax/easing/EasePack.min.js"></script>
+        <script type="text/javascript" src="https://www.sait.samsung.co.kr/saithome/mobile/javascripts/design_common.js"></script>
+        <script type="text/javascript" src="https://www.sait.samsung.co.kr/saithome/mobile/javascripts/jquery.rwdImageMaps.min.js"></script>
     </body>
 </html>
