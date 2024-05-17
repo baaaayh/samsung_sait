@@ -3,6 +3,7 @@ $(function () {
     let ww = $(window).innerWidth();
     let counterIdx = 0;
     let totalSection = $('.main-section').length - 1;
+    let prevWindowHeight = $(window).innerHeight();
 
     $(window).on('resize', function () {
         ww = $(window).innerWidth();
@@ -103,10 +104,11 @@ $(function () {
                 setTimeout(function () {
                     isMove = false;
                 }, 1200);
-
                 this.setCurrentSection();
             },
             setCurrentSection: function () {
+                isMove = true;
+
                 let currentSection = $('.main-section').eq(currentIndex);
                 // indicator
                 if (currentIndex <= totalSection) {
@@ -119,7 +121,7 @@ $(function () {
                 $('.main-section').find('.aos-init').removeClass('aos-animate');
                 $('.main-section.active').find('.aos-init').addClass('aos-animate');
                 // $('.indicator li.active span').slideDown(700).parents('li').siblings('li').find('span').slideUp(700);
-                $('.indicator li').eq(currentIndex).find('span').slideDown().parents('li').siblings('li').find('span').slideUp();
+                $('.indicator li').eq(currentIndex).find('span').slideDown(730).parents('li').siblings('li').find('span').slideUp(730);
                 //currentSection.siblings('.main-section').find('.aos-init').removeClass('aos-animate');
                 // 섹션 컬러라이징
                 if (currentSection.data('color') === 'white') {
@@ -224,11 +226,10 @@ $(function () {
                 $(window).on('touchend', (e) => this.handleTouchMove(e));
                 $(window).on('resize', () => this.isOverFlow());
                 $(window).on('scroll touchmove', () => this.handleMobileScroll());
-                $('.scroll-box').on('click', () => this.scrollBtnHandler());
                 $(window).on('keydown', (e) => this.keyDownHandler(e));
-                $('.indicator li a').on('click', (e) => this.indicatorHandler(e));
-                $('.scroll-down').on('click', () => this.setTransitionSection(1));
                 $(window).on('resize', () => this.setTransitionSection());
+                $('.scroll-down').on('click', () => this.setTransitionSection(1));
+                $('.indicator li a').on('click', (e) => this.indicatorHandler(e));
             },
         };
         onePageScroll.init();

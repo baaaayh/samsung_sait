@@ -73,6 +73,7 @@ a {
     &__search {
         button {
             &#searchBtn {
+                position: relative;
                 display: inline-block;
                 width: 30px;
                 height: 30px;
@@ -80,6 +81,32 @@ a {
                 background: url("../images/icons/icon_search.svg") center / auto no-repeat;
                 font-size: 0;
                 border: none;
+                transition: none;
+                &.active {
+                    background: none;
+                    &::before {
+                        content:'';
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        display: inline-block;
+                        width: 28px;
+                        height: 1px;
+                        background-color: #fff;
+                        transform: translate(-50%, -50%) rotate(45deg);
+                    }
+                    &::after {
+                        content:'';
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        display: inline-block;
+                        width: 28px;
+                        height: 1px;
+                        background-color: #fff;
+                        transform: translate(-50%, -50%) rotate(-45deg);
+                    }
+                }
             }
         }
     }
