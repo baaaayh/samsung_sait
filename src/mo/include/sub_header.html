@@ -1,0 +1,152 @@
+<header class="header" id="header">
+    <div class="header_wrap">
+        <div class="header__inner">
+            <h1 class="header__logo">
+                <a href="/">
+                    <img src="../resources/assets/images/common/logo.svg" alt="SAIT" />
+                </a>
+            </h1>
+
+            <div class="util">
+                <div class="util__search">
+                    <button type="button" id="searchBtn">검색</button>
+                </div>
+                <div class="all-menu">
+                    <button type="button" id="gnbBtn">
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="headerSearch">
+            <fieldset>
+                <legend>headerSearch form</legend>
+                <div id="globalInput">
+                    <label for="globalSearch" class="hidden-txt">search string</label>
+                    <input type="text" id="searchKeyword2" name="searchKeyword" placeholder="Input text" />
+                    <div class="submit_wrap" onclick="AllSearch();">
+                        <a href="javascript:void(0);" type="submit" value="search"></a>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+    </div>
+
+    <script>
+        $('#searchKeyword2').keydown(function (key) {
+            if (key.keyCode == 13) {
+                //키가 13이면 실행 (엔터는 13)
+                AllSearch();
+            }
+        });
+        function AllSearch() {
+            if ($('#searchKeyword2').val() == '') {
+                alert('Please enter your search word');
+                $('#searchKeyword2').focus();
+                return false;
+            }
+            window.location.href = '../etc/search.do?searchKeyword=' + encodeURIComponent($('#searchKeyword2').val());
+            /* window.allSearchFrm.submit(); */
+        }
+    </script>
+
+    <nav id="gnb">
+        <div class="gnb_wrap">
+            <button type="button" id="gnbClose">gnb 닫기</button>
+            <nav>
+                <h2>사이트 전체 메뉴</h2>
+                <ul class="depth1">
+                    <li>
+                        <button type="button" class="active">About SAIT <i></i></button>
+                        <ul class="depth2" style="display: block">
+                            <li><a href="../about/who.do">Who We Are</a></li>
+                            <li><a href="../about/history.do">History of Progress</a></li>
+                            <li><a href="../about/labs.do">Global Labs</a></li>
+                            <li><a href="../about/collabo_overview.do">Global Collaboration</a></li>
+                            <li><a href="../about/social.do">Social Engagement</a></li>
+                            <li><a href="../about/contact.do">Contact us</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <button type="button">Research Areas <i></i></button>
+                        <ul class="depth2" style="">
+                            <li><a href="../research/what.do" style="font-weight: 700">What We Do</a></li>
+                            <!--
+	                     	<li><a href="../research/multimedia.do" >Augmented Reality</a></li>
+							<li><a href="../research/deep.do" >Deep Learning</a></li>
+							<li><a href="../research/autonomous.do" >Automotive Electronics</a></li>
+							<li><a href="../research/brain.do" >Brain Inspired Computing & Device</a></li>
+							-->
+                            <!--
+							<li><a href="../research/deep.do" >Artificial Intelligence</a></li>
+							<li><a href="../research/brain.do" >Computing Platform</a></li>
+	                     	<li><a href="../research/multimedia.do" >Augmented Reality</a></li>							
+							<li><a href="../research/autonomous.do" >Automotive Electronics</a></li>														
+							<li><a href="../research/healthcare.do" >Healthcare Platform</a></li>
+							<li><a href="../research/metaphotonics.do" >Metaphotonics</a></li>
+							<li><a href="../research/graphene.do" >Graphene/2D</a></li>
+							<li><a href="../research/organic.do" >Organic Electronic Materials</a></li>
+							<li><a href="../research/polymer.do" >Optical Component Materials</a></li>
+							<li><a href="../research/inorganics.do" >Functional Inorganics</a></li>
+							<li><a href="../research/quantum.do" >Quantum Dot</a></li>
+							<li><a href="../research/battery.do" >Next Generation Battery</a></li>
+							<li><a href="../research/bio.do" >Biomaterials</a></li>
+							<li><a href="../research/computational.do" >Computational Science</a></li>
+							-->
+                            <li>
+                                <a href="../research/researchArea.do?idx=14"> AI Algorithms</a>
+                            </li>
+                            <li>
+                                <a href="../research/researchArea.do?idx=16"> Computing Platform</a>
+                            </li>
+                            <li>
+                                <a href="../research/researchArea.do?idx=1"> Human Augmentation</a>
+                            </li>
+                            <li>
+                                <a href="../research/researchArea.do?idx=2"> Metaphotonics</a>
+                            </li>
+                            <li>
+                                <a href="../research/researchArea.do?idx=3"> Nano Electronics</a>
+                            </li>
+                            <li>
+                                <a href="../research/researchArea.do?idx=18"> Display Materials</a>
+                            </li>
+                            <li>
+                                <a href="../research/researchArea.do?idx=21"> Battery Materials</a>
+                            </li>
+                            <li>
+                                <a href="../research/researchArea.do?idx=23"> Semiconductor Materials</a>
+                            </li>
+                            <li>
+                                <a href="../research/researchArea.do?idx=27"> Environmental Research</a>
+                            </li>
+                            <!-- 						
+							<li><a href="../research/paper_list.do" style="font-weight: 700;" >Research Papers</a></li>
+							 -->
+                            <li><a href="../research/paper_list_srt.do" style="font-weight: 700">Publications</a></li>
+                            <li><a href="../research/paper_list_wtc.do">Best Research Papers</a></li>
+                            <li><a href="../research/infra.do" style="font-weight: 700">Research Infra</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <button type="button">News &amp; Events <i></i></button>
+                        <ul class="depth2" style="">
+                            <li><a href="../about/press.do">Press</a></li>
+                            <li><a href="../event/saif2023.do">AI Forum</a></li>
+                            <li><a href="../event/aiResearcher.do">AI Researcher of the Year</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <button type="button">Join Us <i></i></button>
+                        <ul class="depth2" style="">
+                            <li><a href="../join/application.do">Application Process</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="gnb_banner"></div>
+        </div>
+    </nav>
+</header>
