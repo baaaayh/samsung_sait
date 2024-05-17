@@ -30,6 +30,8 @@ a {
     font-weight: 400;
     line-height: 1.36;
     color: #fff;
+    transition: 0.23s ease;
+
     &__inner {
         display: flex;
         justify-content: space-between;
@@ -45,6 +47,22 @@ a {
         flex-shrink: 0;
         a {
             display: block;
+        }
+    }
+    &.white {
+        background-color: #fff;
+        color: #000;
+
+        .util__search {
+            button{
+                &#searchBtn {
+                    background: url(../images/icons/icon_search_black.svg) center / auto no-repeat;
+                    &.active {
+                        background: none;
+                        &::before, &::after {background-color: #000;}
+                    }
+                } 
+            }
         }
     }
 }

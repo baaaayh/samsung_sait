@@ -486,7 +486,7 @@ body {
 }
 .image-slider {
     .swiper-wrapper {
-        transition-delay: 0.2s;
+        // transition-delay: 0.2s;
     }
     .swiper-slide {
         position: relative;
@@ -502,8 +502,17 @@ body {
                 height: 100%;
                 object-fit: cover;
                 object-position: center;
+                transition: 1.5s ease;
+                transform: scale(1.2);
             }
         }
+        // &-prev {
+        //     .image-slider__wrap {
+        //         >img {
+        //             transform: scale(1.2) translateX(100px);
+        //         }
+        //     }
+        // }
     }
 }
 .join {

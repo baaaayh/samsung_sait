@@ -124,10 +124,10 @@ $(function () {
                 $('.indicator li').eq(currentIndex).find('span').slideDown(730).parents('li').siblings('li').find('span').slideUp(730);
                 //currentSection.siblings('.main-section').find('.aos-init').removeClass('aos-animate');
                 // 섹션 컬러라이징
-                if (currentSection.data('color') === 'white') {
-                    $wrap.addClass('white');
+                if (currentSection.data('color') === 'white' || $('#searchBtn').hasClass('active')) {
+                    $('.header').addClass('white');
                 } else {
-                    $wrap.removeClass('white');
+                    $('.header').removeClass('white');
                 }
                 if (currentSection.data('name') === 'counter') {
                     setTimeout(function () {
@@ -241,6 +241,7 @@ $(function () {
                 slidesPerView: 1,
                 autoplay: {
                     delay: 7000,
+                    disableOnInteraction: false,
                 },
                 loop: true,
                 pagination: {
@@ -255,7 +256,7 @@ $(function () {
                 hashNavigation: {
                     watchState: true,
                 },
-                resizeObserver: false,
+                // resizeObserver: false,
                 touchRatio: 0,
                 on: {
                     autoplayTimeLeft(s, time, progress) {
@@ -295,11 +296,15 @@ $(function () {
                 fadeEffect: { crossFade: true },
             });
             const imageSlider = new Swiper('.image-slider', {
-                parallax: true,
+                // parallax: true,
                 speed: 1200,
                 // slidesPerView: '1',
                 // autoplay: false,
+                effect: 'slide',
                 touchRatio: 0,
+                // parallax: true,
+                // centeredSlides: true,
+                // spaceBetween: 0,
                 // loop: true,
             });
             bgSlider.controller.control = [textSlider, imageSlider];
