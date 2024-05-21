@@ -1,15 +1,14 @@
 $(function () {
     const search = {
-        openSearch(e) {
-            if ($(e.target).hasClass('active')) {
+        toggleSearch(e) {
+            if ($(e.target).hasClass('active') && $('.main-section.active').attr('data-color') !== 'white') {
                 $('.header').removeClass('white');
             } else {
                 $('.header').addClass('white');
             }
         },
         init() {
-            $(document).on('click', (e) => this.closeSearch(e));
-            $('#searchBtn').on('click', (e) => this.openSearch(e));
+            $('#searchBtn').on('click', (e) => this.toggleSearch(e));
         },
     };
 

@@ -3,7 +3,6 @@ $(function () {
     let ww = $(window).innerWidth();
     let counterIdx = 0;
     let totalSection = $('.main-section').length - 1;
-    let prevWindowHeight = $(window).innerHeight();
 
     $(window).on('resize', function () {
         ww = $(window).innerWidth();
@@ -15,29 +14,30 @@ $(function () {
         let $body = $('body'),
             $wrap = $('.wrap'),
             currentIndex = 0,
-            isMove = false,
-            isText = false,
-            mouseWheel = 0;
+            isMove = false;
         let startY, endY;
 
         var onePageScroll = {
             // mouse wheel
-            handleWheel: function (e) {
+            orderTransition: function (e) {
                 if (!$('.all-menu').hasClass('active') && !$('.popup--main').hasClass('active')) {
                     if (!this.isMobile()) {
                         if (!isMove) {
-                            if (e.originalEvent.deltaY > 0) {
+                            if (e.originalEvent.deltaY > 0 || e.originalEvent.key === 'ArrowDown') {
                                 if (!this.isLast()) {
                                     isMove = true;
                                     currentIndex++;
                                     this.setTransitionSection();
                                 }
-                            } else {
+                            } else if (e.originalEvent.deltaY < 0 || e.originalEvent.key === 'ArrowUp') {
                                 if (!this.isFirst()) {
                                     isMove = true;
                                     currentIndex--;
                                     this.setTransitionSection();
                                 }
+                            } else {
+                                isMove = true;
+                                this.setTransitionSection(e.originalEvent.key - 1);
                             }
                         }
                     }
@@ -72,21 +72,26 @@ $(function () {
             // pc/mo 구분
             isMobile: function () {
                 let ww = window.innerWidth;
-                return ww <= 1024;
+                return false;
             },
             isOverFlow() {
-                if (this.isMobile()) {
-                    $body.removeClass('scroll-lock');
-                    currentIndex = 0;
-                    $('#main').css('transform', 'translate3d(0, 0, 0)');
-                } else {
-                    $body.addClass('scroll-lock');
-                    $(window).scrollTop(0, 0);
-                }
+                // if (this.isMobile()) {
+                //     $body.removeClass('scroll-lock');
+                //     currentIndex = 0;
+                //     $('#main').css('transform', 'translate3d(0, 0, 0)');
+                // } else {
+                //     $body.addClass('scroll-lock');
+                //     $(window).scrollTop(0, 0);
+                // }
+
                 $('.indicator li').eq(currentIndex).addClass('active').find('span').show().siblings('li').removeClass('active');
+                if (currentIndex < totalSection) {
+                    $('.main').css('transform', 'translate3d(0px, -' + currentIndex * window.innerHeight + 'px, 0px)');
+                } else if (currentIndex >= totalSection) {
+                    $('.main').css('transform', 'translate3d(0px, -' + ((currentIndex - 1) * window.innerHeight + $('.main-section').eq(currentIndex)[0].clientHeight) + 'px, 0px)');
+                }
             },
             // 섹션 넘기기
-
             setTransitionSection: function (idx) {
                 if (idx >= 0) {
                     currentIndex = idx;
@@ -94,21 +99,35 @@ $(function () {
 
                 if (currentIndex < totalSection) {
                     $('.main').css('transform', 'translate3d(0px, -' + currentIndex * window.innerHeight + 'px, 0px)');
-                    $('.footer').removeClass('active');
-                }
-
-                if (currentIndex >= totalSection) {
+                } else if (currentIndex >= totalSection) {
                     $('.main').css('transform', 'translate3d(0px, -' + ((currentIndex - 1) * window.innerHeight + $('.main-section').eq(currentIndex)[0].clientHeight) + 'px, 0px)');
                 }
 
                 setTimeout(function () {
                     isMove = false;
                 }, 1200);
+
+                this.setCurrentSection();
+            },
+            keyDownSetTransitionSection: function (idx) {
+                isMove = true;
+                if (idx >= 0) {
+                    currentIndex = idx;
+                }
+
+                if (currentIndex < totalSection) {
+                    $('.main').css('transform', 'translate3d(0px, -' + currentIndex * window.innerHeight + 'px, 0px)');
+                } else if (currentIndex >= totalSection) {
+                    $('.main').css('transform', 'translate3d(0px, -' + ((currentIndex - 1) * window.innerHeight + $('.main-section').eq(currentIndex)[0].clientHeight) + 'px, 0px)');
+                }
+
+                setTimeout(function () {
+                    isMove = false;
+                }, 1200);
+
                 this.setCurrentSection();
             },
             setCurrentSection: function () {
-                isMove = true;
-
                 let currentSection = $('.main-section').eq(currentIndex);
                 // indicator
                 if (currentIndex <= totalSection) {
@@ -118,30 +137,13 @@ $(function () {
                 // section active
                 $('.main-section').removeClass('active');
                 currentSection.addClass('active').siblings('.main-section').removeClass('active');
-                $('.main-section').find('.aos-init').removeClass('aos-animate');
-                $('.main-section.active').find('.aos-init').addClass('aos-animate');
-                // $('.indicator li.active span').slideDown(700).parents('li').siblings('li').find('span').slideUp(700);
-                $('.indicator li').eq(currentIndex).find('span').slideDown(730).parents('li').siblings('li').find('span').slideUp(730);
+                $('.indicator li').eq(currentIndex).find('span').slideDown(730).parents('li').siblings('li').find('span').stop().slideUp(730);
                 //currentSection.siblings('.main-section').find('.aos-init').removeClass('aos-animate');
                 // 섹션 컬러라이징
                 if (currentSection.data('color') === 'white' || $('#searchBtn').hasClass('active')) {
                     $('.header').addClass('white');
                 } else {
                     $('.header').removeClass('white');
-                }
-                if (currentSection.data('name') === 'counter') {
-                    setTimeout(function () {
-                        // $('.numbers').countTo({
-                        //     formatter: function (value, options) {
-                        //         return value
-                        //             .toFixed(0)
-                        //             .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ',');
-                        //     },
-                        // });
-                    }, 100);
-                }
-                if (currentSection.data('name') === 'counter') {
-                    counterStart();
                 }
             },
             isFirst: function () {
@@ -208,26 +210,15 @@ $(function () {
                     (isMove = true), this.setTransitionSection(1);
                 }
             },
-            keyDownHandler: function (e) {
-                if (e.originalEvent.key === 'ArrowDown') {
-                    this.setTransitionSection(currentIndex + 1);
-                } else if (e.originalEvent.key === 'ArrowUp') {
-                    this.setTransitionSection(currentIndex - 1);
-                } else {
-                    let idx = e.originalEvent.key - 1;
-                    this.setTransitionSection(idx);
-                }
-            },
             init: function () {
                 this.isOverFlow();
                 $('.main-section').eq(currentIndex).addClass('active');
-                $(window).on('wheel', (e) => this.handleWheel(e));
+                $(window).on('wheel', (e) => this.orderTransition(e));
+                $(window).on('keydown', (e) => this.orderTransition(e));
                 $(window).on('touchstart', (e) => this.handleTouch(e));
                 $(window).on('touchend', (e) => this.handleTouchMove(e));
                 $(window).on('resize', () => this.isOverFlow());
                 $(window).on('scroll touchmove', () => this.handleMobileScroll());
-                $(window).on('keydown', (e) => this.keyDownHandler(e));
-                $(window).on('resize', () => this.setTransitionSection());
                 $('.scroll-down').on('click', () => this.setTransitionSection(1));
                 $('.indicator li a').on('click', (e) => this.indicatorHandler(e));
             },
@@ -238,11 +229,12 @@ $(function () {
     const main = {
         mainKvInit() {
             let mainKV = new Swiper('.main-kv', {
-                slidesPerView: 1,
+                slidesPerView: 'auto',
                 autoplay: {
                     delay: 7000,
                     disableOnInteraction: false,
                 },
+                allowTouchMove: false,
                 loop: true,
                 pagination: {
                     el: '.main-kv__control',
@@ -252,12 +244,13 @@ $(function () {
                     },
                 },
                 effect: 'fade',
-                fadeEffect: { crossFade: true },
+                fadeEffect: {
+                    crossFade: true,
+                },
+                resizeObserver: false,
                 hashNavigation: {
                     watchState: true,
                 },
-                // resizeObserver: false,
-                touchRatio: 0,
                 on: {
                     autoplayTimeLeft(s, time, progress) {
                         $('.main-kv__bar').css({ width: (1 - progress) * 100 + '%' });
@@ -266,7 +259,6 @@ $(function () {
             });
         },
         sliderInit() {
-            // const researchArr = ['AI Algorithms', 'Computing Platform', 'Human Augmentation', 'Metaphotonics', 'Nano Electronics', 'Display Materials', 'Battery Materials', 'Semiconductor Materials', 'Environmental Research'];
             const bgSlider = new Swiper('.bg-slider', {
                 autoplay: false,
                 loop: true,
@@ -275,14 +267,7 @@ $(function () {
                 hashNavigation: {
                     watchState: true,
                 },
-                touchRatio: 0,
-                // pagination: {
-                //     el: '.research__list',
-                //     clickable: true,
-                //     renderBullet: function (index, className) {
-                //         return '<li class="' + className + '"><span>' + (index < 9 ? '0' : '') + (index + 1) + '</span><button type="button">' + researchArr[index] + '</button><a href="javascript:;"></a></li>';
-                //     },
-                // },
+                allowTouchMove: false,
                 speed: 1200,
                 observer: true,
                 observeParents: true,
@@ -292,20 +277,13 @@ $(function () {
                 autoplay: false,
                 loop: true,
                 effect: 'fade',
-                touchRatio: 0,
+                allowTouchMove: false,
                 fadeEffect: { crossFade: true },
             });
             const imageSlider = new Swiper('.image-slider', {
-                // parallax: true,
                 speed: 1200,
-                // slidesPerView: '1',
-                // autoplay: false,
                 effect: 'slide',
-                touchRatio: 0,
-                // parallax: true,
-                // centeredSlides: true,
-                // spaceBetween: 0,
-                // loop: true,
+                allowTouchMove: false,
             });
             bgSlider.controller.control = [textSlider, imageSlider];
 
