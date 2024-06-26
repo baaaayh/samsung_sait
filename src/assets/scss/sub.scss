@@ -1,0 +1,35 @@
+body {
+    background-color: #1D242F;
+}
+#container {
+    padding-top: 80px;
+}
+#subLocation {
+    max-width: 1920px;
+    padding: 0 100px;
+    box-sizing: border-box;
+}
+#subLocation .location_box {
+    max-width: 1700px;
+    background-color: transparent;
+    border: none;
+}
+#subLocation .location_box.active {
+    background-color: #fff;
+}
+#subLocation .location_box:after, #subLocation .location_box:before {
+    background-color: transparent;
+    border: none;
+}
+#subLocation .location_box.active:before, #subLocation .location_box.active:after {
+    background-color: #fff;
+}
+#subLocation .location_list > li button, #subLocation .location_list > li a {
+    color: #fff;
+}
+#subLocation .location_list > li button:before, #subLocation .location_list > li button:after {
+    background-color: #fff;
+}
+#content #subTitle h4 {
+    color: #fff;
+}
