@@ -7,25 +7,37 @@ body {
 }
 
 // ** subLocation ** //
-
 #subLocation {
-    max-width: 1920px;
+    // max-width: 1720px;
     width: 100%;
     height: 116px;
-    padding: 20px 100px;
+    padding: 20px 0;
+    margin: 0 auto;
     box-sizing: border-box;
 }
 #subLocation .location_box {
-    // max-width: 1700px;
+    max-width: 1720px;
+    left: 50%;
+    transform: translateX(-50%);
     background-color: transparent;
     border: none;
+    transition: 0.5s ease;
 }
 #subLocation .location_box.active {
+    max-width: 100%;
     background-color: #fff;
 }
+#subLocation .location_box.active {}
 #subLocation .location_box:after, #subLocation .location_box:before {
+    display: none;
+    width: calc(1700px - 50%);
     background-color: transparent;
     border: none;
+}
+#subLocation .location_list {
+    max-width: 1720px;
+    width: 100%;
+    margin: 0 auto;
 }
 #subLocation .location_box.active:before, #subLocation .location_box.active:after {
     background-color: #fff;
@@ -108,6 +120,9 @@ body {
     font-family: "SamsungOneKR";
     color: #fff;
 }
+.row--pt0 {
+    padding-top: 0;
+}
 .row--pt120 {
     padding-top: 120px;
 }
@@ -130,6 +145,13 @@ h6 {
     font-size: 28px;
     line-height: 38px;
     color: #fff;
+}
+.small-title {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px;
+    color: #fff;
+    margin-bottom: 20px;
 }
 p {
     font-size: 18px;
@@ -250,4 +272,407 @@ p {
     border-radius: 50%;
     background-color: #fff;
     overflow: hidden;
+}
+
+// labs
+.global {
+    margin-bottom: 30px;
+}
+.global ul {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.global ul li {
+    width: calc(25% - 7.5px);
+}
+.global ul li button {
+    display: inline-block;
+    width: 100%;
+    background-color: #333D50;
+    text-align: center;
+    font-size: 18px;
+    line-height: 50px;
+    color: #fff;
+    border-radius: 3px;
+}
+.global ul li button.active {
+    color: #1428A0;
+    font-weight: 700;
+    background-color: #fff;
+}
+#content .contents_wrap {
+    padding: 0;
+}
+.labs .sait_global .sait_view {
+    padding-top: 0;
+    background-color: transparent;
+}
+.labs .sait_global .sait_view article { 
+    margin: 0;
+}
+.labs .sait_global {
+    margin: 0;
+}
+#content:after {
+    display: none;
+}
+.labs:after {
+    display: none !important;
+}
+.labs .sait_global .sait_view .view_wrap.labs {
+    height: auto;
+}
+.labs .sait_global .sait_view article.labs {
+    position: relative;
+} 
+.labs .sait_global .sait_view article.labs .txt_wrap.people_txt .pepl_wrap {
+    padding-top: 30px;
+    overflow: hidden;
+}
+.labs .sait_global .sait_view article.labs .txt_wrap.people_txt .pepl_wrap .clear {
+    clear: both;
+}
+.labs .sait_global .sait_view article.labs .txt_wrap.people_txt .pepl_wrap .clear + .clear {
+    padding-top: 70px;
+}
+.labs .sait_global .sait_view article.labs .txt_wrap.people_txt .pepl_wrap .pepl_box {
+    width: 33.33%;
+    float: left;
+}
+.labs .sait_global .sait_view article.labs .txt_wrap.people_txt .pepl_wrap .pepl_box img {
+    display: block;
+}
+.labs .sait_global .sait_view article.labs .txt_wrap.people_txt .pepl_wrap .pepl_box .pepl_name {
+    font-family: 'SamsungOneLatin', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    color: #333;
+    text-align: center;
+    line-height: 25px;
+    width: 315px;
+    padding-top: 23px;
+}
+.labs .sait_global .sait_view article.labs .txt_wrap.people_txt .pepl_wrap .pepl_box .skill {
+    padding-top: 0;
+    text-align: center;
+    font-family: 'SamsungOneLatin', sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+    color: #636363;
+    line-height: 20px;
+    width: 315px;
+    padding: 6px 0 26px;
+}
+.labs .sait_global .sait_view article.labs .txt_wrap.people_txt .pepl_wrap .pepl_box .btn_area {
+    width: 315px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+.labs .sait_global .sait_view article.labs .txt_wrap.people_txt .pepl_wrap .pepl_box .btn_area a {
+    width: 135px;
+    height: 30px;
+    line-height: 31px;
+    text-indent: 25px;
+    background-color: #1428a0;
+    display: inline-block;
+    color: #fff;
+    font-size: 14px;
+    margin: 0;
+    position: relative;
+    border: 1px solid #636363;
+    box-sizing: border-box;
+    -webkit-transition: all 0.2s ease;
+    text-align: left;
+}
+.labs .sait_global .sait_view article.labs .txt_wrap.people_txt .pepl_wrap .pepl_box .btn_area a:hover {
+    background-color: #fff;
+    color: #1428a0;
+}
+.labs .sait_global .sait_view article.labs .txt_wrap.people_txt .pepl_wrap .pepl_box .btn_area a i {
+    position: absolute;
+    top: 49%;
+    right: 20px;
+    -webkit-transition: all 0.2s ease;
+}
+.labs .sait_global .sait_view article.labs .txt_wrap.people_txt .pepl_wrap .pepl_box .btn_area a i:before {
+    width: 20px;
+    height: 1px;
+    display: block;
+    content: '';
+    background-color: #fff;
+    position: absolute;
+    right: 0;
+    -webkit-transition: background-color 0.2s ease;
+}
+.labs .sait_global .sait_view article.labs .txt_wrap.people_txt .pepl_wrap .pepl_box .btn_area a i:after {
+    width: 0;
+    height: 0;
+    display: block;
+    content: '';
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid transparent;
+    border-left: 5px solid #fff;
+    -webkit-transition: border-color 0.2s ease;
+}
+.labs .sait_global .sait_view article.labs .txt_wrap.people_txt .pepl_wrap .pepl_box .btn_area a:hover i:before {
+    background-color: #1428a0;
+}
+.labs .sait_global .sait_view article.labs .txt_wrap.people_txt .pepl_wrap .pepl_box .btn_area a:hover i:after {
+    border-left-color: #1428a0;
+}
+
+.labs .sait_global .sait_view article .txt_wrap .link_wrap {
+    margin: 30px 0 40px;
+}
+.labs .sait_global .sait_view article ul li {
+    padding: 0;
+}
+.labs .sait_global .sait_view article .txt_wrap .link_wrap ul::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.labs .sait_global .sait_view article .txt_wrap .link_wrap ul li {
+    float: left;
+    width: 316px;
+}
+.labs .sait_global .sait_view article .txt_wrap .link_wrap ul li + li {
+    margin-left: 16px;
+}
+.labs .sait_global .sait_view article .txt_wrap .link_wrap ul li:nth-child(3n + 1) {
+    margin-left: 0;
+}
+.labs .sait_global .sait_view article .txt_wrap .link_wrap ul li:nth-child(n + 4) {
+    padding: 42px 0 0;
+}
+.labs .sait_global .sait_view article .txt_wrap .link_wrap li a {
+    float: none;
+}
+.labs .sait_global .sait_view article .txt_wrap .link_wrap li:nth-of-type(1) a {
+    background: url(https://www.sait.samsung.co.kr/saithome/images/about/labs_link04.jpg) no-repeat;
+}
+.labs .sait_global .sait_view article .txt_wrap .link_wrap li:nth-of-type(2) a {
+    background: url(https://www.sait.samsung.co.kr/saithome/images/about/labs_link01.jpg) no-repeat;
+}
+.labs .sait_global .sait_view article .txt_wrap .link_wrap li:nth-of-type(3) a {
+    background: url(https://www.sait.samsung.co.kr/saithome/images/about/labs_link02.jpg) no-repeat;
+}
+.labs .sait_global .sait_view article .txt_wrap .link_wrap li:nth-of-type(4) a {
+    background: url(https://www.sait.samsung.co.kr/saithome/images/about/labs_link03.jpg) no-repeat;
+}
+.labs .sait_global .sait_view article .txt_wrap .link_wrap li .title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: #333;
+}
+.labs .sait_global .sait_view article:first-child .img_wrap {
+    background: none;
+    height: auto;
+}
+.row__guide {
+    max-width: 980px;
+    width: 100%;
+    margin: 0 auto;
+}
+.row__wrap {
+    
+}
+.row__inbox {
+    margin-top: 80px;
+    display: flex;
+    gap: 40px;
+}
+.row__inbox:first-child {
+    margin-top: 0;
+}
+.row__item {
+    flex: 1;
+}
+.row__figure {
+    padding-top: 50px;
+    box-sizing: border-box;
+}
+.labs .sait_global .sait_view article .txt_wrap {
+    padding: 80px 0 0;
+}
+.txt_wrap {
+    padding: 80px 0 0;
+}
+.labs .sait_global .sait_view article .txt_wrap h1 {
+    color: #fff;
+}
+.labs .sait_global .sait_view article.labs .txt_wrap.people_txt .pepl_wrap .pepl_box .pepl_name {
+    color: #fff;
+}
+.labs .sait_global .sait_view article.labs .txt_wrap.people_txt .pepl_wrap .pepl_box .skill {
+    color: #6E7E96;
+}
+.labs .sait_global .sait_view article.labs .txt_wrap.people_txt .pepl_wrap .pepl_box .btn_area a {
+    background-color: transparent;
+    
+}
+.public_txt h1 {
+    padding-left: 20px;
+}
+.list_item {
+    width: 100%;
+    float: none;
+    padding: 0 20px;
+}
+.list_box a {
+    width: 100%;
+    float: left;
+    color: #333;
+    -webkit-transition: color 0.2s ease;
+}
+.tit {
+    width: 100%;
+    padding-top: 27px;
+    padding-bottom: 17px;
+    font-size: 18px;
+    font-family: SamsungSharpSans, sans-serif;
+    font-weight: bold;
+    color: #333;
+    width: 100%;
+    line-height: 29px;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    -webkit-box-orient: vertical;
+}
+.infowrap {
+    padding-bottom: 30px;
+}
+.infowrap p.infobox {
+    font-size: 17px;
+    font-weight: 400;
+    color: #4f4f4f;
+    line-height: 30px !important;
+    padding: 0 !important;
+}
+.infowrap p.infobox span:nth-child(1):before {
+    left: 100px;
+}
+.infowrap p.infobox span em {
+    border-bottom: 1px solid #bbb;
+    font-style: normal;
+}
+.list_item::after {
+    content: '';
+    clear: both;
+    display: block;
+}
+.list_item {
+    border-bottom: 1px solid #a8a8a8;
+}
+.list_item:hover,
+.list_item:focus {
+    background-color: #fff;
+}
+.list_item a:hover .tit {
+    color: #1428a0;
+}
+.btn_area a {
+    width: 135px;
+    height: 30px;
+    line-height: 31px;
+    text-indent: 17px;
+    background-color: #1428a0;
+    display: inline-block;
+    color: #fff;
+    font-size: 14px;
+    margin-top: -8px;
+    margin-bottom: 30px;
+    padding: 0;
+    position: relative;
+    border: 1px solid #636363;
+    box-sizing: border-box;
+    -webkit-transition: all 0.2s ease;
+    text-align: left;
+}
+.btn_area a:hover {
+    background-color: #fff;
+    color: #1428a0;
+}
+.btn_area a:hover i,
+.btn_area a:focus i {
+    transform: translate(5px, 0);
+}
+.btn_area a i {
+    position: absolute;
+    top: 49%;
+    right: 20px;
+    -webkit-transition: all 0.2s ease;
+}
+.btn_area a i::before {
+    width: 20px;
+    height: 1px;
+    display: block;
+    content: '';
+    background-color: #fff;
+    position: absolute;
+    right: 0;
+    -webkit-transition: background-color 0.2s ease;
+}
+.btn_area a i:after {
+    width: 0;
+    height: 0;
+    display: block;
+    content: '';
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid transparent;
+    border-left: 5px solid #fff;
+    -webkit-transition: border-color 0.2s ease;
+}
+.btn_area a:hover i:before {
+    background-color: #1428a0;
+}
+.btn_area a:hover i:after {
+    border-left-color: #1428a0;
+}
+.labs .sait_global .sait_view article.labs .txt_wrap.public_btn {
+    
+}
+.labs .sait_global .sait_view article.labs .txt_wrap.public_btn .btn_area {
+    margin-top: 30px;
+}
+.labs .sait_global .sait_view article.labs .txt_wrap.public_btn .btn_area a {
+    width: 160px;
+}
+.link-btn {
+    display: flex;
+    gap: 10px;
+}
+.link-btn a {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    font-size: 18px;
+    font-weight: 700;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.link-btn a:hover {
+    border: 1px solid #fff;
+}
+.btn__title {
+    display: inline-flex;
+    gap: 20px;
+    align-items: center;
 }

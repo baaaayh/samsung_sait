@@ -28,41 +28,6 @@
 		<div id="wrap" role="main">
 			<!-- header-->
 			<%- include("../include/header.html") %>
-			<!-- //include header -->
-			<div id="headerSearch">
-				<!-- <form action="https://www.sait.samsung.co.kr/saithome/etc/search.do" method="get" name="allSearchFrm"> -->
-				<fieldset>
-					<legend>headerSearch form</legend>
-					<div id="globalInput">
-						<label for="globalSearch" class="hidden-txt">search string</label>
-						<input type="text" id="searchKeyword2" name="searchKeyword" placeholder="Input text" />
-						<div class="submit_wrap" onclick="AllSearch();" onkeypress="AllSearch()" tabindex="0" title="search button">
-							<!-- <input type="submit" value="search"> -->
-							<!--<a href="javascript:void(0);" type="submit" value="search"></a>-->
-						</div>
-					</div>
-				</fieldset>
-				<!-- </form> -->
-			</div>
-
-			<script>
-				$('#searchKeyword2').keydown(function (key) {
-					if (key.keyCode == 13) {
-						//키가 13이면 실행 (엔터는 13)
-						AllSearch();
-					}
-				});
-				function AllSearch() {
-					if ($('#searchKeyword2').val() == '') {
-						alert('Please enter your search word');
-						$('#searchKeyword2').focus();
-						return false;
-					}
-					window.location.href = 'https://www.sait.samsung.co.kr/saithome/etc/search.do?searchKeyword=' + encodeURIComponent($('#searchKeyword2').val());
-					/* window.allSearchFrm.submit(); */
-				}
-			</script>
-
 			<!-- //header-->
 
 			<!-- container-->
@@ -90,8 +55,8 @@
 									<li><a href="https://www.sait.samsung.co.kr/saithome/about/collabo_overview.do">Global Collaboration</a></li>
 									<li><a href="https://www.sait.samsung.co.kr/saithome/about/social.do">Social Engagement</a></li>
 									<!--
-							<li><a href="https://www.sait.samsung.co.kr/saithome/about/press.do" >Press</a></li>
-							-->
+                                <li><a href="https://www.sait.samsung.co.kr/saithome/about/press.do" >Press</a></li>
+                                -->
 									<li><a href="https://www.sait.samsung.co.kr/saithome/about/contact.do">Contact us</a></li>
 								</ul>
 							</li>
