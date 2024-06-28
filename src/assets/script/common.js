@@ -13,13 +13,9 @@ $(function () {
     };
 
     const header = {
-        // toggleState() {
-        //     $('.header').toggleClass('active');
-        //     $('.dep2').stop().slideToggle();
-        // },
         openHeader() {
             $('.header').addClass('active');
-            $('.dep2').stop().slideDown(340);
+            $('.dep2').slideDown(340);
         },
         closeHeader() {
             $('.header').removeClass('active');

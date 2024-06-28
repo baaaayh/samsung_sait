@@ -8,7 +8,7 @@ body {
 
 // ** subLocation ** //
 #subLocation {
-    // max-width: 1720px;
+    max-width: 100%;
     width: 100%;
     height: 116px;
     padding: 20px 0;
@@ -17,6 +17,7 @@ body {
 }
 #subLocation .location_box {
     max-width: 1720px;
+    width: 100%;
     left: 50%;
     transform: translateX(-50%);
     background-color: transparent;
@@ -129,7 +130,34 @@ body {
 .row:first-child {
     padding-top: 0;
 }
+.row__guide {
+    max-width: 980px;
+    width: 100%;
+    margin: 0 auto;
+}
+.row__wrap {
+    
+}
+.row__inbox {
+    margin-top: 80px;
+    display: flex;
+    gap: 40px;
+}
+.row__inbox:first-child {
+    margin-top: 0;
+}
+.row__item {
+    flex: 1;
+}
+.row__figure {
+    padding-top: 50px;
+    box-sizing: border-box;
+}
+#content #subTitle + .row {
+    padding-top: 0;
+}
 h5.title {
+    float: none;
     margin-bottom: 20px;
     font-size: 34px;
     font-weight: 700;
@@ -145,6 +173,9 @@ h6 {
     font-size: 28px;
     line-height: 38px;
     color: #fff;
+}
+h6.mb30 {
+    margin-bottom: 30px;
 }
 .small-title {
     font-size: 20px;
@@ -229,6 +260,41 @@ p {
     width: 100%;
 }
 
+// subTab
+.renew2024 #subTab {}
+.renew2024 #subTab ul {
+    display: flex;
+    padding: 0;
+    gap: 10px;
+}
+.renew2024 #subTab ul:before, .renew2024 #subTab ul:after {
+    display: none;
+}
+.renew2024 #subTab ul li a.active:after {
+    display: none;
+}
+.renew2024 #subTab ul li {
+    float: none;
+    flex: 1;
+    margin: 0;
+}
+.renew2024 #subTab ul li a {
+    display: block;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    font-weight: 400;
+    border-radius: 0;
+    background-color: #333D50;
+    color: #fff;
+}
+.renew2024 #subTab ul li a.active {
+    background-color: #fff;
+    color: #1428A0;
+    font-size: 18px;
+    font-weight: 700;
+}
+
 // ** about ** //
 // who
 .who .vice_box {
@@ -306,16 +372,18 @@ p {
 }
 .labs .sait_global .sait_view {
     padding-top: 0;
+    padding-bottom: 0;
     background-color: transparent;
 }
 .labs .sait_global .sait_view article { 
+    width: 100%;
     margin: 0;
 }
 .labs .sait_global {
     margin: 0;
 }
 #content:after {
-    display: none;
+    display: none !important;
 }
 .labs:after {
     display: none !important;
@@ -476,35 +544,26 @@ p {
     line-height: 22px;
     color: #333;
 }
-.labs .sait_global .sait_view article:first-child .img_wrap {
+.labs .sait_global .sait_view article .img_wrap {
     background: none;
     height: auto;
 }
-.row__guide {
-    max-width: 980px;
-    width: 100%;
-    margin: 0 auto;
+.labs .sait_global .sait_view article:nth-of-type(1) .img_wrap,
+.labs .sait_global .sait_view article:nth-of-type(2) .img_wrap,
+.labs .sait_global .sait_view article:nth-of-type(3) .img_wrap,
+.labs .sait_global .sait_view article:nth-of-type(4) .img_wrap,
+.labs .sait_global .sait_view article:nth-of-type(5) .img_wrap,
+.labs .sait_global .sait_view article:nth-of-type(6) .img_wrap,
+.labs .sait_global .sait_view article:nth-of-type(7) .img_wrap,
+.labs .sait_global .sait_view article:nth-of-type(8) .img_wrap {
+    background-image: none;
 }
-.row__wrap {
-    
-}
-.row__inbox {
-    margin-top: 80px;
-    display: flex;
-    gap: 40px;
-}
-.row__inbox:first-child {
-    margin-top: 0;
-}
-.row__item {
-    flex: 1;
-}
-.row__figure {
-    padding-top: 50px;
-    box-sizing: border-box;
-}
+
 .labs .sait_global .sait_view article .txt_wrap {
     padding: 80px 0 0;
+}
+.labs .sait_global .sait_view article .txt_wrap--pt40 {
+    padding: 40px 0 0;
 }
 .txt_wrap {
     padding: 80px 0 0;
@@ -675,4 +734,150 @@ p {
     display: inline-flex;
     gap: 20px;
     align-items: center;
+}
+.btn_area a {
+    background-color: transparent;
+}
+.infowrap p.infobox span {
+    color: #fff;
+}
+.infowrap p.infobox span:first-child {
+    color: #6E7E96;
+    font-weight: 700;
+}
+.tit {
+    color: #fff;
+    font-weight: 500;
+}
+.list_item {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.list_item:hover .tit, .list_item:focus .tit{
+    color: #1428a0;
+}
+.list_item:hover .infowrap p.infobox span, 
+.list_item:focus .infowrap p.infobox span {
+    color: #1428a0;
+}
+.list_item:hover .infowrap p.infobox span:first-child, 
+.list_item:focus .infowrap p.infobox span:first-child {
+    color: #6E7E96;
+}
+.list_item:hover .btn_area a, .list_item:focus .btn_area a {
+    background-color: #1428a0;
+    color: #fff;
+}
+.list_item:hover .btn_area a:hover i:before,
+.list_item:focus .btn_area a:hover i:before
+{
+    background-color: #fff;
+}
+.list_item:hover .btn_area a:hover i:after,
+.list_item:focus .btn_area a:hover i:after
+{
+    border-left: 5px solid #fff;
+}
+.labs .sait_global .sait_view article ul li {
+    float: none;
+    width: 100%;
+}
+.labs .sait_global .sait_view article ul li.one {
+    float: none;
+    width: 100%;
+}
+.labs .sait_global .sait_view article .one {
+    
+}
+.labs .sait_global .sait_view article .one > li {
+    padding-left: 170px;
+    margin-top: 30px;
+    padding-bottom: 30px;
+    position: relative;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    box-sizing: border-box;
+}
+.labs .sait_global .sait_view article .one > li:first-child {
+    margin-top: 0;
+}
+.labs .sait_global .sait_view article .one address ul::after {
+    display: block;
+    content:'';
+    clear: both;
+}
+.labs .sait_global .sait_view article .one address ul li {
+    margin-top: 5px;
+}
+.labs .sait_global .sait_view article .one address ul li:first-child {
+    margin-top: 0;
+}
+.labs .sait_global .sait_view article ul li address {
+    
+}
+.labs .sait_global .sait_view article .one address ul li span {
+    display: inline-block;
+    float: left;
+    min-width: 100px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 26px;
+    color: #6E7E96;
+}
+.labs .sait_global .sait_view article ul strong {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    padding: 0 20px;
+    border-radius: 20px;
+    font-size: 18px;
+    line-height: 40px;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+.txt_wrap--bb {
+    
+}
+.labs .sait_global .sait_view article .txt_wrap .link_wrap {
+    margin: 0;
+}
+.labs .sait_global .sait_view article .txt_wrap .link_wrap li .title {
+    color: #fff;
+}
+.labs .sait_global .sait_view article ul.one li address ul li p {
+    overflow: hidden;
+    padding: 0;
+}
+.labs .sait_global .sait_view article .txt_wrap .grey_box {
+    padding: 30px 40px;
+    background-color: #28303E;
+}
+.labs .sait_global .sait_view article .txt_wrap .grey_box ul {
+    font-size: 0;
+}
+.labs .sait_global .sait_view article .txt_wrap .grey_box ul li {
+    display: inline-block;
+    width: 50%;
+    margin-top: 5px;
+    font-size: 16px;
+    line-height: 26px;
+    color: #fff;
+}
+.labs .sait_global .sait_view article .txt_wrap .grey_box ul li:nth-child(-n + 2){
+    margin-top: 0;
+}
+
+// social
+.social .science_wrap {
+    background-color: transparent;
+}
+
+p strong {
+    display: block;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+// contact
+.contact .contact_wrap {
+    padding: 0;
 }
