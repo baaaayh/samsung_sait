@@ -1,0 +1,2016 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- 공통적용헤더정보 -->
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <!-- //공통적용헤더정보 -->
+        <link rel="stylesheet" href="https://www.sait.samsung.co.kr/saithome/stylesheets/css/common.css" />
+        <script type="text/javascript" src="https://www.sait.samsung.co.kr/saithome/javascripts/jquery-1.8.2.min.js"></script>
+        <!--[if lt IE 9]><script src="https://www.sait.samsung.co.kr/saithome/javascripts/lib/html5shiv.min.js"></script><![endif]-->
+        <!--[if lt IE 10]><script src="https://www.sait.samsung.co.kr/saithome/javascripts/lib/placeholders.min.js"></script><![endif]-->
+        <meta name="Keywords" content="SAIT, Samsung Advanced Institute of Technology, 삼성종합기술원, 삼성전자 종합기술원, Samsung research, Samsung R&amp;D, Samsung future technology, R&amp;D, Autonomoucs Driving, Graphene, New materials, QD, Quantum Dot" />
+
+        <title>Samsung AI Researcher of the Year | Samsung Advanced Institute of Technology</title>
+        <meta name="Description" content="Samsung AI Researcher of the Year | Samsung Advanced Institute of Technology" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Samsung AI Researcher of the Year | Samsung Advanced Institute of Technology" />
+        <meta property="og:description" content="Samsung AI Researcher of the Year | Samsung Advanced Institute of Technology" />
+        <meta property="og:image" content="" />
+        <meta property="og:url" content="" />
+        <meta property="og:site_name" content="Samsung Advanced Institute of Technology" />
+        <meta name="Author" content="Samsung Advanced Institute of Technology" />
+        <meta name="robots" content="ALL" />
+
+        <style type="text/css">
+            .aiApplyBtn {
+                width: 380px;
+                height: 80px;
+                margin: 45px 0 0;
+                display: inline-block;
+                border: 2px solid #1428a0;
+                background-color: #1428a0;
+                color: #fff;
+                font-weight: 700;
+                position: relative;
+                font-size: 20px;
+                -webkit-transition: all 0.2s ease;
+                -moz-transition: all 0.2s ease;
+                -o-transition: all 0.2s ease;
+                -ms-transition: all 0.2s ease;
+                -ms-transition: all 0.2s ease;
+            }
+            .rdoAI {
+                width: 20px;
+                height: 46px;
+                vertical-align: middle;
+                margin: -1px 10px 0 10px;
+            }
+            .rdoAI font {
+                font-size: 20px;
+                font-weight: 700;
+            }
+            .research_box {
+                margin: 40px 0 0 20px;
+                border: 1px solid #d6d6d6;
+                padding: 50px 40px;
+            }
+            .research_box strong {
+                font-size: 20px;
+                color: #1428a0;
+            }
+            .research_box div {
+                margin: 45px 0 0;
+                line-height: 25px;
+                position: relative;
+            }
+            .research_box div label {
+                cursor: none;
+            }
+
+            .list_box {
+                margin: 0 0 0 20px;
+                padding: 0 40px 0 30px;
+            }
+            .list_box div {
+                margin: 45px 0 0;
+                line-height: 25px;
+                position: relative;
+            }
+            .list_box div label {
+                cursor: none;
+            }
+
+            .chkAI {
+                width: 20px;
+                height: 46px;
+                vertical-align: middle;
+                margin: -1px 10px 0 10px;
+            }
+            .chkAI font {
+                font-size: 20px;
+                font-weight: 400;
+            }
+
+            .btnSave {
+                width: 100%;
+                height: 100%;
+                display: block;
+                text-indent: -50px;
+                color: #fff;
+                font-size: 20px;
+                font-weight: 700;
+                cursor: pointer;
+                -webkit-transition: color 0.2s ease;
+                -moz-transition: color 0.2s ease;
+                -o-transition: color 0.2s ease;
+                -ms-transition: color 0.2s ease;
+                padding: 0;
+                font-family: SamsungOneLatin, Noto Sans KR, sans-serif;
+            }
+            .btnSave:focus,
+            .btnSave:hover {
+                color: #1428a0;
+            }
+            .btnSave.check_not {
+                color: #fff !important;
+                cursor: auto !important;
+                background-color: #555 !important;
+                border-color: #555 !important;
+            }
+            #modalPopup .apply_popup table tr td div input[type='text'] {
+                width: 522px;
+            }
+            .filebox > div > div {
+                margin-bottom: 10px;
+            }
+
+            sup.sm {
+                font-size: 10px;
+            }
+            .contents_box .desc button i {
+                position: absolute;
+                top: 49%;
+                right: 162px;
+                -webkit-transition: all 0.2s ease;
+                -moz-transition: all 0.2s ease;
+                -o-transition: all 0.2s ease;
+                -ms-transition: all 0.2s ease;
+            }
+            .contents_box .desc button i:before {
+                width: 25px;
+                height: 1px;
+                display: block;
+                content: '';
+                background-color: #fff;
+                position: absolute;
+                -webkit-transition: background-color 0.2s ease;
+                -moz-transition: background-color 0.2s ease;
+                -o-transition: background-color 0.2s ease;
+                -ms-transition: background-color 0.2s ease;
+            }
+            .contents_box .desc button i:after {
+                width: 0;
+                height: 0;
+                display: block;
+                content: '';
+                position: absolute;
+                top: -2px;
+                right: -25px;
+                border-bottom: 3px solid transparent;
+                border-top: 3px solid transparent;
+                border-left: 5px solid #fff;
+                -webkit-transition: border-color 0.2s ease;
+                -moz-transition: border-color 0.2s ease;
+                -o-transition: border-color 0.2s ease;
+                -ms-transition: border-color 0.2s ease;
+            }
+            section.researcher #subTitle p.sub_t {
+                font-size: 25px !important;
+                line-height: 40px;
+                color: #333;
+                font-weight: 700;
+            }
+        </style>
+        <script type="text/javascript" src="https://www.sait.samsung.co.kr/saithome/gro/lib/js/gro.js"></script>
+        <script type="text/javascript" src="https://www.sait.samsung.co.kr/saithome/gro/lib/js/progress/progress.js"></script>
+        <script type="text/javascript">
+            jQuery(document).ready(function () {
+                if ('' == 'initFunc') {
+                    alert('');
+                    //fnClose();
+                } else if ('' == 'attachError') {
+                    alert('');
+                }
+
+                var frm = document.frmGroForm;
+                frm.btnSave.disabled = true;
+                // 맨처음 포커스
+                frm.priPiName.focus();
+            });
+
+            function fileChangeText(c_ob) {
+                if (window.FileReader) {
+                    // modern browser
+                    var filename = $(c_ob)[0].files[0].name;
+                } else {
+                    // old IE
+                    var filename = $(c_ob).val().split('/').pop().split('\\').pop(); // 파일명만 추출
+                }
+                $(c_ob).siblings('.upload-name').val(filename);
+            }
+
+            $(function () {
+                //파일첨부
+                var fileTarget = $('.filebox .upload-hidden');
+                fileTarget.on('change', function () {
+                    if (window.FileReader) {
+                        // modern browser
+                        var filename = $(this)[0].files[0].name;
+                    } else {
+                        // old IE
+                        var filename = $(this).val().split('/').pop().split('\\').pop(); // 파일명만 추출
+                    }
+                    $(this).siblings('.upload-name').val(filename);
+                });
+
+                var $popup = $('#modalPopup');
+                var $applyBtn = $('.aiApplyBtn');
+                var $close = $('.popup_close');
+                $applyBtn.click(function () {
+                    $('html').addClass('no_scroll');
+                    TweenMax.to($popup, 0.5, { opacity: 1, display: 'block', onComplete: openPop });
+                    TweenMax.fromTo($('.popup_container'), 0.5, { y: 50 }, { y: 0, ease: es_step });
+                    function openPop() {
+                        $popup.focus();
+                    }
+                });
+
+                $('input[name=choose]').change(function () {
+                    var curRdoVal = $(this).val();
+                    var frm = document.frmGroForm;
+                    if (curRdoVal == 'no') {
+                        alert('Applicants must be under 35 years of age at the submission date.');
+                        var $popup = $('#modalPopup');
+                        TweenMax.to($popup, 0.3, { opacity: 0, display: 'none', ease: es_step, onComplete: noscroll });
+                        location.reload();
+                    } else {
+                        frm.priAgeYn.value = 'Y';
+                    }
+                });
+
+                function noscroll() {
+                    $('html').removeClass('no_scroll');
+                }
+
+                $close
+                    .on('click', function () {
+                        TweenMax.to($popup, 0.3, { opacity: 0, display: 'none', ease: es_step, onComplete: noscroll });
+                        $applyBtn.focus();
+                    })
+                    .on('keydown', function (e) {
+                        var tab = Tab(function () {
+                            $popup.focus();
+                        }, e);
+                    });
+
+                $popup.on('keydown', function (e) {
+                    if ($(event.target).attr('tabindex')) {
+                        var tab = Shifttab(function () {
+                            $close.focus();
+                        }, e);
+                        if (tab) return false;
+                    }
+                });
+
+                $('#frmGroForm')
+                    .find('input[type=text]')
+                    .each(function () {
+                        var objID = $(this).attr('id');
+                        if (objID == 'universityKind') {
+                            //return;
+                        }
+                        $(this).keydown(function () {
+                            if (event.keyCode === 13) {
+                                event.preventDefault();
+                            }
+                        });
+                    });
+            });
+
+            //==================================================
+            //팝업창 닫기
+            //==================================================
+            function fnClose() {
+                window.close();
+            }
+            function fnSearchEvt() {
+                if (window.event.keyCode == 13) {
+                    fnSearch();
+                }
+            }
+            function fnSearchEvt2() {
+                document.frmGroForm.uniCfmFlag.value = 'N';
+            }
+
+            //==================================================
+            // University 조회
+            //==================================================
+            function fnSearch() {
+                var url = '/saithome/event.do?method=aiUniversityList&schKeyword=' + document.frmGroForm.universityKind.value;
+                acntWin = window.open(url, 'fncAiUniversitySearch', 'toolbar=no,menubar=no,resizable=no,scrollbars=yes,top=270,left=700,width=650,height=550');
+                acntWin.focus();
+                return;
+            }
+            //==================================================
+            // University 변경시
+            //==================================================
+            function changeUniversity(trgObj) {
+                var seqNo = trgObj;
+
+                //------------------------------------------------------------
+                // DIV 감추기
+                //------------------------------------------------------------
+                document.getElementById('otherUniDiv').style.display = 'none';
+                document.getElementById('otherUniDiv').disabled = true;
+                //document.getElementById('otherUniDiv2').style.display = 'none';
+                //document.getElementById('otherUniDiv2').disabled = true;
+
+                if (seqNo == 'Other') {
+                    // Other University
+                    //------------------------------------------------------------
+                    // Other University Name
+                    //------------------------------------------------------------
+                    document.getElementById('otherUniDiv').style.display = 'block';
+                    document.getElementById('otherUniDiv').disabled = false;
+                }
+            }
+
+            //==================================================
+            // 동의 여부에 따라 Next 버튼 선택 가능
+            //==================================================
+            function changeAgree() {
+                var frm = document.frmGroForm;
+
+                if (frm.chkAgree[0].checked == true && frm.chkAgree[1].checked == true && frm.chkAgree[2].checked == true) {
+                    frm.btnSave.disabled = false;
+                    $('.btnSave').removeClass('check_not');
+                    frm.secretYn.value = 'Y';
+                    frm.personalYn.value = 'Y';
+                } else {
+                    $('.btnSave').addClass('check_not');
+                    frm.btnSave.disabled = true;
+                }
+            }
+
+            //==================================================
+            //GRO 접수 저장
+            //==================================================
+            /* 올릴때 삭제 필요	 */
+            function fnSave() {
+                var frm = document.frmGroForm;
+
+                if (!fnCheckValid()) {
+                    return;
+                }
+                if (!fnCheckValid_AttachFile()) {
+                    return;
+                }
+                if (!confirm('Do you want to save?')) {
+                    return;
+                }
+
+                // 버튼 비활성화
+                frm.btnSave.disabled = true;
+
+                frm.action = '/saithome/event/event.do?method=save';
+                frm.submit();
+            }
+
+            //==================================================
+            // 입력값  Validation 체크
+            //==================================================
+            function fnCheckValid() {
+                var ret = true;
+                var frm = document.frmGroForm;
+                var trgObj = null;
+
+                //----------------------------------------
+                // AGE
+                //----------------------------------------
+                if ($('input[name=choose]:checked').length == 0) {
+                    alert('Please Check Age');
+                    frm.choose[0].focus();
+                    return false;
+                }
+
+                //----------------------------------------
+                // AGE 진행 안되도록 막기
+                //----------------------------------------
+                if (frm.priAgeYn.value == 'N') {
+                    alert('Applicants must be under 35 years of age at the submission date.');
+                    return false;
+                }
+
+                //----------------------------------------
+                // Primary PI Name
+                //----------------------------------------
+                trgObj = frm.priPiName;
+                if ($.trim(trgObj.value) == '') {
+                    //alert('Primary PI Name을 입력해 주세요.');
+                    alert('Please enter a Name');
+                    trgObj.focus();
+                    return false;
+                } else if (getByte($.trim(trgObj.value)) > 500) {
+                    alert('Name can not exceed more than 500 characters');
+                    trgObj.focus();
+                    return false;
+                }
+                //----------------------------------------
+                // Primary PI Email
+                //----------------------------------------
+                trgObj = frm.priPiEmail;
+                if ($.trim(trgObj.value) != '') {
+                    var email = $.trim(trgObj.value);
+                    var result = chkEmailValid(email);
+                    if (!result) {
+                        //alert("Primary PI Email을 확인 하세요");
+                        alert('Email format is not correct. E.g) abc@bcd.com');
+                        trgObj.focus();
+                        return false;
+                    }
+                } else if (getByte($.trim(trgObj.value)) > 100) {
+                    alert('Email can not exceed more than 100 characters');
+                    trgObj.focus();
+                    return false;
+                } else {
+                    //alert("Primary PI Email을 입력해 주세요");
+                    alert('Please check Email');
+                    trgObj.focus();
+                    return false;
+                }
+                //----------------------------------------
+                // Nationality
+                //----------------------------------------
+                trgObj = frm.priPiNaTI;
+                if ($.trim(trgObj.value) == '') {
+                    //alert('Primary PI Name을 입력해 주세요.');
+                    alert('Please enter a Nationality');
+                    trgObj.focus();
+                    return false;
+                }
+                //----------------------------------------
+                // Birthday
+                //----------------------------------------
+                trgObj = frm.priPiBirthday;
+                if ($.trim(trgObj.value) == '') {
+                    //alert('Primary PI Name을 입력해 주세요.');
+                    alert('Please enter a Birth (YYYYMMDD)');
+                    trgObj.focus();
+                    return false;
+                } else {
+                    if ($.trim(trgObj.value).length < 8) {
+                        alert('Please enter a Birth (YYYYMMDD)');
+                        trgObj.focus();
+                        return false;
+                    }
+                }
+
+                //----------------------------------------
+                // University
+                //----------------------------------------
+                trgObj = frm.universityKindSeqNo;
+
+                if ($.trim(trgObj.value) == '') {
+                    //alert('University 를 선택해 주세요.');
+                    alert('Please choose a affiliation in the list');
+                    frm.universityKind.focus();
+                    return false;
+                } else {
+                    var seqNo = frm.universityKind.value;
+
+                    if (seqNo != 'Other') {
+                        // Other University
+                        frm.otherUniversityName.value = '';
+                    } else {
+                        trgObj = frm.otherUniversityName;
+                        if ($.trim(trgObj.value) == '') {
+                            //alert('Other University 를 입력해 주세요.');
+                            alert('Please enter the name of the other affiliation ');
+                            trgObj.focus();
+                            return false;
+                        } else if (getByte($.trim(trgObj.value)) > 100) {
+                            alert('Other affiliation can not exceed more than 100 characters');
+                            trgObj.focus();
+                            return false;
+                        }
+                    }
+                }
+                //----------------------------------------
+                // Country/Region
+                //----------------------------------------
+                //trgObj = frm.countryKindSeqNo;
+                //if($.trim(trgObj.value) == ''){
+                //alert('Country/Region 를 선택해 주세요.');
+                //	alert("Please select a Country/Region");
+                //	trgObj.focus();
+                //	return false;
+                //}
+                //----------------------------------------
+                // Job title/position
+                //----------------------------------------
+                trgObj = frm.JobKind;
+                if ($.trim(trgObj.value) == '') {
+                    alert('Please enter a Job title/position');
+                    trgObj.focus();
+                    return false;
+                }
+
+                trgObj = frm.researchareas;
+                if ($.trim(trgObj.value) == '') {
+                    alert('Please enter Primary and secondary research areas');
+                    trgObj.focus();
+                    return false;
+                }
+
+                trgObj = frm.title01;
+                if ($.trim(trgObj.value) == '') {
+                    alert('Please enter Title of thesis/book');
+                    trgObj.focus();
+                    return false;
+                }
+
+                trgObj = frm.place01;
+                if ($.trim(trgObj.value) == '') {
+                    alert('Please enter Place of publication: Publisher');
+                    trgObj.focus();
+                    return false;
+                }
+
+                trgObj = frm.year01;
+                if ($.trim(trgObj.value) == '') {
+                    alert('Please enter Year of publication');
+                    trgObj.focus();
+                    return false;
+                }
+
+                var pubType = $('#pubType01 option:selected').val();
+                if (pubType == '') {
+                    alert('Please choose Type of publisher');
+                    $('#pubType01').focus();
+                    return false;
+                }
+
+                trgObj = frm.doi01;
+                if ($.trim(trgObj.value) == '') {
+                    alert('Please enter DOI(or link of thesis)');
+                    trgObj.focus();
+                    return false;
+                }
+
+                return ret;
+            }
+
+            //==================================================
+            //Attach Files  Validation 체크
+            //==================================================
+            function fnCheckValid_AttachFile() {
+                var ret = true;
+                var frm = document.frmGroForm;
+                var trgObj = null;
+                var fileArray = new Array();
+                var fileCnt = 0;
+
+                //----------------------------------------
+                // Attach File
+                //----------------------------------------
+                var format = '\.(doc|docx|pdf)$';
+                // CV Files
+                trgObj = document.getElementsByName('cv_file');
+                for (var i = 0; i < trgObj.length; i++) {
+                    if (trgObj[i].value == '') {
+                        //alert('파일을 첨부해 주세요.');
+                        alert('Please attach the CV');
+                        trgObj[i].focus();
+                        return false;
+                    } else {
+                        if (new RegExp(format, 'i').test(trgObj[i].value)) {
+                        } else {
+                            //alert("doc, zip, docx 파일만 첨부하실 수 있습니다.");
+                            alert('Only doc, docx, pdf files can be attached' + ' (CV)');
+                            trgObj[i].focus();
+                            return false;
+                        }
+                    }
+                    //----------------------------------------
+                    // 파일 중복 체크
+                    //----------------------------------------
+                    var tempFileName = trgObj[i].value;
+                    var fileName = tempFileName.substring(tempFileName.lastIndexOf('\\') + 1);
+                    if (fileCnt > 0) {
+                        for (var k = 0; k < fileCnt; k++) {
+                            if (fileArray[k] == fileName) {
+                                alert('Duplicate file exists');
+                                return false;
+                            }
+                        }
+                    }
+                    if (fileName != '') fileArray[fileCnt++] = fileName;
+                    //----------------------------------------
+                }
+
+                var totalSize = 0;
+                for (var i = 0; i < trgObj.length; i++) {
+                    if (trgObj[i].files[0].size) {
+                        totalSize = totalSize + trgObj[i].files[0].size;
+                    }
+                }
+                totalSize = totalSize / (1024 * 1024);
+                /*
+		 if (totalSize > 31 ){
+			 alert("AttachesFile Over Size(Limit 30M)");
+			 return false;
+		 }
+         */
+                if (totalSize > 11) {
+                    alert('AttachesFile Over Size(Limit 10M)');
+                    return false;
+                }
+                // console.log(totalSize);
+
+                // Research plan Files
+                /*
+		format= "\.(doc|docx)$";
+		trgObj = document.getElementsByName("research_file");
+		for (var i=0; i<trgObj.length; i++){
+			if (trgObj[i].value==""){
+				//alert('파일을 첨부해 주세요.');
+				alert("Please attach the Research plan");
+				trgObj[i].focus();
+				return false;
+			} else {
+				if((new RegExp(format, "i")).test(trgObj[i].value)) {
+				} else {
+					//alert("doc, zip, docx 파일만 첨부하실 수 있습니다.");
+					alert("Only doc, docx files can be attached" + " (Research plan)");
+					trgObj[i].focus();
+					return false;
+				}
+			}
+			//----------------------------------------
+			// 파일 중복 체크
+			//----------------------------------------
+			var tempFileName = trgObj[i].value; 
+			var fileName = tempFileName.substring(tempFileName.lastIndexOf('\\')+1);
+			if(fileCnt > 0) {
+				for(var k=0; k<fileCnt; k++)
+				{
+					if(fileArray[k] == fileName) {
+						alert("Duplicate file exists");
+						return false;
+					}
+				}
+			}
+			if(fileName != "")	fileArray[fileCnt++] = fileName;
+			//----------------------------------------
+		}
+		var totalSize =0;
+		for (var i=0; i<trgObj.length; i++){
+			if(trgObj[i].files[0].size){
+				totalSize = totalSize + trgObj[i].files[0].size;
+			}
+		}
+		totalSize = totalSize / (1024 * 1024);
+		*/
+                /*
+		if (totalSize > 31 ){
+			alert("AttachesFile Over Size(Limit 30M)");
+			return false;
+		}
+        */
+                /*
+		if (totalSize > 11 ){
+            alert("AttachesFile Over Size(Limit 10M)");
+            return false;
+        }
+        */
+
+                // Application Form Files
+                /*
+		format= "\.(doc|docx)$";
+		trgObj = document.getElementsByName("application_file");
+		for (var i=0; i<trgObj.length; i++){
+			if (trgObj[i].value==""){
+				//alert('파일을 첨부해 주세요.');
+				alert("Please attach the Application form");
+				trgObj[i].focus();
+				return false;
+			} else {
+				if((new RegExp(format, "i")).test(trgObj[i].value)) {
+				} else {
+					//alert("doc, zip, docx 파일만 첨부하실 수 있습니다.");
+					alert("Only doc, docx files can be attached" + " (Application form)");
+					trgObj[i].focus();
+					return false;
+				}
+			}
+			//----------------------------------------
+			// 파일 중복 체크
+			//----------------------------------------
+			var tempFileName = trgObj[i].value; 
+			var fileName = tempFileName.substring(tempFileName.lastIndexOf('\\')+1);
+			if(fileCnt > 0) {
+				for(var k=0; k<fileCnt; k++)
+				{
+					if(fileArray[k] == fileName) {
+						alert("Duplicate file exists");
+						return false;
+					}
+				}
+			}
+			if(fileName != "")	fileArray[fileCnt++] = fileName;
+			//----------------------------------------
+		}
+		*/
+                /*
+		var totalSize =0;
+		for (var i=0; i<trgObj.length; i++){
+			if(trgObj[i].files[0].size){
+				totalSize = totalSize + trgObj[i].files[0].size;
+			}
+		}
+		totalSize = totalSize / (1024 * 1024);
+        */
+                /*
+		if (totalSize > 31 ){
+			alert("AttachesFile Over Size(Limit 30M)");
+			return false;
+		}
+        */
+                /*
+		if (totalSize > 11 ){
+            alert("AttachesFile Over Size(Limit 10M)");
+            return false;
+        }
+        */
+
+                return ret;
+            }
+
+            // 숫자가 아닌경우 자동 삭제
+            function removeChar(e) {
+                var e = e || window.event,
+                    keyCode = e.which ? e.which : e.keyCode;
+
+                if (keyCode == 8 || keyCode == 46 || keyCode == 37 || keyCode == 39) {
+                    return;
+                } else {
+                    e.target.value = e.target.value.replace(/[^0-9]/g, '');
+                }
+            }
+        </script>
+
+        <%- include("../include/sub_head.html") %>
+    </head>
+    <body>
+        <script>
+            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                location.replace('/saithome/mobile/event/aiResearcher.do');
+            } else {
+            }
+
+            function ssifRefresh() {
+                location.reload();
+            }
+        </script>
+
+        <div id="wrap" role="main">
+            <!-- header-->
+            <%- include("../include/sub_header.html") %>
+            <!-- //header-->
+
+            <!-- container-->
+            <section id="container" class="forum f2020research">
+                <!-- subLocation-->
+                <div id="subLocation">
+                    <div class="location_box">
+                        <ul class="location_list">
+                            <li class="home"><a href="https://www.sait.samsung.co.kr/saithome/main/main.do">main page</a></li>
+                            <li class="depth1">
+                                <button type="button">News & Events</button>
+                                <ul class="under_depth">
+                                    <li><a href="https://www.sait.samsung.co.kr/saithome/about/who.do">About SAIT</a></li>
+                                    <li><a href="https://www.sait.samsung.co.kr/saithome/research/what.do">Research Areas</a></li>
+                                    <li><a href="https://www.sait.samsung.co.kr/saithome/about/press.do">News & Events</a></li>
+                                    <li><a href="https://www.sait.samsung.co.kr/saithome/join/application.do">Join Us</a></li>
+                                </ul>
+                            </li>
+                            <li class="depth2">
+                                <button type="button">AI Researcher of the Year</button>
+                                <ul class="under_depth">
+                                    <li><a href="https://www.sait.samsung.co.kr/saithome/about/press.do">Press</a></li>
+                                    <li><a href="https://www.sait.samsung.co.kr/saithome/event/saif2023.do">AI Forum</a></li>
+                                    <li><a href="https://www.sait.samsung.co.kr/saithome/event/aiResearcher.do" class="active">AI Researcher of the Year</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- //subLocation-->
+
+                <!-- subContent-->
+                <section id="content" class="researcher">
+                    <div id="subTitle" class="subTitle forum js-scr-sec">
+                        <h4 class="js-scr-box gray js-scr-box">Samsung AI Researcher of 2024</h4>
+                    </div>
+
+                    <style>
+                        .contents_box + .contents_box.btn_area {
+                            padding-top: 0;
+                            border-top: none;
+                        }
+                        .researcher .contents_wrap .contents_box.btn_area .desc button {
+                            margin: 0;
+                        }
+                        .contents_box h5 {
+                            font-size: 30px;
+                            color: #333;
+                            font-weight: 700;
+                            line-height: 40px;
+                            display: inline-block;
+                        }
+                        .contents_box h5.fl {
+                            float: left;
+                        }
+                    </style>
+                    <div class="content_wrap">
+                        <div class="content__container">
+                            <div class="content__item">
+                                <div class="nav_group js-scr-sec">
+                                    <a href="./aiResearcher2023.do" class="prev_ev js-scr-box">Previous Awardees</a>
+                                </div>
+                                <article class="row row--pt0">
+                                    <div class="row__inner js-scr-sec">
+                                        <h5 class="title title--mb30 js-scr-box">Introduction</h5>
+                                        <div class="desc fr js-scr-box">
+                                            <p class="">
+                                                The "Samsung AI Researcher of the Year" recognizes promising researchers who have made outstanding research or contributions to the field of AI.<br />
+                                                We encourage highly-qualified individuals that meet the eligibility requirements to submit applications directly via this website. If you would like to nominate an outstanding researcher for this award, please see the nomination guide provided below in
+                                                the “To Apply” section.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="row">
+                                    <div class="row__inner js-scr-sec">
+                                        <h5 class="title title--mb30 js-scr-box">Eligibility Requirements</h5>
+                                        <div class="desc fr js-scr-box">
+                                            <ul class="dash-list">
+                                                <li>
+                                                    Faculty or research scientist at a university or public research institute.
+                                                    <p class="gray">* Undergraduate and Doctoral Students are not eligible; however, post-doctoral researcher and research scientist can apply for the award.</p>
+                                                </li>
+                                                <li>Applicant must be age 35 or under on August 6, 2024.</li>
+                                                <li>Research must be in the field of artificial intelligence.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="row">
+                                    <div class="row__inner js-scr-sec">
+                                        <h5 class="title title--mb30 js-scr-box">Rewards and Obligations</h5>
+                                        <div class="desc fr js-scr-box">
+                                            <ul class="dash-list">
+                                                <li>A plaque and monetary award of $30,000 USD.</li>
+                                                <li>Winners are required to give a presentation about their research at the 2024 Samsung AI Forum.</li>
+                                            </ul>
+                                            <div class="bottom-text">
+                                                <p class="gray">* 2024 Samsung AI Forum will be held in Korea on November 4, 2024 (KST)</p>
+                                                <p class="gray">* It is mandatory for the award recipient to give an award speech and to deliver a presentation about their research at the 2024 Samsung AI Forum.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="row">
+                                    <div class="row__inner js-scr-sec">
+                                        <h5 class="title title--mb30 js-scr-box">Timeline (KST / UTC+09:00)</h5>
+                                        <div class="desc fr js-scr-box">
+                                            <ul class="dash-list">
+                                                <li>Program announcement : June 17, 2024.</li>
+                                                <li>Submissions accepted through August 6, 2024.</li>
+                                                <li>Winners announced (via email) in September, 2024.</li>
+                                                <li>Award ceremony will be held in Korea on November 4, 2024 (KST) during the Samsung AI Forum.</li>
+                                            </ul>
+                                            <div class="bottom-text">
+                                                <p class="gray">* If you wish to nominate someone for the award, please submit the nomination form by July 19, 2024 (KST). Please see the nomination guide provided below.</p>
+                                                <p class="gray">* The selection process will be overseen by Professor Yoshua Bengio (Co-chair of the Samsung AI Forum) and a committee of world-class professors.</p>
+                                                <p class="gray">* Awards Review Committee will not provide individual feedback on the results.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="row">
+                                    <div class="row__inner js-scr-sec">
+                                        <h5 class="title title--mb30 js-scr-box">To Apply</h5>
+                                        <div class="desc fr js-scr-box">
+                                            <p>
+                                                We are committed to recognizing standout AI researchers throughout the world.<br />
+                                                Samsung will conduct the AI Researcher of the Year program annually to support creative and meaningful contributions to AI.<br />
+                                                Eligible candidates can submit an application by clicking the “Apply” button below and completing the online submission page.<br />
+                                                Applications must be submitted by midnight on August 6, 2024 (KST) to be considered.
+                                            </p>
+                                            <div class="bottom-text">
+                                                <p class="gray">* Applications are ONLY accepted via the online submission page.</p>
+                                                <p class="gray">* For details on how to nominate a candidate, please download the <a href="https://www.sait.samsung.co.kr/saithome/datefile/2024_nomination_guide.docx" class="btn btn-download-link" download>nomination guide</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                                <div class="btn-wrap btn-wrap--mt60 js-scr-sec">
+                                    <div class="btn btn-default js-scr-box">
+                                        <span class="btn-default__text btn-default__text--arrow">Apply</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content__item content__item--bt">
+                                <article class="row">
+                                    <div class="row__inner">
+                                        <h5 class="title title--mb30 title--tac">FAQ</h5>
+                                        <div class="faq_area">
+                                            <div class="faq_list">
+                                                <ul class="js-scr-sec">
+                                                    <li class="js-scr-box">
+                                                        <p class="question"><a href="#none">If I am “self-nominating” myself for the award, what is the application process?</a></p>
+                                                        <div class="answer" style="display: none">
+                                                            <p>If you are applying for the award on your own without a 3rd-party nomination, then simply click the “Apply” button<br />on the website and complete the online submission page.</p>
+                                                        </div>
+                                                    </li>
+                                                    <li class="js-scr-box">
+                                                        <p class="question"><a href="#none">How do I apply?</a></p>
+                                                        <div class="answer" style="">
+                                                            <p>
+                                                                Eligible candidates can submit an application by clicking the “Apply” button and completing the online submission page. Applications must be submitted by midnight on August 6, 2024 (KST) to be considered.<br />
+                                                                * Applications are ONLY accepted via the online submission page.
+                                                            </p>
+                                                        </div>
+                                                    </li>
+                                                    <li class="js-scr-box">
+                                                        <p class="question"><a href="#none">If I would like to nominate someone for the award, in what format should I submit the nomination file?</a></p>
+                                                        <div class="answer" style="">
+                                                            <p>The nomination file should be submitted in MS Word format. (.docx, .doc)</p>
+                                                        </div>
+                                                    </li>
+                                                    <li class="js-scr-box">
+                                                        <p class="question"><a href="#none">What language should the application use?</a></p>
+                                                        <div class="answer" style="">
+                                                            <p>All documents should be submitted in English.</p>
+                                                        </div>
+                                                    </li>
+                                                    <li class="js-scr-box">
+                                                        <p class="question"><a href="#none">Are there nationality restrictions?</a></p>
+                                                        <div class="answer" style="">
+                                                            <p>There are no nationality restrictions.</p>
+                                                        </div>
+                                                    </li>
+                                                    <li class="js-scr-box">
+                                                        <p class="question"><a href="#none">How do I determine my primary and secondary research areas?</a></p>
+                                                        <div class="answer" style="">
+                                                            <p>
+                                                                Please identify areas that align with conferences/journals where you would publish. Your choices of primary and secondary areas help us choose who reviews your application. Example Research Areas: Computer Vision, Natural Language and
+                                                                Speech Processing, AI Applications in Material Sciences, AI Applications in Design &amp; Manufacturing, AI Applications in Healthcare, Unsupervised Learning &amp; Generative&nbsp;Models, Meta Learning&nbsp;&amp; Domain Adaptation,
+                                                                Reinforcement Learning, Deep Learning Hardware, Distributed Large-scale Deep Learning, etc.
+                                                            </p>
+                                                        </div>
+                                                    </li>
+                                                    <li class="js-scr-box">
+                                                        <p class="question"><a href="#none">Who is eligible to apply for the Samsung AI Researcher of the Year?</a></p>
+                                                        <div class="answer" style="">
+                                                            <p>
+                                                                Applicant must be <br />
+                                                                - Faculty or research scientist at a university or public research institute. <br />
+                                                                &nbsp;&nbsp;* Undergraduate and Doctoral Students are not eligible; however, post-doctoral researcher and research scientist can apply for the award.<br />
+                                                                - Age 35 or under on August 6, 2024.<br />
+                                                                - Research must be in the field of artificial intelligence.
+                                                            </p>
+                                                        </div>
+                                                    </li>
+                                                    <li class="js-scr-box">
+                                                        <p class="question"><a href="#none">Are candidates that are 35 years old now eligible to apply?</a></p>
+                                                        <div class="answer" style="">
+                                                            <p>
+                                                                A candidate who is 35 years of age at the time of the submission date (August 6, 2024) are eligible to apply.<br />
+                                                                (For example, if the applicant turns 36 on August 6<sup>th</sup>, the applicant is not eligible for award.)
+                                                            </p>
+                                                        </div>
+                                                    </li>
+                                                    <li class="js-scr-box">
+                                                        <p class="question"><a href="#none">Are there eligibility criteria for the nominator?</a></p>
+                                                        <div class="answer" style="">
+                                                            <p>Anyone can nominate candidates.</p>
+                                                        </div>
+                                                    </li>
+                                                    <li class="js-scr-box">
+                                                        <p class="question"><a href="#none">Who will review the application?</a></p>
+                                                        <div class="answer" style="">
+                                                            <p>The selection process will be overseen by the Awards Review Committee, led by Professor Yoshua Bengio and composed of world-class professors.</p>
+                                                        </div>
+                                                    </li>
+                                                    <li class="js-scr-box">
+                                                        <p class="question"><a href="#none">Will feedback be provided on the application?</a></p>
+                                                        <div class="answer" style="">
+                                                            <p>No, applicants will not receive feedback.</p>
+                                                        </div>
+                                                    </li>
+                                                    <li class="js-scr-box">
+                                                        <p class="question"><a href="#none">Who will receive the monetary award? The school/public institute or the professor/researcher?</a></p>
+                                                        <div class="answer" style="">
+                                                            <p>Monetary award will be paid directly to the winner.</p>
+                                                        </div>
+                                                    </li>
+                                                    <li class="js-scr-box">
+                                                        <p class="question"><a href="#none">Does submitting an application or accepting an award come with any legal obligations?</a></p>
+                                                        <div class="answer" style="">
+                                                            <p>
+                                                                Applicants have no obligations. There are no legal obligations with respect to publication rights, exclusivity, or intellectual property. By accepting the award, winners agree to give a presentation about their research at the 2024
+                                                                Samsung AI Forum. 2024 Samsung AI Forum will be held on November 4, 2024 (KST), and the awardees should prepare award speech for the Forum.
+                                                            </p>
+                                                        </div>
+                                                    </li>
+                                                    <li class="js-scr-box">
+                                                        <p class="question"><a href="#none">How can I ask additional questions?</a></p>
+                                                        <div class="answer" style="">
+                                                            <p>If your question has not been answered, please email us at <a href="ai.award@samsung.com" target="_blank">ai.award@samsung.com</a></p>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="content__item">
+                                <p class="">For more questions, Please contact below.</p>
+                                <div class="contbox">
+                                    <div class="inner cont js-scr-sec">
+                                        <h4 class="js-scr-box">Contact us</h4>
+                                        <div class="contbox__row js-scr-box"><span class="contbox__title">E-mail</span><a href="mailto:ai.award@samsung.com">ai.award@samsung.com</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ style 2020-11-25 -->
+                    <style type="text/css">
+                        .faq_area {
+                            margin-top: 130px;
+                        }
+                        .faq_area .title {
+                            font-size: 50px;
+                            color: #333;
+                            font-weight: bold;
+                            text-align: center;
+                        }
+                        .faq_area .title + .faq_list {
+                            margin-top: 50px;
+                        }
+
+                        .faq_list li:first-child {
+                            border-top: 2px solid #333;
+                        }
+                        .faq_list li:last-child {
+                            border-bottom: 1px solid #a8a8a8;
+                        }
+                        .faq_list li + li {
+                            border-top: 1px solid #a8a8a8;
+                        }
+                        .faq_list li {
+                            padding: 30px 40px;
+                            box-sizing: border-box;
+                        }
+
+                        .faq_list li.on {
+                            background-color: #1428a0;
+                        }
+                        .faq_list li.on .question a {
+                            color: #fff;
+                        }
+                        .faq_list li.on .question:before {
+                            color: #fff;
+                        }
+                        .faq_list li.on .question:after {
+                            border-bottom: 9px solid #fff;
+                            border-top: 0;
+                            transition: all 0.2s;
+                        }
+                        .faq_list li.on .answer {
+                            color: #fff;
+                            font-weight: 400;
+                        }
+
+                        .question {
+                            position: relative;
+                            font-size: 20px;
+                            line-height: 35px;
+                            font-weight: 700;
+                            color: #636363;
+                        }
+                        .question:before {
+                            content: 'Q.';
+                            font-size: 32px;
+                            font-weight: 700;
+                            color: #333;
+                            padding-right: 15px;
+                            vertical-align: top;
+                        }
+                        .question:after {
+                            content: '';
+                            display: block;
+                            position: absolute;
+                            top: 50%;
+                            right: 0;
+                            width: 0;
+                            height: 0;
+                            border-left: 6px solid transparent;
+                            border-right: 6px solid transparent;
+                            border-top: 9px solid #1428a0;
+                            transition: all 0.2s;
+                        }
+                        .question a {
+                            display: inline-block;
+                            width: 80%;
+                        }
+                        .question + .answer {
+                            margin-top: 28px;
+                            padding-top: 28px;
+                            border-top: 1px solid #5b69bd;
+                        }
+                        .answer {
+                            display: none;
+                        }
+                        .answer:before {
+                            content: 'A.';
+                            font-size: 32px;
+                            font-weight: 700;
+                            color: #fff;
+                            padding-right: 15px;
+                            vertical-align: top;
+                        }
+                        .answer p {
+                            display: inline-block;
+                            width: 80%;
+                            font-size: 17px;
+                            line-height: 25px;
+                            font-weight: 400;
+                        }
+                        .answer p a {
+                            color: #fff;
+                            text-decoration: underline;
+                        }
+                    </style>
+                    <!-- // FAQ style 2020-11-25 -->
+
+                    <!-- FAQ 스크립트 2020-11-25 -->
+                    <script type="text/javascript">
+                        $(document).ready(function () {
+                            faq();
+                        });
+
+                        function faq() {
+                            var question = $('.faq_list li');
+
+                            question.on('click', function () {
+                                var _this = $(this);
+                                var _thisAnswer = _this.children('.answer');
+
+                                if (_this.hasClass('on') == 1) {
+                                    $('.faq_list li').removeClass('on');
+                                    $('.answer').slideUp('fast');
+                                } else {
+                                    $('.faq_list li').removeClass('on');
+                                    $('.answer').slideUp('fast');
+                                    _this.addClass('on');
+                                    _thisAnswer.slideDown('fast');
+                                }
+                            });
+                        }
+                    </script>
+                    <!-- // FAQ 스크립트 2020-11-25 -->
+
+                    <!-- researcher modal popup CSS -->
+                    <style type="text/css">
+                        .researcher .contents_wrap .contents_box .desc button:hover,
+                        .researcher .contents_wrap .contents_box .desc button:focus {
+                            background-color: #fff;
+                            color: #1428a0;
+                        }
+                        .researcher .contents_wrap .contents_box .desc button:hover i:after,
+                        .researcher .contents_wrap .contents_box .desc button:focus i:after {
+                            border-left-color: #1428a0;
+                        }
+                        .researcher .contents_wrap .contents_box .desc button:hover i:before,
+                        .researcher .contents_wrap .contents_box .desc button:focus i:before {
+                            background-color: #1428a0;
+                        }
+                        .researcher .contents_wrap .contents_box .desc button {
+                            width: 380px;
+                            height: 80px;
+                            margin: 45px 0 0;
+                            display: inline-block;
+                            text-indent: -52px;
+                            border: 2px solid #1428a0;
+                            background-color: #1428a0;
+                            color: #fff;
+                            font-weight: 700;
+                            position: relative;
+                            font-size: 20px;
+                            -webkit-transition: all 0.2s ease;
+                            -moz-transition: all 0.2s ease;
+                            -o-transition: all 0.2s ease;
+                            -ms-transition: all 0.2s ease;
+                        }
+                        #modalPopup .researcher_wrap {
+                            padding: 100px 60px 110px 40px;
+                        }
+                        #modalPopup .apply_popup.researcher {
+                            padding: 0;
+                        }
+                        #modalPopup .apply_popup.researcher + .apply_popup.researcher {
+                            border-top: 1px solid #d6d6d6;
+                            padding-top: 55px;
+                            margin-top: 55px;
+                        }
+                        #modalPopup .apply_popup .tit_wrap.sm h1 {
+                            font-size: 22px;
+                            color: #333;
+                            text-align: left;
+                        }
+                        #modalPopup .apply_popup .tit_wrap.sm p {
+                            color: #8a8a8a;
+                            font-size: 16px;
+                            text-align: left;
+                            padding-top: 15px;
+                        }
+                        #modalPopup .apply_popup.researcher table {
+                            margin-top: 0;
+                        }
+                        #modalPopup .apply_popup.researcher table.mt50 {
+                            margin-top: 50px;
+                        }
+                        #modalPopup .apply_popup.researcher table.mt30 {
+                            margin-top: 30px;
+                        }
+                        #modalPopup .apply_popup.researcher table tr th.age {
+                            padding-bottom: 30px;
+                        }
+                        #modalPopup .apply_popup.researcher table tr th.age input[type='radio'] {
+                            margin-left: 50px;
+                        }
+                        #modalPopup .apply_popup.researcher table tr th.age input[type='radio'] {
+                            -webkit-appearance: none;
+                            width: 18px;
+                            height: 18px;
+                            border: 2px solid #333;
+                            border-radius: 50%;
+                            outline: none;
+                            background: #fff;
+                            margin-right: 6px;
+                        }
+                        #modalPopup .apply_popup.researcher table tr th.age input[type='radio']:before {
+                            content: '';
+                            display: block;
+                            width: 60%;
+                            height: 60%;
+                            margin: 20% auto;
+                            border-radius: 50%;
+                        }
+                        #modalPopup .apply_popup.researcher table tr th.age input[type='radio']:checked:before {
+                            background-color: #333;
+                        }
+                        #modalPopup .apply_popup.researcher table tr th.age label + input[type='radio'] {
+                            margin-left: 20px;
+                        }
+                        #modalPopup .apply_popup.researcher table tr th {
+                            line-height: 30px;
+                            text-align: left;
+                            padding: 18px 0 0 15px;
+                        }
+
+                        #modalPopup .apply_popup.researcher table tr th p {
+                            color: #8a8a8a;
+                            font-size: 16px;
+                        }
+
+                        #modalPopup .apply_popup.researcher table tr th p {
+                            color: #8a8a8a;
+                            font-size: 16px;
+                        }
+
+                        #modalPopup .apply_popup.researcher table tr th sub.imp {
+                            color: #1428a0;
+                        }
+                        #modalPopup .apply_popup.researcher table tr td {
+                            height: 100px;
+                        }
+                        #modalPopup .apply_popup.researcher table tr td p {
+                            color: #8a8a8a;
+                            font-size: 16px;
+                        }
+                        #modalPopup .apply_popup.researcher table tr td textarea.psrarea {
+                            font-size: 19px;
+                            color: #999;
+                            line-height: 35px;
+                            height: 220px;
+                            padding: 20px 30px;
+                            box-sizing: border-box;
+                        }
+                        #modalPopup .apply_popup.researcher table tr td.imp {
+                            position: relative;
+                        }
+                        #modalPopup .apply_popup.researcher table tr td.imp::before {
+                            content: '*';
+                            display: block;
+                            color: #1428a0;
+                            position: absolute;
+                            top: 24px;
+                            left: -1px;
+                            font-size: 26px;
+                        }
+                        /*
+            #modalPopup .apply_popup.researcher table tr td.box_type{
+                height: 0;
+                padding: 5px 0px 5px 20px;
+            }
+            */
+                        #modalPopup .apply_popup.researcher table.researcher_form tr td.box_type {
+                            height: 0;
+                            width: 100%;
+                            padding: 30px 0 20px;
+                        }
+                        #modalPopup .apply_popup.researcher table.researcher_form tr td.box_type.ad {
+                            padding: 0 0 20px;
+                        }
+                        #modalPopup .apply_popup.researcher table tr td.box_type::after {
+                            content: '';
+                            display: block;
+                            clear: both;
+                        }
+                        #modalPopup .apply_popup.researcher table tr td.box_type span {
+                            margin-right: 30px;
+                        }
+                        #modalPopup .apply_popup.researcher table tr td.box_type span.imp {
+                            position: relative;
+                        }
+                        #modalPopup .apply_popup.researcher table tr td.box_type span.imp::after {
+                            content: '*';
+                            display: block;
+                            color: #1428a0;
+                            position: absolute;
+                            top: 6px;
+                            right: -15px;
+                            font-size: 26px;
+                        }
+
+                        #modalPopup .apply_popup.researcher table tr td.box_type input[type='text'] {
+                            background-color: #f8f8f8;
+                            /* width: 32%; */
+                            width: 230px;
+                            border-bottom: none;
+                            height: 50px;
+                            padding: 0 0 0 20px;
+                            /*font-size: 17px;*/
+                            font-size: 14px;
+                            color: #999;
+                        }
+                        #modalPopup .apply_popup.researcher table tr td.box_type input[type='text'] + input[type='text'] {
+                            /* margin-left: 10px;*/
+                            margin-left: 8px;
+                        }
+                        /*
+            #modalPopup .apply_popup.researcher table tr td.box_type .sel_wrap{
+                position: relative;
+                width: 32%;
+            }
+            */
+                        #modalPopup .apply_popup.researcher table tr td.box_type .sel_wrap {
+                            position: relative;
+                            width: 220px;
+                            display: inline-block;
+                            margin-left: 8px;
+                        }
+                        #modalPopup .apply_popup.researcher table tr td.box_type .sel_wrap + input[type='text'] {
+                            margin-left: 8px;
+                        }
+                        #modalPopup .apply_popup.researcher table tr td.box_type .sel_wrap.right {
+                            display: inline-block;
+                        }
+
+                        #modalPopup .apply_popup.researcher table tr td.box_type .sel_wrap:after {
+                            width: 0;
+                            height: 0;
+                            display: block;
+                            content: '';
+                            border-left: 8px solid transparent;
+                            border-right: 8px solid transparent;
+                            border-top: 10px solid #333;
+                            position: absolute;
+                            /*top: 50%;*/
+                            top: 70%;
+                            right: 20px;
+                            margin-top: -14px;
+                        }
+                        #modalPopup .apply_popup.researcher table tr td.box_type .sel_wrap select {
+                            width: 100%;
+                            background-color: #f8f8f8;
+                            border-bottom: none;
+                            color: #636363;
+                            /*font-size: 16px;*/
+                            font-size: 14px;
+                            height: 50px;
+                            /*margin-bottom: 20px;*/
+                            padding: 0 0 0 20px;
+                        }
+                        /*
+            #modalPopup .apply_popup table tr td div.filebox label:before {
+                width: 2px;
+                height: 14px;
+                display: block;
+                content: "";
+                position: absolute;
+                top: 13px;
+                left: 24px;
+                background-color: #fff;
+            }
+            #modalPopup .apply_popup table tr td div.filebox label:after {
+                width: 14px;
+                height: 2px;
+                display: block;
+                content: "";
+                position: absolute;
+                top: 19px;
+                left: 18px;
+                background-color: #fff;
+            }
+            */
+                        #modalPopup .apply_popup.researcher table tr td .filebox div input[type='text'] {
+                            width: 650px;
+                        }
+                        #modalPopup .apply_popup.researcher table tr td .filebox div.width input[type='text'] {
+                            width: 660px;
+                        }
+                        #modalPopup .apply_popup.researcher table tr td .filebox input[type='text'],
+                        #modalPopup .apply_popup table tr td select {
+                            width: 100%;
+                            height: 42px;
+                            border-bottom-width: 2px;
+                            border-bottom-style: solid;
+                            border-bottom-color: #333;
+                            font-size: 20px;
+                            padding: 0 0 0 10px;
+                            -webkit-box-sizing: border-box;
+                            -moz-box-sizing: border-box;
+                            box-sizing: border-box;
+                            background-color: transparent;
+                        }
+                        #modalPopup .apply_popup.researcher table tr td div.filebox label:before {
+                            width: 2px;
+                            height: 14px;
+                            display: block;
+                            content: '';
+                            position: absolute;
+                            top: 13px;
+                            left: 24px;
+                            background-color: #fff;
+                        }
+                        #modalPopup .apply_popup table tr td div.filebox label:after {
+                            width: 14px;
+                            height: 2px;
+                            display: block;
+                            content: '';
+                            position: absolute;
+                            top: 19px;
+                            left: 18px;
+                            background-color: #fff;
+                        }
+                        #modalPopup .apply_popup table tr td div.filebox label.sm {
+                            width: 100px;
+                            font-size: 14px;
+                        }
+                        #modalPopup .apply_popup.researcher table tr td div.filebox label.sm:before {
+                            width: 2px;
+                            height: 10px;
+                            display: block;
+                            content: '';
+                            position: absolute;
+                            top: 16px;
+                            left: 22px;
+                            background-color: #fff;
+                        }
+                        #modalPopup .apply_popup table tr td div.filebox label.sm:after {
+                            width: 10px;
+                            height: 2px;
+                            display: block;
+                            content: '';
+                            position: absolute;
+                            top: 20px;
+                            left: 18px;
+                            background-color: #fff;
+                        }
+
+                        #modalPopup .apply_popup.researcher .submit_wrap {
+                            padding: 0;
+                        }
+                        #modalPopup .apply_popup.researcher .submit_wrap .submit_box {
+                            margin: 60px 0 0;
+                            width: 380px;
+                            height: 80px;
+                            margin: 45px 0 0;
+                            display: inline-block;
+                            text-indent: -52px;
+                            border: 2px solid #1428a0;
+                            background-color: #1428a0;
+                            color: #fff;
+                            font-weight: 700;
+                            position: relative;
+                            font-size: 20px;
+                            -webkit-transition: all 0.2s ease;
+                            -moz-transition: all 0.2s ease;
+                            -o-transition: all 0.2s ease;
+                            -ms-transition: all 0.2s ease;
+                        }
+                        #modalPopup .apply_popup.researcher .submit_wrap .submit_box .btnSave {
+                            width: 100%;
+                            height: 100%;
+                            display: block;
+                            text-indent: -50px;
+                            color: #fff;
+                            font-size: 20px;
+                            font-weight: 700;
+                            cursor: pointer;
+                            -webkit-transition: color 0.2s ease;
+                            -moz-transition: color 0.2s ease;
+                            -o-transition: color 0.2s ease;
+                            -ms-transition: color 0.2s ease;
+                            padding: 0;
+                            font-family: SamsungOneLatin, Noto Sans KR, sans-serif;
+                        }
+                        #modalPopup .apply_popup.researcher .submit_wrap .submit_box .btnSave:hover {
+                            color: #1428a0;
+                            background-color: #fff;
+                        }
+                        .btnSave.check_not {
+                            color: #fff !important;
+                            cursor: auto !important;
+                            background-color: #555 !important;
+                            border-color: #555 !important;
+                        }
+                        #modalPopup .apply_popup.researcher .submit_wrap .submit_box:hover i:before,
+                        #modalPopup .apply_popup.researcher .submit_wrap .submit_box:focus i:before {
+                            background-color: #fff;
+                        }
+                        #modalPopup .apply_popup.researcher .submit_wrap .submit_box i:after {
+                            border-bottom: 4px solid transparent;
+                            border-top: 4px solid transparent;
+                            border-left: 6px solid #fff;
+                            top: -3px;
+                            right: -27px;
+                        }
+                        #modalPopup .apply_popup .submit_wrap .submit_box input[type='submit']:hover {
+                            color: #fff;
+                        }
+                    </style>
+
+                    <!-- researcher form popup -->
+                    <form id="frmGroForm" name="frmGroForm" action="/saithome/event/aiResearcher.do" method="post" enctype="multipart/form-data">
+                        <input type="text" style="display: none" />
+                        <input type="hidden" name="formMode" value="CREATE" />
+                        <input type="hidden" name="web_type" value="pc" />
+                        <input type="hidden" name="secretYn" value="" />
+                        <input type="hidden" name="personalYn" value="" />
+                        <input type="hidden" name="priAgeYn" value="" />
+
+                        <div id="modalPopup" tabindex="0">
+                            <div class="popup_container">
+                                <div class="researcher_wrap">
+                                    <article class="apply_popup researcher">
+                                        <div class="tit_wrap">
+                                            <h1>Samsung AI Researcher of the Year Application</h1>
+                                            <p>
+                                                The submission deadline is Tuesday, August 6, 2024.<br />
+                                                (Korea Standard Time, UTC+9).
+                                            </p>
+                                        </div>
+                                        <table class="researcher_form mt50">
+                                            <caption>
+                                                Samsung AI Researcher of the Year Application
+                                            </caption>
+                                            <colgroup>
+                                                <col width="220px" />
+                                                <col width="280px" />
+                                                <col width="220px" />
+                                                <col width="280px" />
+                                            </colgroup>
+                                            <tbody>
+                                                <tr>
+                                                    <th colspan="4" class="age">
+                                                        Are you 35 years of age or under?
+                                                        <input type="radio" id="yes" name="choose" value="yes" />
+                                                        <label for="yes">YES</label>
+                                                        <input type="radio" id="no" name="choose" value="no" />
+                                                        <label for="no">NO</label>
+                                                        <p>* Applicants must be born after August 6, 1988.</p>
+                                                    </th>
+                                                </tr>
+                                                <tr>
+                                                    <th>Name <sub class="imp">*</sub></th>
+                                                    <td><input name="priPiName" id="priPiName" type="text" value="" size="25" maxlength="100" /></td>
+                                                    <th style="text-align: center">Email <sub class="imp">*</sub></th>
+                                                    <td><input name="priPiEmail" id="priPiEmail" type="text" value="" size="25" maxlength="100" /></td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Nationality <sub class="imp">*</sub></th>
+                                                    <td>
+                                                        <input name="priPiNaTI" id="priPiNaTI" type="text" value="" size="25" maxlength="50" style="text-transform: uppercase" />
+                                                        <p>* Based on passport marking.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Birth(MMDDYYYY) <sub class="imp">*</sub></th>
+                                                    <td>
+                                                        <input name="priPiBirthday" id="priPiBirthday" type="text" value="" size="25" maxlength="8" oninput="removeChar(event)" />
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Affiliation <sub class="imp">*</sub></th>
+                                                    <td colspan="3">
+                                                        <div>
+                                                            <input name="universityKind" id="universityKind" type="text" value="" onkeydown="Javascript:fnSearchEvt();" onkeyup="Javascript:fnSearchEvt2();" />
+                                                            <input type="hidden" name="universityKindSeqNo" id="universityKindSeqNo" value="" />
+                                                            <input type="hidden" name="uniCfmFlag" id="uniCfmFlag" value="N" />
+                                                            <button type="button" name="btnSearch" title="Search" onclick="javascript:fnSearch();return false;">Search</button>
+                                                            <div id="otherUniDiv" style="display: none">
+                                                                <br />
+                                                                <input name="otherUniversityName" id="otherUniversityName" type="text" value="" size="54" maxlength="400" />
+                                                            </div>
+                                                            <p>* Please search by keyword. If not found, select “Other” and type in your affiliation name.</p>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Country / Region <sub class="imp">*</sub></th>
+                                                    <td colspan="3">
+                                                        <input name="countryKind" id="countryKind" type="text" value="" readonly />
+                                                        <input type="hidden" name="countryKindSeqNo" id="countryKindSeqNo" value="" />
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Job title/Position <sub class="imp">*</sub></th>
+                                                    <td colspan="3">
+                                                        <input name="JobKind" id="JobKind" type="text" value="" maxlength="400" />
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Google scholar<br />URL</th>
+                                                    <td colspan="3">
+                                                        <input name="scholar" id="scholar" type="text" value="" maxlength="400" />
+                                                        <p>* Optional, but recommended</p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Professional<br />website URL</th>
+                                                    <td colspan="3">
+                                                        <input name="Professionalwebsite" id="Professionalwebsite" type="text" value="" maxlength="400" />
+                                                        <p>* Optional, but recommended</p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>CV<em>(.docx or PDF)</em> <sub class="imp">*</sub></th>
+                                                    <td colspan="3">
+                                                        <div class="filebox">
+                                                            <div id="ra_files-root">
+                                                                <div>
+                                                                    <input type="text" class="upload-name" disabled="disabled" />
+                                                                    <input type="file" name="cv_file" id="cv_file" size="60%" class="upload-hidden" />
+                                                                    <label for="cv_file">Add File</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <p>* Maximum attachment file size 10Mbyte.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr style="display: none">
+                                                    <th>Research plan<br /><em>(.docx)</em> <sub class="imp">*</sub></th>
+                                                    <td colspan="3">
+                                                        <div class="filebox">
+                                                            <div id="ra_files-root">
+                                                                <div>
+                                                                    <input type="text" class="upload-name" disabled="disabled" />
+                                                                    <input type="file" name="research_file" id="research_file" size="60%" class="upload-hidden" />
+                                                                    <label for="research_file">Add File</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <p>* Research plan for next 1~2 year, maximum 2 page. Maximum attachment file size 10Mbyte.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr style="display: none">
+                                                    <th>Application form<br /><em>(.docx)</em> <sub class="imp">*</sub></th>
+                                                    <td colspan="3">
+                                                        <div class="filebox">
+                                                            <div id="ra_files-root">
+                                                                <div>
+                                                                    <input type="text" class="upload-name" disabled="disabled" />
+                                                                    <input type="file" name="application_file" id="application_file" size="60%" class="upload-hidden" />
+                                                                    <label for="application_file">Add File</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <p>* Maximum attachment file size 10Mbyte.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Primary and<br />secondary<br />research areas <sub class="imp">*</sub></th>
+                                                    <td colspan="3">
+                                                        <textarea
+                                                            name="researchareas"
+                                                            id="researchareas"
+                                                            maxlength="2000"
+                                                            placeholder="Example Research Areas Computer Vision, Natural Language and SpeechProcessing, AI Applications in Material Sciences, AI Applications in Design& Manufacturing, AI Applications in Healthcare, Unsupervised Learning & Generative Models, Meta Learning & Domain Adaptation, Reinforcement Learning, Deep Learning Hardware, Distributed Large-scale Deep Learning, etc."
+                                                            class="psrarea"
+                                                        ></textarea>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </article>
+                                    <article class="apply_popup researcher">
+                                        <div class="tit_wrap sm">
+                                            <h1>List of up to 5 of the top publications of your research for recent 3 years, if applicable</h1>
+                                            <p>Recommended format : Title of thesis/book, Place of publication: Publisher, Year of publication</p>
+                                        </div>
+                                        <table class="researcher_form">
+                                            <tbody>
+                                                <tr>
+                                                    <td class="box_type">
+                                                        <span class="imp">1.</span>
+                                                        <input type="text" name="title01" id="title01" placeholder="Title of thesis/book" class="first" maxlength="400" />
+                                                        <input type="text" name="place01" id="palce01" placeholder="Place of publication: Publisher" maxlength="400" style="width: 230px" />
+                                                        <input type="text" name="year01" id="year01" placeholder="Year of publication" maxlength="4" oninput="removeChar(event)" />
+                                                        <div class="sel_wrap">
+                                                            <select name="pubType01" id="pubType01">
+                                                                <option value="">Choose a list</option>
+                                                                <option value="First author">First author</option>
+                                                                <option value="Co-author">Co-author</option>
+                                                                <option value="Corresponding author">Corresponding author</option>
+                                                            </select>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="box_type ad">
+                                                        <input type="text" name="doi01" id="doi01" placeholder="DOI(or link of thesis)" class="first" maxlength="400" style="margin-left: 45px; width: 713px" />
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="box_type">
+                                                        <span>2.</span>
+                                                        <input type="text" name="title02" id="title02" placeholder="Title of thesis/book" maxlength="400" />
+                                                        <input type="text" name="place02" id="palce02" placeholder="Place of publication: Publisher" maxlength="400" style="width: 230px" />
+                                                        <input type="text" name="year02" id="year02" placeholder="Year of publication" maxlength="4" oninput="removeChar(event)" />
+                                                        <div class="sel_wrap">
+                                                            <select name="pubType02" id="pubType02">
+                                                                <option value="">Choose a list</option>
+                                                                <option value="First author">First author</option>
+                                                                <option value="Co-author">Co-author</option>
+                                                                <option value="Corresponding author">Corresponding author</option>
+                                                            </select>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="box_type ad">
+                                                        <input type="text" name="doi02" id="doi02" placeholder="DOI(or link of thesis)" class="first" maxlength="400" style="margin-left: 45px; width: 713px" />
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="box_type">
+                                                        <span>3.</span>
+                                                        <input type="text" name="title03" id="title03" placeholder="Title of thesis/book" maxlength="400" />
+                                                        <input type="text" name="place03" id="palce03" placeholder="Place of publication: Publisher" maxlength="400" style="width: 230px" />
+                                                        <input type="text" name="year03" id="year03" placeholder="Year of publication" maxlength="4" oninput="removeChar(event)" />
+                                                        <div class="sel_wrap">
+                                                            <select name="pubType03" id="pubType03">
+                                                                <option value="">Choose a list</option>
+                                                                <option value="First author">First author</option>
+                                                                <option value="Co-author">Co-author</option>
+                                                                <option value="Corresponding author">Corresponding author</option>
+                                                            </select>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="box_type ad">
+                                                        <input type="text" name="doi03" id="doi03" placeholder="DOI(or link of thesis)" class="first" maxlength="400" style="margin-left: 45px; width: 713px" />
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="box_type">
+                                                        <span>4.</span>
+                                                        <input type="text" name="title04" id="title04" placeholder="Title of thesis/book" maxlength="400" />
+                                                        <input type="text" name="place04" id="palce04" placeholder="Place of publication: Publisher" maxlength="400" style="width: 230px" />
+                                                        <input type="text" name="year04" id="year04" placeholder="Year of publication" maxlength="4" oninput="removeChar(event)" />
+                                                        <div class="sel_wrap">
+                                                            <select name="pubType04" id="pubType04">
+                                                                <option value="">Choose a list</option>
+                                                                <option value="First author">First author</option>
+                                                                <option value="Co-author">Co-author</option>
+                                                                <option value="Corresponding author">Corresponding author</option>
+                                                            </select>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="box_type ad">
+                                                        <input type="text" name="doi04" id="doi04" placeholder="DOI(or link of thesis)" class="first" maxlength="400" style="margin-left: 45px; width: 713px" />
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="box_type">
+                                                        <span>5.</span>
+                                                        <input type="text" name="title05" id="title05" placeholder="Title of thesis/book" maxlength="400" />
+                                                        <input type="text" name="place05" id="palce05" placeholder="Place of publication: Publisher" maxlength="400" style="width: 230px" />
+                                                        <input type="text" name="year05" id="year05" placeholder="Year of publication" maxlength="4" oninput="removeChar(event)" />
+                                                        <div class="sel_wrap">
+                                                            <select name="pubType05" id="pubType05">
+                                                                <option value="">Choose a list</option>
+                                                                <option value="First author">First author</option>
+                                                                <option value="Co-author">Co-author</option>
+                                                                <option value="Corresponding author">Corresponding author</option>
+                                                            </select>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="box_type ad">
+                                                        <input type="text" name="doi05" id="doi05" placeholder="DOI(or link of thesis)" class="first" maxlength="400" style="margin-left: 45px; width: 713px" />
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </article>
+                                    <article class="apply_popup researcher">
+                                        <table class="researcher_form">
+                                            <caption>
+                                                Samsung AI Researcher of the Year Application
+                                            </caption>
+                                            <colgroup>
+                                                <col width="220px" />
+                                                <col width="*" />
+                                            </colgroup>
+                                            <tbody>
+                                                <tr>
+                                                    <th>How did you<br />hear about<br />this award?<br /><em>(Optional)</em></th>
+                                                    <td>
+                                                        <textarea name="Optional" id="Optional" maxlength="2000"></textarea>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="agree_box">
+                                            <strong>* Please read carefully and check the box as below.</strong>
+                                            <div>
+                                                <!--<input type="checkbox" id="agree1">-->
+                                                <input type="checkbox" name="chkAgree" id="chkAgree" onclick="javascript:changeAgree(this);" value="" />
+                                                <label for="chkAgree">Applications submitted without this box checked will be automatically rejected without further review.</label>
+                                            </div>
+                                            <div>
+                                                <!--<input type="checkbox" id="agree2"> -->
+                                                <input type="checkbox" name="chkAgree" id="chkAgree1" onclick="javascript:changeAgree(this);" value="" />
+                                                <label for="chkAgree1"
+                                                    >I hereby consent to your use of my personal information that I have given to you or you have collected by proper means. Samsung Electronics Co., Ltd. value the personal information of applicants and strive to protect each applicant's personal
+                                                    information. SAMSUNG adheres to all applicable laws and regulations including the Act on Personal Information Protection. For more details on the processing of personal information, please refer to the Samsung AI Researcher of the Year
+                                                    website.</label
+                                                >
+                                            </div>
+                                            <div>
+                                                <!--<input type="checkbox" id="agree2"> -->
+                                                <input type="checkbox" name="chkAgree" id="chkAgree2" onclick="javascript:changeAgree(this);" value="" />
+                                                <label for="chkAgree2">I hereby consent that the award opportunity may be considered forfeited if the participant does not satisfy eligibility criteria, such as age, research field requirements, and attendance at the award ceremony.</label>
+                                            </div>
+                                        </div>
+                                        <div class="submit_wrap">
+                                            <div class="submit_box">
+                                                <!-- <input type="submit" value="SUBMIT"> -->
+                                                <input type="button" name="btnSave" value="Submit" title="Submit" class="btnSave check_not" onclick="javascript:fnSave();return false;" disabled="" />
+                                                <i></i>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+                                <button class="popup_close">close</button>
+                            </div>
+                        </div>
+                    </form>
+                    <!-- // researcher form popup-->
+
+                    <link rel="stylesheet" href="https://www.sait.samsung.co.kr/saithome/javascripts/lib/slick/slick.css" />
+                    <link rel="stylesheet" href="https://www.sait.samsung.co.kr/saithome/javascripts/lib/slick/slick-theme.css" />
+                    <script type="text/javascript" src="https://www.sait.samsung.co.kr/saithome/javascripts/lib/slick/slick.min.js"></script>
+                    <script>
+                        $(document).ready(function () {
+                            function fileChangeText(c_ob) {
+                                if (window.FileReader) {
+                                    // modern browser
+                                    var filename = $(c_ob)[0].files[0].name;
+                                } else {
+                                    // old IE
+                                    var filename = $(c_ob).val().split('/').pop().split('\\').pop(); // 파일명만 추출
+                                }
+                                $(c_ob).siblings('.upload-name').val(filename);
+                            }
+                            $(function () {
+                                //파일첨부
+                                var fileTarget = $('.filebox .upload-hidden');
+                                fileTarget.on('change', function () {
+                                    if (window.FileReader) {
+                                        // modern browser
+                                        var filename = $(this)[0].files[0].name;
+                                    } else {
+                                        // old IE
+                                        var filename = $(this).val().split('/').pop().split('\\').pop(); // 파일명만 추출
+                                    }
+                                    $(this).siblings('.upload-name').val(filename);
+                                });
+
+                                var $popup = $('#modalPopup');
+                                var $applyBtn = $('.apply_btn');
+                                var $close = $('.popup_close');
+                                $applyBtn.click(function () {
+                                    $('html').addClass('no_scroll');
+                                    TweenMax.to($popup, 0.5, { opacity: 1, display: 'block', onComplete: openPop });
+                                    TweenMax.fromTo($('.popup_container'), 0.5, { y: 50 }, { y: 0, ease: es_step });
+                                    function openPop() {
+                                        $popup.focus();
+                                    }
+                                });
+
+                                function noscroll() {
+                                    $('html').removeClass('no_scroll');
+                                }
+
+                                $close
+                                    .on('click', function () {
+                                        TweenMax.to($popup, 0.3, { opacity: 0, display: 'none', ease: es_step, onComplete: noscroll });
+                                        $applyBtn.focus();
+                                    })
+                                    .on('keydown', function (e) {
+                                        var tab = Tab(function () {
+                                            $popup.focus();
+                                        }, e);
+                                    });
+
+                                $popup.on('keydown', function (e) {
+                                    if ($(event.target).attr('tabindex')) {
+                                        var tab = Shifttab(function () {
+                                            $close.focus();
+                                        }, e);
+                                        if (tab) return false;
+                                    }
+                                });
+                            });
+                        });
+                    </script>
+                    <!--// Gallery -->
+                </section>
+
+                <!-- //subContent-->
+
+                <!-- subAside-->
+                <aside id="relatedContents" class="js-scr-sec">
+                    <div class="related__inner">
+                        <div class="related__title">
+                            <h1 class="js-scr-box">Related Contents</h1>
+                            <span class="js-scr-box">Explore more related contents from SAIT!</span>
+                        </div>
+                        <div class="related_wrap">
+                            <article class="js-scr-box">
+                                <a href="https://www.sait.samsung.co.kr/saithome/about/press_view.do?new_seq=1136">
+                                    <h1>News</h1>
+                                </a>
+                            </article>
+                            <article class="js-scr-box">
+                                <a href="https://www.sait.samsung.co.kr/saithome/event/saif2023.do">
+                                    <h1>AI Forum 2023</h1>
+                                </a>
+                            </article>
+                        </div>
+                    </div>
+                </aside>
+                <!-- //subAside-->
+
+                <!-- //container-->
+
+                <!-- footer -->
+
+                <%- include("../include/sub_footer.html") %>
+                <div id="gnbDimmed" class="dimmed"></div>
+
+                <!-- Global site tag (gtag.js) - Google Analytics -->
+                <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123575008-1"></script>
+                <script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag() {
+                        dataLayer.push(arguments);
+                    }
+                    gtag('js', new Date());
+
+                    gtag('config', 'UA-167217135-1');
+                </script>
+            </section>
+            <!-- //footer -->
+        </div>
+        <script type="text/javascript" src="https://www.sait.samsung.co.kr/saithome/javascripts/lib/TweenMax/TweenMax.min.js"></script>
+        <script type="text/javascript" src="https://www.sait.samsung.co.kr/saithome/javascripts/lib/TweenMax/easing/EasePack.min.js"></script>
+        <script type="text/javascript" src="https://www.sait.samsung.co.kr/saithome/javascripts/design_common.js"></script>
+    </body>
+</html>

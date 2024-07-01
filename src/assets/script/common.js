@@ -14,8 +14,10 @@ $(function () {
 
     const header = {
         openHeader() {
-            $('.header').addClass('active');
-            $('.dep2').slideDown(340);
+            if (!$('#headerSearch').is(':visible')) {
+                $('.header').addClass('active');
+                $('.dep2').slideDown(340);
+            }
         },
         closeHeader() {
             $('.header').removeClass('active');
@@ -25,7 +27,6 @@ $(function () {
             $(this).parents('li').toggleClass('active');
         },
         init() {
-            // $('#gnb').hover(this.toggleState);
             $('.gnb').on('mouseenter', this.openHeader);
             $('.gnb').on('mouseleave', this.closeHeader);
             $('.dep2').hover(this.toggleItem).bind(this);

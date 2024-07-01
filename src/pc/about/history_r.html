@@ -410,20 +410,22 @@
 
                 <!-- subAside-->
                 <aside id="relatedContents" class="js-scr-sec">
-                    <h1 class="js-scr-box">Related Contents</h1>
-                    <div class="related_wrap">
-                        <article class="js-scr-box">
-                            <a href="https://www.sait.samsung.co.kr/saithome/about/history.do">
-                                <figure><img src="https://www.sait.samsung.co.kr/saithome/images/layout/related_img01.jpg" alt="History" /></figure>
-                                <h1>History of Progress <i></i></h1>
-                            </a>
-                        </article>
-                        <article class="js-scr-box">
-                            <a href="https://www.sait.samsung.co.kr/saithome/about/labs.do">
-                                <figure><img src="https://www.sait.samsung.co.kr/saithome/images/layout/related_img02.jpg" alt="Global" /></figure>
-                                <h1>Global Labs <i></i></h1>
-                            </a>
-                        </article>
+                    <div class="related__inner">
+                        <div class="related__title">
+                            <h1 class="js-scr-box">Related Contents</h1>
+                        </div>
+                        <div class="related_wrap">
+                            <article class="js-scr-box">
+                                <a href="https://www.sait.samsung.co.kr/saithome/about/history.do">
+                                    <h1>History of Progress</h1>
+                                </a>
+                            </article>
+                            <article class="js-scr-box">
+                                <a href="https://www.sait.samsung.co.kr/saithome/about/labs.do">
+                                    <h1>Global Labs</h1>
+                                </a>
+                            </article>
+                        </div>
                     </div>
                 </aside>
                 <!-- //subAside-->
@@ -432,29 +434,7 @@
 
             <!-- footer -->
 
-            <footer id="footer">
-                <!-- include footer -->
-                <div class="footer_wrap">
-                    <ul class="f_link">
-                        <li><a href="https://www.sait.samsung.co.kr/saithome/etc/privacy.do">Privacy Statement</a></li>
-                        <!-- 
-			 <li><a href="https://www.sait.samsung.co.kr/saithome/etc/legal.do">Legal Notice</a></li>
-			 -->
-                        <li style="font-weight: 700"><a href="https://www.sait.samsung.co.kr/saithome/etc/management.do" style="color: #f0f8ff">Privacy Policy</a></li>
-                    </ul>
-                    <div class="f_bottom">
-                        <div class="copy_wrap">
-                            <address>130, Samsung-ro, Yeongtong-gu, Suwon-si, Gyeonggi-do, 16678, Korea.</address>
-                            <span class="tel">Tel / +82-31-8061-1114</span>
-                            <p class="copyright">Copyright© 2005-2018 SAMSUNG All Rights Reserved.</p>
-                        </div>
-                    </div>
-                    <a href="http://www.webwatch.or.kr/Situation/WA_Situation.html?MenuCD=110" title="new window open" target="_blank" class="footer_wa"
-                        ><img src="https://www.sait.samsung.co.kr/saithome/images/layout/footer_ad_icon.jpg" border="0" alt="과학기술정보통신부 WEB ACCESSIBILITY 마크(웹 접근성 품질인증 마크)" title="국가 공인 인증기관 : 웹와치"
-                    /></a>
-                </div>
-                <!-- //include footer -->
-            </footer>
+            <%- include("../include/sub_footer.html") %>
             <div id="gnbDimmed" class="dimmed"></div>
 
             <!-- Global site tag (gtag.js) - Google Analytics -->
