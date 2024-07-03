@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- 공통적용헤더정보 -->
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <!-- //공통적용헤더정보 -->
+        <link rel="stylesheet" href="https://www.sait.samsung.co.kr/saithome/stylesheets/css/common.css" />
+        <script type="text/javascript" src="https://www.sait.samsung.co.kr/saithome/javascripts/jquery-1.8.2.min.js"></script>
+        <!--[if lt IE 9]><script src="https://www.sait.samsung.co.kr/saithome/javascripts/lib/html5shiv.min.js"></script><![endif]-->
+        <!--[if lt IE 10]><script src="https://www.sait.samsung.co.kr/saithome/javascripts/lib/placeholders.min.js"></script><![endif]-->
+        <meta name="Keywords" content="SAIT, Samsung Advanced Institute of Technology, 삼성종합기술원, 삼성전자 종합기술원, Samsung research, Samsung R&amp;D, Samsung future technology, R&amp;D, Autonomoucs Driving, Graphene, New materials, QD, Quantum Dot" />
+        <title>Singlet oxygen driven photocatalytic degradation of gaseous formaldehyde and its mechanistic study | Samsung Advanced Institute of Technology</title>
+        <meta
+            name="Description"
+            content="<div id='cafe-note-contents' style='line-height: 1.2; font-family: '굴림',Gulim,Arial; font-size: 10pt;'><p style='margin: 0px 0px 13.33px; line-height: 200％;'><span style='color: black; font-family: 'times new roman',serif; -ms-layout-grid-mode: line;'><span style='font-size: 12pt;'>Conventional stud... | Samsung Advanced Institute of Technology"
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Singlet oxygen driven photocatalytic degradation of gaseous formaldehyde and its mechanistic study | Samsung Advanced Institute of Technology" />
+        <meta
+            property="og:description"
+            content="<div id='cafe-note-contents' style='line-height: 1.2; font-family: '굴림',Gulim,Arial; font-size: 10pt;'><p style='margin: 0px 0px 13.33px; line-height: 200％;'><span style='color: black; font-family: 'times new roman',serif; -ms-layout-grid-mode: line;'><span style='font-size: 12pt;'>Conventional stud... | Samsung Advanced Institute of Technology"
+        />
+        <meta property="og:image" content="" />
+        <meta property="og:url" content="" />
+        <meta property="og:site_name" content="Samsung Advanced Institute of Technology" />
+        <meta name="Author" content="Samsung Advanced Institute of Technology" />
+        <meta name="robots" content="ALL" />
+        <%- include("../include/sub_head.html") %>
+    </head>
+    <body>
+        <div id="wrap" role="main">
+            <!-- header-->
+            <%- include("../include/sub_header.html") %>
+            <!-- //header-->
+
+            <!-- container-->
+            <section id="container" class="research_02">
+                <!-- subVisual-->
+                <div id="subVisual" style="background-image: url(https://www.sait.samsung.co.kr/saithome/images/research/research_visual.jpg)">
+                    <div class="tit_wrap">
+                        <h3>
+                            <span>Changing the World through Creative Research</span>
+                        </h3>
+                    </div>
+                </div>
+                <!-- //subVisual-->
+                <!-- subLocation-->
+                <div id="subLocation">
+                    <div class="location_box">
+                        <ul class="location_list">
+                            <li class="home"><a href="https://www.sait.samsung.co.kr/saithome/main/main.do">main page</a></li>
+                            <li class="depth1">
+                                <button type="button">Research Areas</button>
+                                <ul class="under_depth">
+                                    <li><a href="https://www.sait.samsung.co.kr/saithome/about/who.do">About SAIT</a></li>
+                                    <li><a href="https://www.sait.samsung.co.kr/saithome/research/what.do">Research Areas</a></li>
+                                    <li><a href="https://www.sait.samsung.co.kr/saithome/about/press.do">News & Events</a></li>
+                                    <li><a href="https://www.sait.samsung.co.kr/saithome/join/application.do">Join Us</a></li>
+                                </ul>
+                            </li>
+                            <li class="depth2">
+                                <button type="button">Publications</button>
+                                <ul class="under_depth">
+                                    <li class="accent"><a href="https://www.sait.samsung.co.kr/saithome/research/what.do">What We Do</a></li>
+                                    <!--
+							<li><a href="https://www.sait.samsung.co.kr/saithome/research/multimedia.do"  >Augmented Reality</a></li>
+							<li><a href="https://www.sait.samsung.co.kr/saithome/research/deep.do"  >Deep Learning</a></li>
+							<li><a href="https://www.sait.samsung.co.kr/saithome/research/autonomous.do"  >Automotive Electronics</a></li>
+							<li><a href="https://www.sait.samsung.co.kr/saithome/research/brain.do"  >Brain Inspired Computing & Device</a></li>
+							-->
+                                    <!--
+							<li><a href="https://www.sait.samsung.co.kr/saithome/research/deep.do"  >Artificial Intelligence</a></li>
+							<li><a href="https://www.sait.samsung.co.kr/saithome/research/brain.do"  >Computing Platform</a></li>
+							<li><a href="https://www.sait.samsung.co.kr/saithome/research/multimedia.do"  >Augmented Reality</a></li>							
+							<li><a href="https://www.sait.samsung.co.kr/saithome/research/autonomous.do"  >Automotive Electronics</a></li>
+							<li><a href="https://www.sait.samsung.co.kr/saithome/research/healthcare.do"  >Healthcare Platform</a></li>
+							<li><a href="https://www.sait.samsung.co.kr/saithome/research/metaphotonics.do"  >Metaphotonics</a></li>
+							<li><a href="https://www.sait.samsung.co.kr/saithome/research/graphene.do"  >Graphene/2D</a></li>
+                            <li><a href="https://www.sait.samsung.co.kr/saithome/research/organic.do"  >Organic Electronic Materials</a></li>
+							<li><a href="https://www.sait.samsung.co.kr/saithome/research/polymer.do"  >Optical Component Materials</a></li>
+							<li><a href="https://www.sait.samsung.co.kr/saithome/research/inorganics.do"  >Functional Inorganics</a></li>
+							<li><a href="https://www.sait.samsung.co.kr/saithome/research/quantum.do"  >Quantum Dot</a></li>
+							<li><a href="https://www.sait.samsung.co.kr/saithome/research/battery.do"  >Next Generation Battery</a></li>
+							<li><a href="https://www.sait.samsung.co.kr/saithome/research/bio.do"  >Biomaterials</a></li>
+							<li><a href="https://www.sait.samsung.co.kr/saithome/research/computational.do"  >Computational Science</a></li>
+							-->
+
+                                    <li>
+                                        <a href="https://www.sait.samsung.co.kr/saithome/research/researchArea.do?idx=14"> AI Algorithms</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.sait.samsung.co.kr/saithome/research/researchArea.do?idx=16"> Computing Platform</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.sait.samsung.co.kr/saithome/research/researchArea.do?idx=1"> Human Augmentation</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.sait.samsung.co.kr/saithome/research/researchArea.do?idx=2"> Metaphotonics</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.sait.samsung.co.kr/saithome/research/researchArea.do?idx=3"> Nano Electronics</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.sait.samsung.co.kr/saithome/research/researchArea.do?idx=18"> Display Materials</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.sait.samsung.co.kr/saithome/research/researchArea.do?idx=21"> Battery Materials</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.sait.samsung.co.kr/saithome/research/researchArea.do?idx=23"> Semiconductor Materials</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.sait.samsung.co.kr/saithome/research/researchArea.do?idx=27"> Environmental Research</a>
+                                    </li>
+                                    <!--
+							<li class="accent"><a href="https://www.sait.samsung.co.kr/saithome/research/paper_list.do"    >Research Papers</a></li>
+							-->
+                                    <li class="accent"><a href="https://www.sait.samsung.co.kr/saithome/research/paper_list_srt.do" class="active">Publications</a></li>
+                                    <li class="accent"><a href="https://www.sait.samsung.co.kr/saithome/research/paper_list_wtc.do">Best Research Papers</a></li>
+                                    <li class="accent"><a href="https://www.sait.samsung.co.kr/saithome/research/infra.do">Research Infra</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- //subLocation-->
+
+                <!-- subContent-->
+                <section id="content" class="paper_view view_page">
+                    <div class="content__container">
+                        <article class="row">
+                            <div class="row__inner">
+                                <div id="subTitle" class="js-scr-sec">
+                                    <h4 class="js-scr-box">Singlet oxygen driven photocatalytic degradation of gaseous formaldehyde and its mechanistic study</h4>
+                                    <time datetime="2023-02-21" class="js-scr-box">2023.02.21</time>
+                                </div>
+                                <div class="row__wrap">
+                                    <div class="contents_wrap js-scr-sec">
+                                        <dl class="js-scr-box">
+                                            <dt>Journal</dt>
+                                            <dd>JJAP</dd>
+                                        </dl>
+                                        <dl class="js-scr-box">
+                                            <dt>Date</dt>
+                                            <dd>2004.08.10</dd>
+                                        </dl>
+                                        <dl class="js-scr-box">
+                                            <dt>Abstract</dt>
+                                            <dd>
+                                                We present a method for fabricating SiO2 nanodot arrays through pattern transfer of self-organized tantalum oxide hard masks on to a Si wafer. Tantalum oxide nanopillar arrays are formed at the bottom of anodic aluminum oxide by electrochemical
+                                                anodization of the Al/Ta films on a Si wafer. Then the tantalum oxide nanopillars were used as hard masks for formation of SiO2 nanostructures. Ion milling was used for the pattern transfer. The density and diameter of the SiO2 nanodot arrays could be
+                                                controlled by varing the anodizing conditions. The average diameters and areal density of prepared SiO2 nanodisks were 68 nm and 1010/cm2, respectively. Through this approach, it is expected that a wide variety of nanodisk arrays over large areas can
+                                                be prepared.
+                                            </dd>
+                                        </dl>
+                                        <dl class="js-scr-box">
+                                            <dt>Reference</dt>
+                                            <dd>N</dd>
+                                        </dl>
+                                        <dl class="js-scr-box">
+                                            <dt>DOI</dt>
+                                            <dd><a href="http://dx.doi.org/10.1143/JJAP.43.5657" target="_blank">http://dx.doi.org/10.1143/JJAP.43.5657</a></dd>
+                                        </dl>
+                                    </div>
+                                    <div id="contentLink" class="js-scr-sec">
+                                        <div class="prev_link js-scr-box js-motion-end" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0)">
+                                            <a href="https://www.sait.samsung.co.kr/saithome/research/paper_view_srt.do?kid=20040810172744634E&amp;searchKeyword=">
+                                                <span>Servo and Tracking Algorithm For a Probe Storage System</span>
+                                                <i></i>
+                                            </a>
+                                        </div>
+                                        <div class="next_link js-scr-box js-motion-end" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0)">
+                                            <a href="https://www.sait.samsung.co.kr/saithome/research/paper_view_srt.do?kid=20040210083020500E&amp;searchKeyword=">
+                                                <span>Independent component analysis in a local facial residue space for face recognition</span>
+                                                <i></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="btn-wrap btn-wrap--mt40 js-scr-sec">
+                                        <a href="https://www.sait.samsung.co.kr/saithome/research/paper_list_srt.do?searchKeyword=&pageIndex=1" class="btn btn-default js-scr-box">
+                                            <span class="btn-default__text">LIST</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+                <!-- //subContent-->
+
+                <!-- subAside-->
+                <aside id="relatedContents" class="js-scr-sec">
+                    <div class="related__inner">
+                        <div class="related__title">
+                            <h1 class="js-scr-box">Related Contents</h1>
+                            <span class="js-scr-box">Explore more related contents from SAIT!</span>
+                        </div>
+                        <div class="related_wrap">
+                            <article class="js-scr-box">
+                                <a href="https://www.sait.samsung.co.kr/saithome/about/history.do">
+                                    <h1>History Of Progress</h1>
+                                </a>
+                            </article>
+                            <article class="js-scr-box">
+                                <a href="https://www.sait.samsung.co.kr/saithome/about/labs.do">
+                                    <h1>Global Labs</h1>
+                                </a>
+                            </article>
+                        </div>
+                    </div>
+                </aside>
+                <!-- //subAside-->
+            </section>
+            <!-- //container-->
+
+            <!-- footer -->
+
+            <%- include("../include/sub_footer.html") %>
+            <div id="gnbDimmed" class="dimmed"></div>
+
+            <!-- Global site tag (gtag.js) - Google Analytics -->
+            <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123575008-1"></script>
+            <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag() {
+                    dataLayer.push(arguments);
+                }
+                gtag('js', new Date());
+
+                gtag('config', 'UA-167217135-1');
+            </script>
+            <!-- //footer -->
+        </div>
+        <script type="text/javascript" src="https://www.sait.samsung.co.kr/saithome/javascripts/lib/TweenMax/TweenMax.min.js"></script>
+        <script type="text/javascript" src="https://www.sait.samsung.co.kr/saithome/javascripts/lib/TweenMax/easing/EasePack.min.js"></script>
+        <script type="text/javascript" src="https://www.sait.samsung.co.kr/saithome/javascripts/design_common.js"></script>
+    </body>
+</html>
