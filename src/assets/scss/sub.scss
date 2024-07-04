@@ -459,6 +459,14 @@ strong {
 .faq #subTab ul li a {
     width: 100%;
 }
+.world_research #subTab.subTab-rt ul {
+    max-width: 700px;
+    width: 100%;
+}
+.world_research #subTab.subTab-rt ul li.ntb {
+    top: auto;
+}
+
 
 // pagination
 #listPage .page_btn button {
@@ -640,6 +648,11 @@ strong {
 }
 #content .contents_wrap {
     padding: 0;
+}
+.third_depth_titbox {
+    width: 100%;
+    table-layout: fixed;
+    margin-bottom: 60px;
 }
 .labs .sait_global .sait_view {
     padding-top: 0;
@@ -1287,11 +1300,71 @@ p strong {
     font-size: 18px;
     line-height: 28px;
 }
+.contents_flow h5 span {
+    border-color: #fff;
+    color: #fff;
+}
+.social .science_box strong {
+    color: #fff;
+}
+.social .activity_wrap .activity_box li .tit {
+    background-color: #47566C;
+}
 
 // contact
+.contact .map_box .address_wrap address {
+    color: #fff;
+}
+.contact .map_wrap {
+    padding-bottom: 0;
+}
+.contact .map_box .company_name {
+    background-color: #47566C;
+    background-image: url(../images/icons/icon_school.svg);
+}
+.contact .map_wrap #map {
+    -webkit-box-shadow: 10px 11px 20px #11161c;
+    box-shadow: 10px 11px 20px #11161c;
+}
+
 
 
 // *** Research Areas *** //
+// What we do
+
+
+// researchArea
+.third_depth_titbox p.tit {
+    color: #fff;
+}
+.world_research .contents_wrap .contents_box strong {
+    color: #fff;
+}
+span.impact-desc {
+    font-weight: 700;
+    color: #fff;
+}
+.third_depth_titbox p.desc {
+    color: #6E7E96;
+}
+.art-content .art-num-list dt {
+    color: #fff;
+}
+.art-content .art-num-list dd {
+    color: #fff;
+}
+#related_paper > h1 span {
+    color: #fff;
+}
+#related_paper > .related_pp_wrap .cm_pp {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+#related_paper > .related_pp_wrap .cm_pp .desc {
+    color: #fff;
+}
+#related_paper > .related_pp_wrap .cm_pp .date {
+    color: #6E7E96;
+}
 // Publications
 .paper_list .view_list.rsp .list_box {
     margin-top: 40px;
@@ -1393,7 +1466,17 @@ section.research_pp aside#relatedContents {
 .infra .tit {
     padding: 0;
 }
-
+.infra #infraRolling .nav_btn button {
+    background-color: #333D50;
+}
+.infra #infraRolling .nav_btn button:hover, 
+.infra #infraRolling .nav_btn button:focus {
+    background-color: #fff;
+    background-image: url(../images/icons/infra_navi_icon_on.png);
+    background-position: center;
+    background-size: auto;
+    background-repeat: no-repeat;
+}
 
 //press
 #boardSearch {
