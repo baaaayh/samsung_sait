@@ -1,3 +1,79 @@
+.research-2024 .ai_visual {
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+}
+.research-2024 #subTab ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    padding: 0;
+    font-size: 0;
+}
+.research-2024 #subTab ul:before {
+    display: none;
+}
+.research-2024 #subTab.subTab-rt ul li.ntb {
+    margin: 0;
+}
+.research-2024 #subTab ul li a small {
+    display: block;
+    font-size: 12px;
+    line-height: 16px;
+}
+.research-2024 .subTab-rt {
+    margin-top: 0;
+}
+.research-2024 .subTab-rt--mt100 {
+    margin-top: 100px;
+}
+.research-2024 .contents-box__row {
+    margin-top: 100px;
+}
+.research-2024 .contents_wrap .contents-box__item {
+    margin-top: 40px;
+}
+.research-2024 .contents_wrap .contents-box__item:first-child {
+    margin-top: 0;
+}
+.research-2024 .contents_wrap .contents-box__item strong {
+    padding-bottom: 0;
+}
+.research-2024 .contents_wrap .contents-box__item--mt40 {
+    margin-top: 40px;
+}
+.research-2024 .contents-box__row:first-child {
+    margin-top: 0;
+}
+.research-2024 .tab-box {
+    margin-top: 70px;
+}
+.research-2024 .tab-box .tab-box__container {
+    display: none;
+}
+.research-2024 .tab-box .tab-box__container.active {
+    display: block;
+}
+.research-2024 .contents_box {
+    padding: 90px 0;
+}
+.research-2024 .contents_wrap .contents_box p {
+    padding: 0 100px;
+}
+.research-2024 .art-content .art-img-bx {
+    margin-top: 90px;
+}
+.research-2024 .contents_wrap .contents_box strong.large {
+    font-size: 25px;
+    font-weight: 700;
+}
+
+
+
+
+
 body {
     background-color: #1D242F;
 }
@@ -1335,7 +1411,15 @@ p strong {
 
 // *** Research Areas *** //
 // What we do
-
+section.what .changing_list ul li i img {
+    filter: invert(100%) saturate(0%);
+}
+section.what .changing_list ul li strong {
+    display: block;
+    font-size: 20px;
+    line-height: 30px;
+    color: #fff;
+}
 
 // researchArea
 .third_depth_titbox p.tit {
@@ -1540,6 +1624,9 @@ input[type=text]:focus, textarea:focus, select:focus {
 }
 #PressList_ul.list_shape {
     gap: 10px;
+}
+.press {
+    width: auto;
 }
 .press .board_list {
     width: 100%;
