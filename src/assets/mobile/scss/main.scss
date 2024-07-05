@@ -323,6 +323,12 @@
             overflow: hidden;
             color: #fff;
             box-sizing: border-box;
+            word-break: keep-all;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
             &::before {
                 content:'';
                 display: inline-block;

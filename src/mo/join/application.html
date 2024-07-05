@@ -5,12 +5,10 @@
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
         <!-- //공통적용헤더정보 -->
-        <link rel="stylesheet" href="https://www.sait.samsung.co.kr/saithome/stylesheets/css/common.css" />
-        <script type="text/javascript" src="https://www.sait.samsung.co.kr/saithome/javascripts/jquery-1.8.2.min.js"></script>
-        <!--[if lt IE 9]><script src="https://www.sait.samsung.co.kr/saithome/javascripts/lib/html5shiv.min.js"></script><![endif]-->
-        <!--[if lt IE 10]><script src="https://www.sait.samsung.co.kr/saithome/javascripts/lib/placeholders.min.js"></script><![endif]-->
+        <link rel="stylesheet" href="https://www.sait.samsung.co.kr/saithome/mobile/stylesheets/css/common.css" />
+        <script type="text/javascript" src="https://www.sait.samsung.co.kr/saithome/mobile/javascripts/jquery-1.8.2.min.js"></script>
         <meta name="Keywords" content="SAIT, Samsung Advanced Institute of Technology, 삼성종합기술원, 삼성전자 종합기술원, Samsung research, Samsung R&amp;D, Samsung future technology, R&amp;D, Autonomoucs Driving, Graphene, New materials, QD, Quantum Dot" />
-
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
         <title>Join us | Samsung Advanced Institute of Technology</title>
         <meta name="Description" content="Join us | Samsung Advanced Institute of Technology" />
         <meta property="og:type" content="website" />
@@ -31,30 +29,16 @@
 
             <!-- container-->
             <section id="container" class="join">
-                <!-- subLocation-->
-                <div id="subLocation">
-                    <div class="location_box">
-                        <ul class="location_list">
-                            <li class="home"><a href="https://www.sait.samsung.co.kr/saithome/main/main.do">main page</a></li>
-                            <li class="depth1">
-                                <button type="button">Careers</button>
-                                <ul class="under_depth">
-                                    <li><a href="https://www.sait.samsung.co.kr/saithome/about/who.do">About SAIT</a></li>
-                                    <li><a href="https://www.sait.samsung.co.kr/saithome/research/what.do">Research Areas</a></li>
-                                    <li><a href="https://www.sait.samsung.co.kr/saithome/about/press.do">News & Events</a></li>
-                                    <li><a href="https://www.sait.samsung.co.kr/saithome/join/application.do">Careers</a></li>
-                                </ul>
-                            </li>
-                            <li class="depth2">
-                                <button type="button">Recruiting Process</button>
-                                <ul class="under_depth">
-                                    <li><a href="https://www.sait.samsung.co.kr/saithome/join/application.do" class="active">Recruiting Process</a></li>
-                                </ul>
-                            </li>
-                        </ul>
+                <!-- subVisual-->
+                <div id="subVisual">
+                    <img src="https://www.sait.samsung.co.kr/saithome/mobile/images/join/join_visual.jpg" alt="" />
+                    <div class="tit_wrap">
+                        <h3>
+                            <span> Changing the World through<br />Creative Research </span>
+                        </h3>
                     </div>
                 </div>
-                <!-- //subLocation-->
+                <!-- //subVisual-->
 
                 <!-- subContent-->
                 <section id="content" class="application">
@@ -68,7 +52,7 @@
                                 <p class="js-scr-box">SAIT is looking for highly creative people to lead the future. The institute's world-class lab facilities and broad scope of research provides a rich environment for conducting cutting-edge scientific and technological innovation.</p>
                             </div>
                         </article>
-                        <article class="row js-scr-sec">
+                        <article class="row row--pt40 js-scr-sec">
                             <div class="row__inner js-scr-sec">
                                 <div class="rprocess">
                                     <ul>
@@ -142,7 +126,7 @@
                                 </div>
                             </div>
                         </article>
-                        <article class="row">
+                        <article class="row row--pt40">
                             <div class="row__inner js-scr-sec">
                                 <ul class="sub-list">
                                     <li class="js-scr-box">
@@ -161,7 +145,9 @@
                                         <div class="small-title small-title--mb5">Executive Interview</div>
                                         <p class="fs-16">Questions about personal values for career, growth potential, organizational, communication and interpersonal skills.</p>
                                     </li>
-                                    <li class="js-scr-box"><span>contact</span><a href="mailto:jobinfo@samsung.com">jobinfo@samsung.com</a></li>
+                                    <li class="js-scr-box">
+                                        <div class="contact-box"><span>contact</span><a href="mailto:jobinfo@samsung.com">jobinfo@samsung.com</a></div>
+                                    </li>
                                 </ul>
                             </div>
                         </article>
@@ -183,12 +169,12 @@
                         </div>
                         <div class="related_wrap">
                             <article class="js-scr-box">
-                                <a href="https://www.sait.samsung.co.kr/saithome/about/history.do">
+                                <a href="https://www.sait.samsung.co.kr/saithome/mobile/about/history.do">
                                     <h1>History Of Progress</h1>
                                 </a>
                             </article>
                             <article class="js-scr-box">
-                                <a href="https://www.sait.samsung.co.kr/saithome/about/labs.do">
+                                <a href="https://www.sait.samsung.co.kr/saithome/mobile/about/labs.do">
                                     <h1>Global Labs</h1>
                                 </a>
                             </article>
@@ -200,8 +186,9 @@
             <!-- //container-->
 
             <!-- footer -->
+
             <%- include("../include/sub_footer.html") %>
-            <div id="gnbDimmed" class="dimmed"></div>
+
             <!-- Global site tag (gtag.js) - Google Analytics -->
             <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123575008-1"></script>
             <script>
@@ -213,10 +200,12 @@
 
                 gtag('config', 'UA-167217135-1');
             </script>
+
             <!-- //footer -->
+            <div id="gnbDimmed" class="dimmed"></div>
         </div>
-        <script type="text/javascript" src="https://www.sait.samsung.co.kr/saithome/javascripts/lib/TweenMax/TweenMax.min.js"></script>
-        <script type="text/javascript" src="https://www.sait.samsung.co.kr/saithome/javascripts/lib/TweenMax/easing/EasePack.min.js"></script>
-        <script type="text/javascript" src="https://www.sait.samsung.co.kr/saithome/javascripts/design_common.js"></script>
+        <script type="text/javascript" src="https://www.sait.samsung.co.kr/saithome/mobile/javascripts/lib/TweenMax/TweenMax.min.js"></script>
+        <script type="text/javascript" src="https://www.sait.samsung.co.kr/saithome/mobile/javascripts/lib/TweenMax/easing/EasePack.min.js"></script>
+        <script type="text/javascript" src="https://www.sait.samsung.co.kr/saithome/mobile/javascripts/design_common.js"></script>
     </body>
 </html>

@@ -142,9 +142,7 @@ body {
     padding-top: 0;
 }
 .content__container {
-    max-width: 1180px;
-    width: 100%;
-    margin: 0 auto;
+    
 }
 .row {
     padding-top: 80px;
@@ -165,6 +163,11 @@ body {
 }
 .row:first-child {
     padding-top: 0;
+}
+.row__inner {
+    max-width: 1180px;
+    width: 100%;
+    margin: 0 auto;
 }
 .row__guide {
     max-width: 980px;
@@ -332,6 +335,7 @@ strong {
 }
 .related__inner {
     max-width: 1180px;
+    min-width: 1180px;
     width: 100%;
     margin: 0 auto;
     display: flex;
@@ -2182,6 +2186,11 @@ p.mb20 {
 
 //  *** etc *** //
 // privacy
+.privacy {
+    width: auto;
+    max-width: 1180px;
+    min-width: 1180px;
+}
 .privacy .step {
     padding: 80px 0 0;
 }
