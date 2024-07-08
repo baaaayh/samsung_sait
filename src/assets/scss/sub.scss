@@ -1866,13 +1866,19 @@ section.forum .infobox .inner .ttx-group {
 section.forum .infobox .inner .ttx {
     position: relative;
     padding-left: 140px;
-    display: flex;
-    justify-content: space-between;
     padding-top: 0px !important;
 }
-section.forum .infobox .inner .ttx--block {
-    display: block;
+section.forum .infobox .inner .ttx--speaker {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    grid-column-gap: 60px;
+    grid-row-gap: 40px;
+}
+section.forum .infobox .inner .ttx--pl0 {
     padding-left: 0;
+}
+section.forum .infobox .inner .ttx--mt60 {
+    margin-top: 60px;
 }
 section.forum .infobox .inner .ttx + .ttx {
     padding-top: 0;
@@ -1882,9 +1888,10 @@ section.forum .infobox .inner .ttx-group .ttx + .ttx {
     margin-top: 60px !important;
 }
 section.forum .infobox .inner .ttx .speaker {
+    text-align: center;
+    vertical-align: top;
     top: auto !important;
     margin: 0 !important;
-    width: min-content;
 }
 section.forum .infobox .inner .ttx > span {
     position: absolute;
@@ -2025,6 +2032,9 @@ section.forum.f2020 .program_array:nth-child(9) .detail {
 }
 
 // saif 2019
+section#container section#content.f2019 {
+    padding-bottom: 120px !important;
+}
 section.forum .infobox .inner .ttx span {
     display: inline-block;
     line-height: 40px;

@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- 공통적용헤더정보 -->
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <!-- //공통적용헤더정보 -->
+        <link rel="stylesheet" href="https://www.sait.samsung.co.kr/saithome/mobile/stylesheets/css/common.css" />
+        <script type="text/javascript" src="https://www.sait.samsung.co.kr/saithome/mobile/javascripts/jquery-1.8.2.min.js"></script>
+        <meta name="Keywords" content="SAIT, Samsung Advanced Institute of Technology, 삼성종합기술원, 삼성전자 종합기술원, Samsung research, Samsung R&amp;D, Samsung future technology, R&amp;D, Autonomoucs Driving, Graphene, New materials, QD, Quantum Dot" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+        <title>Samsung AI Forum 2023 | Samsung Advanced Institute of Technology</title>
+        <meta name="Description" content="Samsung AI Forum 2023 | Samsung Advanced Institute of Technology" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Samsung AI Forum 2023 | Samsung Advanced Institute of Technology" />
+        <meta property="og:description" content="Samsung AI Forum 2023 | Samsung Advanced Institute of Technology" />
+        <meta property="og:image" content="" />
+        <meta property="og:url" content="" />
+        <meta property="og:site_name" content="Samsung Advanced Institute of Technology" />
+        <meta name="Author" content="Samsung Advanced Institute of Technology" />
+        <meta name="robots" content="ALL" />
+        <%- include("../include/sub_head.html") %>
+    </head>
+    <body>
+        <!-- <script>
+            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+            } else {
+                location.replace('/saithome/event/saif2023.do');
+            }
+
+            function ssifRefresh() {
+                location.reload();
+            }
+        </script> -->
+
+        <div id="wrap" role="main">
+            <!-- header-->
+            <%- include("../include/sub_header.html") %>
+            <!-- //header-->
+
+            <style type="text/css">
+                section.forum.f2022 #subTitle h4.line_h {
+                    line-height: 34px;
+                }
+
+                .video_wrap .video {
+                    border: none;
+                    background-color: #ccc;
+                    width: calc(100% - 60px);
+                    margin: 0 auto;
+                    margin-top: 50px;
+                    height: 178px;
+                }
+
+                article.lsdesc_box {
+                    width: calc(100% - 60px);
+                    margin: 0 auto;
+                    padding: 25px 0 0;
+                }
+
+                article.lsdesc_box p {
+                    font-size: 15px;
+                    color: #636363;
+                    line-height: 25px;
+                }
+
+                article.lsdesc_box p a {
+                    color: #1428a0;
+                    text-decoration: underline;
+                    font-weight: 700;
+                }
+
+                section.forum .contbox {
+                    width: 100%;
+                    border: 1px solid #a8a8a8;
+                    margin: 0 auto;
+                    display: table;
+                    margin-top: 17px;
+                    margin-bottom: 85px;
+                }
+
+                section.forum .contbox .inner.cont {
+                    padding: 35px 25px;
+                }
+
+                section.forum .contbox .inner.cont h4 {
+                    color: #1428a0;
+                    font-size: 15px;
+                }
+
+                section.forum .contbox .inner.cont a {
+                    display: block;
+                    color: #636363;
+                    font-size: 14px;
+                    margin-top: 20px;
+                }
+
+                .contact_wrap {
+                    width: calc(100% - 60px);
+                    margin: 0 auto;
+                    margin-top: 35px;
+                }
+
+                .contact_wrap p {
+                    color: #333;
+                    font-size: 15px;
+                    font-weight: 700;
+                }
+
+                section.forum.f2022 #subTitle h5.sm_title {
+                    font-size: 20px;
+                    padding-top: 20px;
+                }
+
+                section.forum.f2022 a.regi_btn {
+                    display: inline-block;
+                    background-color: #1428a0;
+                    color: #fff;
+                    font-size: 15px;
+                    font-weight: 700;
+                    width: 150px;
+                    text-align: center;
+                    padding: 12px 0;
+                    border-radius: 17px;
+                    margin-top: 25px;
+                }
+
+                section.forum.f2022 .subTitle {
+                    text-align: center;
+                }
+
+                section.forum.f2022 p.video_desc {
+                    font-size: 17px;
+                    line-height: 27px;
+                    color: #333;
+                    text-align: center;
+                    font-weight: 700;
+                    width: 80%;
+                    margin: 0 auto;
+                    padding-top: 25px;
+                }
+
+                section.forum.f2022 p.video_desc span {
+                    color: #1428a0;
+                }
+
+                .subBtn {
+                    margin-top: 30px;
+                    margin-bottom: 40px;
+                }
+
+                .subBtn a {
+                    display: inline-block;
+                    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+                    padding: 18px 35px;
+                    background: #1a237e;
+                    border-radius: 30px;
+                    font-size: 14px;
+                    color: #fff;
+                }
+
+                section.forum.f2022 .infobox .inner .ttx .speaker.mgr0 {
+                    margin-right: 0;
+                }
+
+                section.forum.f2022 .infobox .inner .ttx .speaker.mgr10 {
+                    margin-right: 10%;
+                }
+
+                section.forum.f2022 .infobox .inner .ttx .speaker.mgl10 {
+                    margin-left: 10%;
+                }
+
+                section.forum.f2022 .program_array .detail {
+                    position: relative;
+                }
+
+                .detail .video_view {
+                    position: relative;
+                    width: 110px;
+                    height: 30px;
+                    right: 0;
+                    top: 0;
+                    background: #333;
+                    display: block;
+                    background: url(https://www.sait.samsung.co.kr/saithome/mobile/images/event/saif2023/mv_more.png) no-repeat center;
+                    background-size: 100%;
+                    margin: 20px auto 0 0;
+                }
+
+                section.forum.f2022 .infobox .inner .ttx .speaker {
+                    margin-left: 40px;
+                    margin-right: 40px;
+                    vertical-align: top;
+                }
+
+                section.forum.f2022 .infobox .inner .ttx:last-child {
+                    margin-top: 0;
+                }
+
+                section.forum.f2022 .infobox .inner .ttx a.mt img {
+                    display: block;
+                    margin-top: 10px;
+                }
+
+                section.forum.f2022 .infobox .inner .ttx .speaker p + p.sub {
+                    margin-top: 0px;
+                }
+
+                section.forum.f2022 .infobox .inner .ttx .speaker i {
+                    margin: 0 auto;
+                    width: 120px;
+                    height: 120px;
+                }
+
+                .tac {
+                    text-align: center;
+                }
+
+                /* 211001 */
+                .infobox p {
+                    color: #636363;
+                    font-weight: 400;
+                }
+
+                .infobox .p-bold {
+                    color: #333333;
+                    font-weight: 700;
+                }
+
+                @media screen and (max-width: 850px) {
+                    section.forum.f2022 .infobox .inner .ttx .speaker {
+                        margin: 0 20px;
+                    }
+                }
+
+                @media screen and (max-width: 660px) {
+                    section.forum.f2022 .infobox .inner .ttx .speaker {
+                        width: calc((100% - 150px) / 3);
+                    }
+
+                    section.forum.f2022 .infobox .inner .ttx .speaker i {
+                        width: 80px;
+                        height: 80px;
+                    }
+                }
+
+                @media screen and (max-width: 500px) {
+                    section.forum.f2022 .infobox .inner .ttx .speaker {
+                        width: calc((100% - 36px) / 2);
+                        margin: 0 5px;
+                    }
+
+                    section.forum.f2022 .infobox .inner .ttx .speaker i {
+                        width: 100px;
+                        height: 100px;
+                    }
+                }
+
+                /* 20220726 */
+                section.forum.f2022 .bimpact {
+                    color: #1428a0;
+                    font-size: 14px;
+                    line-height: 20px;
+                }
+
+                /* 230925 */
+                .m-btn-round {
+                    display: inline-block;
+                    padding: 0 30px;
+                    background-color: #fff;
+                    font-size: 15px;
+                    line-height: 40px;
+                    border-radius: 20px;
+                }
+
+                .forum-sub-title {
+                    margin-top: 40px;
+                    font-family: SamsungSharpSans, sans-serif;
+                    font-weight: 700;
+                    font-size: 20px;
+                    line-height: 30px;
+                    color: #1428a0;
+                    text-align: center;
+                }
+
+                .ttx .speaker {
+                    vertical-align: top;
+                }
+            </style>
+
+            <!-- container-->
+            <section id="container" class="forum f2022 f2023 renew2024">
+                <!-- subVisual-->
+                <div id="subVisual">
+                    <img src="https://www.sait.samsung.co.kr/saithome/mobile/images/event/saif2023/m-img-topbanner_2023.jpg" alt="" />
+                </div>
+                <!-- //subVisual-->
+                <div id="content">
+                    <div class="content__container">
+                        <article class="row">
+                            <div class="row__inner">
+                                <div id="subTitle" class="subTitle forum js-scr-sec">
+                                    <h4 class="js-scr-box line_h">Samsung AI Forum 2023</h4>
+                                    <div class="nav_group">
+                                        <a href="./saif2022.do" class="prev_ev">Samsung AI Forum 2022</a>
+                                    </div>
+                                </div>
+                                <div class="video_wrap js-scr-sec">
+                                    <div class="video js-scr-box">
+                                        <iframe width="100%" height="170" src="https://www.youtube.com/embed/R7n9f6x7gP4?si=kGTVv8wU3A1DSEAj" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                                <div class="infobox js-scr-sec">
+                                    <div class="inner">
+                                        <div class="ttx js-scr-box"><span>Participants </span>Anyone with an interest in AI technology including undergraduate and graduate students, university faculty members, researchers, and etc.</div>
+                                        <div class="ttx js-scr-box"><span>Registration </span>October 12 ~ November 7</div>
+                                        <div class="ttx js-scr-box">
+                                            <span>Date</span>
+                                            <p>November 7 (Tue.) 10:00 (KST, UST+9)</p>
+                                        </div>
+                                        <div class="ttx js-scr-box">
+                                            <span>Location</span>
+                                            <p>Suwon Convention Center</p>
+                                        </div>
+                                        <div class="ttx">
+                                            <span class="js-scr-box left_align">Co-Chairs</span>
+                                            <div class="ttx__speaker">
+                                                <div class="speaker js-scr-box">
+                                                    <i><img src="https://www.sait.samsung.co.kr/saithome/mobile/images/event/saif2023/Gyoyoung Jin.png" alt="" /></i>
+                                                    <p>Gyoyoung Jin</p>
+                                                    <p class="sub">Samsung</p>
+                                                </div>
+
+                                                <div class="speaker js-scr-box">
+                                                    <i><img src="https://www.sait.samsung.co.kr/saithome/mobile/images/event/saif2023/Yoshua Bengio.png" alt="" /></i>
+                                                    <p>Yoshua Bengio</p>
+                                                    <p class="sub">Univ. of Montreal</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <br />
+                                        <!-- 2022-10-17 추가 : 내용추가+수정 -->
+                                        <div class="ttx">
+                                            <span class="js-scr-box left_align">Speakers</span>
+                                            <div class="ttx__speaker">
+                                                <div class="speaker js-scr-box">
+                                                    <i><img src="https://www.sait.samsung.co.kr/saithome/mobile/images/event/saif2023/Kye Hyun Kyung.png" alt="" /></i>
+                                                    <p>Kye Hyun Kyung</p>
+                                                    <p class="sub">Samsung Electronics</p>
+                                                </div>
+                                                <div class="speaker js-scr-box">
+                                                    <i><img src="https://www.sait.samsung.co.kr/saithome/mobile/images/event/saif2023/Yoshua Bengio.png" alt="" /></i>
+                                                    <p>Yoshua Bengio</p>
+                                                    <p class="sub">Montreal Univ.</p>
+                                                </div>
+                                                <div class="speaker js-scr-box">
+                                                    <i><img src="https://www.sait.samsung.co.kr/saithome/mobile/images/event/saif2023/Jim Keller.png" alt="" /></i>
+                                                    <p>Jim Keller</p>
+                                                    <p class="sub">Tenstorrent</p>
+                                                </div>
+                                                <div class="speaker js-scr-box">
+                                                    <i><img src="https://www.sait.samsung.co.kr/saithome/mobile/images/event/saif2023/Larry Zitnick.png" alt="" /></i>
+                                                    <p>Larry Zitnick</p>
+                                                    <p class="sub">Meta</p>
+                                                </div>
+                                                <div class="speaker js-scr-box">
+                                                    <i><img src="https://www.sait.samsung.co.kr/saithome/mobile/images/event/saif2023/Satoshi Matsuoka.png" alt="" /></i>
+                                                    <p>Satoshi Matsuoka</p>
+                                                    <p class="sub">RIKEN Center for<br />Computer Science</p>
+                                                </div>
+                                                <div class="speaker js-scr-box">
+                                                    <i><img src="https://www.sait.samsung.co.kr/saithome/mobile/images/event/saif2023/Kyunghyun Cho.png" alt="" /></i>
+                                                    <p>Kyunghyun Cho</p>
+                                                    <p class="sub">New York Univ.</p>
+                                                </div>
+                                                <div class="speaker js-scr-box">
+                                                    <i><img src="https://www.sait.samsung.co.kr/saithome/mobile/images/event/saif2023/Masato Motomura.png" alt="" /></i>
+                                                    <p>Masato Motomura</p>
+                                                    <p class="sub">Tokyo Univ.</p>
+                                                </div>
+                                                <div class="speaker js-scr-box">
+                                                    <i><img src="https://www.sait.samsung.co.kr/saithome/mobile/images/event/saif2023/Duane S. Boning.png" alt="" /></i>
+                                                    <p>Duane S. Boning</p>
+                                                    <p class="sub">MIT</p>
+                                                </div>
+                                                <div class="speaker js-scr-box">
+                                                    <i><img src="https://www.sait.samsung.co.kr/saithome/mobile/images/event/saif2023/Joo-Young Kim.png" alt="" /></i>
+                                                    <p>Joo-Young Kim</p>
+                                                    <p class="sub">KAIST, HyperAccel</p>
+                                                </div>
+                                                <div class="speaker js-scr-box">
+                                                    <i><img src="https://www.sait.samsung.co.kr/saithome/mobile/images/event/saif2023/Zaid Kahn.png" alt="" /></i>
+                                                    <p>Zaid Kahn</p>
+                                                    <p class="sub">Microsoft</p>
+                                                </div>
+                                                <div class="speaker js-scr-box">
+                                                    <i><img src="https://www.sait.samsung.co.kr/saithome/mobile/images/event/saif2023/Young Sang Choi.png" alt="" /></i>
+                                                    <p>Young Sang Choi</p>
+                                                    <p class="sub">SAIT</p>
+                                                </div>
+                                                <div class="speaker js-scr-box">
+                                                    <i><img src="https://www.sait.samsung.co.kr/saithome/mobile/images/event/saif2023/Seungwon Lee.png" alt="" /></i>
+                                                    <p>Seungwon Lee</p>
+                                                    <p class="sub">SAIT</p>
+                                                </div>
+                                                <div class="speaker js-scr-box">
+                                                    <i><img src="https://www.sait.samsung.co.kr/saithome/mobile/images/event/saif2023/Jae-Joon Han.png" alt="" /></i>
+                                                    <p>Jae-Joon Han</p>
+                                                    <p class="sub">SAIT</p>
+                                                </div>
+                                                <div class="speaker js-scr-box">
+                                                    <i><img src="https://www.sait.samsung.co.kr/saithome/mobile/images/event/saif2023/Younghun Sung.png" alt="" /></i>
+                                                    <p>Younghun Sung</p>
+                                                    <p class="sub">SAIT</p>
+                                                </div>
+                                                <div class="speaker js-scr-box">
+                                                    <i><img src="https://www.sait.samsung.co.kr/saithome/mobile/images/event/saif2023/Jun Haeng Lee.png" alt="" /></i>
+                                                    <p>Jun Haeng Lee</p>
+                                                    <p class="sub">SAIT</p>
+                                                </div>
+                                                <div class="speaker js-scr-box">
+                                                    <i><img src="https://www.sait.samsung.co.kr/saithome/mobile/images/event/saif2023/Changkyu Choi.png" alt="" /></i>
+                                                    <p>Changkyu Choi</p>
+                                                    <p class="sub">SAIT</p>
+                                                </div>
+                                                <div class="speaker js-scr-box">
+                                                    <i><img src="https://www.sait.samsung.co.kr/saithome/mobile/images/event/saif2023/Eunsoo Shim.png" alt="" /></i>
+                                                    <p>Eunsoo Shim</p>
+                                                    <p class="sub">SAIT</p>
+                                                </div>
+                                            </div>
+
+                                            <!-- <div class="speaker js-scr-box">
+							<i><img src="https://www.sait.samsung.co.kr/saithome/mobile/images/event/saif2023/m_21_se1_02.png" alt=""></i>
+							<p>Kunle Olukotun</p>
+							<p class="sub">Stanford Univ.</p>
+						</div>
+						<div class="speaker js-scr-box">
+							<i><img src="https://www.sait.samsung.co.kr/saithome/mobile/images/event/saif2023/m_21_se1_03.png" alt=""></i>
+							<p>Andrew Feldman</p>
+							<p class="sub">Cerebras Systems</p>
+						</div>
+						
+						<div class="speaker js-scr-box">
+							<i><img src="https://www.sait.samsung.co.kr/saithome/mobile/images/event/saif2023/m_21_se2_02.png" alt=""></i>
+							<p>Gerbrand Ceder</p>
+							<p class="sub">UC Berkeley</p>
+						</div>
+						<div class="speaker js-scr-box">
+							<i><img src="https://www.sait.samsung.co.kr/saithome/mobile/images/event/saif2023/m_21_se2_03.png" alt=""></i>
+							<p>Bryce Meredig</p>
+							<p class="sub">Citrine Informatics</p>
+						</div>
+						
+						<div class="speaker js-scr-box">
+							<i><img src="https://www.sait.samsung.co.kr/saithome/mobile/images/event/saif2023/m_21_se3_02.png" alt=""></i>
+							<p>Antonio Torralba</p>
+							<p class="sub">MIT</p>
+						</div>
+						<div class="speaker js-scr-box">
+							<i><img src="https://www.sait.samsung.co.kr/saithome/mobile/images/event/saif2023/m_21_se3_03.png" alt=""></i>
+							<p>Daniel Bibireata</p>
+							<p class="sub">LandingAI</p>
+						</div>
+						<div class="speaker js-scr-box">
+							<i><img src="https://www.sait.samsung.co.kr/saithome/mobile/images/event/saif2023/m_21_se3_04.png" alt=""></i>
+							<p>Kathleen McKeown</p>
+							<p class="sub">Columbia Univ.</p>
+						</div> -->
+                                        </div>
+
+                                        <div class="ttx js-scr-box" style="margin-top: 70px; display: none">
+                                            <span class="js-scr-box left_align">
+                                                Samsung AI Researcher 2022 <br />
+                                                Awardee
+                                            </span>
+                                            <div class="ttx__speaker">
+                                                <div class="speaker js-scr-box" style="">
+                                                    <a href="https://www.cs.princeton.edu/~danqic/" target="_blank">
+                                                        <i><img src="https://www.sait.samsung.co.kr/saithome/mobile/images/event/saif2023/Danqi-Chen.png" /></i>
+                                                    </a>
+                                                    <p>Danqi Chen</p>
+                                                    <p class="sub">(Princeton University)</p>
+                                                </div>
+                                                <div class="speaker js-scr-box">
+                                                    <a href="https://ai.stanford.edu/~tengyuma/" target="_blank">
+                                                        <i><img src="https://www.sait.samsung.co.kr/saithome/mobile/images/event/saif2023/Tengyu-Ma.png" alt="" /></i>
+                                                    </a>
+                                                    <p>Tengyu Ma</p>
+                                                    <p class="sub">(Stanford University)</p>
+                                                </div>
+                                                <div class="speaker js-scr-box">
+                                                    <a href="https://simonshaoleidu.com/" target="_blank">
+                                                        <i><img src="https://www.sait.samsung.co.kr/saithome/mobile/images/event/saif2023/Simon-Du.png" alt="" /></i>
+                                                    </a>
+                                                    <p>Simon Shaolei Du</p>
+                                                    <p class="sub">(University of Washington)</p>
+                                                </div>
+                                                <div class="speaker js-scr-box" style="">
+                                                    <a href="https://people.cs.umass.edu/~miyyer/" target="_blank">
+                                                        <i style="margin: 0 auto"><img src="https://www.sait.samsung.co.kr/saithome/mobile/images/event/saif2023/Mohit-Iyyer.png" alt="" /></i>
+                                                    </a>
+                                                    <p>Mohit Iyyer</p>
+                                                    <p class="sub">
+                                                        (University of <br />
+                                                        Massachusetts Amherst)
+                                                    </p>
+                                                </div>
+                                                <div class="speaker js-scr-box" style="">
+                                                    <a href="https://aditya-grover.github.io/" target="_blank">
+                                                        <i><img src="https://www.sait.samsung.co.kr/saithome/mobile/images/event/saif2023/Aditya-Grover.png" alt="" /></i>
+                                                    </a>
+                                                    <p>Aditya Grover</p>
+                                                    <p class="sub">
+                                                        (University of <br />
+                                                        California Los Angeles)
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- //2022-10-17 끝 -->
+
+                                        <!-- <div class="ttx js-scr-box">
+						<div class="wrap" style="text-align: center;margin-top:50px">
+							<a href="https://www.sait.samsung.co.kr/saithome/mobile/event/aiResearcher.do" target="_blank" style="display: block;"><img src="https://www.sait.samsung.co.kr/saithome/mobile/images/event/saif2023/mo_researcher_banner_2022.jpg" alt=""></a>
+						</div>
+					</div> -->
+                                    </div>
+                                </div>
+
+                                <div class="js-scr-sec" style="display: none">
+                                    <h3 class="js-scr-box">Program</h3>
+                                </div>
+
+                                <div class="program_wrap js-scr-sec" style="display: none">
+                                    <div class="program_array js-scr-box">
+                                        <div class="time">
+                                            <p>09:00 ~ 09:35</p>
+                                        </div>
+                                        <div class="detail">
+                                            <p>
+                                                <span class="bimpact">Jong Hee Han | Vice Chairman & CEO</span><br />
+                                                Opening Remarks
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="program_array js-scr-box">
+                                        <div class="time">
+                                            <p>09:35 ~ 10:20</p>
+                                        </div>
+                                        <div class="detail">
+                                            <p>
+                                                <span class="bimpact">Yoshua Bengio | University of Montreal</span><br />
+                                                Why we need amortized, causal and Bayesian world models
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="program_array js-scr-box" style="border-bottom: 2px solid #333">
+                                        <p style="color: #333; font-weight: 600; font-size: 18">Session 1. AI for R&D Innovation</p>
+                                    </div>
+
+                                    <div class="program_array js-scr-box">
+                                        <div class="time">
+                                            <p>10:20 ~ 10:35</p>
+                                        </div>
+                                        <div class="detail">
+                                            <p>
+                                                <span class="bimpact">Changkyu Choi | Corporate EVP, Samsung Advanced Institute of Technology</span><br />
+                                                AI Transformation for Semiconductor R&D
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="program_array js-scr-box">
+                                        <div class="time">
+                                            <p>10:35 ~ 10:50</p>
+                                        </div>
+                                        <div class="detail">
+                                            <p>
+                                                <span class="bimpact">Young Sang Choi | Corporate VP, Samsung Advanced Institute of Technology</span><br />
+                                                Materials Design Accelerated by AI
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="program_array js-scr-box">
+                                        <div class="time">
+                                            <p>10:50 ~ 11:05</p>
+                                        </div>
+                                        <div class="detail">
+                                            <p>
+                                                <span class="bimpact">Jae-Joon Han | VP of Technology, Samsung Advanced Institute of Technology</span><br />
+                                                Trustworthy Computer Vision for Semiconductor Manufacturing
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="program_array js-scr-box" style="border-bottom: 2px solid #333">
+                                        <p style="color: #333; font-weight: 600; font-size: 18">Session 2. Recent Advances of AI Algorithms</p>
+                                    </div>
+
+                                    <div class="program_array js-scr-box">
+                                        <div class="time">
+                                            <p>11:25 ~ 11:40</p>
+                                        </div>
+                                        <div class="detail">
+                                            <p>
+                                                <span class="bimpact">Simon Lacoste-Julien | VP of SAIT AI Lab. Montreal</span><br />
+                                                Learning Causal Representations
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="program_array js-scr-box">
+                                        <div class="time">
+                                            <p>11:40 ~ 12:00</p>
+                                        </div>
+                                        <div class="detail">
+                                            <p>
+                                                <span class="bimpact">Minjoon Seo | Korea Advanced Institute of Science & Technology</span><br />
+                                                Generative Search Engine
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="program_array js-scr-box" style="border-bottom: 2px solid #333">
+                                        <div class="time">
+                                            <p>12:00 ~ 12:20</p>
+                                        </div>
+                                        <div class="detail">
+                                            <p>
+                                                <span class="bimpact">Hyun Oh Song | Seoul National University</span><br />
+                                                Learning with Combinatorial Structures for Efficient Machine Learning
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="program_array js-scr-box" style="padding: 20px 0; border-bottom: 2px solid #333">
+                                        <div class="time">
+                                            <p>12:20 ~ 13:40</p>
+                                        </div>
+                                        <div class="detail">
+                                            <p>Lunch<br /></p>
+                                        </div>
+                                    </div>
+
+                                    <div class="program_array js-scr-box" style="border-bottom: 2px solid #333">
+                                        <p style="color: #333; font-weight: 600; font-size: 18">Session 3. Large Scale Computing for AI and HPC</p>
+                                    </div>
+
+                                    <div class="program_array js-scr-box">
+                                        <div class="time">
+                                            <p>13:40 ~ 14:00</p>
+                                        </div>
+                                        <div class="detail">
+                                            <p>
+                                                <span class="bimpact">Alan Gara | Former IBM and Intel Fellow</span><br />
+                                                The Evolution of HPC and ramifications for the future of AI
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="program_array js-scr-box">
+                                        <div class="time">
+                                            <p>14:00 ~ 14:15</p>
+                                        </div>
+                                        <div class="detail">
+                                            <p>
+                                                <span class="bimpact">Robert William Wisniewski | SVP of SAIT Systems Architecture Lab. San Jose</span><br />
+                                                Innovating the Next Discontinuity
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="program_array js-scr-box">
+                                        <div class="time">
+                                            <p>14:15 ~ 14:30</p>
+                                        </div>
+                                        <div class="detail">
+                                            <p>
+                                                <span class="bimpact">Seungwon Lee | VP of Technology, Samsung Advanced Institute of Technology</span><br />
+                                                Single Large Job Acceleration with GPU and Processing-in-memory (PIM)
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="program_array js-scr-box" style="padding: 20px 0; border-bottom: 2px solid #333">
+                                        <div class="time">
+                                            <p>14:40 ~ 15:30</p>
+                                        </div>
+                                        <div class="detail">
+                                            <p>
+                                                <span class="bimpact">Panel Discussion</span>
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="program_array js-scr-box">
+                                        <div class="time">
+                                            <p>15:50 ~ 15:55</p>
+                                        </div>
+                                        <div class="detail">
+                                            <p>
+                                                <span class="bimpact">Awards Ceremony</span><br />
+                                                - Samsung AI Researcher of the Year <br />
+                                                - Samsung AI Challenge
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="program_array js-scr-box" style="padding: 20px 0">
+                                        <div class="time">
+                                            <p>15:55 ~ 16:45</p>
+                                        </div>
+                                        <div class="detail">
+                                            <p>
+                                                <span class="bimpact">Awardee's Contribution Speech</span>
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="program_array js-scr-box">
+                                        <div class="time">
+                                            <p>16:45 ~ 16:50</p>
+                                        </div>
+                                        <div class="detail">
+                                            <p>
+                                                <span class="bimpact">Gyoyoung Jin | Corporate President, Samsung Advanced Institute of Technology</span><br />
+                                                Closing Remarks
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="contact_wrap">
+                                    <p>For more questions, Please contact below.</p>
+                                    <div class="contbox js-scr-sec">
+                                        <div class="inner cont js-scr-box">
+                                            <h4>Contact us</h4>
+                                            <div class="contbox__row">
+                                                <span class="contbox__title">E-mail</span>
+                                                <a href="#none">ai.forum@samsung.com</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- subAside-->
+                <aside id="relatedContents" class="js-scr-sec">
+                    <div class="related__inner">
+                        <div class="related__title">
+                            <h1 class="js-scr-box">Related Contents</h1>
+                            <span class="js-scr-box">Explore more related contents from SAIT!</span>
+                        </div>
+                        <div class="related_wrap">
+                            <article class="js-scr-box">
+                                <a href="/saithome/mobile/about/press_view.do?new_seq=1125">
+                                    <h1>News</h1>
+                                </a>
+                            </article>
+                            <article class="js-scr-box">
+                                <a href="/saithome/mobile/event/aiResearcher.do">
+                                    <h1>AI Researcher of the Year</h1>
+                                </a>
+                            </article>
+                        </div>
+                    </div>
+                </aside>
+                <!-- //subAside-->
+            </section>
+            <!-- //container-->
+
+            <!-- footer -->
+
+            <%- include("../include/sub_footer.html") %>
+
+            <!-- Global site tag (gtag.js) - Google Analytics -->
+            <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123575008-1"></script>
+            <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag() {
+                    dataLayer.push(arguments);
+                }
+                gtag('js', new Date());
+
+                gtag('config', 'UA-167217135-1');
+            </script>
+
+            <!-- //footer -->
+            <div id="gnbDimmed" class="dimmed"></div>
+        </div>
+
+        <script type="text/javascript" src="https://www.sait.samsung.co.kr/saithome/mobile/javascripts/lib/TweenMax/TweenMax.min.js"></script>
+        <script type="text/javascript" src="https://www.sait.samsung.co.kr/saithome/mobile/javascripts/lib/TweenMax/easing/EasePack.min.js"></script>
+        <script type="text/javascript" src="https://www.sait.samsung.co.kr/saithome/mobile/javascripts/design_common.js"></script>
+        <script>
+            $(document).ready(function () {
+                $('.wtc_pp').css({ background: "#fff url('')", 'background-repeat': 'no-repeat', 'background-size': '40px 35px;', 'background-position': '25px 25px' });
+            });
+        </script>
+    </body>
+</html>
