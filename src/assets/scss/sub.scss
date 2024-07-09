@@ -218,7 +218,9 @@ body {
     padding-top: 0;
 }
 .content__container {
-    
+    max-width: 1180px;
+    width: 100%;
+    margin: 0 auto;
 }
 .row {
     padding-top: 80px;
@@ -241,9 +243,7 @@ body {
     padding-top: 0;
 }
 .row__inner {
-    max-width: 1180px;
-    width: 100%;
-    margin: 0 auto;
+    
 }
 .row__guide {
     max-width: 980px;
@@ -638,6 +638,22 @@ strong {
     background-color: #fff;
     overflow: hidden;
 }
+.history .history_wrap article h1 {
+    color: #fff;
+}
+.history .history_wrap article h1:before {
+    background-color: #fff;
+}
+.history .history_wrap article h1:after {
+    background-color: #fff;
+}
+.history .history_wrap article dt {
+    color: #6E7E96;
+}
+.history .history_wrap article dd {
+    color: #fff;
+}
+
 
 // labs
 .btn_area a {
@@ -1392,6 +1408,9 @@ p strong {
 }
 
 // contact
+.contact .contact_wrap {
+    padding-top: 0;
+}
 .contact .map_box .address_wrap address {
     color: #fff;
 }
@@ -1411,6 +1430,9 @@ p strong {
 
 // *** Research Areas *** //
 // What we do
+.what .what_wrap .what_img {
+    margin: 0;
+}
 section.what .changing_list ul li i img {
     filter: invert(100%) saturate(0%);
 }
@@ -1422,6 +1444,13 @@ section.what .changing_list ul li strong {
 }
 
 // researchArea
+#content .third_depth_titbox {
+    margin: 0;
+    display: none;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
 .third_depth_titbox p.tit {
     color: #fff;
 }
@@ -1441,6 +1470,49 @@ span.impact-desc {
 .art-content .art-num-list dd {
     color: #fff;
 }
+
+
+
+// art-content
+.art-content__wrap {
+    max-width: 1180px;
+    width: 100%;
+    margin: 0 auto;
+}
+.art-content__title {}
+.art-content__title strong {
+    display: block;
+    margin-bottom: 20px;
+    font-size: 34px;
+    line-height: 44px;
+    color: #fff;
+}
+.art-content__title p {
+    font-size: 18px;
+    line-height: 28px;
+}
+.art-content__text {
+    margin-top: 80px;
+}
+.art-content__row {
+    margin-top: 80px;
+}
+.art-content__row:first-child {
+    margin-top: 0;
+}
+.art-content__row strong {
+    display: block;
+    font-size: 28px;
+    line-height: 38px;
+    color: #fff;
+}
+.art-content__row p {
+    margin-top: 20px;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+// 
 #related_paper > h1 span {
     color: #fff;
 }
@@ -1496,6 +1568,9 @@ span.impact-desc {
 }
 
 // paper view srt
+#content.paper_view #subTitle h4 {
+    width: 100%;
+}
 #content.paper_view #subTitle time {
     color: #6E7E96;
 }
@@ -1788,11 +1863,32 @@ input[type=text]:focus, textarea:focus, select:focus {
 
 // *** News & Events *** //
 // AI Forum
+section.forum #subTab {
+    margin-top: 0;
+    margin-bottom: 80px;
+}
+section.forum #subTab + .row {
+    padding-top: 0;
+}
+section.forum #subTab + .row__wrap {
+    padding-top: 0;
+}
 section.forum .video_wrap {
     margin-bottom: 80px;
 }
+section.forum .video_wrap + .row {
+    padding-top: 0px;
+}
+section.forum .video_wrap + .row__wrap {
+    padding-top: 0;
+}
+section.forum .video_wrap.m0 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
 section.forum .video_wrap .video {
     font-size: 0;
+    margin-top: 0;
 }
 section.forum .nav_group {
     top: auto;
@@ -1818,7 +1914,7 @@ section.forum .nav_group a.prev_ev {
     height: auto;
 }
 section.forum .nav_group a.prev_ev:after {
-    top: 11px;
+    top: 13px;
     right: 25px;
     background: url(../images/sub/fo_arr_prev_white.png) center / auto no-repeat;
 }
@@ -1838,7 +1934,7 @@ section.forum .nav_group a.next_ev {
     float: right;
 }
 section.forum .nav_group a.next_ev:after {
-    top: 11px;
+    top: 13px;
     right: 25px;
     background: url(../images/sub/fo_arr_prev_white.png) center / auto no-repeat;
     transform: rotate(180deg);
@@ -1935,9 +2031,12 @@ section.forum .contbox .inner.cont h4:before {
 }
 section.forum .contbox .inner.cont a {
     display: inline-block;
-    margin-top: 20px;
+    margin-top: 0px;
     padding-left: 0;
     color: #fff;
+}
+section.forum .contbox .inner.cont .contbox__row {
+    margin-top: 20px;
 }
 section.forum .contbox .inner.cont .contbox__title {
     display: inline-block;
@@ -2229,7 +2328,72 @@ p.mb20 {
     margin-top: 80px;
 }
 
+// Awardees
+#content .person_list {
+    border-top: 1px solid #fff;
+    box-sizing: border-box;
+    margin-top: 0;
+}
+#content .person_list li:first-child {
+    border-top: none;
+}
 
+#content .person_list li .info .name {
+    color: #fff;
+}
+#content .person_list li .info .name + .desc {
+    font-size: 18px;
+    line-height: 28px;
+    color: #7D8794;
+}
+#content .person_list .chkBtn {
+    background-color: transparent;
+    margin-top: 0;
+    max-width: 500px;
+    width: 100%;
+    padding: 0 55px;
+    box-sizing: border-box;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 33px;
+}
+#content .person_list .chkBtn:hover {
+    background-color: #fff;
+    color: #1428a0;
+    border-color: #fff;
+}
+#content .person_list .chkBtn:after {
+    display: none;
+}
+#content .person_list .chkBtn .chkBtn__text {
+    display: inline-block;
+    width: 100%;
+    position: relative;
+    padding-right: 45px;
+    text-align-last: left;
+    line-height: 65px;
+    box-sizing: border-box;
+}
+#content .person_list .chkBtn .chkBtn__text::after {
+    content:'';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    display: inline-block;
+    width: 26px;
+    height: 7px;
+    background: url(../images/icons/chkbtn_arrow.png) center / auto no-repeat;
+}
+#content .person_list .chkBtn:hover .chkBtn__text::after {
+    background: url(../images/icons/icon_chkbtn_arrow_blue.png) center / auto no-repeat;
+}
+#content .person_list .btn-wrap {}
+#content .person_list .btn-wrap__row {
+    margin-top: 20px;
+}
+#content .person_list .btn-wrap__row:first-child {
+    margin-top: 0;
+}
 
 // *** careers *** //
 // application

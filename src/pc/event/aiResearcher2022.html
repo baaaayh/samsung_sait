@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- 공통적용헤더정보 -->
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <!-- //공통적용헤더정보 -->
+        <link rel="stylesheet" href="https://www.sait.samsung.co.kr/saithome/stylesheets/css/common.css" />
+        <link rel="stylesheet" href="https://www.sait.samsung.co.kr/saithome/stylesheets/2024/sub.css" />
+        <link rel="shortcut icon" href="https://www.sait.samsung.co.kr/saithome/images/favicon.ico" />
+        <script type="text/javascript" src="https://www.sait.samsung.co.kr/saithome/javascripts/jquery-1.8.2.min.js"></script>
+        <!--[if lt IE 9]><script src="https://www.sait.samsung.co.kr/saithome/javascripts/lib/html5shiv.min.js"></script><![endif]-->
+        <!--[if lt IE 10]><script src="https://www.sait.samsung.co.kr/saithome/javascripts/lib/placeholders.min.js"></script><![endif]-->
+        <meta name="Keywords" content="SAIT, Samsung Advanced Institute of Technology, 삼성종합기술원, 삼성전자 종합기술원, Samsung research, Samsung R&amp;D, Samsung future technology, R&amp;D, Autonomoucs Driving, Graphene, New materials, QD, Quantum Dot" />
+
+        <title>Samsung AI Researcher of the Year | Samsung Advanced Institute of Technology</title>
+        <meta name="Description" content="Samsung AI Researcher of the Year | Samsung Advanced Institute of Technology" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Samsung AI Researcher of the Year | Samsung Advanced Institute of Technology" />
+        <meta property="og:description" content="Samsung AI Researcher of the Year | Samsung Advanced Institute of Technology" />
+        <meta property="og:image" content="" />
+        <meta property="og:url" content="" />
+        <meta property="og:site_name" content="Samsung Advanced Institute of Technology" />
+        <meta name="Author" content="Samsung Advanced Institute of Technology" />
+        <meta name="robots" content="ALL" />
+
+        <style type="text/css">
+            .aiApplyBtn {
+                width: 380px;
+                height: 80px;
+                margin: 45px 0 0;
+                display: inline-block;
+                border: 2px solid #1428a0;
+                background-color: #1428a0;
+                color: #fff;
+                font-weight: 700;
+                position: relative;
+                font-size: 20px;
+                -webkit-transition: all 0.2s ease;
+                -moz-transition: all 0.2s ease;
+                -o-transition: all 0.2s ease;
+                -ms-transition: all 0.2s ease;
+                -ms-transition: all 0.2s ease;
+            }
+            .rdoAI {
+                width: 20px;
+                height: 46px;
+                vertical-align: middle;
+                margin: -1px 10px 0 10px;
+            }
+            .rdoAI font {
+                font-size: 20px;
+                font-weight: 700;
+            }
+            .research_box {
+                margin: 40px 0 0 20px;
+                border: 1px solid #d6d6d6;
+                padding: 50px 40px;
+            }
+            .research_box strong {
+                font-size: 20px;
+                color: #1428a0;
+            }
+            .research_box div {
+                margin: 45px 0 0;
+                line-height: 25px;
+                position: relative;
+            }
+            .research_box div label {
+                cursor: none;
+            }
+
+            .list_box {
+                margin: 0 0 0 20px;
+                padding: 0 40px 0 30px;
+            }
+            .list_box div {
+                margin: 45px 0 0;
+                line-height: 25px;
+                position: relative;
+            }
+            .list_box div label {
+                cursor: none;
+            }
+
+            .chkAI {
+                width: 20px;
+                height: 46px;
+                vertical-align: middle;
+                margin: -1px 10px 0 10px;
+            }
+            .chkAI font {
+                font-size: 20px;
+                font-weight: 400;
+            }
+
+            .btnSave {
+                width: 100%;
+                height: 100%;
+                display: block;
+                text-indent: -50px;
+                color: #fff;
+                font-size: 20px;
+                font-weight: 700;
+                cursor: pointer;
+                -webkit-transition: color 0.2s ease;
+                -moz-transition: color 0.2s ease;
+                -o-transition: color 0.2s ease;
+                -ms-transition: color 0.2s ease;
+                padding: 0;
+                font-family: SamsungOneLatin, Noto Sans KR, sans-serif;
+            }
+            .btnSave:focus,
+            .btnSave:hover {
+                color: #1428a0;
+            }
+            .btnSave.check_not {
+                color: #fff !important;
+                cursor: auto !important;
+                background-color: #555 !important;
+                border-color: #555 !important;
+            }
+            #modalPopup .apply_popup table tr td div input[type='text'] {
+                width: 522px;
+            }
+            .filebox > div > div {
+                margin-bottom: 10px;
+            }
+
+            sup.sm {
+                font-size: 10px;
+            }
+            .contents_box .desc button i {
+                position: absolute;
+                top: 49%;
+                right: 162px;
+                -webkit-transition: all 0.2s ease;
+                -moz-transition: all 0.2s ease;
+                -o-transition: all 0.2s ease;
+                -ms-transition: all 0.2s ease;
+            }
+            .contents_box .desc button i:before {
+                width: 25px;
+                height: 1px;
+                display: block;
+                content: '';
+                background-color: #fff;
+                position: absolute;
+                -webkit-transition: background-color 0.2s ease;
+                -moz-transition: background-color 0.2s ease;
+                -o-transition: background-color 0.2s ease;
+                -ms-transition: background-color 0.2s ease;
+            }
+            .contents_box .desc button i:after {
+                width: 0;
+                height: 0;
+                display: block;
+                content: '';
+                position: absolute;
+                top: -2px;
+                right: -25px;
+                border-bottom: 3px solid transparent;
+                border-top: 3px solid transparent;
+                border-left: 5px solid #fff;
+                -webkit-transition: border-color 0.2s ease;
+                -moz-transition: border-color 0.2s ease;
+                -o-transition: border-color 0.2s ease;
+                -ms-transition: border-color 0.2s ease;
+            }
+            section.researcher #subTitle p.sub_t {
+                font-size: 25px !important;
+                line-height: 40px;
+                color: #333;
+                font-weight: 700;
+            }
+        </style>
+        <%- include("../include/sub_head.html") %>
+    </head>
+    <body>
+        <!-- <script>
+            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                location.replace('/saithome/mobile/event/aiResearcher2022.do');
+            } else {
+            }
+
+            function ssifRefresh() {
+                location.reload();
+            }
+        </script> -->
+
+        <div id="wrap" role="main">
+            <!-- header-->
+            <%- include("../include/sub_header.html") %>
+            <!-- //header-->
+
+            <!-- container-->
+            <section id="container" class="forum f2020research">
+                <!-- subVisual-->
+                <div id="subVisual"></div>
+                <!-- //subVisual-->
+
+                <!-- subLocation-->
+                <div id="subLocation">
+                    <div class="location_box">
+                        <ul class="location_list">
+                            <li class="home"><a href="https://www.sait.samsung.co.kr/saithome/main/main.do">main page</a></li>
+                            <li class="depth1">
+                                <button type="button">News & Events</button>
+                                <ul class="under_depth">
+                                    <li><a href="https://www.sait.samsung.co.kr/saithome/about/who.do">About SAIT</a></li>
+                                    <li><a href="https://www.sait.samsung.co.kr/saithome/research/what.do">Research Areas</a></li>
+                                    <li><a href="https://www.sait.samsung.co.kr/saithome/about/press.do">News & Events</a></li>
+                                    <li><a href="https://www.sait.samsung.co.kr/saithome/join/application.do">Join Us</a></li>
+                                </ul>
+                            </li>
+                            <li class="depth2">
+                                <button type="button">AI Researcher of the Year</button>
+                                <ul class="under_depth">
+                                    <li><a href="https://www.sait.samsung.co.kr/saithome/about/press.do">Press</a></li>
+                                    <li><a href="https://www.sait.samsung.co.kr/saithome/event/saif2023.do">AI Forum</a></li>
+                                    <li><a href="https://www.sait.samsung.co.kr/saithome/event/aiResearcher.do" class="active">AI Researcher of the Year</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- //subLocation-->
+
+                <!-- subContent-->
+                <section id="content" class="researcher">
+                    <div class="content__container">
+                        <article class="row">
+                            <div class="row__inner">
+                                <div id="subTitle" class="subTitle forum js-scr-sec">
+                                    <h4 class="js-scr-box gray">2022 Awardees</h4>
+                                </div>
+                                <div class="nav_group">
+                                    <a href="./aiResearcher2021.do" class="prev_ev">2021 Awardees</a>
+                                    <a href="./aiResearcher2023.do" class="next_ev">2023 Awardees</a>
+                                </div>
+                                <!-- person list style 2020-11-25 -->
+                                <style type="text/css">
+                                    .person_list {
+                                        margin-top: 100px;
+                                        text-align: center;
+                                    }
+                                    .person_list li {
+                                        padding: 20px 40px;
+                                        text-align: left;
+                                    }
+                                    .person_list li:first-child {
+                                        border-top: 2px solid #333;
+                                    }
+                                    .person_list li:last-child {
+                                        border-bottom: 2px solid #a8a8a8;
+                                    }
+                                    .person_list li + li {
+                                        border-top: 1px solid #a8a8a8;
+                                    }
+                                    .person_list li a {
+                                        display: block;
+                                        width: 100%;
+                                    }
+                                    .person_list li img {
+                                        float: left;
+                                    }
+                                    .person_list li img + .info {
+                                        padding-left: 40px;
+                                    }
+                                    .person_list li a:after {
+                                        content: '';
+                                        display: block;
+                                        clear: both;
+                                    }
+                                    .person_list .tb {
+                                        display: table;
+                                    }
+                                    .info {
+                                        display: table-cell;
+                                        vertical-align: middle;
+                                    }
+                                    .info .name {
+                                        font-weight: 700;
+                                        font-size: 20px;
+                                        color: #1428a0;
+                                    }
+                                    .info .desc {
+                                        font-weight: 400;
+                                        font-size: 20px;
+                                        color: #636363;
+                                        line-height: 30px;
+                                    }
+                                    .info .name + .desc {
+                                        margin-top: 20px;
+                                    }
+                                    .chkBtn {
+                                        display: inline-block;
+                                        margin-top: 50px;
+                                        padding: 20px 55px;
+                                        border-radius: 28px;
+                                        background-color: #1428a0;
+                                        color: #fff;
+                                        font-size: 20px;
+                                        font-weight: 700;
+                                    }
+                                    .chkBtn:after {
+                                        content: '';
+                                        display: inline-block;
+                                        width: 26px;
+                                        height: 7px;
+                                        background-image: url(https://www.sait.samsung.co.kr/saithome/images/event/chkbtn_arrow.png);
+                                        background-repeat: no-repeat;
+                                        background-size: 100%;
+                                        margin-left: 28px;
+                                        vertical-align: middle;
+                                    }
+                                    .list_title {
+                                        text-align: left;
+                                        font-size: 25px;
+                                        color: #333;
+                                        font-weight: 700;
+                                    }
+                                    .list_title + ul {
+                                        margin-top: 30px;
+                                    }
+                                </style>
+                                <!-- person list style 2020-11-25 -->
+
+                                <!-- person list 영역 2020-11-25 -->
+                                <div class="person_list">
+                                    <ul>
+                                        <li>
+                                            <a href="https://simonshaoleidu.com" target="_blank">
+                                                <div class="tb">
+                                                    <img src="https://www.sait.samsung.co.kr/saithome/images/event/22_sp_ev03.png" alt="Simon Shaolei Du" style="width: 126px; height: 126px" />
+                                                    <div class="info">
+                                                        <p class="name">Simon Shaolei Du</p>
+                                                        <p class="desc">a very productive researcher who authored many strong papers in theory of deep learning and reinforcement learning</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="https://www.cs.princeton.edu/~danqic" target="_blank">
+                                                <div class="tb">
+                                                    <img src="https://www.sait.samsung.co.kr/saithome/images/event/22_sp_ev01.png" alt="Danqi Chen" style="width: 126px; height: 126px" />
+                                                    <div class="info">
+                                                        <p class="name">Danqi Chen</p>
+                                                        <p class="desc">
+                                                            one of the pioneers of deep learning for NLP. She was one of the first's to show that deep learning can have high impact on NLP by proposing a deep learning based parser. Since then she's been pushing the boundary of deep learning for NLP.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="https://people.cs.umass.edu/~miyyer" target="_blank">
+                                                <div class="tb">
+                                                    <img src="https://www.sait.samsung.co.kr/saithome/images/event/22_sp_ev04.png" alt="Mohit Iyyer" style="width: 126px; height: 126px" />
+                                                    <div class="info">
+                                                        <p class="name">Mohit Iyyer</p>
+                                                        <p class="desc">co-authored one of the most influential, seminal papers on contextualized word embeddings, ELMO. He also contributed in the areas of open-ended question answering and language generation.</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="https://ai.stanford.edu/~tengyuma" target="_blank">
+                                                <div class="tb">
+                                                    <img src="https://www.sait.samsung.co.kr/saithome/images/event/22_sp_ev05.png" alt="Tengyu Ma" style="width: 126px; height: 126px" />
+                                                    <div class="info">
+                                                        <p class="name">Tengyu Ma</p>
+                                                        <p class="desc">one of the pioneers of modern theoretical understanding of deep learning. He worked on analyzing and studying challenging, real-world algorithms doing works leading to better theoretical understanding of neural methods.</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="https://aditya-grover.github.io" target="_blank">
+                                                <div class="tb">
+                                                    <img src="https://www.sait.samsung.co.kr/saithome/images/event/22_sp_ev02.png" alt="Aditya Grover" style="width: 126px; height: 126px" />
+                                                    <div class="info">
+                                                        <p class="name">Aditya Grover</p>
+                                                        <p class="desc">a productive researcher in probabilistic deep learning. Other than theoretical side, he also contributed to socially important applications such as improving battery materials</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <div class="btn-wrap btn-wrap--mt60">
+                                        <div class="btn-wrap__row">
+                                            <a href="https://www.youtube.com/live/mS8_N8DqBXo?feature=share&t=27632" target="_blank" class="chkBtn">
+                                                <span class="chkBtn__text">Award Ceremony</span>
+                                            </a>
+                                        </div>
+                                        <div class="btn-wrap__row">
+                                            <a href="https://www.youtube.com/live/mS8_N8DqBXo?feature=share&t=27863" target="_blank" class="chkBtn">
+                                                <span class="chkBtn__text">Awardee’s Contribution Speech</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- // person list 영역 2020-11-25 -->
+                            </div>
+                        </article>
+                    </div>
+
+                    <link rel="stylesheet" href="https://www.sait.samsung.co.kr/saithome/javascripts/lib/slick/slick.css" />
+                    <link rel="stylesheet" href="https://www.sait.samsung.co.kr/saithome/javascripts/lib/slick/slick-theme.css" />
+                    <script type="text/javascript" src="https://www.sait.samsung.co.kr/saithome/javascripts/lib/slick/slick.min.js"></script>
+                </section>
+                <!-- //subContent-->
+
+                <!-- subAside-->
+                <aside id="relatedContents" class="js-scr-sec">
+                    <div class="related__inner">
+                        <div class="related__title">
+                            <h1 class="js-scr-box">Related Contents</h1>
+                            <span class="js-scr-box">Explore more related contents from SAIT!</span>
+                        </div>
+                        <div class="related_wrap">
+                            <article class="js-scr-box">
+                                <a href="https://www.sait.samsung.co.kr/saithome/about/press_view.do?new_seq=1125">
+                                    <h1>News</h1>
+                                </a>
+                            </article>
+                            <article class="js-scr-box">
+                                <a href="https://www.sait.samsung.co.kr/saithome/event/saif2021.do">
+                                    <h1>AI Forum 2021</h1>
+                                </a>
+                            </article>
+                        </div>
+                    </div>
+                </aside>
+                <!-- //subAside-->
+
+                <!-- //container-->
+
+                <!-- footer -->
+
+                <%- include("../include/sub_footer.html") %>
+                <div id="gnbDimmed" class="dimmed"></div>
+
+                <!-- Global site tag (gtag.js) - Google Analytics -->
+                <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123575008-1"></script>
+                <script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag() {
+                        dataLayer.push(arguments);
+                    }
+                    gtag('js', new Date());
+
+                    gtag('config', 'UA-167217135-1');
+                </script>
+            </section>
+            <!-- //footer -->
+        </div>
+        <script type="text/javascript" src="https://www.sait.samsung.co.kr/saithome/javascripts/lib/TweenMax/TweenMax.min.js"></script>
+        <script type="text/javascript" src="https://www.sait.samsung.co.kr/saithome/javascripts/lib/TweenMax/easing/EasePack.min.js"></script>
+        <script type="text/javascript" src="https://www.sait.samsung.co.kr/saithome/javascripts/design_common.js"></script>
+    </body>
+</html>

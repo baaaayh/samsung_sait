@@ -60,162 +60,153 @@
                 <!-- subContent-->
                 <section id="content" class="press">
                     <div class="content__container">
+                        <div id="subTitle" class="js-scr-sec">
+                            <h4 class="js-scr-box">Press</h4>
+                            <p class="js-scr-box">Take a quick look at events and news from inside Samsung Advanced Institute of Technology</p>
+                        </div>
                         <article class="row">
-                            <div class="row__inner">
-                                <div id="subTitle" class="js-scr-sec">
-                                    <h4 class="js-scr-box">Press</h4>
-                                    <p class="js-scr-box">Take a quick look at events and news from inside Samsung Advanced Institute of Technology</p>
-                                </div>
-                                <div class="row__wrap js-scr-sec">
-                                    <div id="boardSearch" class="js-scr-box">
-                                        <form action="?" method="get" name="Search" id="frmSearch">
-                                            <input type="hidden" name="searchYear" id="searchYear" value="" />
-                                            <fieldset>
-                                                <legend>Press board search form</legend>
-                                                <div id="selectCustom">
-                                                    <button type="button" title="years option" id="searchYear_select">All Years</button>
-                                                    <ul>
-                                                        <li onclick="searchYear('')"><button type="button" class="active">All Years</button></li>
-                                                        <li onclick="searchYear('2024')"><button type="button">2024</button></li>
-                                                        <li onclick="searchYear('2023')"><button type="button">2023</button></li>
-                                                        <li onclick="searchYear('2022')"><button type="button">2022</button></li>
-                                                        <li onclick="searchYear('2021')"><button type="button">2021</button></li>
-                                                        <li onclick="searchYear('2020')"><button type="button">2020</button></li>
-                                                        <li onclick="searchYear('2019')"><button type="button">2019</button></li>
-                                                        <li onclick="searchYear('2018')"><button type="button">2018</button></li>
-                                                        <li onclick="searchYear('2017')"><button type="button">2017</button></li>
-                                                        <li onclick="searchYear('2016')"><button type="button">2016</button></li>
-                                                        <li onclick="searchYear('2015')"><button type="button">2015</button></li>
-                                                        <li onclick="searchYear('2014')"><button type="button">2014</button></li>
-                                                        <li onclick="searchYear('2013')"><button type="button">2013</button></li>
-                                                        <li onclick="searchYear('2012')"><button type="button">2012</button></li>
-                                                        <li onclick="searchYear('2011')"><button type="button">2011</button></li>
-                                                        <li onclick="searchYear('2010')"><button type="button">2010</button></li>
-                                                        <li onclick="searchYear('2009')"><button type="button">2009</button></li>
-                                                        <li onclick="searchYear('2008')"><button type="button">2008</button></li>
-                                                        <li onclick="searchYear('2007')"><button type="button">2007</button></li>
-                                                        <li onclick="searchYear('2006')"><button type="button">2006</button></li>
-                                                        <li onclick="searchYear('2005')"><button type="button">2005</button></li>
-                                                        <li onclick="searchYear('2004')"><button type="button">2004</button></li>
-                                                    </ul>
+                            <div class="row__inner js-scr-sec">
+                                <div id="boardSearch" class="js-scr-box">
+                                    <form action="?" method="get" name="Search" id="frmSearch">
+                                        <input type="hidden" name="searchYear" id="searchYear" value="" />
+                                        <fieldset>
+                                            <legend>Press board search form</legend>
+                                            <div id="selectCustom">
+                                                <button type="button" title="years option" id="searchYear_select">All Years</button>
+                                                <ul>
+                                                    <li onclick="searchYear('')"><button type="button" class="active">All Years</button></li>
+                                                    <li onclick="searchYear('2024')"><button type="button">2024</button></li>
+                                                    <li onclick="searchYear('2023')"><button type="button">2023</button></li>
+                                                    <li onclick="searchYear('2022')"><button type="button">2022</button></li>
+                                                    <li onclick="searchYear('2021')"><button type="button">2021</button></li>
+                                                    <li onclick="searchYear('2020')"><button type="button">2020</button></li>
+                                                    <li onclick="searchYear('2019')"><button type="button">2019</button></li>
+                                                    <li onclick="searchYear('2018')"><button type="button">2018</button></li>
+                                                    <li onclick="searchYear('2017')"><button type="button">2017</button></li>
+                                                    <li onclick="searchYear('2016')"><button type="button">2016</button></li>
+                                                    <li onclick="searchYear('2015')"><button type="button">2015</button></li>
+                                                    <li onclick="searchYear('2014')"><button type="button">2014</button></li>
+                                                    <li onclick="searchYear('2013')"><button type="button">2013</button></li>
+                                                    <li onclick="searchYear('2012')"><button type="button">2012</button></li>
+                                                    <li onclick="searchYear('2011')"><button type="button">2011</button></li>
+                                                    <li onclick="searchYear('2010')"><button type="button">2010</button></li>
+                                                    <li onclick="searchYear('2009')"><button type="button">2009</button></li>
+                                                    <li onclick="searchYear('2008')"><button type="button">2008</button></li>
+                                                    <li onclick="searchYear('2007')"><button type="button">2007</button></li>
+                                                    <li onclick="searchYear('2006')"><button type="button">2006</button></li>
+                                                    <li onclick="searchYear('2005')"><button type="button">2005</button></li>
+                                                    <li onclick="searchYear('2004')"><button type="button">2004</button></li>
+                                                </ul>
+                                            </div>
+                                            <div id="searchInput">
+                                                <label for="SearchString" class="hidden-txt">search string</label>
+                                                <input type="text" id="searchKeyword" name="searchKeyword" placeholder="Input text" value="" />
+                                                <div class="submit_wrap">
+                                                    <input type="submit" value="search" />
                                                 </div>
-                                                <div id="searchInput">
-                                                    <label for="SearchString" class="hidden-txt">search string</label>
-                                                    <input type="text" id="searchKeyword" name="searchKeyword" placeholder="Input text" value="" />
-                                                    <div class="submit_wrap">
-                                                        <input type="submit" value="search" />
-                                                    </div>
-                                                </div>
-                                            </fieldset>
-                                        </form>
+                                            </div>
+                                        </fieldset>
+                                    </form>
 
-                                        <ul class="list_select">
-                                            <li>
-                                                <button type="button" title="current looking form" class="square active">album type<span class="hidden-txt">selected</span></button>
-                                            </li>
-                                            <li>
-                                                <button type="button" title="current looking form" class="list">list type selected<span class="hidden-txt">selected</span></button>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="board_list js-scr-box">
-                                        <ul id="PressList_ul">
-                                            <li>
-                                                <a href="https://www.sait.samsung.co.kr/saithome/about/press_view.do?new_seq=1135&searchYear=&searchKeyword=" class="tit">Samsung hires a world-renowned Supercomputer expert</a>
-                                                <p>
-                                                    Samsung Electronics Co., Ltd. announced that it hired Dr. Robert Wisniewski, a world-renowned researcher who led research on large-scale supercomputer projects at IBM and Intel. He joined SAIT(Samsung Advanced Institute of Technology) as a research
-                                                    leader(Senior Vice President) of System Architecture Lab established under the System Research Center in SAIT. Robert Wisniewski is expected to lead Samsungs supercomputer system development through research on supercomputer hardware and software
-                                                    arch
-                                                </p>
-                                                <time datetime="2022-04-18">April18, 2022</time>
-                                                <a href="https://www.sait.samsung.co.kr/saithome/about/press_view.do?new_seq=1135&searchYear=&searchKeyword=" class="more">Read more</a>
-                                            </li>
-                                            <li>
-                                                <a href="https://www.sait.samsung.co.kr/saithome/about/press_view.do?new_seq=1134&searchYear=&searchKeyword=" class="tit">Samsung Demonstrates the World’s First MRAM Based In-Memory Computing</a>
-                                                <p>
-                                                    Samsung Electronics research in making next generation AI semiconductors with MRAM technology published in Nature SEOUL, Korea Jan. 13, 2022 Samsung Electronics Co., Ltd., a world leader in advanced semiconductor technology, today announced its
-                                                    demonstration of the worlds first in-memory computing based on MRAM (Magnetoresistive Random Access Memory). The paper on this innovation was published online by Nature on January 12 (GMT), and is set to be published in the upcoming print edition
-                                                    of Natur
-                                                </p>
-                                                <time datetime="2022-01-13">January13, 2022</time>
-                                                <a href="https://www.sait.samsung.co.kr/saithome/about/press_view.do?new_seq=1134&searchYear=&searchKeyword=" class="more">Read more</a>
-                                            </li>
-                                            <li>
-                                                <a href="https://www.sait.samsung.co.kr/saithome/about/press_view.do?new_seq=1133&searchYear=&searchKeyword=" class="tit">Samsung Electronics Puts Forward a Vision To ‘Copy and Paste’ the Brain on Neuromorphic Chips</a>
-                                                <p>
-                                                    With Harvard Researchers, Samsung introduces a new approach to reverse engineer the brain on a memory chip, in a Perspective paper published in Nature Electronics Samsung Electronics, a world leader in advanced semiconductor technology, today
-                                                    shared a new insight that takes the world a step closer to realizing neuromorphic chips that can better mimic the brain. Envisioned by the leading engineers and scholars from Samsung and Harvard University, the insight was published as a
-                                                    Perspective paper,
-                                                </p>
-                                                <time datetime="2021-09-28">September28, 2021</time>
-                                                <a href="https://www.sait.samsung.co.kr/saithome/about/press_view.do?new_seq=1133&searchYear=&searchKeyword=" class="more">Read more</a>
-                                            </li>
-                                            <li>
-                                                <a href="https://www.sait.samsung.co.kr/saithome/about/press_view.do?new_seq=1132&searchYear=&searchKeyword=" class="tit">Samsung Researchers Prove the Viability of Commercialized ‘Stretchable’ Devices</a>
-                                                <p>
-                                                    With the establishment of flexible displays behind us, many have asked what the next big development in display technology will be. Recently, free-form displays[1] have been gaining traction as next-generation technology that will allow for
-                                                    high-resolution visuals and portability at the same time. While the technology is still in its nascent stages, significant research has been carried out on stretchable displays (a core technology for free-form displays) that can be stretched in all
-                                                    directions
-                                                </p>
-                                                <time datetime="2021-06-07">June07, 2021</time>
-                                                <a href="https://www.sait.samsung.co.kr/saithome/about/press_view.do?new_seq=1132&searchYear=&searchKeyword=" class="more">Read more</a>
-                                            </li>
-                                            <li>
-                                                <a href="https://www.sait.samsung.co.kr/saithome/about/press_view.do?new_seq=1130&searchYear=&searchKeyword=" class="tit">[Interview] Samsung Researchers Open a New Chapter for Holographic Displays</a>
-                                                <p>
-                                                    Holograms have been wowing us ever since they were first invented in 1947. The incredible thing about holograms is that they allow us to experience the real and virtual worlds at the same time. Though theyve long been regarded as the most perfect
-                                                    way to represent objects with light, their widespread commercialization has thus far been hindered by technological limitations. (From left) Samsung Advanced Institute of Technology (SAIT) Principal Researcher Jungkwuen An, Staff Researcher Kanghee
-                                                    Won,
-                                                </p>
-                                                <time datetime="2020-11-20">November20, 2020</time>
-                                                <a href="https://www.sait.samsung.co.kr/saithome/about/press_view.do?new_seq=1130&searchYear=&searchKeyword=" class="more">Read more</a>
-                                            </li>
-                                            <li>
-                                                <a href="https://www.sait.samsung.co.kr/saithome/about/press_view.do?new_seq=1129&searchYear=&searchKeyword=" class="tit">Samsung AI Forum 2020: Humanity Takes Center Stage in Discussing the Future of AI</a>
-                                                <p>
-                                                    Each year, Samsung Electronics AI Forum brings together experts from all over the world to discuss the latest advancements in artificial intelligence (AI) and share ideas on the next directions for the development of these technologies. This
-                                                    November 2 and 3, experts, researchers and interested viewers alike convened virtually to share the latest developments in AI research and discussed some of the most pressing and relevant issues facing AI research today. Making the Best Use of AI
-                                                    in a Rapidl
-                                                </p>
-                                                <time datetime="2020-11-20">November20, 2020</time>
-                                                <a href="https://www.sait.samsung.co.kr/saithome/about/press_view.do?new_seq=1129&searchYear=&searchKeyword=" class="more">Read more</a>
-                                            </li>
-                                            <li>
-                                                <a href="https://www.sait.samsung.co.kr/saithome/about/press_view.do?new_seq=1128&searchYear=&searchKeyword=" class="tit">[Samsung AI Forum 2020] Day 1: How AI Can Make a Meaningful Impact on Real World Issues</a>
-                                                <p>
-                                                    The Samsung AI Forum is an annual event that brings together globally renowned experts in the industry as well as across academia to serve as a platform with which to disseminate the very latest in AI trends, technologies and research. This years
-                                                    AI Forum, the fourth of its kind, is being held over two days this November 2 and 3. The first day of the event, hosted by the Samsung Advanced Institute of Technology (SAIT), Samsungs RD hub dedicated to cutting-edge future technologies, is
-                                                    enabling pa
-                                                </p>
-                                                <time datetime="2020-11-10">November10, 2020</time>
-                                                <a href="https://www.sait.samsung.co.kr/saithome/about/press_view.do?new_seq=1128&searchYear=&searchKeyword=" class="more">Read more</a>
-                                            </li>
-                                            <li>
-                                                <a href="https://www.sait.samsung.co.kr/saithome/about/press_view.do?new_seq=1127&searchYear=&searchKeyword=" class="tit">Samsung Electronics Develops Industry-leading Blue QLED Technology</a>
-                                                <p>
-                                                    Samsung Electronics Develops Industry-leading Blue QLED Technology Samsung Advanced Institute of Technology (SAIT), Samsungs RD hub dedicated to cutting-edge future technologies has secured industry-leading cadmium-free blue Quantum Dot
-                                                    light-emitting diodes (QLEDs) performance. Since blue is known to be the most difficult color to implement out of the three primary QLED colors (red, blue and green), this achievement coming in the wake of Samsungs development of red QLED
-                                                    technology last November
-                                                </p>
-                                                <time datetime="2020-10-20">October20, 2020</time>
-                                                <a href="https://www.sait.samsung.co.kr/saithome/about/press_view.do?new_seq=1127&searchYear=&searchKeyword=" class="more">Read more</a>
-                                            </li>
-                                            <li>
-                                                <a href="https://www.sait.samsung.co.kr/saithome/about/press_view.do?new_seq=1125&searchYear=&searchKeyword=" class="tit">‘Samsung AI Forum 2020‘ Explores the Future of Artificial Intelligence</a>
-                                                <p>
-                                                    Samsung AI Forum 2020 Explores the Future of Artificial Intelligence Leading academics, industry experts to discuss AI Technologies for Changes in the Real World and Human-Centered AI SEOUL, South Korea October 6, 2020 Samsung Electronics Co., Ltd.
-                                                    announced today that it will hold the Samsung AI Forum 2020 online via its YouTube channel for two days from November 2nd to 3rd. Marking its fourth anniversary this year, the forum gathers world-renowned academics and industry experts on
-                                                    artificial i
-                                                </p>
-                                                <time datetime="2020-10-06">October06, 2020</time>
-                                                <a href="https://www.sait.samsung.co.kr/saithome/about/press_view.do?new_seq=1125&searchYear=&searchKeyword=" class="more">Read more</a>
-                                            </li>
-                                        </ul>
-                                        <div class="more_wrap js-scr-box" id="MoreBtn">
-                                            <button type="button" class="btn btn-default" onclick="getList();">
-                                                <span class="btn-default__text">MORE</span>
-                                            </button>
-                                        </div>
+                                    <ul class="list_select">
+                                        <li>
+                                            <button type="button" title="current looking form" class="square active">album type<span class="hidden-txt">selected</span></button>
+                                        </li>
+                                        <li>
+                                            <button type="button" title="current looking form" class="list">list type selected<span class="hidden-txt">selected</span></button>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="board_list js-scr-box">
+                                    <ul id="PressList_ul">
+                                        <li>
+                                            <a href="https://www.sait.samsung.co.kr/saithome/about/press_view.do?new_seq=1135&searchYear=&searchKeyword=" class="tit">Samsung hires a world-renowned Supercomputer expert</a>
+                                            <p>
+                                                Samsung Electronics Co., Ltd. announced that it hired Dr. Robert Wisniewski, a world-renowned researcher who led research on large-scale supercomputer projects at IBM and Intel. He joined SAIT(Samsung Advanced Institute of Technology) as a research
+                                                leader(Senior Vice President) of System Architecture Lab established under the System Research Center in SAIT. Robert Wisniewski is expected to lead Samsungs supercomputer system development through research on supercomputer hardware and software arch
+                                            </p>
+                                            <time datetime="2022-04-18">April18, 2022</time>
+                                            <a href="https://www.sait.samsung.co.kr/saithome/about/press_view.do?new_seq=1135&searchYear=&searchKeyword=" class="more">Read more</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.sait.samsung.co.kr/saithome/about/press_view.do?new_seq=1134&searchYear=&searchKeyword=" class="tit">Samsung Demonstrates the World’s First MRAM Based In-Memory Computing</a>
+                                            <p>
+                                                Samsung Electronics research in making next generation AI semiconductors with MRAM technology published in Nature SEOUL, Korea Jan. 13, 2022 Samsung Electronics Co., Ltd., a world leader in advanced semiconductor technology, today announced its
+                                                demonstration of the worlds first in-memory computing based on MRAM (Magnetoresistive Random Access Memory). The paper on this innovation was published online by Nature on January 12 (GMT), and is set to be published in the upcoming print edition of
+                                                Natur
+                                            </p>
+                                            <time datetime="2022-01-13">January13, 2022</time>
+                                            <a href="https://www.sait.samsung.co.kr/saithome/about/press_view.do?new_seq=1134&searchYear=&searchKeyword=" class="more">Read more</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.sait.samsung.co.kr/saithome/about/press_view.do?new_seq=1133&searchYear=&searchKeyword=" class="tit">Samsung Electronics Puts Forward a Vision To ‘Copy and Paste’ the Brain on Neuromorphic Chips</a>
+                                            <p>
+                                                With Harvard Researchers, Samsung introduces a new approach to reverse engineer the brain on a memory chip, in a Perspective paper published in Nature Electronics Samsung Electronics, a world leader in advanced semiconductor technology, today shared a
+                                                new insight that takes the world a step closer to realizing neuromorphic chips that can better mimic the brain. Envisioned by the leading engineers and scholars from Samsung and Harvard University, the insight was published as a Perspective paper,
+                                            </p>
+                                            <time datetime="2021-09-28">September28, 2021</time>
+                                            <a href="https://www.sait.samsung.co.kr/saithome/about/press_view.do?new_seq=1133&searchYear=&searchKeyword=" class="more">Read more</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.sait.samsung.co.kr/saithome/about/press_view.do?new_seq=1132&searchYear=&searchKeyword=" class="tit">Samsung Researchers Prove the Viability of Commercialized ‘Stretchable’ Devices</a>
+                                            <p>
+                                                With the establishment of flexible displays behind us, many have asked what the next big development in display technology will be. Recently, free-form displays[1] have been gaining traction as next-generation technology that will allow for
+                                                high-resolution visuals and portability at the same time. While the technology is still in its nascent stages, significant research has been carried out on stretchable displays (a core technology for free-form displays) that can be stretched in all
+                                                directions
+                                            </p>
+                                            <time datetime="2021-06-07">June07, 2021</time>
+                                            <a href="https://www.sait.samsung.co.kr/saithome/about/press_view.do?new_seq=1132&searchYear=&searchKeyword=" class="more">Read more</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.sait.samsung.co.kr/saithome/about/press_view.do?new_seq=1130&searchYear=&searchKeyword=" class="tit">[Interview] Samsung Researchers Open a New Chapter for Holographic Displays</a>
+                                            <p>
+                                                Holograms have been wowing us ever since they were first invented in 1947. The incredible thing about holograms is that they allow us to experience the real and virtual worlds at the same time. Though theyve long been regarded as the most perfect way
+                                                to represent objects with light, their widespread commercialization has thus far been hindered by technological limitations. (From left) Samsung Advanced Institute of Technology (SAIT) Principal Researcher Jungkwuen An, Staff Researcher Kanghee Won,
+                                            </p>
+                                            <time datetime="2020-11-20">November20, 2020</time>
+                                            <a href="https://www.sait.samsung.co.kr/saithome/about/press_view.do?new_seq=1130&searchYear=&searchKeyword=" class="more">Read more</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.sait.samsung.co.kr/saithome/about/press_view.do?new_seq=1129&searchYear=&searchKeyword=" class="tit">Samsung AI Forum 2020: Humanity Takes Center Stage in Discussing the Future of AI</a>
+                                            <p>
+                                                Each year, Samsung Electronics AI Forum brings together experts from all over the world to discuss the latest advancements in artificial intelligence (AI) and share ideas on the next directions for the development of these technologies. This November 2
+                                                and 3, experts, researchers and interested viewers alike convened virtually to share the latest developments in AI research and discussed some of the most pressing and relevant issues facing AI research today. Making the Best Use of AI in a Rapidl
+                                            </p>
+                                            <time datetime="2020-11-20">November20, 2020</time>
+                                            <a href="https://www.sait.samsung.co.kr/saithome/about/press_view.do?new_seq=1129&searchYear=&searchKeyword=" class="more">Read more</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.sait.samsung.co.kr/saithome/about/press_view.do?new_seq=1128&searchYear=&searchKeyword=" class="tit">[Samsung AI Forum 2020] Day 1: How AI Can Make a Meaningful Impact on Real World Issues</a>
+                                            <p>
+                                                The Samsung AI Forum is an annual event that brings together globally renowned experts in the industry as well as across academia to serve as a platform with which to disseminate the very latest in AI trends, technologies and research. This years AI
+                                                Forum, the fourth of its kind, is being held over two days this November 2 and 3. The first day of the event, hosted by the Samsung Advanced Institute of Technology (SAIT), Samsungs RD hub dedicated to cutting-edge future technologies, is enabling pa
+                                            </p>
+                                            <time datetime="2020-11-10">November10, 2020</time>
+                                            <a href="https://www.sait.samsung.co.kr/saithome/about/press_view.do?new_seq=1128&searchYear=&searchKeyword=" class="more">Read more</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.sait.samsung.co.kr/saithome/about/press_view.do?new_seq=1127&searchYear=&searchKeyword=" class="tit">Samsung Electronics Develops Industry-leading Blue QLED Technology</a>
+                                            <p>
+                                                Samsung Electronics Develops Industry-leading Blue QLED Technology Samsung Advanced Institute of Technology (SAIT), Samsungs RD hub dedicated to cutting-edge future technologies has secured industry-leading cadmium-free blue Quantum Dot light-emitting
+                                                diodes (QLEDs) performance. Since blue is known to be the most difficult color to implement out of the three primary QLED colors (red, blue and green), this achievement coming in the wake of Samsungs development of red QLED technology last November
+                                            </p>
+                                            <time datetime="2020-10-20">October20, 2020</time>
+                                            <a href="https://www.sait.samsung.co.kr/saithome/about/press_view.do?new_seq=1127&searchYear=&searchKeyword=" class="more">Read more</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.sait.samsung.co.kr/saithome/about/press_view.do?new_seq=1125&searchYear=&searchKeyword=" class="tit">‘Samsung AI Forum 2020‘ Explores the Future of Artificial Intelligence</a>
+                                            <p>
+                                                Samsung AI Forum 2020 Explores the Future of Artificial Intelligence Leading academics, industry experts to discuss AI Technologies for Changes in the Real World and Human-Centered AI SEOUL, South Korea October 6, 2020 Samsung Electronics Co., Ltd.
+                                                announced today that it will hold the Samsung AI Forum 2020 online via its YouTube channel for two days from November 2nd to 3rd. Marking its fourth anniversary this year, the forum gathers world-renowned academics and industry experts on artificial i
+                                            </p>
+                                            <time datetime="2020-10-06">October06, 2020</time>
+                                            <a href="https://www.sait.samsung.co.kr/saithome/about/press_view.do?new_seq=1125&searchYear=&searchKeyword=" class="more">Read more</a>
+                                        </li>
+                                    </ul>
+                                    <div class="more_wrap js-scr-box" id="MoreBtn">
+                                        <button type="button" class="btn btn-default" onclick="getList();">
+                                            <span class="btn-default__text">MORE</span>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
