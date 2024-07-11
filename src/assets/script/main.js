@@ -231,7 +231,7 @@ $(function () {
             let mainKV = new Swiper('.main-kv', {
                 slidesPerView: 'auto',
                 autoplay: {
-                    delay: 7000,
+                    delay: 5000,
                     disableOnInteraction: false,
                 },
                 allowTouchMove: false,

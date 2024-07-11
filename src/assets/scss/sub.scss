@@ -1521,12 +1521,16 @@ span.impact-desc {
     font-size: 34px;
     line-height: 44px;
 }
+.art-content__row--title strong + div {
+    margin-top: 20px;
+}
 .art-content__row p {
     font-size: 18px;
     margin-top: 20px;
     line-height: 28px;
 }
 .art-content__row > div {
+    text-align: center;
     margin-top: 50px;
 }
 .art-content__row > div:first-child {
@@ -2355,18 +2359,29 @@ section.forum .infobox .inner .ttx--block > span {
 section.forum .infobox .inner .ttx span {
     color: #6E7E96;
 }
-section.forum .infobox .inner .ttx .speaker p {
-    min-width: 140px;
-    margin-top: 10px;
-    line-height: 28px;
+section.forum .infobox .inner .ttx span.c-white {
     color: #fff;
 }
-section.forum .infobox .inner .ttx .speaker p:last-child {
+section.forum .infobox .inner .ttx .speaker p {
     font-size: 16px;
     line-height: 26px;
     color: #6E7E96;
     margin-top: 0;
 }
+section.forum .infobox .inner .ttx .speaker i + p {
+    min-width: 140px;
+    margin-top: 10px;
+    font-size: 18px;
+    line-height: 28px;
+    color: #fff;
+}
+section.forum .infobox .inner .ttx small {
+    display: block;
+    font-size: 16px;
+    line-height: 26px;
+    color: #6E7E96;
+}
+
 .contact_wrap p {
     color: #fff !important;
 }
@@ -2673,6 +2688,7 @@ p.mb20 {
     padding-top: 5px;
     color: #000;
 }
+
 .question + .answer {
     border-top: 1px solid #e0e0e0;
 }
@@ -2796,13 +2812,14 @@ p.mb20 {
     text-align: center;
 }
 .rprocess__num {
-    font-size: 14px;
+    font-size: 16px;
+    line-height: 26px;
     font-weight: 700;
     color: #6E7E96;
 }
 .rprocess__tit {
-    font-size: 16px;
-    line-height: 26px;
+    font-size: 20px;
+    line-height: 30px;
     color: #fff;
 }
 
