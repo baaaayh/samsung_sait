@@ -293,6 +293,16 @@ a {
 
 #headerSearch {
     top: 81px;
+    #globalInput {
+        input[type=text] {
+            &:hover {
+                border-color: #1428a0 !important;
+            }
+            &:focus {
+                border-color: #1428a0 !important;
+            }
+        }
+    }
 }
 
 .footer {
