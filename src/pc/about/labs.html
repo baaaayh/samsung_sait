@@ -1740,7 +1740,7 @@
             $window.load(function () {
                 about1();
             });
-            let scrolledAfterClick = false;
+
             function about1() {
                 var $saitList = $('.sait_list');
                 var $saitView = $('.sait_view');
@@ -1758,8 +1758,9 @@
                     scrolledAfterClick = false;
                 });
             }
-
+            let scrolledAfterClick = false;
             $window.on('scroll wheel', function () {
+                console.log('here', scrolledAfterClick);
                 if (!scrolledAfterClick) {
                     scrollBg();
                     scrolledAfterClick = true;

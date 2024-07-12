@@ -24,7 +24,7 @@
 .research-2024 .custom-select {
     display: flex;
     align-items: center;
-    width: calc(100%);
+    width: 100%;
     height: 47px;
     background: #fff;
     border-radius: 47px;
@@ -263,7 +263,8 @@ section.forum #content #subTab ul {
 }
 section.forum #content #subTab ul li {
     float: none;
-    width: calc(50% - 5px);
+    flex: 1;
+    width: 100%;
     display: inline-block !important;
     margin: 0;
     padding: 0;
@@ -380,6 +381,7 @@ section.forum #content h3 {
     line-height: 42px;
     font-weight: 700;
     color: #fff;
+    margin: 0;
 }
 #content.press_view #subTitle h4 {
     font-size: 20px;
@@ -880,10 +882,19 @@ select:focus {
     font-size: 14px;
     line-height: 24px;
 }
+
 // what we do
 .contents_flow h5 span {
     color: #fff;
     border-color: #fff;
+}
+.what .changing_list {
+    text-align: left;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+.what .changing_list .list01 {
+    padding: 0;
 }
 .what .changing_list ul li strong {
     display: block;
@@ -897,11 +908,109 @@ select:focus {
     padding-bottom: 0;
 }
 .what .changing_list ul p {
+    margin-top: 5px;
     line-height: 26px;
+    padding: 0;
 }
 
 
+// art-content
+.art-content__section {
+    margin-top: 120px;
+}
+.art-content__section:first-child {
+    margin-top: 0;
+}
+.art-content__row {
+    margin-top: 80px;
+}
+.art-content__row:first-child {
+    margin-top: 0;
+}
+.art-content__row strong {
+    display: block;
+    font-size: 28px;
+    line-height: 38px;
+    color: #fff;
+}
+.art-content__row--title strong {
+    font-size: 24px;
+    line-height: 34px;
+}
+.art-content__row--title strong + div {
+    margin-top: 20px;
+}
+.art-content__row p {
+    font-size: 18px;
+    margin-top: 20px;
+    line-height: 28px;
+}
+.art-content__row p.mt40 {
+    margin-top: 40px;
+}
+.art-content__row > div {
+    text-align: center;
+    margin-top: 50px;
+}
+.art-content__row > div:first-child {
+    margin-top: 0px;
+}
+.art-content__row ul {
+    margin-top: 50px;
+}
+.art-content__row ul:first-child {
+    margin-top: 0;
+}
+.art-content__row ul li {
+    margin-top: 40px;
+}
+.art-content__row ul li:first-child {
+    margin-top: 0;
+}
+.art-content__row ul li small {
+    display: block;
+    font-size: 24px;
+    line-height: 34px;
+    font-weight: 700;
+    color: #fff;
+}
+.art-content__row ul li > div {
+    margin-top: 20px;
+}
+.art-content__row ul li > div:first-child {
+    margin-top: 0;
+}
+.art-content__row--figure {
+    margin-top: 40px;
+    font-size: 0;
+    text-align: center;
+}
+.art-content__row--figure:first-child {
+    margin-top: 0;
+}
+.art-content__list li {
+    margin-top: 80px;
+}
+.art-content__list li:first-child {
+    margin-top: 0;
+}
+.what .art-content .changing_list ul li {
+    margin-top: 40px;
+    padding-bottom: 0;
+    box-sizing: border-box;
+}
+.what .art-content .changing_list ul li:first-child {
+    margin-top: 0;
+}
+
 // ai algorithms
+
+
+
+
+
+
+
 .third_depth_titbox p.tit {
     font-size: 26px;
     line-height: 36px;
@@ -1033,16 +1142,15 @@ section.research_pp #content {
 
 // infra
 .research_img_grid {
-    width: 100%;
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
 }
 .research_img_array {
     margin-top: 0;
     margin-right: 0;
     float: none;
-    width: calc(50% - 5px);
+    width: 100%;
 }
 .infra .cm_pd30 {
     padding: 0 20px;
@@ -1219,7 +1327,12 @@ section.forum #content .infobox .inner .ttx > p {
     width: 100%;
     color: #fff;
 }
-
+section.forum #content .infobox .inner .ttx small {
+    display: block;
+    font-size: 16px;
+    line-height: 26px;
+    color: #6E7E96;
+}
 section.forum #content .infobox .inner .ttx .speaker p {
     font-size: 14px;
     line-height: 24px;
@@ -1230,12 +1343,7 @@ section.forum #content .infobox .inner .ttx .speaker i + p {
     line-height: 26px;
     color: #fff;
 }
-section.forum #content .infobox .inner .ttx .speaker small {
-    display: block;
-    font-size: 16px;
-    line-height: 26px;
-    color: #6E7E96;
-}
+
 
 section.forum #content #subTitle .nav_group a.prev_ev {}
 
@@ -1350,7 +1458,7 @@ section.forum #content h1.gallery {
 }
 section.forum .gallery_grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(calc(33.3333% - 10px), 1fr));
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 15px;
 }
 section.forum .gallery_grid .gallery_array {
@@ -1640,7 +1748,10 @@ section.researcher #content .contbox .inner.cont {
 section.researcher #content .contbox {
     border: 1px solid rgba(255, 255, 255, 0.2);
 }
-
+#content .person_list .tb {
+    table-layout: fixed;
+    width: 100%;
+}
 #content .person_list li:first-child {
     border-top: 1px solid #fff;
     box-sizing: border-box;
@@ -1662,6 +1773,9 @@ section.researcher #content .contbox {
 }
 #content .person_list .tb_cell {
     vertical-align: top;
+}
+#content .person_list li .ps_img {
+    max-width: 185px;
 }
 #content .chkBtn {
     display: inline-block;

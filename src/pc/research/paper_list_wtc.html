@@ -1383,6 +1383,7 @@
         <script type="text/javascript" src="https://www.sait.samsung.co.kr/saithome/javascripts/design_common.js"></script>
         <script>
             document.addEventListener('DOMContentLoaded', function () {
+                let scrolledAfterClick = false;
                 const checkboxes = document.querySelectorAll('input[type="checkbox"]');
                 const articles = document.querySelectorAll('.target-item');
                 const itemList = document.querySelector('.item_list');
@@ -1436,38 +1437,16 @@
                     } else {
                         itemList.innerHTML = '<p class="no-matching">No matching articles found.</p>';
                     }
+
+                    scrolledAfterClick = false;
                     console.log(matchingArticles.length);
                 }
-            });
-        </script>
-        <script>
-            $window.load(function () {
-                about1();
-            });
-            let scrolledAfterClick = false;
-            function about1() {
-                var $saitList = $('.sait_list');
-                var $saitView = $('.sait_view');
-                var $saitViewWrap = $saitView.find('.view_wrap');
-                var $saitContent = $saitView.find('article');
-                $saitList.find('li').click(function () {
-                    var _this = $(this);
-                    var _index = _this.index();
-                    var _$saitContentHeight = $saitContent.eq(_index).innerHeight();
-                    $saitList.find('li button').removeClass('active');
-                    _this.find('button').addClass('active');
-                    TweenMax.to($saitContent, 0.3, { opacity: 0, y: 50, display: 'none', ease: es_step });
-                    TweenMax.to($saitContent.eq(_index), 0.3, { opacity: 1, y: 0, display: 'block', ease: es_step });
-                    TweenMax.to($saitViewWrap, 0.3, { height: _$saitContentHeight });
-                    scrolledAfterClick = false;
+                $window.on('scroll wheel', function () {
+                    if (!scrolledAfterClick) {
+                        scrollBg();
+                        scrolledAfterClick = true;
+                    }
                 });
-            }
-
-            $window.on('scroll wheel', function () {
-                if (!scrolledAfterClick) {
-                    scrollBg();
-                    scrolledAfterClick = true;
-                }
             });
         </script>
     </body>
