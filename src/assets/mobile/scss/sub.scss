@@ -169,7 +169,7 @@ select, input, button, textarea {
     width: 100%;
 }
 #content #subTab + .row {
-    padding-top: 0;
+    margin-top: 0;
 }
 #content #subTab ul {
     padding: 0;
@@ -269,6 +269,7 @@ section.forum #content #subTab ul li {
     margin: 0;
     padding: 0;
     font-size: 0;
+    line-height: normal;
 }
 section.forum #content #subTab ul li a {
     display: inline-block;
@@ -370,7 +371,7 @@ section.forum #content h3 {
     margin-bottom: 40px;
 }
 #content #subTitle + .row__wrap {
-    padding-top: 0;
+    margin-top: 0;
 }
 #content #subTitle p {
     font-size: 16px;
@@ -399,19 +400,17 @@ section.forum #content h3 {
     padding: 0;
 }
 .row {
-    padding-top: 40px;
+    margin-top: 40px;
     box-sizing: border-box;
 }
 .row:first-child {
-    padding-top: 0;
+    margin-top: 0;
 }
-.row--pt40 {
-    padding-top: 40px;
-    box-sizing: border-box;
+.row--mt40 {
+    margin-top: 40px;
 }
-.row--pt80 {
-    padding-top: 80px;
-    box-sizing: border-box;
+.row--mt80 {
+    margin-top: 80px;
 }
 .row__wrap {}
 .row__wrap--bb {
@@ -420,7 +419,7 @@ section.forum #content h3 {
     box-sizing: border-box;
 }
 #content #subTitle + .row {
-    padding-top: 0;
+    margin-top: 0;
 }
 #relatedContents {
     padding: 50px 20px;
@@ -696,6 +695,9 @@ select:focus {
 .contact_wrap {
     margin: 0;
     width: 100%;
+}
+.contact .map_wrap {
+    font-size: 0;
 }
 .contact .map_wrap #map {
     box-shadow: none;
@@ -1118,21 +1120,28 @@ span.impact-desc {
 #content .view_list.rsp .list_box li a .tit {
     padding: 0;
     margin-bottom: 20px;
+    word-break: keep-all;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
 }
 #content .view_list.rsp .list_box li a .infowrap {
     padding: 0;
 }
 
 // paper view srt
+
 #content.paper_view #subTitle h4 {
     font-size: 20px;
     line-height: 30px;
 }
-#content.paper_view {
-    
-}
 #content.paper_view .contents_wrap {
     padding: 0;
+}
+#content.paper_view .contents_wrap:first-child {
+    margin-top: 0;
 }
 #content.paper_view .contents_wrap dl {
     margin-top: 10px;
@@ -1187,6 +1196,7 @@ section.research_pp #content {
 // infra
 .research_img_grid {
     display: grid;
+    width: 100%;
     grid-template-columns: repeat(2, 1fr);
     gap: 15px;
 }
@@ -1195,6 +1205,9 @@ section.research_pp #content {
     margin-right: 0;
     float: none;
     width: 100%;
+}
+.research_img_array a {
+    display: block;
 }
 .infra .cm_pd30 {
     padding: 0 20px;
@@ -1258,7 +1271,7 @@ section.forum #content .video_wrap {
     margin-bottom: 40px;
 } 
 section.forum #content .video_wrap + .row {
-    padding-top: 0;
+    margin-top: 0;
 }
 section.forum #content .video_wrap .video {
     position: relative;
@@ -1481,6 +1494,12 @@ section.forum #content .infobox .inner .ttx:last-child {
 section.forum #content .program_array .detail p span.impact {
     color: #6986b2;
 }
+section.forum #content .gallery_wrap .image_group {
+    margin-top: 40px;
+}
+section.forum #content .gallery_wrap .image_group:first-child {
+    margin-top: 0;
+}
 section.forum #content .gallery_wrap {
     margin: 0;
     margin-top: 30px;
@@ -1490,6 +1509,7 @@ section.forum #content h1.gallery {
     font-size: 20px;
     line-height: 30px;
     color: #fff;
+    margin-top: 0;
     margin-bottom: 20px;
 }
 section.forum .gallery_grid {
@@ -1588,14 +1608,14 @@ p.gray {
     background: url(../images/icons/fo_arr_next.png) center / auto no-repeat;
 }
 #content .row__wrap {
-    padding-top: 30px;
+    margin-top: 30px;
     box-sizing: border-box;
 }
 #content .row__wrap:first-child {
-    padding-top: 0;
+    margin-top: 0;
 }
 #content .row__wrap--bt {
-    margin-top: 30px;
+    padding-top: 30px;
     border-top: 1px solid #a8a8a8;
 }
 #content .row__wrap h5.fl {
@@ -1653,7 +1673,7 @@ p.gray {
 
 .btn-default__text {
     display: inline-block;
-    line-height: 38px;
+    line-height: 48px;
     font-size: 16px;
     font-weight: 400;
     color: #fff;
@@ -1776,7 +1796,7 @@ section.researcher #content .contbox .inner.cont a {
     color: #6E7E96;
 }
 section.researcher #content .contbox .inner.cont {
-    padding: 35px 25px;
+    padding: 20px;
     box-sizing: border-box;
 }
 section.researcher #content .contbox {
@@ -1823,7 +1843,7 @@ section.researcher #content .contbox {
     margin-top: 0;
     max-width: 450px;
     width: 100%;
-    padding: 10px 20px;
+    padding: 14px 20px;
     box-sizing: border-box;
     border: 1px solid rgba(255, 255, 255, 0.4);
     border-radius: 33px;

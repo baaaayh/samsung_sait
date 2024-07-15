@@ -49,7 +49,6 @@ $(function () {
                 effect: 'fade',
                 touchRatio: 0,
                 fadeEffect: { crossFade: true },
-                autoHeight: true,
             });
             const imageSlider = new Swiper('.image-slider', {
                 parallax: true,

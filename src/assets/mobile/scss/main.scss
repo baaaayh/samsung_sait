@@ -79,9 +79,6 @@
     &--01 {
         height: 100lvh;
     }
-    &--02 {
-        height: 100lvh;
-    }
 }
 .main-kv {
     position: relative;
@@ -384,8 +381,9 @@
         }
     }
     &__image {
+        margin-top: 20px;
         text-align: right;
-        margin-top: -50px;
+        font-size: 0;
     }
 }
 .bg-slider {
