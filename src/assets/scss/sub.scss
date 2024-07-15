@@ -77,7 +77,6 @@
 body {
     background-color: #1D242F;
     font-family: "SamsungOneKR", sans-serif;
-    letter-spacing: 0.002rem;
 }
 #container {
     padding-top: 80px;
@@ -857,6 +856,7 @@ h6 + .row__wrap {
 }
 .labs .sait_global .sait_view article .row__wrap p {
     padding-top: 0;
+    letter-spacing: 0.005em;
 }
 .labs .sait_global .sait_view article .row__wrap .link_wrap ul {
     display: grid;
