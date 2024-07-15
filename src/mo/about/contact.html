@@ -43,7 +43,7 @@
                 <!-- //subVisual-->
                 <!-- subContent-->
                 <section id="content" class="contact">
-                    <div class="content__container">
+                    <div class="content__container content__container--pd0">
                         <article class="row">
                             <div class="row__inner">
                                 <div id="subTitle" class="js-scr-sec">
@@ -58,53 +58,22 @@
                                             frameborder="0"
                                             style="border: 0"
                                             allowfullscreen
-                                        ></iframe>
+                                        >
+                                        </iframe>
                                         <div class="map_box">
-                                            <div class="contact_company_icon"></div>
-                                            <article class="company_name js-scr-box cm_pd30">
-                                                <h5>
-                                                    Samsung<br />
-                                                    Advanced Institute<br />
-                                                    of Technology
-                                                </h5>
-                                            </article>
                                             <div class="address_wrap js-scr-box">
-                                                <address class="fs-15">130, Samsung-ro, Yeongtong-gu, Suwon-si, Gyeonggi-do, 16678, Korea</address>
-                                                <p><strong>Tel</strong> +82-31-8061-1114</p>
+                                                <strong
+                                                    >Samsung Advanced<br />
+                                                    Institute of Technology</strong
+                                                >
+                                                <address class="fs-15">
+                                                    130, Samsung-ro, Yeongtong-gu,<br />
+                                                    Suwon-si, Gyeonggi-do, 16678, Korea
+                                                </address>
+                                                <p>+82-31-8061-1114</p>
                                             </div>
                                         </div>
                                     </div>
-                                    <article class="taking_wrap js-scr-sec bgf cm_pd30" style="display: none">
-                                        <h1 class="js-scr-box">Taking Commuter Bus</h1>
-                                        <div class="taking_box js-scr-box">
-                                            <div class="taking_boximg"></div>
-                                            <div class="taking_boxtt">
-                                                <dl>
-                                                    <dt>Route</dt>
-                                                    <dd>Samsung Headquarter building <-> SAIT</dd>
-                                                </dl>
-                                                <dl>
-                                                    <dt>Departure</dt>
-                                                    <dd>
-                                                        Bus stop is located in front of the Samsung Electronics <br />
-                                                        Headquater building main entrance. <br />
-                                                        (No.2 green line, Gangnam subway station gate 8)
-                                                    </dd>
-                                                </dl>
-                                                <dl>
-                                                    <dt>Time table <em>(Weekdays)</em></dt>
-                                                    <dd>10:00, 11:00, 12:00, 12:30, 13:30, 14:00, 15:00, 16:00</dd>
-                                                </dl>
-                                            </div>
-                                        </div>
-                                        <div class="contact_mail js-scr-box">
-                                            <strong>Contact us by e-mail</strong>
-                                            <p>
-                                                If you have any suggestions or inquiries, please contact web-master. <br />
-                                                <em>saitweb@samsung.com</em>
-                                            </p>
-                                        </div>
-                                    </article>
                                 </div>
                             </div>
                         </article>
@@ -139,25 +108,7 @@
 
             <!-- footer -->
 
-            <footer id="footer">
-                <div class="footer_wrap">
-                    <h1 class="f_logo"><img src="https://www.sait.samsung.co.kr/saithome/mobile/images/layout/f_logo.png" alt="footer logo" /></h1>
-                    <ul class="f_link">
-                        <li style="font-weight: 700"><a href="https://www.sait.samsung.co.kr/saithome/mobile/etc/privacy.do">Privacy Statement</a></li>
-                        <!-- 
-			<li><a href="https://www.sait.samsung.co.kr/saithome/mobile/etc/legal.do">Legal Notice</a></li>
-			-->
-                        <li style="font-weight: 700"><a href="https://www.sait.samsung.co.kr/saithome/mobile/etc/management.do" style="color: #f0f8ff">Privacy Policy</a></li>
-                    </ul>
-                    <div class="f_bottom">
-                        <div class="copy_wrap">
-                            <address>130, Samsung-ro, Yeongtong-gu, Suwon-si, Gyeonggi-do, 16678, Korea</address>
-                            <span class="tel">Tel / +82-31-8061-1114</span>
-                            <p class="copyright">© 2018. SAMSUNG All Rights Reserved.</p>
-                        </div>
-                    </div>
-                </div>
-            </footer>
+            <%- include("../include/sub_footer.html") %>
 
             <!-- Global site tag (gtag.js) - Google Analytics -->
             <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123575008-1"></script>

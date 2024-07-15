@@ -395,6 +395,9 @@ section.forum #content h3 {
     padding: 0 20px;
     box-sizing: border-box;
 }
+.content__container--pd0 {
+    padding: 0;
+}
 .row {
     padding-top: 40px;
     box-sizing: border-box;
@@ -694,6 +697,47 @@ select:focus {
     margin: 0;
     width: 100%;
 }
+.contact .map_wrap #map {
+    box-shadow: none;
+    height: 330px;
+}
+.contact .map_box {
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+.map_box > .address_wrap {
+    position: relative;
+    padding: 0;
+    padding-top: 20px;
+    box-sizing: border-box;
+    background: #1D242F;
+    text-align: center;
+}
+.map_box > .address_wrap strong {
+    display: block;
+    font-family: "SamsungSharpSans";
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 700;
+    color: #fff;
+}
+.map_box > .address_wrap address {
+    margin-top: 20px;
+    font-size: 16px;
+    line-height: 26px;
+    color: #fff;
+    font-weight: 400;
+}
+#content .contact_wrap .address_wrap > p {
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #6E7E96;
+    margin: 0;
+    margin-top: 5px;
+    padding: 0;
+}
+
 
 // press
 #content.press, #content.press_view {
@@ -790,7 +834,7 @@ select:focus {
     width: 100%;
     position: relative;
     margin: 0 auto;
-    margin-top: 25px;
+    margin-top: 40px;
     padding: 0 60px;
     box-sizing: border-box;
 }
@@ -1310,8 +1354,8 @@ section.forum #content .infobox .inner .ttx {
 }
 section.forum #content .infobox .inner .ttx .speaker i {
     display: inline-block;
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
 }
 section.forum #content .infobox .inner .ttx span {
     font-size: 18px;
@@ -1345,11 +1389,12 @@ section.forum #content .infobox .inner .ttx .speaker i + p {
 }
 
 
+
 section.forum #content #subTitle .nav_group a.prev_ev {}
 
 section.forum #content .infobox .inner .ttx .ttx__speaker {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
     gap: 40px;
 }
 section.forum #content .infobox .inner .ttx .speaker {
@@ -1357,9 +1402,7 @@ section.forum #content .infobox .inner .ttx .speaker {
     text-align: center;
     margin: 0;
     padding: 0;
-}
-section.forum #content .infobox .inner .ttx .speaker p {
-    min-width: 120px;
+    width: auto;
 }
 section.forum #content .contact_wrap {
     width: 100%;
@@ -1373,6 +1416,10 @@ section.forum #content .contact_wrap p {
 section.forum #content .contbox {
     margin-bottom: 0;
     border: 1px solid rgba(255, 255, 255, 0.2);
+}
+section.forum #content .contbox .inner.cont {
+    padding: 20px;
+    box-sizing: border-box;
 }
 section.forum #content .contbox .inner.cont h4 {
     color: #fff;
@@ -1400,26 +1447,15 @@ section.forum #content .contbox .inner.cont a {
     line-height: 26px;
 }
 
-
-@media screen and (max-width: 660px) {
-    section.forum #content .infobox .inner .ttx .speaker {
-        width: auto;
-    }
-    section.forum #content .infobox .inner .ttx .speaker i {
-        width: 120px;
-        height: 120px;
-    }
-}
-@media screen and (max-width: 520px) {
-    section.forum #content .infobox .inner .ttx .speaker i {
-        grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
-        width: 90px;
-        height: 90px;
-    }
+@media screen and (max-width: 500px) {
     section.forum #content .infobox .inner .ttx .ttx__speaker {
         gap: 20px;
     }
 }
+
+
+
+
 section.forum .program_array p {
     color: #6E7E96;
     font-size: 16px;
@@ -1478,8 +1514,6 @@ section.forum .popup .wrap {
 
 // AI Researcher
 p.gray {
-    font-size: 16px;
-    line-height: 26px;
     color: #6E7E96;
 }
 .btn-download-link {
@@ -1571,8 +1605,8 @@ p.gray {
     margin-bottom: 20px;
 }
 #content .row__wrap .desc p {
-    font-size: 16px;
-    line-height: 26px;
+    font-size: 18px;
+    line-height: 28px;
 }
 .bold {
     font-weight: 700;
@@ -1587,8 +1621,8 @@ p.gray {
     margin-top: 15px;
 }
 #content .contact_wrap p {
-    font-size: 16px;
-    line-height: 26px;
+    font-size: 18px;
+    line-height: 28px;
 }
 
 .dotlist li {
@@ -1752,6 +1786,9 @@ section.researcher #content .contbox {
     table-layout: fixed;
     width: 100%;
 }
+#content .person_list .tb::after {
+    display: none;
+}
 #content .person_list li:first-child {
     border-top: 1px solid #fff;
     box-sizing: border-box;
@@ -1760,6 +1797,7 @@ section.researcher #content .contbox {
     width: 75%;
     padding-left: 25px;
     box-sizing: border-box;
+    vertical-align: top;
 }
 #content .person_list .info .name {
     font-size: 20px;
@@ -1928,7 +1966,7 @@ section.researcher #content .contbox {
     font-size: 18px;
     line-height: 28px;
 }
-@media screen and (max-width: 420px){
+@media screen and (max-width: 450px){
     .rprocess__inner {
         display: flex;
         column-gap: 20px;

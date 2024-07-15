@@ -6,7 +6,7 @@ $(function () {
             let mainKV = new Swiper('.main-kv', {
                 slidesPerView: 1,
                 autoplay: {
-                    delay: 7000,
+                    delay: 5000,
                 },
                 loop: true,
                 pagination: {
@@ -49,6 +49,7 @@ $(function () {
                 effect: 'fade',
                 touchRatio: 0,
                 fadeEffect: { crossFade: true },
+                autoHeight: true,
             });
             const imageSlider = new Swiper('.image-slider', {
                 parallax: true,

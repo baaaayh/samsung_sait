@@ -79,6 +79,9 @@
     &--01 {
         height: 100lvh;
     }
+    &--02 {
+        height: 100lvh;
+    }
 }
 .main-kv {
     position: relative;
@@ -298,14 +301,12 @@
         }
     }
     &__inbox {
-        display: flex;
-        flex-direction: column;
-        gap: 30px;
         width: 100%;
     }
     &__text {
         flex-direction: column;
-        
+        position: relative;
+        z-index: 2;
     }
     &__control {
         position: relative;
@@ -352,7 +353,7 @@
             background-color: #fff;
             border: 1px solid #ddd;
             border-radius: 10px;
-            z-index: 1;
+            z-index: 3;
             li {
                 position: relative;
                 font-size: 0;
@@ -384,6 +385,7 @@
     }
     &__image {
         text-align: right;
+        margin-top: -50px;
     }
 }
 .bg-slider {
