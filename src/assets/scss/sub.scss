@@ -1095,18 +1095,21 @@ p.mb20 {
     box-sizing: border-box;
 }
 .infowrap p.infobox {
-    font-size: 17px;
+    display: flex;
+    font-size: 18px;
     font-weight: 400;
     color: #4f4f4f;
-    line-height: 30px !important;
+    line-height: 28px !important;
     padding: 0 !important;
 }
 .infowrap p.infobox span {
     color: #fff;
 }
 .infowrap p.infobox span:first-child {
-    color: #6E7E96;
-    font-weight: 700;
+    flex-shrink: 0;
+}
+.infowrap p.infobox span:last-child {
+    flex: 1;
 }
 .infowrap p.infobox span:nth-child(1):before {
     left: 100px;
