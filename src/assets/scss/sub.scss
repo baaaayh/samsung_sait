@@ -1111,6 +1111,10 @@ p.mb20 {
 .infowrap p.infobox span:last-child {
     flex: 1;
 }
+.infowrap p.infobox span:nth-child(1) {
+    color: #6E7E96;
+    font-weight: 700;
+}
 .infowrap p.infobox span:nth-child(1):before {
     left: 100px;
 }
