@@ -281,18 +281,6 @@
                                         </div>
                                     </div>
                                 </div>
-                                <script>
-                                    $(function () {
-                                        $('.filter__tab').on('click', function () {
-                                            $(this).toggleClass('active');
-                                            if ($(this).hasClass('active')) {
-                                                $('.filter__body').slideDown();
-                                            } else {
-                                                $('.filter__body').stop().slideUp();
-                                            }
-                                        });
-                                    });
-                                </script>
                                 <div class="list_wrap">
                                     <div class="item_list js-scr-sec">
                                         <form action="?" method="get" name="Search" id="frmSearch">
@@ -404,7 +392,7 @@
                                             <i>
                                                 <img src="https://www.sait.samsung.co.kr/saithome/images/research/ico06_p.png" />
                                             </i>
-                                            <h1>Purely spin-vibronic coupling assisted triplet to singlet up-conversion for real deep blue organic light-emitting diodes with over 20％ efficiency and y color coordinate of 0.05</h1>
+                                            <h1>Purely spin-vibronic coupling assisted triplet to singlet up-conversion for real deep blue organic light-emitting diodes with over 20% efficiency and y color coordinate of 0.05</h1>
                                             <div class="infowrap brp">
                                                 <p class="infobox">
                                                     <span>Category</span>
@@ -484,7 +472,7 @@
                                             <i>
                                                 <img src="https://www.sait.samsung.co.kr/saithome/images/research/ico07_p.png" />
                                             </i>
-                                            <h1>Evolution and expansion of Li concentration gradient during charge–discharge cycling</h1>
+                                            <h1>Evolution and expansion of Li concentration gradient during charge-discharge cycling</h1>
                                             <div class="infowrap brp">
                                                 <p class="infobox">
                                                     <span>Category</span>
@@ -1419,6 +1407,18 @@
                     if (!scrolledAfterClick) {
                         scrollBg();
                         scrolledAfterClick = true;
+                    }
+                });
+            });
+        </script>
+        <script>
+            $(function () {
+                $('.filter__tab').on('click', function () {
+                    $(this).toggleClass('active');
+                    if ($(this).hasClass('active')) {
+                        $('.filter__body').slideDown();
+                    } else {
+                        $('.filter__body').stop().slideUp();
                     }
                 });
             });

@@ -57,6 +57,9 @@ select, input, button, textarea {
 .mb5 {
     margin-bottom: 5px;
 }
+.mb10 {
+    margin-bottom: 10px;
+}
 .mb20 {
     margin-bottom: 20px;
 }
@@ -319,7 +322,7 @@ h6 {
     font-size: 20px;
     line-height: 30px;
     color: #fff;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 .small-title {
     font-size: 20px;
@@ -389,7 +392,9 @@ p {
 #content .btn_area a {
     background-color: transparent;
 }
-
+#content .btn_area a:hover {
+    color: #fff;
+}
 
 
 
@@ -742,9 +747,7 @@ select:focus {
 }
 .labs .sait_global .sait_view .view_wrap {
 }
-.labs .txt_wrap.people_txt .pepl_wrap {
-    padding: 0;
-}
+
 .labs .sait_global .sait_view article .txt_wrap {
     padding: 0;
 }
@@ -754,6 +757,9 @@ select:focus {
 }
 .labs .sait_global .sait_view article .txt_wrap p:first-child {
     margin-top: 0;
+}
+.labs .sait_global .sait_view article .txt_wrap.people_txt .pepl_wrap {
+    padding: 0;
 }
 .labs .sait_global .sait_view article .txt_wrap.people_txt .pepl_wrap .clear {
     display: grid;
@@ -770,37 +776,40 @@ select:focus {
     width: 100%;
     padding: 0;
 }
-.labs .sait_global .sait_view article .txt_wrap.people_txt p {
+#content.labs .sait_global .sait_view article .txt_wrap.people_txt .pepl_wrap .pepl_box p {
+    font-size: 14px;
+    line-height: 24px;
     color: #fff;
     margin-top: 15px;
 }
-.labs .sait_global .sait_view article .txt_wrap.people_txt p.skill {
+#content.labs .sait_global .sait_view article .txt_wrap.people_txt .pepl_wrap .pepl_box p.skill {
     margin-top: 0;
     color: #6E7E96;
-    font-size: 16px;
-    line-height: 26px;
 }
-.labs .sait_global .sait_view article .txt_wrap.people_txt .pepl_wrap .pepl_box .btn_area {
+#content.labs .sait_global .sait_view article .txt_wrap.people_txt .pepl_wrap .pepl_box .btn_area {
     display: flex;
     flex-direction: column;
     row-gap: 5px;
     padding-top: 0;
     margin-top: 15px;
 }
-.labs .sait_global .sait_view article .txt_wrap.people_txt a {
+#content.labs .sait_global .sait_view article .txt_wrap.people_txt .pepl_wrap .pepl_box .btn_area a {
     background-color: transparent;
     margin: 0;
 }
-#content.labs .sait_global .sait_view article .txt_wrap.people_txt a:hover, 
-#content.labs .sait_global .sait_view article .txt_wrap.people_txt a:focus {
+#content.labs .sait_global .sait_view article .txt_wrap.people_txt .pepl_wrap .pepl_box .btn_area a i {
+    right: 25px;
+}
+#content.labs .sait_global .sait_view article .txt_wrap.people_txt .pepl_wrap .pepl_box .btn_area a:hover, 
+#content.labs .sait_global .sait_view article .txt_wrap.people_txt .pepl_wrap .pepl_box .btn_area a:focus {
     color: #fff;
 }
-#content.labs .sait_global .sait_view article .txt_wrap.people_txt a:hover i:before, 
-#content.labs .sait_global .sait_view article .txt_wrap.people_txt a:focus i:before {
+#content.labs .sait_global .sait_view article .txt_wrap.people_txt .pepl_wrap .pepl_box .btn_area a:hover i:before, 
+#content.labs .sait_global .sait_view article .txt_wrap.people_txt .pepl_wrap .pepl_box .btn_area a:focus i:before {
     background-color: #fff;
 }
-#content.labs .sait_global .sait_view article .txt_wrap.people_txt a:hover i:after, 
-#content.labs .sait_global .sait_view article .txt_wrap.people_txt a:focus i:after {
+#content.labs .sait_global .sait_view article .txt_wrap.people_txt .pepl_wrap .pepl_box .btn_area a:hover i:after, 
+#content.labs .sait_global .sait_view article .txt_wrap.people_txt .pepl_wrap .pepl_box .btn_area a:focus i:after {
     border-left-color: #fff;
 }
 #content.labs .sait_global .sait_view article .txt_wrap.public_btn .btn_area {
@@ -822,7 +831,7 @@ select:focus {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px;
+    padding: 10px 30px;
     box-sizing: border-box;
     border: 1px solid rgba(255, 255, 255, 0.2);
 }
@@ -830,21 +839,29 @@ select:focus {
     display: flex;
     flex-direction: row;
     align-items: center;
-    column-gap: 15px;
-    font-size: 16px;
+    column-gap: 20px;
+    font-size: 18px;
     color: #fff;
 }
 .link-btn a img {
-    max-width: 24px;
+    max-width: 40px;
+}
+.link-btn a > img {
+    width: 24px;
 }
 .labs .list_box .list_item {
-    padding: 20px 0;
+    padding: 30px 0;
     box-sizing: border-box;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.labs .list_box .list_item:first-child {
+    padding-top: 0;
 }
 .labs .list_box .list_item .tit {
     padding: 0;
     font-size: 18px;
     line-height: 28px;
+    font-weight:500;
     color: #fff;
     word-break: keep-all;
     overflow: hidden;
@@ -858,7 +875,7 @@ select:focus {
     float: none;
 }
 .labs .infowrap {
-    margin-top: 15px;
+    margin-top: 20px;
 }
 .labs .list_item:hover, .labs .list_item:focus {
     background-color: transparent;
@@ -868,17 +885,38 @@ select:focus {
 }
 .labs .list_box .list_item .btn_area a {
     margin: 0;
+    font-size: 14px;
+    height: 38px;
+    line-height: 38px;
+    text-indent: 14px;
+    max-width: 160px;
+    width: 100%;
+}
+.labs .list_box .list_item .btn_area a i {
+    right: 14px;
 }
 .labs .infowrap p.infobox {
     display: flex;
 }
+.labs .infowrap p.infobox span {
+    float: none;
+    font-size: 16px;
+    line-height: 24px;
+}
 .labs .infowrap p.infobox span:nth-child(1) {
     width: 100%;
-    max-width: 90px;
+    max-width: 100px;
 }
 .labs .infowrap p.infobox span:nth-child(1):before {
     top: 14px;
     right: 0;
+}
+.labs .infowrap p.infobox span:nth-child(2) {
+    flex: 1;
+    width: auto;
+    margin-left: 0;
+    padding-left: 20px;
+    box-sizing: border-box;
 }
 #content.labs .sait_global .sait_view article .txt_wrap .link_wrap {
     display: grid;
@@ -894,6 +932,10 @@ select:focus {
 }
 #content.labs .sait_global .sait_view article .txt_wrap .link_wrap a .title {
     color: #fff;
+    font-size: 16px;
+    line-height: 26px;
+    margin-top: 10px;
+    -webkit-line-clamp: 4;
 }
 .labs .sait_global .sait_view article ul li {
     width: 100%;
@@ -911,8 +953,13 @@ select:focus {
 .labs .sait_global .sait_view article .one > li:first-child {
     margin-top: 0;
 }
+
 .labs .sait_global .sait_view article .one > li:first-child .address-area {
     padding-top: 0;
+}
+.labs .sait_global .sait_view article .one > li:last-child .address-area {
+    border-bottom: none;
+    padding-bottom: 0;
 }
 .labs .sait_global .sait_view article .one address {
     padding: 0 0 0px 15px;
