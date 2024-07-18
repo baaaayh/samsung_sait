@@ -5,12 +5,12 @@
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
         <!-- //공통적용헤더정보 -->
-        <link rel="stylesheet" href="https://www.sait.samsung.co.kr/saithome/stylesheets/css/common.css" />
-        <script type="text/javascript" src="https://www.sait.samsung.co.kr/saithome/javascripts/jquery-1.8.2.min.js"></script>
-        <!--[if lt IE 9]><script src="https://www.sait.samsung.co.kr/saithome/javascripts/lib/html5shiv.min.js"></script><![endif]-->
-        <!--[if lt IE 10]><script src="https://www.sait.samsung.co.kr/saithome/javascripts/lib/placeholders.min.js"></script><![endif]-->
+        <link rel="stylesheet" href="https://www.sait.samsung.co.kr/saithome/mobile/stylesheets/css/common.css" />
+        <link rel="stylesheet" href="https://www.sait.samsung.co.kr/saithome/mobile/stylesheets/2024/sub.css" />
+        <link rel="shortcut icon" href="https://www.sait.samsung.co.kr/saithome/images/favicon.ico" />
+        <script type="text/javascript" src="https://www.sait.samsung.co.kr/saithome/mobile/javascripts/jquery-1.8.2.min.js"></script>
         <meta name="Keywords" content="SAIT, Samsung Advanced Institute of Technology, 삼성종합기술원, 삼성전자 종합기술원, Samsung research, Samsung R&amp;D, Samsung future technology, R&amp;D, Autonomoucs Driving, Graphene, New materials, QD, Quantum Dot" />
-
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
         <title>Global Collaboration | Samsung Advanced Institute of Technology</title>
         <meta name="Description" content="Global Collaboration | Samsung Advanced Institute of Technology" />
         <meta property="og:type" content="website" />
@@ -21,6 +21,7 @@
         <meta property="og:site_name" content="Samsung Advanced Institute of Technology" />
         <meta name="Author" content="Samsung Advanced Institute of Technology" />
         <meta name="robots" content="ALL" />
+
         <style>
             .btnSave {
                 width: 100%;
@@ -28,19 +29,13 @@
                 display: block;
                 text-indent: -50px;
                 color: #fff;
-                font-size: 20px;
+                font-size: 18px;
                 font-weight: 700;
                 cursor: pointer;
                 -webkit-transition: color 0.2s ease;
                 -moz-transition: color 0.2s ease;
                 -o-transition: color 0.2s ease;
                 -ms-transition: color 0.2s ease;
-                padding: 0;
-                font-family: SamsungOneLatin, Noto Sans KR, sans-serif;
-            }
-            .btnSave:focus,
-            .btnSave:hover {
-                color: #1428a0;
             }
             .btnSave.check_not {
                 color: #fff !important;
@@ -48,23 +43,28 @@
                 background-color: #555 !important;
                 border-color: #555 !important;
             }
-            #modalPopup .apply_popup table tr td div input[type='text'] {
-                width: 522px;
+
+            #pro_files-root > div {
+                margin-bottom: 10px;
             }
-            .filebox > div > div {
+            #ra_files-root > div {
                 margin-bottom: 10px;
             }
         </style>
+        <script type="text/javascript" src="/saithome/gro/lib/js/gro.js"></script>
         <%- include("../include/sub_head.html") %>
     </head>
     <body>
         <script>
             if ('' != null && '' != '') {
-                alert('');
+                if ('' == 'close') {
+                    alert('GRO online submission is now closed');
+                } else {
+                    alert('');
+                }
             }
-
-            function fileDownload() {}
         </script>
+
         <div id="wrap" role="main">
             <!-- header-->
             <%- include("../include/sub_header.html") %>
@@ -73,60 +73,40 @@
             <!-- container-->
             <section id="container" class="about">
                 <!-- subVisual-->
-                <div id="subVisual" style="background-image: url(https://www.sait.samsung.co.kr/saithome/images/about/about_visual.jpg)">
+                <div id="subVisual">
+                    <img src="https://www.sait.samsung.co.kr/saithome/mobile/images/about/about_visual.jpg" alt="" />
                     <div class="tit_wrap">
                         <h3>
-                            <span>Samsung Advanced Institute of Technology</span>
+                            <span> Samsung Advanced <br />Institute of Technology </span>
                         </h3>
                     </div>
                 </div>
                 <!-- //subVisual-->
-                <!-- subLocation-->
-                <div id="subLocation">
-                    <div class="location_box">
-                        <ul class="location_list">
-                            <li class="home"><a href="https://www.sait.samsung.co.kr/saithome/main/main.do">main page</a></li>
-                            <li class="depth1">
-                                <button type="button">About SAIT</button>
-                                <ul class="under_depth">
-                                    <li><a href="https://www.sait.samsung.co.kr/saithome/about/who.do">About SAIT</a></li>
-                                    <li><a href="https://www.sait.samsung.co.kr/saithome/research/what.do">Research Areas</a></li>
-                                    <li><a href="https://www.sait.samsung.co.kr/saithome/about/press.do">News & Events</a></li>
-                                    <li><a href="https://www.sait.samsung.co.kr/saithome/join/application.do">Join Us</a></li>
-                                </ul>
-                            </li>
-                            <li class="depth2">
-                                <button type="button">Global Collaboration</button>
-                                <ul class="under_depth">
-                                    <li><a href="https://www.sait.samsung.co.kr/saithome/about/who.do">Who We Are</a></li>
-                                    <li><a href="https://www.sait.samsung.co.kr/saithome/about/history.do">History of Progress</a></li>
-                                    <li><a href="https://www.sait.samsung.co.kr/saithome/about/labs.do">Global Labs</a></li>
-                                    <li><a href="https://www.sait.samsung.co.kr/saithome/about/collabo_overview.do" class="active">Global Collaboration</a></li>
-                                    <li><a href="https://www.sait.samsung.co.kr/saithome/about/contact.do">Contact us</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- //subLocation-->
 
                 <!-- 2022-11-02 작업 : 시작 -->
                 <style type="text/css">
-                    .new2022 #subTab ul li a {
-                        width: 200px;
+                    .new2022 #subTab {
+                        overflow-x: scroll;
+                        overflow-y: hidden;
+                        height: 70px;
+                        -webkit-user-drag: auto;
+                    }
+                    .new2022 #subTab ul {
+                        width: 130%;
+                    }
+                    .new2022 #subTab ul li {
+                        width: calc(88% / 5);
                     }
                     .new2022 .new2022__wrap {
-                        display: flex;
-                        max-width: 1180px;
-                        margin: 0 auto;
-                        margin-top: 100px;
-                        padding-bottom: 60px;
+                        margin-top: 50px;
+                        padding: 0 60px;
+                        padding-bottom: 35px;
                         border-bottom: 1px solid #a8a8a8;
                     }
                     .new2022 .new2022__year {
-                        flex-basis: 260px;
-                        font-size: 37px;
-                        line-height: 40px;
+                        margin-bottom: 12px;
+                        font-size: 25px;
+                        line-height: 20px;
                         color: #1428a0;
                     }
                     .new2022 .new2022__list > li {
@@ -135,38 +115,34 @@
                         gap: 20px;
                     }
                     .new2022 .new2022__list > li ~ li {
-                        margin-top: 40px;
+                        margin-top: 25px;
                     }
                     .new2022 .new2022__list b {
+                        font-size: 14px;
+                        line-height: 20px;
                         color: #333;
                         font-weight: bold;
                     }
                     .new2022 .new2022__list span {
+                        font-size: 12px;
+                        line-height: 16px;
                         color: #636363;
                         font-weight: normal;
                     }
-                    @media screen and (max-width: 1240px) {
-                        .new2022 #subTab ul li a {
-                            width: 120px;
-                        }
-                    }
                 </style>
                 <!-- subContent-->
-                <section id="content" class="process renew2024">
+                <section id="content" class="apply new2022">
                     <div class="content__container">
                         <div id="subTitle" class="js-scr-sec">
                             <h4 class="js-scr-box">Global Collaboration</h4>
-                            <!--  
-				<h5 class="js-scr-box">GRO 2021 will be opened from 21<sup>st</sup> of June to 24<sup>th</sup> of August</h5>
-				-->
                         </div>
                         <div id="subTab" class="js-scr-sec">
                             <ul class="js-scr-box">
-                                <li><a href="../about/collabo_overview.html">Overview</a></li>
-                                <li><a href="../about/collabo_process.html">Process</a></li>
-                                <li><a href="../about/collabo_apply.html" class="active">Apply</a></li>
-                                <li><a href="../about/collabo_faq.html">FAQ</a></li>
-                                <li><a href="../about/collabo_recipients.html">Recipients</a></li>
+                                <li><a href="./collabo_overview.html">Overview</a></li>
+                                <li><a href="./collabo_process.html">Process</a></li>
+                                <li><a href="./collabo_apply.html" class="active">Apply</a></li>
+                                <li><a href="./collabo_faq.html">FAQ</a></li>
+                                <li><a href="./collabo_recipients.html">Recipients</a></li>
                             </ul>
                         </div>
                         <article class="row">
@@ -188,13 +164,13 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <div class="btn-wrap btn-wrap--tal mt30 js-scr-sec">
+                                <div class="btn-wrap btn-wrap--tal mt20 js-scr-sec">
                                     <a href="javascript:;" class="apply_btn btn btn-default js-scr-box">
                                         <div class="btn-default__text btn-default__text--arrow">Apply</div>
                                     </a>
                                 </div>
-                                <div class="mt30 js-scr-sec">
-                                    <strong class="gray js-scr-box">Research proposal is accepted ONLY via the GRO online submission site.</strong>
+                                <div class="mt20 js-scr-sec">
+                                    <strong class="gray js-scr-box fw-bold fs-14">Research proposal is accepted ONLY via the GRO online submission site.</strong>
                                 </div>
                             </div>
                         </article>
@@ -202,7 +178,7 @@
                             <div class="row__inner js-scr-sec">
                                 <h5 class="title mb30 js-scr-box">Submission</h5>
                                 <p class="js-scr-box">Applicants shall submit the following document.</p>
-                                <div class="mt30">
+                                <div class="mt20">
                                     <strong class="js-scr-box">Research Proposal</strong>
                                     <p class="mt10 js-scr-box">Proposal Guide & Format <a href="https://www.sait.samsung.co.kr/saithome/datefile/2024_Samsung_GRO_Proposal_Guide_and_Format.docx" class="btn btn-download-link" download>Download</a></p>
                                 </div>
@@ -223,32 +199,39 @@
                                         <div class="down-list__wrap">
                                             <ul>
                                                 <li class="js-scr-box">
-                                                    <p>Beyond Transformer/Future AI</p>
-                                                    <a href="../datefile/1-1_Beyond_Transformer_Future_AI_GRO_CFP.docx" download="" class="btn btn-download-link">Download</a>
+                                                    <p>
+                                                        <a href="../datefile/1-1_Beyond_Transformer_Future_AI_GRO_CFP.docx" download target="_blank">Beyond Transformer/Future AI<i></i></a>
+                                                    </p>
                                                 </li>
                                                 <li class="js-scr-box">
-                                                    <p>Semicon. Manufacturing Infrastructure using ML</p>
-                                                    <a href="../datefile/1-2_Semicon._Manufacturing_Infrastructure_using_ML_GRO_CFP.docx" download="" class="btn btn-download-link">Download</a>
+                                                    <p>
+                                                        <a href="../datefile/1-2_Semicon._Manufacturing_Infrastructure_using_ML_GRO_CFP.docx" download target="blank">Semicon. Manufacturing Infrastructure using ML<i></i></a>
+                                                    </p>
                                                 </li>
                                                 <li class="js-scr-box">
-                                                    <p>Semicon. Metrology and Inspection using ML</p>
-                                                    <a href="../1-3_Semicon._Metrology_and_Inspection_using_ML_GRO_CFP.docx" download="" class="btn btn-download-link">Download</a>
+                                                    <p>
+                                                        <a href="../1-3_Semicon._Metrology_and_Inspection_using_ML_GRO_CFP.docx" download="" target="_blank">Semicon. Metrology and Inspection using ML<i></i></a>
+                                                    </p>
                                                 </li>
                                                 <li class="js-scr-box">
-                                                    <p>LLM/SLMs in Optimal Control and Reliability Assurance Methods for Utility Supply Systems</p>
-                                                    <a href="../datefile/1-4_LLMSLMs_in_Optimal_Control_and_Reliability_Assurance_GRO_CFP.docx" download="" class="btn btn-download-link">Download</a>
+                                                    <p>
+                                                        <a href="../datefile/1-4_LLMSLMs_in_Optimal_Control_and_Reliability_Assurance_GRO_CFP.docx" download="" target="_blank">LLM/SLMs in Optimal Control and Reliability Assurance Methods for Utility Supply Systems<i></i></a>
+                                                    </p>
                                                 </li>
                                                 <li class="js-scr-box">
-                                                    <p>Fluid analysis using ML</p>
-                                                    <a href="../datefile/1-5_Fluid_Analysis_using_ML_GRO_CFP.docx" download="" class="btn btn-download-link">Download</a>
+                                                    <p>
+                                                        <a href="../datefile/1-5_Fluid_Analysis_using_ML_GRO_CFP.docx" download="" target="_blank">Fluid analysis using ML<i></i></a>
+                                                    </p>
                                                 </li>
                                                 <li class="js-scr-box">
-                                                    <p>Noise Propagation using ML</p>
-                                                    <a href="../datefile/1-6_Noise_Propagation_using_ML_GRO_CFP.docx" download="" class="btn btn-download-link">Download</a>
+                                                    <p>
+                                                        <a href="../datefile/1-6_Noise_Propagation_using_ML_GRO_CFP.docx" download="" target="_blank">Noise Propagation using ML<i></i></a>
+                                                    </p>
                                                 </li>
                                                 <li class="js-scr-box">
-                                                    <p>Generative AI for nextG Cellular Communication</p>
-                                                    <a href="../datefile/1-7_Generative_AI_for_nextG_cellular_Networks_GRO_CFP.docx" download="" class="btn btn-download-link">Download</a>
+                                                    <p>
+                                                        <a href="../datefile/1-7_Generative_AI_for_nextG_cellular_Networks_GRO_CFP.docx" download="" target="_blank">Generative AI for nextG Cellular Communication<i></i></a>
+                                                    </p>
                                                 </li>
                                             </ul>
                                         </div>
@@ -260,16 +243,19 @@
                                         <div class="down-list__wrap">
                                             <ul>
                                                 <li class="js-scr-box">
-                                                    <p>Advanced Optical Interconnect and 3D Integration</p>
-                                                    <a href="../datefile/2-1_Advanced_Optical_Interconnect_and_3D_Integration_GRO_CFP.docx" download="" class="btn btn-download-link">Download</a>
+                                                    <p>
+                                                        <a href="../datefile/2-1_Advanced_Optical_Interconnect_and_3D_Integration_GRO_CFP.docx" download="" target="_blank">Advanced Optical Interconnect and 3D Integration<i></i></a>
+                                                    </p>
                                                 </li>
                                                 <li class="js-scr-box">
-                                                    <p>Advanced Optical Coupling Strategies for Co-packaged Optics</p>
-                                                    <a href="../datefile/2-2_Advanced_Optical_Coupling_Strategies_for_Co-packaged_Optics_GRO_CFP.docx" download="" class="btn btn-download-link">Download</a>
+                                                    <p>
+                                                        <a href="../datefile/2-2_Advanced_Optical_Coupling_Strategies_for_Co-packaged_Optics_GRO_CFP.docx" download="" target="_blank">Advanced Optical Coupling Strategies for Co-packaged Optics<i></i></a>
+                                                    </p>
                                                 </li>
                                                 <li class="js-scr-box">
-                                                    <p>Interconnect for chiplet systemdownload</p>
-                                                    <a href="../datefile/2-3_Interconnect_for_Chiplet_system_GRO_CFP.docx" download="" class="btn btn-download-link">Download</a>
+                                                    <p>
+                                                        <a href="../datefile/2-3_Interconnect_for_Chiplet_system_GRO_CFP.docx" download="" target="_blank">Interconnect for chiplet systemdownload<i></i></a>
+                                                    </p>
                                                 </li>
                                             </ul>
                                         </div>
@@ -281,12 +267,14 @@
                                         <div class="down-list__wrap">
                                             <ul>
                                                 <li class="js-scr-box">
-                                                    <p>3D Metrology and Inspection for Critical Dimension and material analysis</p>
-                                                    <a href="../datefile/3-1_3D_Metrology_and_Inspection_for_Critical_Dimension_and_material_analysis_GRO_CFP.docx" download="" class="btn btn-download-link">Download</a>
+                                                    <p>
+                                                        <a href="../datefile/3-1_3D_Metrology_and_Inspection_for_Critical_Dimension_and_material_analysis_GRO_CFP.docx" download="" target="_blank">3D Metrology and Inspection for Critical Dimension and material analysis<i></i></a>
+                                                    </p>
                                                 </li>
                                                 <li class="js-scr-box">
-                                                    <p>New Metrology and Analytical Tech. for sub-5nm Liquid Particles</p>
-                                                    <a href="../datefile/3-2_New_Metrology_and_Analytical_Tech_GRO_CFP.docx" download="" class="btn btn-download-link">Download</a>
+                                                    <p>
+                                                        <a href="../datefile/3-2_New_Metrology_and_Analytical_Tech_GRO_CFP.docx" download="" target="_blank">New Metrology and Analytical Tech. for sub-5nm Liquid Particles<i></i></a>
+                                                    </p>
                                                 </li>
                                             </ul>
                                         </div>
@@ -298,20 +286,24 @@
                                         <div class="down-list__wrap">
                                             <ul>
                                                 <li class="js-scr-box">
-                                                    <p>Cryogenic CMOS, Analog Circuit Design</p>
-                                                    <a href="../datefile/4-1_Cryogenic_CMOS,_Analog_Circuit_Design_GRO_CFP.docx" download="" class="btn btn-download-link">Download</a>
+                                                    <p>
+                                                        <a href="../datefile/4-1_Cryogenic_CMOS,_Analog_Circuit_Design_GRO_CFP.docx" download="" target="_blank">Cryogenic CMOS, Analog Circuit Design<i></i></a>
+                                                    </p>
                                                 </li>
                                                 <li class="js-scr-box">
-                                                    <p>Beyond CMOS and emerging devices</p>
-                                                    <a href="../datefile/4-2_Beyond_CMOS_and_emerging_devices_GRO_CFP.docx" download="" class="btn btn-download-link">Download</a>
+                                                    <p>
+                                                        <a href="../datefile/4-2_Beyond_CMOS_and_emerging_devices_GRO_CFP.docx" download="" target="_blank">Beyond CMOS and emerging devices<i></i></a>
+                                                    </p>
                                                 </li>
                                                 <li class="js-scr-box">
-                                                    <p>Efficient Computing Architectures and Devices</p>
-                                                    <a href="../datefile/4-3_Efficient_Computing_Architectures_and_Devices_GRO_CFP.docx" download="" class="btn btn-download-link">Download</a>
+                                                    <p>
+                                                        <a href="../datefile/4-3_Efficient_Computing_Architectures_and_Devices_GRO_CFP.docx" download="" target="_blank">Efficient Computing Architectures and Devices<i></i></a>
+                                                    </p>
                                                 </li>
                                                 <li class="js-scr-box">
-                                                    <p>Digital Biomarkers</p>
-                                                    <a href="../datefile/4-4_Digital_Biomarkers_Monitoring,_Interventions_of_Chronic_Health_Conditions_GRO_CFP.docx" download="" class="btn btn-download-link">Download</a>
+                                                    <p>
+                                                        <a href="../datefile/4-4_Digital_Biomarkers_Monitoring,_Interventions_of_Chronic_Health_Conditions_GRO_CFP.docx" download="" target="_blank">Digital Biomarkers<i></i></a>
+                                                    </p>
                                                 </li>
                                             </ul>
                                         </div>
@@ -323,12 +315,14 @@
                                         <div class="down-list__wrap">
                                             <ul>
                                                 <li class="js-scr-box">
-                                                    <p>New Materials for Advanced Semiconductor Packaging</p>
-                                                    <a href="../datefile/5-1_New_Materials_for_Advanced_Semiconductor_Packaging_GRO_CFP.docx" download="" class="btn btn-download-link">Download</a>
+                                                    <p>
+                                                        <a href="../datefile/5-1_New_Materials_for_Advanced_Semiconductor_Packaging_GRO_CFP.docx" download="" target="_blank">New Materials for Advanced Semiconductor Packaging<i></i></a>
+                                                    </p>
                                                 </li>
                                                 <li class="js-scr-box">
-                                                    <p>Next-generation Electronic Materials</p>
-                                                    <a href="../datefile/5-2_Next-generation_Electronic_Materials_GRO_CFP.docx" download="" class="btn btn-download-link">Download</a>
+                                                    <p>
+                                                        <a href="../datefile/5-2_Next-generation_Electronic_Materials_GRO_CFP.docx" download="" target="_blank">Next-generation Electronic Materials<i></i></a>
+                                                    </p>
                                                 </li>
                                             </ul>
                                         </div>
@@ -340,28 +334,34 @@
                                         <div class="down-list__wrap">
                                             <ul>
                                                 <li class="js-scr-box">
-                                                    <p>Carbon Capture and Utilization</p>
-                                                    <a href="../datefile/6-1_Carbon_Capture_and_Utilization_GRO_CFP.docx" download="" class="btn btn-download-link">Download</a>
+                                                    <p>
+                                                        <a href="../datefile/6-1_Carbon_Capture_and_Utilization_GRO_CFP.docx" download="" target="_blank">Carbon Capture and Utilization<i></i></a>
+                                                    </p>
                                                 </li>
                                                 <li class="js-scr-box">
-                                                    <p>Industrial Gas Treatment</p>
-                                                    <a href="../datefile/6-2_Industrial_Gas_Treatment_GRO_CFP.docx" download="" class="btn btn-download-link">Download</a>
+                                                    <p>
+                                                        <a href="../datefile/6-2_Industrial_Gas_Treatment_GRO_CFP.docx" download="" target="_blank">Industrial Gas Treatment<i></i></a>
+                                                    </p>
                                                 </li>
                                                 <li class="js-scr-box">
-                                                    <p>PFAS Treatment</p>
-                                                    <a href="../datefile/6-3_PFAS_Treatment_GRO_CFP.docx" download="" class="btn btn-download-link">Download</a>
+                                                    <p>
+                                                        <a href="../datefile/6-3_PFAS_Treatment_GRO_CFP.docx" download="" target="_blank">PFAS Treatment<i></i></a>
+                                                    </p>
                                                 </li>
                                                 <li class="js-scr-box">
-                                                    <p>Radiative Cooling</p>
-                                                    <a href="../datefile/6-4_Radiative_Cooling_GRO_CFP.docx" download="" class="btn btn-download-link">Download</a>
+                                                    <p>
+                                                        <a href="../datefile/6-4_Radiative_Cooling_GRO_CFP.docx" download="" target="_blank">Radiative Cooling<i></i></a>
+                                                    </p>
                                                 </li>
                                                 <li class="js-scr-box">
-                                                    <p>Sustainable Energy Management System</p>
-                                                    <a href="../datefile/6-5_Sustainable_Energy_Management_System_GRO_CFP.docx" download="" class="btn btn-download-link">Download</a>
+                                                    <p>
+                                                        <a href="../datefile/6-5_Sustainable_Energy_Management_System_GRO_CFP.docx" download="" target="_blank">Sustainable Energy Management System<i></i></a>
+                                                    </p>
                                                 </li>
                                                 <li class="js-scr-box">
-                                                    <p>High Temperature Co-Electrolysis</p>
-                                                    <a href="../datefile/6-6_High_Temperature_Co-Electrolysis_GRO_CFP.docx" download="" class="btn btn-download-link">Download</a>
+                                                    <p>
+                                                        <a href="../datefile/6-6_High_Temperature_Co-Electrolysis_GRO_CFP.docx" download="" target="_blank">High Temperature Co-Electrolysis<i></i></a>
+                                                    </p>
                                                 </li>
                                             </ul>
                                         </div>
@@ -372,11 +372,12 @@
                     </div>
                 </section>
                 <!-- //subContent-->
+                <!-- modalPopup-->
+
                 <form method="post" name="frmGroForm" id="frmGroForm" enctype="multipart/form-data">
                     <input type="text" style="display: none" />
                     <input type="hidden" name="formMode" value="CREATE" />
-
-                    <input type="hidden" name="web_type" value="pc" />
+                    <input type="hidden" name="web_type" value="mobile" />
 
                     <div id="modalPopup" tabindex="0">
                         <div class="popup_container">
@@ -384,34 +385,44 @@
                                 <div class="tit_wrap">
                                     <h1>2024 Samsung GRO Program Application</h1>
                                     <!-- <p>
-								The submission deadline is Monday,
-								19 August 2024, 09:00 AM. (Korea Standard Time, UTC+9)
-							</p> -->
+									The submission deadline is Monday,
+									19 August 2024, 09:00 AM. (Korea Standard Time, UTC+9)
+								</p> -->
                                 </div>
                                 <table>
                                     <caption>
                                         Samsung GRO Program Application
                                     </caption>
                                     <colgroup>
-                                        <col width="220px" />
-                                        <col width="280px" />
-                                        <col width="220px" />
-                                        <col width="280px" />
+                                        <col width="100%" />
+                                        <col width="100%" />
+                                        <col width="100%" />
+                                        <col width="100%" />
                                     </colgroup>
                                     <tr>
                                         <th>Primary PI Name</th>
-                                        <!--<td><input type="text"></td>-->
-                                        <td><input name="priPiName" id="priPiName" type="text" value="" size="25" maxlength="500" onkeypress="if(event.keyCode==13){return false}" /></td>
-
+                                        <!--<td><input type="text" placeholder="Input Text"></td>-->
+                                        <td><input name="priPiName" id="priPiName" type="text" value="" placeholder="Input Text" maxlength="500" /></td>
+                                    </tr>
+                                    <tr>
                                         <th>Primary PI Email</th>
-                                        <!--<td><input type="text"></td>-->
-                                        <td><input name="priPiEmail" id="priPiEmail" type="text" value="" size="25" maxlength="100" onkeypress="if(event.keyCode==13){return false}" /></td>
+                                        <!--<td><input type="text" placeholder="Input Text"></td>-->
+                                        <td><input name="priPiEmail" id="priPiEmail" type="text" value="" placeholder="Input Text" maxlength="100" /></td>
                                     </tr>
                                     <tr>
                                         <th>University</th>
-                                        <td colspan="3">
+                                        <td>
                                             <div>
-                                                <input name="universityKind" id="universityKind" type="text" value="" onKeyDown="Javascript:fnSearchEvt();" onKeyUp="Javascript:fnSearchEvt2();" onkeypress="if(event.keyCode==13){return false}" />
+                                                <!--
+											<input type="text" placeholder="Input Text" class="input_bn">
+											<button type="button">Search</button>
+											 -->
+                                                <!--
+											<div id=otherUniDiv2 style="display:block;">
+											Please search by keyword. If not find, search “other” and put in the name of university
+											</div>
+											 -->
+                                                <input name="universityKind" id="universityKind" type="text" value="" onKeyDown="Javascript:fnSearchEvt();" onKeyUp="Javascript:fnSearchEvt2();" />
                                                 <input type="hidden" name="universityKindSeqNo" id="universityKindSeqNo" value="" />
                                                 <input type="hidden" name="uniCfmFlag" id="uniCfmFlag" value="N" />
                                                 <button type="button" name="btnSearch" title="Search" onclick="javascript:fnSearch();return false;">Search</button>
@@ -429,16 +440,16 @@
                                     </tr>
                                     <tr>
                                         <th>Country / Region</th>
-                                        <td colspan="3">
-                                            <!--<input type="text">
-									-->
-                                            <input name="countryKind" id="countryKind" type="text" value="" readonly onkeypress="if(event.keyCode==13){return false}" />
+                                        <td>
+                                            <!--<input type="text" placeholder="Input Text">
+										-->
+                                            <input name="countryKind" id="countryKind" type="text" value="" readonly />
                                             <input type="hidden" name="countryKindSeqNo" id="countryKindSeqNo" value="" />
                                         </td>
                                     </tr>
                                     <tr>
                                         <th>Theme</th>
-                                        <td colspan="3">
+                                        <td>
                                             <div class="select_wrap">
                                                 <select name="themeId" id="themeId" onChange="javascript:changeThemeIdList(this);return false;">
                                                     <option value="">----- Choose a list -----</option>
@@ -461,48 +472,47 @@
                                     </tr>
                                     <tr>
                                         <th>Sub-theme</th>
-                                        <td colspan="3">
-                                            <div id="subjectDiv" class="select_wrap">
-                                                <select name="subjectId" id="subjectId">
-                                                    <option value="">----- Choose a list -----</option>
-                                                </select>
+                                        <td>
+                                            <div class="select_wrap">
+                                                <div id="subjectDiv" class="select_wrap">
+                                                    <select name="subjectId" id="subjectId">
+                                                        <option value="">----- Choose a list -----</option>
+                                                    </select>
+                                                </div>
                                             </div>
                                         </td>
                                     </tr>
                                     <tr>
                                         <th>Budget/year <em>(USD)</em></th>
                                         <td>
-                                            <input name="cost" id="cost" type="text" value="" onkeyup="$(this).val(f_insertComma(this.value))" onkeypress="if(event.keyCode==13){return false}" />
+                                            <input name="cost" id="cost" type="text" value="" onkeyup="$(this).val(f_insertComma(this.value))" />
                                         </td>
                                     </tr>
                                     <tr>
                                         <th>Proposal Title</th>
-                                        <td colspan="3">
-                                            <input name="proposalTitle" id="proposalTitle" type="text" value="" maxlength="1000" onkeypress="if(event.keyCode==13){return false}" />
+                                        <td>
+                                            <input name="proposalTitle" id="proposalTitle" type="text" value="" maxlength="1000" placeholder="Input Text" />
                                         </td>
                                     </tr>
                                     <tr>
                                         <th>Proposal Abstract</th>
-                                        <td colspan="3">
-                                            <textarea name="proposalAbstract" id="proposalAbstract" style="border: solid 2px #333"></textarea>
+                                        <td>
+                                            <textarea name="proposalAbstract" id="proposalAbstract" placeholder="Input Text" style="border: solid 2px #333"></textarea>
                                         </td>
                                     </tr>
                                     <tr>
                                         <th>Proposal <em>(MS-word)</em></th>
-                                        <td colspan="3">
+                                        <td>
                                             <div class="filebox">
                                                 <div id="pro_files-root">
                                                     <div>
-                                                        <input type="text" class="upload-name" disabled="disabled" />
+                                                        <input type="text" class="upload-name input_bn" disabled="disabled" />
                                                         <input type="file" name="pro_file" id="pro_file" size="60%" class="upload-hidden" />
                                                         <!--<span onclick="addFile('PRO')" >Add File</span>-->
-                                                        <label for="pro_file" style="right: 130px">Select</label>
+                                                        <label for="pro_file" style="right: 105px">Select</label>
                                                         <label onclick="addFile('PRO')">Add File</label>
                                                     </div>
                                                 </div>
-
-                                                <!--<input type="file" id="upload_file01" class="upload-hidden">
-										<label for="upload_file01">Add File</label>-->
 
                                                 <p>
                                                     * Recommended file name : Sub-theme number_proposal title_University name_PI Last name.
@@ -516,12 +526,10 @@
                                 <div class="agree_box">
                                     <strong>* Please read carefully and check the box as below. </strong>
                                     <div>
-                                        <!--<input type="checkbox" id="agree1">-->
                                         <input type="checkbox" name="chkAgree" id="chkAgree" onclick="javascript:changeAgree(this);" value="" />
                                         <label for="chkAgree">My proposal does not contain any confidential or proprietary Information. Applications submitted without this box checked will be automatically rejected without further review. </label>
                                     </div>
                                     <div>
-                                        <!--<input type="checkbox" id="agree2">	-->
                                         <input type="checkbox" name="chkAgree" id="chkAgree1" onclick="javascript:changeAgree(this);" value="" />
                                         <label for="chkAgree1"
                                             >I hereby consent to your use of my personal information that I have given to you or you have collected by proper means. Samsung Electronics Co., Ltd, Samsung Electro-Mechanics Co., Ltd, Samsung SDS Co., Ltd. value the personal information of applicants
@@ -535,9 +543,9 @@
                                         Please click the "Submit" button below to upload your proposal. <br />
                                         If your proposal is successfully submitted, you will receive a confirmation email
                                     </p>
-
                                     <div class="submit_box">
-                                        <!--<input type="submit" value="SUBMIT">-->
+                                        <!--<input type="submit" value="SUBMIT"> <i></i>
+									-->
                                         <input type="button" name="btnSave" value="Submit" title="Submit" class="btnSave check_not" onclick="javascript:fnSave();return false;" />
                                         <i></i>
                                     </div>
@@ -547,18 +555,9 @@
                         </div>
                     </div>
                 </form>
+
                 <!-- //modalPopup-->
                 <script type="text/javascript">
-                    function fileChangeText(c_ob) {
-                        if (window.FileReader) {
-                            // modern browser
-                            var filename = $(c_ob)[0].files[0].name;
-                        } else {
-                            // old IE
-                            var filename = $(c_ob).val().split('/').pop().split('\\').pop(); // 파일명만 추출
-                        }
-                        $(c_ob).siblings('.upload-name').val(filename);
-                    }
                     $(function () {
                         //파일첨부
                         var fileTarget = $('.filebox .upload-hidden');
@@ -620,12 +619,12 @@
                         </div>
                         <div class="related_wrap">
                             <article class="js-scr-box">
-                                <a href="https://www.sait.samsung.co.kr/saithome/about/who.do">
+                                <a href="https://www.sait.samsung.co.kr/saithome/mobile/about/who.do">
                                     <h1>Who We Are</h1>
                                 </a>
                             </article>
                             <article class="js-scr-box">
-                                <a href="https://www.sait.samsung.co.kr/saithome/research/what.do">
+                                <a href="https://www.sait.samsung.co.kr/saithome/mobile/research/what.do">
                                     <h1>What We Do</h1>
                                 </a>
                             </article>
@@ -639,7 +638,6 @@
             <!-- footer -->
 
             <%- include("../include/sub_footer.html") %>
-            <div id="gnbDimmed" class="dimmed"></div>
 
             <!-- Global site tag (gtag.js) - Google Analytics -->
             <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123575008-1"></script>
@@ -652,7 +650,9 @@
 
                 gtag('config', 'UA-167217135-1');
             </script>
+
             <!-- //footer -->
+            <div id="gnbDimmed" class="dimmed"></div>
         </div>
 
         <script type="text/javascript">
@@ -664,7 +664,7 @@
 
                 if ('' == 'initFunc') {
                     alert('');
-                    //fnClose();
+                    fnClose();
                 } else if ('' == 'attachError') {
                     alert('');
                 }
@@ -696,7 +696,7 @@
             //==================================================
             function fnSearch() {
                 var url = '/saithome/gro/Common.do?method=universityList&schKeyword=' + document.frmGroForm.universityKind.value;
-                acntWin = window.open(url, 'fncUniversitySearch', 'toolbar=no,menubar=no,resizable=no,scrollbars=yes,top=270,left=700,width=650,height=550');
+                acntWin = window.open(url, 'fncUniversitySearch', '');
                 acntWin.focus();
                 return;
             }
@@ -772,8 +772,8 @@
                 var frm = document.frmGroForm;
 
                 if (frm.chkAgree[0].checked == true && frm.chkAgree[1].checked == true) {
-                    frm.btnSave.disabled = false;
                     $('.btnSave').removeClass('check_not');
+                    frm.btnSave.disabled = false;
                 } else {
                     $('.btnSave').addClass('check_not');
                     frm.btnSave.disabled = true;
@@ -1018,10 +1018,8 @@
                         }
                     }
                     if (fileName != '') fileArray[fileCnt++] = fileName;
-
                     //----------------------------------------
                 }
-
                 var totalSize = 0;
                 for (var i = 0; i < trgObj.length; i++) {
                     if (trgObj[i].files[0].size) {
@@ -1033,7 +1031,6 @@
                     alert('Proposal 파일이 30MB 이상입니다. ');
                     return false;
                 }
-                // console.log(totalSize);
 
                 var totalSize = 0;
                 for (var i = 0; i < trgObj.length; i++) {
@@ -1061,12 +1058,12 @@
                     div.setAttribute('id', 'pro_file-' + pro_gFiles);
                     //var removeFileId = "file"+pro_gFiles
                     div.innerHTML =
-                        '<input type="text" class="upload-name" disabled="disabled"><input type="file" name="pro_file" id="pro_file' +
+                        '<input type="text" class="upload-name input_bn" disabled="disabled"><input type="file" name="pro_file" id="pro_file' +
                         pro_gFiles +
                         '" size="60%" class="upload-hidden" onchange="fileChangeText(this)" />' +
                         '<label for="pro_file' +
                         pro_gFiles +
-                        '" style="right: 130px;" >Select</label>' +
+                        '" style="right: 105px;" >Select</label>' +
                         '<label onclick="removeFile(\'pro_file-' +
                         pro_gFiles +
                         '\')">Delete</label>';
@@ -1148,15 +1145,10 @@
                     alert('오류위치 = CommonScript.f_numeric    \n' + '오류내역 = [' + ex.description + ']');
                 }
             }
-
-            function fnFormDownload(frmType) {
-                document.fileDown.frmType.value = frmType;
-                document.fileDown.target = 'hidden_frame';
-                document.fileDown.submit();
-            }
         </script>
-        <script type="text/javascript" src="https://www.sait.samsung.co.kr/saithome/javascripts/lib/TweenMax/TweenMax.min.js"></script>
-        <script type="text/javascript" src="https://www.sait.samsung.co.kr/saithome/javascripts/lib/TweenMax/easing/EasePack.min.js"></script>
-        <script type="text/javascript" src="https://www.sait.samsung.co.kr/saithome/javascripts/design_common.js"></script>
+
+        <script type="text/javascript" src="https://www.sait.samsung.co.kr/saithome/mobile/javascripts/lib/TweenMax/TweenMax.min.js"></script>
+        <script type="text/javascript" src="https://www.sait.samsung.co.kr/saithome/mobile/javascripts/lib/TweenMax/easing/EasePack.min.js"></script>
+        <script type="text/javascript" src="https://www.sait.samsung.co.kr/saithome/mobile/javascripts/design_common.js"></script>
     </body>
 </html>

@@ -722,6 +722,17 @@ strong {
 .dash-list li.gray p {
     color: #6E7E96;
 }
+.dash-list li.gray small {
+    display: block;
+    font-size: 16px;
+    line-height: 26px;
+    color: #6E7E96;
+}
+.dash-list li.star::before {
+    content:"*";
+    color: #6E7E96;
+}
+
 p.gray {
     font-size: 16px;
     line-height: 26px;
@@ -764,6 +775,12 @@ p.mb20 {
     height: 1px;
     background-color: #fff;
     content:'';
+}
+.btnSave.check_not {
+    color: #fff !important;
+    cursor: auto !important;
+    background-color: #555 !important;
+    border-color: #555 !important;
 }
 
 
@@ -1258,6 +1275,34 @@ p.mb20 {
     margin-bottom: 10px;
 }
 
+.address-box {
+    display: flex;
+    column-gap: 40px;
+}
+.address-box__list  {
+    flex: 1;
+}
+.address-box__list .address-area {
+    margin: 0;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.address-box__list .one li .address-area {
+    margin: 0;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    box-sizing: border-box;
+}
+.address-box__list .one li:first-child .address-area {
+    padding-top: 0;
+}
+.address-box__list .one li:last-child .address-area {
+    padding-bottom: 0;
+    border-bottom: none;
+}
+.labs .sait_global .sait_view article .address-box .one > li {
+    margin: 0;
+}
 
 // Global Collaboration Process
 .calendar {}
@@ -2391,6 +2436,18 @@ section.forum .nav_group a.next_ev:after {
     right: 25px;
     background: url(../images/sub/fo_arr_prev_white.png) center / auto no-repeat;
     transform: rotate(180deg);
+}
+section.forum .nav_group a.prev_ev:hover,
+section.forum .nav_group a.next_ev:hover {
+    background-color: #fff;
+    border: 1px solid #fff;
+    color: #1428a0;
+}
+section.forum .nav_group a.prev_ev:hover:after {
+    background: url(../images/sub/fo_arr_prev_blue.png) center/ auto no-repeat;
+}
+section.forum .nav_group a.next_ev:hover:after {
+    background: url(../images/sub/fo_arr_prev_blue.png) center/ auto no-repeat;
 }
 section.forum .infobox {
     border: 1px solid rgba(255, 255, 255, 0.2);

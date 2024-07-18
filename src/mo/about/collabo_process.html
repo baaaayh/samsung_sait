@@ -5,12 +5,12 @@
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
         <!-- //공통적용헤더정보 -->
-        <link rel="stylesheet" href="https://www.sait.samsung.co.kr/saithome/stylesheets/css/common.css" />
-        <script type="text/javascript" src="https://www.sait.samsung.co.kr/saithome/javascripts/jquery-1.8.2.min.js"></script>
-        <!--[if lt IE 9]><script src="https://www.sait.samsung.co.kr/saithome/javascripts/lib/html5shiv.min.js"></script><![endif]-->
-        <!--[if lt IE 10]><script src="https://www.sait.samsung.co.kr/saithome/javascripts/lib/placeholders.min.js"></script><![endif]-->
+        <link rel="stylesheet" href="https://www.sait.samsung.co.kr/saithome/mobile/stylesheets/css/common.css" />
+        <link rel="stylesheet" href="https://www.sait.samsung.co.kr/saithome/mobile/stylesheets/2024/sub.css" />
+        <link rel="shortcut icon" href="https://www.sait.samsung.co.kr/saithome/images/favicon.ico" />
+        <script type="text/javascript" src="https://www.sait.samsung.co.kr/saithome/mobile/javascripts/jquery-1.8.2.min.js"></script>
         <meta name="Keywords" content="SAIT, Samsung Advanced Institute of Technology, 삼성종합기술원, 삼성전자 종합기술원, Samsung research, Samsung R&amp;D, Samsung future technology, R&amp;D, Autonomoucs Driving, Graphene, New materials, QD, Quantum Dot" />
-
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
         <title>Global Collaboration | Samsung Advanced Institute of Technology</title>
         <meta name="Description" content="Global Collaboration | Samsung Advanced Institute of Technology" />
         <meta property="og:type" content="website" />
@@ -32,60 +32,40 @@
             <!-- container-->
             <section id="container" class="about">
                 <!-- subVisual-->
-                <div id="subVisual" style="background-image: url(https://www.sait.samsung.co.kr/saithome/images/about/about_visual.jpg)">
+                <div id="subVisual">
+                    <img src="https://www.sait.samsung.co.kr/saithome/mobile/images/about/about_visual.jpg" alt="" />
                     <div class="tit_wrap">
                         <h3>
-                            <span>Samsung Advanced Institute of Technology</span>
+                            <span> Samsung Advanced <br />Institute of Technology </span>
                         </h3>
                     </div>
                 </div>
                 <!-- //subVisual-->
-                <!-- subLocation-->
-                <div id="subLocation">
-                    <div class="location_box">
-                        <ul class="location_list">
-                            <li class="home"><a href="https://www.sait.samsung.co.kr/saithome/main/main.do">main page</a></li>
-                            <li class="depth1">
-                                <button type="button">About SAIT</button>
-                                <ul class="under_depth">
-                                    <li><a href="https://www.sait.samsung.co.kr/saithome/about/who.do">About SAIT</a></li>
-                                    <li><a href="https://www.sait.samsung.co.kr/saithome/research/what.do">Research Areas</a></li>
-                                    <li><a href="https://www.sait.samsung.co.kr/saithome/about/press.do">News & Events</a></li>
-                                    <li><a href="https://www.sait.samsung.co.kr/saithome/join/application.do">Join Us</a></li>
-                                </ul>
-                            </li>
-                            <li class="depth2">
-                                <button type="button">Global Collaboration</button>
-                                <ul class="under_depth">
-                                    <li><a href="https://www.sait.samsung.co.kr/saithome/about/who.do">Who We Are</a></li>
-                                    <li><a href="https://www.sait.samsung.co.kr/saithome/about/history.do">History of Progress</a></li>
-                                    <li><a href="https://www.sait.samsung.co.kr/saithome/about/labs.do">Global Labs</a></li>
-                                    <li><a href="https://www.sait.samsung.co.kr/saithome/about/collabo_overview.do" class="active">Global Collaboration</a></li>
-                                    <li><a href="https://www.sait.samsung.co.kr/saithome/about/contact.do">Contact us</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- //subLocation-->
 
                 <!-- 2022-11-02 작업 : 시작 -->
                 <style type="text/css">
-                    .new2022 #subTab ul li a {
-                        width: 200px;
+                    .new2022 #subTab {
+                        overflow-x: scroll;
+                        overflow-y: hidden;
+                        height: 70px;
+                        -webkit-user-drag: auto;
+                    }
+                    .new2022 #subTab ul {
+                        width: 130%;
+                    }
+                    .new2022 #subTab ul li {
+                        width: calc(88% / 5);
                     }
                     .new2022 .new2022__wrap {
-                        display: flex;
-                        max-width: 1180px;
-                        margin: 0 auto;
-                        margin-top: 100px;
-                        padding-bottom: 60px;
+                        margin-top: 50px;
+                        padding: 0 60px;
+                        padding-bottom: 35px;
                         border-bottom: 1px solid #a8a8a8;
                     }
                     .new2022 .new2022__year {
-                        flex-basis: 260px;
-                        font-size: 37px;
-                        line-height: 40px;
+                        margin-bottom: 12px;
+                        font-size: 25px;
+                        line-height: 20px;
                         color: #1428a0;
                     }
                     .new2022 .new2022__list > li {
@@ -94,38 +74,42 @@
                         gap: 20px;
                     }
                     .new2022 .new2022__list > li ~ li {
-                        margin-top: 40px;
+                        margin-top: 25px;
                     }
                     .new2022 .new2022__list b {
+                        font-size: 14px;
+                        line-height: 20px;
                         color: #333;
                         font-weight: bold;
                     }
                     .new2022 .new2022__list span {
+                        font-size: 12px;
+                        line-height: 16px;
                         color: #636363;
                         font-weight: normal;
                     }
-                    @media screen and (max-width: 1240px) {
-                        .new2022 #subTab ul li a {
-                            width: 120px;
-                        }
+                </style>
+
+                <!-- 2024-06-13 DT 테그 font-weight 조절 -->
+                <style type="text/css">
+                    .gro_detail > dl > dt {
+                        font-weight: 700;
                     }
                 </style>
+
                 <!-- subContent-->
-                <section id="content" class="process renew2024">
+                <section id="content" class="process new2022">
                     <div class="content__container">
                         <div id="subTitle" class="js-scr-sec">
                             <h4 class="js-scr-box">Global Collaboration</h4>
-                            <!--  
-				<h5 class="js-scr-box">GRO 2021 will be opened from 21<sup>st</sup> of June to 24<sup>th</sup> of August</h5>
-				-->
                         </div>
                         <div id="subTab" class="js-scr-sec">
                             <ul class="js-scr-box">
-                                <li><a href="../about/collabo_overview.html">Overview</a></li>
-                                <li><a href="../about/collabo_process.html" class="active">Process</a></li>
-                                <li><a href="../about/collabo_apply.html">Apply</a></li>
-                                <li><a href="../about/collabo_faq.html">FAQ</a></li>
-                                <li><a href="../about/collabo_recipients.html">Recipients</a></li>
+                                <li><a href="./collabo_overview.html">Overview</a></li>
+                                <li><a href="./collabo_process.html" class="active">Process</a></li>
+                                <li><a href="./collabo_apply.html">Apply</a></li>
+                                <li><a href="./collabo_faq.html">FAQ</a></li>
+                                <li><a href="./collabo_recipients.html">Recipients</a></li>
                             </ul>
                         </div>
                         <article class="row">
@@ -144,7 +128,7 @@
                                             <li class="js-scr-box">
                                                 <div class="rprocess__inner">
                                                     <div class="rprocess__figure">
-                                                        <img src="../../resources/assets/images/sub/collabo_process_01.svg" alt="" />
+                                                        <img src="../../resources/assets/mobile/images/sub/collabo_process_01.svg" alt="" />
                                                     </div>
                                                     <div class="rprocess__content">
                                                         <div class="rprocess__num">June</div>
@@ -155,7 +139,7 @@
                                             <li class="js-scr-box">
                                                 <div class="rprocess__inner">
                                                     <div class="rprocess__figure">
-                                                        <img src="../../resources/assets/images/sub/collabo_process_02.svg" alt="" />
+                                                        <img src="../../resources/assets/mobile/images/sub/collabo_process_02.svg" alt="" />
                                                     </div>
                                                     <div class="rprocess__content">
                                                         <div class="rprocess__num">June ~ August</div>
@@ -166,7 +150,7 @@
                                             <li class="js-scr-box">
                                                 <div class="rprocess__inner">
                                                     <div class="rprocess__figure">
-                                                        <img src="../../resources/assets/images/sub/collabo_process_03.svg" alt="" />
+                                                        <img src="../../resources/assets/mobile/images/sub/collabo_process_03.svg" alt="" />
                                                     </div>
                                                     <div class="rprocess__content">
                                                         <div class="rprocess__num">September</div>
@@ -177,7 +161,7 @@
                                             <li class="js-scr-box">
                                                 <div class="rprocess__inner">
                                                     <div class="rprocess__figure">
-                                                        <img src="../../resources/assets/images/sub/collabo_process_04.svg" alt="" />
+                                                        <img src="../../resources/assets/mobile/images/sub/collabo_process_04.svg" alt="" />
                                                     </div>
                                                     <div class="rprocess__content">
                                                         <div class="rprocess__num">October</div>
@@ -188,7 +172,7 @@
                                             <li class="js-scr-box">
                                                 <div class="rprocess__inner">
                                                     <div class="rprocess__figure">
-                                                        <img src="../../resources/assets/images/sub/collabo_process_05.svg" alt="" />
+                                                        <img src="../../resources/assets/mobile/images/sub/collabo_process_05.svg" alt="" />
                                                     </div>
                                                     <div class="rprocess__content">
                                                         <div class="rprocess__num">November</div>
@@ -199,7 +183,7 @@
                                             <li class="js-scr-box">
                                                 <div class="rprocess__inner">
                                                     <div class="rprocess__figure">
-                                                        <img src="../../resources/assets/images/sub/collabo_process_06.svg" alt="" />
+                                                        <img src="../../resources/assets/mobile/images/sub/collabo_process_06.svg" alt="" />
                                                     </div>
                                                     <div class="rprocess__content">
                                                         <div class="rprocess__num">January</div>
@@ -352,12 +336,12 @@
                         </div>
                         <div class="related_wrap">
                             <article class="js-scr-box">
-                                <a href="https://www.sait.samsung.co.kr/saithome/about/who.do">
+                                <a href="https://www.sait.samsung.co.kr/saithome/mobile/about/who.do">
                                     <h1>Who We Are</h1>
                                 </a>
                             </article>
                             <article class="js-scr-box">
-                                <a href="https://www.sait.samsung.co.kr/saithome/research/what.do">
+                                <a href="https://www.sait.samsung.co.kr/saithome/mobile/research/what.do">
                                     <h1>What We Do</h1>
                                 </a>
                             </article>
@@ -371,7 +355,6 @@
             <!-- footer -->
 
             <%- include("../include/sub_footer.html") %>
-            <div id="gnbDimmed" class="dimmed"></div>
 
             <!-- Global site tag (gtag.js) - Google Analytics -->
             <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123575008-1"></script>
@@ -384,10 +367,12 @@
 
                 gtag('config', 'UA-167217135-1');
             </script>
+
             <!-- //footer -->
+            <div id="gnbDimmed" class="dimmed"></div>
         </div>
-        <script type="text/javascript" src="https://www.sait.samsung.co.kr/saithome/javascripts/lib/TweenMax/TweenMax.min.js"></script>
-        <script type="text/javascript" src="https://www.sait.samsung.co.kr/saithome/javascripts/lib/TweenMax/easing/EasePack.min.js"></script>
-        <script type="text/javascript" src="https://www.sait.samsung.co.kr/saithome/javascripts/design_common.js"></script>
+        <script type="text/javascript" src="https://www.sait.samsung.co.kr/saithome/mobile/javascripts/lib/TweenMax/TweenMax.min.js"></script>
+        <script type="text/javascript" src="https://www.sait.samsung.co.kr/saithome/mobile/javascripts/lib/TweenMax/easing/EasePack.min.js"></script>
+        <script type="text/javascript" src="https://www.sait.samsung.co.kr/saithome/mobile/javascripts/design_common.js"></script>
     </body>
 </html>
