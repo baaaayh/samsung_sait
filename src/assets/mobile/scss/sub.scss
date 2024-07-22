@@ -378,10 +378,6 @@ strong {
     transition: 0.34s ease;
     text-align: center;
 }
-.btn-default:hover {
-    background-color: #fff;
-    border: 1px solid #fff;
-}
 .btn-default__text {
     display: inline-block;
     line-height: 48px;
@@ -403,12 +399,6 @@ strong {
     width: 18px;
     height: 18px;
     background: url(../images/sub/btn_default_text_arrow.svg) center/auto no-repeat;
-}
-.btn-default:hover .btn-default__text {
-    color: #1D242F;
-}
-.btn-default:hover .btn-default__text--arrow::before {
-    background: url(../images/sub/btn_default_text_arrow_black.svg) center/auto no-repeat;
 }
 #content .btn_area a {
     background-color: transparent;
@@ -940,6 +930,12 @@ select:focus {
     display: block;
     float: none;
 }
+.labs .list_box .list_item .btn_area a:hover i::before {
+    background-color: #fff;
+}
+.labs .list_box .list_item .btn_area a:hover i::after {
+    border-left-color: #fff;
+}
 .labs .infowrap {
     margin-top: 20px;
 }
@@ -1083,6 +1079,12 @@ select:focus {
     border-bottom: none;
 }
 
+#content .btn_area a:hover i, 
+#content .btn_area a:focus i {
+    transform: translate(0, 0);
+}
+
+
 // Global Collaboration
 #content.new2022 #subTab {
     overflow: auto;
@@ -1116,9 +1118,11 @@ select:focus {
 .dash-list li.gray {
     color: #6E7E96;
 }
-.dash-list li.gray p {
+.dash-list li.gray p,
+.dash-list li.gray strong {
     color: #6E7E96;
 }
+
 .dash-list li.gray small {
     display: block;
     font-size: 16px;
@@ -2145,11 +2149,6 @@ p.gray {
     transition: 0.34s ease;
 }
 
-.btn-default:hover {
-    background-color: #fff;
-    border: 1px solid #fff;
-}
-
 .btn-default__text {
     display: inline-block;
     line-height: 48px;
@@ -2175,13 +2174,6 @@ p.gray {
     background: url(../images/sub/btn_default_text_arrow.svg) center/auto no-repeat;
 }
 
-.btn-default:hover .btn-default__text {
-    color: #1D242F;
-}
-
-.btn-default:hover .btn-default__text--arrow::before {
-    background: url(../images/sub/btn_default_text_arrow_black.svg) center/auto no-repeat;
-}
 #content .faq_area {
     margin-top: 0;
 }
