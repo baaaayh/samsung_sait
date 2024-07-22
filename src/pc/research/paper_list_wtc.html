@@ -279,6 +279,11 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        <div class="btn-wrap">
+                                            <button type="button" class="btn btn-default reset-button">
+                                                <span class="btn btn-default__text">Reset</span>
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="list_wrap">
@@ -1339,13 +1344,22 @@
         <script type="text/javascript" src="https://www.sait.samsung.co.kr/saithome/javascripts/design_common.js"></script>
         <script>
             document.addEventListener('DOMContentLoaded', function () {
+                console.log($('.item_list article').length);
                 let scrolledAfterClick = false;
                 const checkboxes = document.querySelectorAll('input[type="checkbox"]');
                 const articles = document.querySelectorAll('.target-item');
                 const itemList = document.querySelector('.item_list');
-
+                const resetButton = document.querySelector('.reset-button');
                 checkboxes.forEach((checkbox) => {
                     checkbox.addEventListener('change', filterArticles);
+                });
+
+                // reset-button 클릭 시 모든 체크박스 해제 및 모든 기사 표시
+                resetButton.addEventListener('click', function () {
+                    checkboxes.forEach((checkbox) => {
+                        checkbox.checked = false;
+                    });
+                    filterArticles(); // 필터 조건 초기화 후 필터링 함수 호출
                 });
 
                 function filterArticles() {
@@ -1384,6 +1398,7 @@
                     });
 
                     // itemList를 비우고 필터링된 article 요소들을 추가
+
                     itemList.innerHTML = '';
                     if (matchingArticles.length > 0) {
                         matchingArticles.forEach((article) => {
@@ -1394,9 +1409,7 @@
                     }
 
                     scrolledAfterClick = false;
-                    console.log(matchingArticles.length);
                 }
-
                 $window.on('scroll wheel', function () {
                     if (!scrolledAfterClick) {
                         scrollBg();

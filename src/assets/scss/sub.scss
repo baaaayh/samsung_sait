@@ -1669,9 +1669,6 @@ span.impact-desc {
     font-size: 34px;
     line-height: 44px;
 }
-.art-content__row--title strong + div {
-    margin-top: 20px;
-}
 .art-content__row p {
     font-size: 18px;
     margin-top: 20px;
@@ -1679,13 +1676,6 @@ span.impact-desc {
 }
 .art-content__row p.mt40 {
     margin-top: 40px;
-}
-.art-content__row > div {
-    text-align: center;
-    margin-top: 50px;
-}
-.art-content__row > div:first-child {
-    margin-top: 0px;
 }
 .art-content__row ul {
     margin-top: 50px;
@@ -1712,13 +1702,13 @@ span.impact-desc {
 .art-content__row ul li > div:first-child {
     margin-top: 0;
 }
-.art-content__row--figure {
+.art-content__figure {
     margin-top: 40px;
-    font-size: 0;
     text-align: center;
+    font-size: 0;
 }
-.art-content__row--figure:first-child {
-    margin-top: 0;
+.art-content__row--title strong + .art-content__figure {
+    margin-top: 20px;
 }
 .art-content__list {}
 .art-content__list li {
@@ -1933,6 +1923,10 @@ span.impact-desc {
 // paper list wtc
 .filter {}
 .filter__head {}
+.filter__body {
+    padding-bottom: 40px;
+    box-sizing: border-box;
+}
 .filter__tab {
     display: inline-block;
     padding: 10px 20px;
