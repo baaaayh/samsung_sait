@@ -35,14 +35,14 @@
                 <div id="subLocation">
                     <div class="location_box">
                         <ul class="location_list">
-                            <li class="home"><a href="/pc/index.html">main page</a></li>
+                            <li class="home"><a href="../index.html">main page</a></li>
                             <li class="depth1">
                                 <button type="button">Personal Information Management Policy</button>
                                 <ul class="under_depth">
-                                    <li><a href="/pc/about/who.html">About SAIT</a></li>
-                                    <li><a href="/pc/about/what.html">Research Areas</a></li>
-                                    <li><a href="/pc/about/press.html">News & Events</a></li>
-                                    <li><a href="/pc/join/application.html">Join Us</a></li>
+                                    <li><a href="../about/who.html">About SAIT</a></li>
+                                    <li><a href="../about/what.html">Research Areas</a></li>
+                                    <li><a href="../about/press.html">News & Events</a></li>
+                                    <li><a href="../join/application.html">Join Us</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -583,15 +583,16 @@
                     <div class="related__inner">
                         <div class="related__title">
                             <h1 class="js-scr-box">Related Contents</h1>
+                            <span class="js-scr-box">Explore more related contents from SAIT!</span>
                         </div>
                         <div class="related_wrap">
                             <article class="js-scr-box">
-                                <a href="/pc/about/history.html">
+                                <a href="../about/history.html">
                                     <h1>History Of Progress</h1>
                                 </a>
                             </article>
                             <article class="js-scr-box">
-                                <a href="/pc/about/labs.html">
+                                <a href="../about/labs.html">
                                     <h1>Global Labs</h1>
                                 </a>
                             </article>
@@ -627,6 +628,7 @@
         <!-- 2020-12-21 js 추가-->
         <script>
             $(document).ready(function () {
+                let scrolledAfterClick = false;
                 $('#subTab ul li').click(function () {
                     var sidx = $(this).index();
 
@@ -636,18 +638,17 @@
 
                     $('.tab_viewcon > div.on').removeClass('on');
                     $('.tab_viewcon > div').eq(sidx).addClass('on');
+                    scrolledAfterClick = false;
+                });
+                $window.on('scroll wheel', function () {
+                    console.log('here');
+                    if (!scrolledAfterClick) {
+                        scrollBg();
+                        scrolledAfterClick = true;
+                    }
                 });
             });
         </script>
         <!-- 2020-12-21 js 추가 end-->
-        <script>
-            let scrolledAfterClick = false;
-            $window.on('scroll wheel', function () {
-                if (!scrolledAfterClick) {
-                    scrollBg();
-                    scrolledAfterClick = true;
-                }
-            });
-        </script>
     </body>
 </html>

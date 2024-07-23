@@ -319,6 +319,9 @@ h5.title {
     color: #fff;
     margin-bottom: 20px;
 }
+h5.title.mb0 {
+    margin-bottom: 0;
+}
 h6 {
     font-size: 20px;
     line-height: 30px;
@@ -1188,59 +1191,156 @@ select:focus {
     margin-bottom: 5px;
 }
 
-.time-table ul li {
-    margin-top: 20px;
+.apply .apply_wrap .time_line {
+    padding: 0;
 }
-.time-table ul li:first-child {
+.apply .apply_wrap .flow_contents {
+    line-height: inherit;
+    margin-top: 40px;
+}
+.apply .apply_wrap .flow_contents:first-child {
     margin-top: 0;
 }
-.time-table__title {
+.apply .apply_wrap .flow_contents .tit {
+    padding: 0;
+    color: #fff;
+}
+.apply .apply_wrap .time_line .time_content dl {
+    margin-bottom: 20px;
+    padding: 0;
+}
+.apply .apply_wrap .time_line .time_content dt {
+    float: none;
     font-size: 18px;
     line-height: 28px;
     font-weight: 700;
     color: #6E7E96;
+    margin: 0;
 }
-.time-table__date {
+.apply .apply_wrap .time_line .time_content dd {
+    float: none;
     margin-top: 5px;
     font-size: 16px;
     line-height: 26px;
 }
-#modalPopup .apply_popup .submit_wrap .submit_box i {
-    top: 52%;
+.apply .apply_wrap .time_line .time_content button {
+    width: auto;
+    height: auto;
+    margin: 0;
+    text-indent: 0;
+    background-color: transparent;
+    font-weight: 400;
+    font-size: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
 }
-.down-list {
-    border-top: 1px solid rgba(255, 255, 255, 1);
-    box-sizing: border-box;
+.apply .apply_wrap .time_line .time_content p {
+    padding: 0;
+    margin-top: 20px;
+    font-size: 14px;
+    line-height: 24px;
+    color: #6E7E96;
+    font-weight: 700;
 }
-.down-list__row {
+.apply .apply_wrap .submission {
+    margin: 0;
+    margin-top: 40px;
+    padding: 0;
+    border-top: none;
+}
+.apply .apply_wrap .submission .submission_contents p {
+    font-size: 18px;
+    line-height: 28px;
+    color: #fff;
+}
+.apply .apply_wrap .submission .submission_contents dd {
+    padding: 0;
+}
+.apply .apply_wrap .research_wrap {
+    padding: 0;
+    margin-top: 40px;
+    background-color: transparent;
+}
+.apply .apply_wrap .submission .submission_contents dl:nth-of-type(1) {
+    padding: 0;
+    margin-top: 20px;
+}
+.apply .apply_wrap .submission .submission_contents dt {
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 700;
+    color: #fff;
+}
+.apply .apply_wrap .submission .submission_contents dd {
+    font-size: 18px;
+    line-height: 28px;
+    margin-top: 10px;
+}
+.apply .apply_wrap .submission .submission_contents dd a {
+    margin: 0;
+    color: #fff;
+    border-bottom: none;
+}
+.apply .apply_wrap .research_wrap .research_con {
+    padding: 0;
+}
+.apply .apply_wrap .research_wrap .theme_list {
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    margin-top: 40px;
+}
+.apply .apply_wrap .research_wrap .theme_list dl {
     padding: 30px 0;
     box-sizing: border-box;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
-.down-list__title {
+.apply .apply_wrap .research_wrap .theme_list dt {
+    margin-bottom: 30px;
+}
+.apply .apply_wrap .research_wrap .theme_list dt button {
+    padding: 0;
+    color: #fff;
     font-family: "Samsung Sharp Sans";
     font-size: 18px;
     line-height: 28px;
-    margin-bottom: 30px;
     font-weight: 500;
 }
-.down-list__wrap ul li {
+.apply .apply_wrap .research_wrap .theme_list dt button:after {
+    display: none;
+}
+.apply .apply_wrap .research_wrap .theme_list dd {
+    display: block !important;
+}
+.apply .apply_wrap .research_wrap .theme_list dd p {
+    padding: 0;
     margin-top: 10px;
+    font-size: 18px;
+    line-height: 28px;
 }
-.down-list__wrap ul li:first-child {
+.apply .apply_wrap .research_wrap .theme_list dd p:first-child {
     margin-top: 0;
+    font-size: 18px;
+    line-height: 28px;
 }
-.down-list__wrap ul li p a {
-    display: inline-block;
+.apply .apply_wrap .research_wrap .theme_list dd p:last-child {
+    margin-top: 10px;
+    margin-bottom: 0;
 }
-.down-list__wrap ul li p a i {
+.apply .apply_wrap .research_wrap .theme_list dd a {
+    position: relative;
+    width: 16px;
+    height: 16px;
+    background: url(../images/icons/icon_download.svg) center / auto no-repeat;
     display: inline-block;
-    width: 18px;
-    height: 18px;
-    background: url(../images/icons/icon_down_list.svg) center / auto no-repeat;
-    vertical-align: middle;
+    text-indent: 0;
+    background-position: center;
+    left: auto;
+    top: auto;
+    font-size: 0;
     margin-left: 10px;
+    vertical-align: middle;
 }
+
+
 .faq_wrap {
     padding: 0;
 }

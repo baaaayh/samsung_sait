@@ -2635,6 +2635,12 @@ section.forum .infobox .inner .ttx .speaker p {
     color: #6E7E96;
     margin-top: 0;
 }
+section.forum .infobox .inner .ttx .speaker a + p {
+    margin-top: 10px;
+    font-size: 18px;
+    line-height: 28px;
+    color: #fff;
+}
 section.forum .infobox .inner .ttx .speaker i + p {
     min-width: 140px;
     margin-top: 10px;
