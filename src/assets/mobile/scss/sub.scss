@@ -1675,6 +1675,16 @@ select:focus {
 }
 #related_paper > h1 > span.more {
     top: 0;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+#related_paper > h1 > span.more:before {
+    top: 1px;
+}
+#related_paper > h1 > span.more > a {
+    display: inline-block;
+    box-sizing: border-box;
+    font-size: 14px;
 }
 #related_paper > .related_pp_wrap > article {
     margin-bottom: 0;
