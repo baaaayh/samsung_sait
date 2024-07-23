@@ -3,6 +3,18 @@ body {
     background-color: transparent;
 }
 
+#wrap {
+    min-width: 1920px;
+}
+
+.header {
+    min-width: 1920px;
+}
+
+#headerSearch {
+    min-width: 1920px;
+}
+
 .btn {
     display: inline-block;
 }
@@ -88,8 +100,10 @@ body {
     }
     &__inner {
         position: relative;
+        max-width: 1720px;
+        width: 100%;
         height: 100%;
-        padding: 0 100px;
+        margin: 0 auto;
         box-sizing: border-box;
     }
     &--01 {
@@ -136,8 +150,10 @@ body {
         }
     }
     &__inner {
+        max-width: 1720px;
+        width: 100%;
         height: 100%;
-        padding: 0 100px;
+        margin: 0 auto;
         box-sizing: border-box;
     }
     &__contents {
@@ -173,13 +189,15 @@ body {
     &__control {
         &.swiper-pagination-horizontal {
             position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
             display: flex;
             gap: 10px;
             align-items: center;
+            max-width: 1720px;
+            width: 100%;
             bottom: 235px;
             z-index: 1;
-            padding: 0 100px;
-            box-sizing: border-box;
             .swiper-pagination-bullet {
                 display: flex;
                 align-items: center;
@@ -310,7 +328,7 @@ body {
     }
     &__contents {
         position: relative;
-        max-width: 1510px;
+        max-width: 1560px;
         width: 100%;
         height: 100%;
         margin: 0 auto;
@@ -322,7 +340,6 @@ body {
         flex-direction: column;
         justify-content: center;
         height: 100%;
-        padding: 0 20px;
         padding-top: 80px;
         box-sizing: border-box;
         h2 {
@@ -335,6 +352,7 @@ body {
     }
     &__inbox {
         display: flex;
+        justify-content: center;
         align-items: flex-start;
         gap: 30px;
         width: 100%;
@@ -516,11 +534,14 @@ body {
     }
 }
 .join {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 100%;
     padding-top: 80px;
     box-sizing: border-box;
     &__inner {
-        height: 100%;
+        width: 100%;
         padding: 30px 0;
         box-sizing: border-box;
     }
@@ -584,6 +605,9 @@ body {
             object-fit: cover;
             object-position: center;
         }
+    }
+    &__image {
+        min-height: 620px;
     }
 }
 
