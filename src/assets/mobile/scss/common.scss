@@ -185,6 +185,27 @@ a {
             }
         }
     }
+    #headerSearch {
+        #globalInput {
+            input[type=text] {
+                padding-right: 50px;
+                &:focus {
+                    border-color: #1428A0 !important;
+                }
+            }
+            .submit_wrap {
+                display: inline-block;
+                width: 40px;
+                height: 40px;
+                background-size: 22px auto;
+                top: 0;
+                right: 0;
+                a {
+                    display: block;
+                }
+            }
+        }
+    }
 }
 
 

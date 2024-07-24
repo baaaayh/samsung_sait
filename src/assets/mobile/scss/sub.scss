@@ -30,7 +30,7 @@ select, input, button, textarea {
     position: relative;
     padding: 0;
 }
-.footer__wrap {
+.footer__bottom .footer__wrap {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
 }
@@ -1912,7 +1912,6 @@ select:focus {
 .toggle-desc__content {
     display: none;
 }
-.toggle-desc__content p {}
 
 // AI Algorithms
 .third_depth_titbox {
@@ -1931,6 +1930,23 @@ span.impact-desc {
 }
 
 // publication
+.paper_list #paperSearch .submit_wrap {
+    top: 0;
+    right: 0;
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    background-position: center;
+}
+.paper_list #paperSearch .submit_wrap input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-indent: 0;
+    font-size: 0;
+}
 .infowrap p.infobox span {
     color: #fff;
 }
@@ -1998,6 +2014,10 @@ span.impact-desc {
     padding-top: 0;
     font-size: 18px;
     line-height: 28px;
+}
+#content.paper_view .contents_wrap dl dd a {
+    display: inline-block;
+    word-break: break-all;
 }
 
 
@@ -2179,6 +2199,7 @@ section.research_pp #content {
     color: #fff;
 }
 .research_slide_cls {
+    right: 25px;
     border-color: #fff;
 }
 .research_slide_hd {
@@ -2647,13 +2668,38 @@ p.gray {
 }
 #content .answer {
     position: relative;
+    padding: 20px 30px;
+    padding-left: 0;
     border-top: 1px solid #333D50;
+    margin: 0;
 }
 #content .answer:before {
+    display: none;
     position: absolute;
     top: 20px; 
     left: 0;
     line-height: 28px;
+    margin: 0;
+}
+#content .answer p {
+    position: relative;
+    display: block;
+    width: 100%;
+    font-size: 18px;
+    line-height: 28px;
+    padding-left: 30px;
+    box-sizing: border-box;
+}
+#content .answer p::before {
+    content: "A.";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 700;
+    color: #fff;
 }
 #content .faq_list li .question:after {
     border-top: 9px solid #fff;
@@ -2678,19 +2724,11 @@ p.gray {
     color: #000;
 }
 #content .faq_list li.on .answer {
-    margin-top: 0px;
-    padding: 20px 30px;
     box-sizing: border-box;
-    border-top: 1px solid #e0e0e0;
+    
 }
-#content .faq_list li.on .answer::before {
+#content .faq_list li.on .answer p::before {
     color: #1428A0;
-}
-#content .faq_list li .answer p {
-    display: block;
-    width: 100%;
-    font-size: 18px;
-    line-height: 28px;
 }
 .researcher .faq_area .faq_list li.on .answer p a {
     display: inline-block;
