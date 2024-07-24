@@ -1709,7 +1709,7 @@ section.what .what_wrap .what_img {
     margin: 0;
 }
 section.what .changing_list ul li i img {
-    filter: invert(100%) saturate(0%);
+    filter: invert(100%) saturate(0%) brightness(2);
 }
 section.what .changing_list ul li strong {
     display: block;
@@ -2192,7 +2192,7 @@ section.research_pp aside#relatedContents {
     color: #fff;
 }
 .paper_list .list_wrap .item_list article i img {
-    filter: invert(100%) saturate(0%);
+    filter: invert(100%) saturate(0%) brightness(2);
 }
 .paper_list .list_wrap .item_list article:hover {
     background-color: #fff;

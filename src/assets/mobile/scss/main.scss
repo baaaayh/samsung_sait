@@ -476,8 +476,6 @@
 }
 .join {
     height: 100%;
-    padding-top: 70px;
-    box-sizing: border-box;
     &__inner {
         height: 100%;
         padding: 20px 0;
@@ -561,7 +559,7 @@
                 justify-content: space-between;
                 height: 60px;
                 margin-bottom: 10px;
-                font-family: "Samsung Sharp Sans";
+                font-family: "SamsungSharpSans";
                 font-size: 20px;
                 font-weight: 700;
             }

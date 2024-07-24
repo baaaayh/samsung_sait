@@ -118,6 +118,9 @@ select, input, button, textarea {
     border-bottom: 1px solid #fff;
     box-sizing: border-box;
 }
+.contents_wrap {
+    margin-top: 0;
+}
 #content.press_view .row__wrap {
     padding-top: 0;
     padding-bottom: 30px;
@@ -271,11 +274,14 @@ section.forum #content #subTitle h4 {
     line-height: 40px;
     background-color: #333D50;
 }
-#subTab ul li a:hover, 
-#subTab ul li a:focus, 
 #subTab ul li a.active {
     background-color: #fff;
     color: #1428A0;
+}
+#subTab ul li a:hover, 
+#subTab ul li a:focus {
+    background-color: #333D50;
+    color: #fff;
 }
 #subTab ul:before {
     display: none;
@@ -308,6 +314,10 @@ section.forum #content #subTitle h4 {
     font-size: 16px;
     line-height: 40px;
     height: auto;
+}
+#subTab.psInfo ul li a.active {
+    background-color: #fff;
+    color: #1428A0;
 }
 .subTab-rt select {
     font-size: 14px;
@@ -439,6 +449,8 @@ strong {
 .contbox__row ul li strong {
     display: inline-block;
     width: 75px;
+    font-size: 16px;
+    line-height: 26px;
     font-weight: 700;
     color: #6E7E96;
 }
@@ -480,7 +492,7 @@ section.forum #content #subTab ul li {
 section.forum #content #subTab ul li a {
     display: inline-block;
     width: 100%;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 40px;
     padding: 0 20px;
     box-sizing: border-box;
@@ -495,14 +507,14 @@ section.forum #content .program_wrap {
 section.forum #content h3 {
     color: #fff;
     margin-top: 0;
+    line-height: 32px;
 }
 #listPage .page_btn button {
     border: 1px solid transparent;
     background-color: #3a4559;
     color: #fff;
 }
-#listPage .page_btn button.active,
-#listPage .page_btn button:hover {
+#listPage .page_btn button.active {
     border: 1px solid #fff;
     background-color: #fff;
     color: #000;
@@ -528,16 +540,16 @@ section.forum #content h3 {
     background-image: url(../images/icons/icon_pagination_first.png);
 }
 #listPage .page_btn button.prev_btn:hover {
-    background-image: url(../images/icons/icon_pagination_prev_on.png);
+    background-image: url(../images/icons/icon_pagination_prev.png);
 }
 #listPage .page_btn button.prev_end_btn:hover {
-    background-image: url(../images/icons/icon_pagination_first_on.png);
+    background-image: url(../images/icons/icon_pagination_first.png);
 }
 #listPage .page_btn button.next_btn:hover {
-    background-image: url(../images/icons/icon_pagination_prev_on.png);
+    background-image: url(../images/icons/icon_pagination_prev.png);
 }
 #listPage .page_btn button.next_end_btn:hover {
-    background-image: url(../images/icons/icon_pagination_first_on.png);
+    background-image: url(../images/icons/icon_pagination_first.png);
 }
 
 
@@ -560,6 +572,7 @@ section.forum #content h3 {
     font-weight: 700;
 }
 .related__title span {
+    display: block;
     margin-top: 5px;
     font-size: 16px;
     line-height: 26px;
@@ -644,7 +657,11 @@ select:focus {
     padding: 10px 0 0;
     box-sizing: border-box;
 }
-
+#boardSearch #selectCustom ul li button {
+    display: block;
+    width: 100%;
+    text-align: left;
+}
 
 
 
@@ -745,10 +762,14 @@ select:focus {
 .labs .sait_global .sait_view article .lab-list__item {
     margin-top: 20px;
 }
+.labs .sait_global .sait_view article .lab-list__item::after {
+    display: none;
+}
 .labs .sait_global .sait_view article .lab-list__item:first-child {
     margin-top: 0;
 }
 .labs .sait_global .sait_view article .lab-list__item strong {
+    display: block;
     font-size: 18px;
     line-height: 28px;
     font-weight: 700;
@@ -973,7 +994,7 @@ select:focus {
     max-width: 100px;
 }
 .labs .infowrap p.infobox span:nth-child(1):before {
-    top: 14px;
+    top: 12px;
     right: 0;
 }
 .labs .infowrap p.infobox span:nth-child(2) {
@@ -1071,7 +1092,7 @@ select:focus {
     margin: 0;
 }
 .labs .sait_global .sait_view article .address-box .one > li .address-area {
-    padding: 10px 0;
+    padding: 20px 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 .labs .sait_global .sait_view article .address-box .one > li:first-child .address-area {
@@ -1147,16 +1168,15 @@ select:focus {
     background-color: #28303E;
     box-sizing: border-box;
 }
-.calendar__date {
-    font-family: "Samsung Sharp Sans";
-    font-weight: 700;
-}
 .calendar__date span {
     display: block;
     font-size: 20px;
     line-height: 30px;
+    font-family: "SamsungSharpSans";
+    font-weight: 700;
 }
 .calendar__date strong {
+    font-family: "SamsungSharpSans";
     margin-top: 5px;
     display: block;
     font-size: 32px;
@@ -1168,7 +1188,7 @@ select:focus {
     line-height: 26px;
 }
 .calendar__contents .small-title {
-    font-family: "Samsung Sharp Sans";
+    font-family: "SamsungSharpSans";
     font-size: 20px;
     line-height: 30px;
     margin-bottom: 10px;
@@ -1299,7 +1319,7 @@ select:focus {
 .apply .apply_wrap .research_wrap .theme_list dt button {
     padding: 0;
     color: #fff;
-    font-family: "Samsung Sharp Sans";
+    font-family: "SamsungSharpSans";
     font-size: 18px;
     line-height: 28px;
     font-weight: 500;
@@ -1312,6 +1332,8 @@ select:focus {
 }
 .apply .apply_wrap .research_wrap .theme_list dd p {
     padding: 0;
+    padding-left: 30px;
+    box-sizing: border-box;
     margin-top: 10px;
     font-size: 18px;
     line-height: 28px;
@@ -1326,18 +1348,19 @@ select:focus {
     margin-bottom: 0;
 }
 .apply .apply_wrap .research_wrap .theme_list dd a {
-    position: relative;
-    width: 16px;
-    height: 16px;
-    background: url(../images/icons/icon_download.svg) center / auto no-repeat;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: unset;
+    background: url(../images/icons/icon_download.svg) left top 4px / 18px auto no-repeat;
     display: inline-block;
     text-indent: 0;
-    background-position: center;
-    left: auto;
-    top: auto;
     font-size: 0;
-    margin-left: 10px;
+    margin-left: 0px;
     vertical-align: middle;
+    z-index: 1;
 }
 
 
@@ -1450,7 +1473,7 @@ select:focus {
 }
 #content.new2022 .new2022__year p a{
     display: inline-block;
-    font-family: "Samsung Sharp Sans";
+    font-family: "SamsungSharpSans";
     font-size: 32px;
     font-weight: 700;
     line-height: 42px;
@@ -1554,8 +1577,8 @@ select:focus {
     text-align: left;
 }
 .press .board_list {
-    padding-top: 50px;
-    box-sizing: border-box;
+    margin-top: 50px;
+    padding: 0;
 }
 .press .board_list ul li p {
     display: none;
@@ -1727,7 +1750,7 @@ select:focus {
     line-height: 30px;
 }
 .what .changing_list ul li i img {
-    filter: invert(100%) saturate(0%);
+    filter: invert(100%) saturate(0%) brightness(2);
 }
 .what .changing_list ul li:last-child {
     padding-bottom: 0;
@@ -1742,7 +1765,6 @@ select:focus {
 
 
 // Research
-
 #content.world_research {
     padding: 40px 20px 80px !important;
     box-sizing: border-box;
@@ -1770,6 +1792,9 @@ select:focus {
 .art-content__row--title strong {
     font-size: 24px;
     line-height: 34px;
+}
+.art-content__row--title strong span {
+    display: block;
 }
 .art-content__row--title strong + div {
     margin-top: 20px;
@@ -2109,7 +2134,7 @@ section.research_pp #content {
     background-color: #333D50;
 }
 .paper_list .list_wrap .item_list article i img {
-    filter: invert(100%) saturate(0%);
+    filter: invert(100%) saturate(0%) brightness(2);
 }
 .paper_list .list_wrap .item_list article h1 {
     color: #fff;
@@ -2180,8 +2205,18 @@ section.research_pp #content {
 .cls_asset_2 {
     transform: translate(-50%, -50%) rotate(45deg);
 }
-
-
+.research_slide_h1 {
+    padding: 0;
+}
+.research_slide_h2 {
+    padding: 15px 0;
+    box-sizing: border-box;
+}
+.research_slide_align {
+    padding: 20px;
+    padding-top: 30px;
+    box-sizing: border-box;
+}
 
 // *** event *** //
 // saif
@@ -2194,7 +2229,8 @@ section.research_pp #content {
 section.forum #content #subTitle h5 {
     margin: 0;
     margin-top: 20px;
-    line-height: 24px;
+    font-size: 20px;
+    line-height: 30px;
     padding: 0;
     color: #6E7E96 !important;
 }
@@ -2243,8 +2279,8 @@ section.forum #content .infobox .inner {
     box-sizing: border-box;
 }
 section.forum #content .infobox .inner .ttx {
-    font-size: 16px;
-    line-height: 26px;
+    font-size: 18px;
+    line-height: 28px;
 }
 section.forum #content .infobox .inner .ttx .speaker i {
     display: inline-block;
@@ -2272,13 +2308,15 @@ section.forum #content .infobox .inner .ttx small {
     color: #6E7E96;
 }
 section.forum #content .infobox .inner .ttx .speaker p {
-    font-size: 14px;
-    line-height: 24px;
-    color: #6E7E96;
-}
-section.forum #content .infobox .inner .ttx .speaker i + p {
     font-size: 16px;
     line-height: 26px;
+    color: #6E7E96;
+}
+section.forum #content .infobox .inner .ttx .speaker i + p,
+section.forum #content .infobox .inner .ttx .speaker a + p
+{
+    font-size: 18px;
+    line-height: 28px;
     color: #fff;
 }
 
@@ -2312,14 +2350,14 @@ section.forum #content .contbox {
     border: 1px solid rgba(255, 255, 255, 0.2);
 }
 section.forum #content .contbox .inner.cont {
-    padding: 20px;
+    padding: 0px;
     box-sizing: border-box;
 }
 section.forum #content .contbox .inner.cont h4 {
     color: #fff;
     padding-left: 0;
     font-size: 18px;
-    line-height: 18px;
+    line-height: 28px;
 }
 section.forum #content .contbox .inner.cont h4::before {
     display: none;
@@ -2352,18 +2390,59 @@ section.forum #content .contbox .inner.cont a {
 
 section.forum .program_array p {
     color: #6E7E96;
-    font-size: 16px;
-    line-height: 26px;
+    font-size: 18px;
+    line-height: 28px;
+}
+section.forum .program_array .time {
+    display: flex;
+    width: auto;
+    height: auto;
+    flex-basis: 20%;
+    flex-shrink: 0;
+    float: none;
 }
 section.forum .program_array .time p {
+    display: block;
+    width: 100%;
     color: #fff;
-    font-size: 16px;
-    line-height: 26px;
+    font-size: 18px;
+    line-height: 28px;
+}
+section.forum .program_array .time p br {
+    display: none;
+}
+section.forum #content .program_array {
+    display: flex;
+    column-gap: 20px;
+}
+section.forum #content .program_array .detail {
+    float: none;
+    display: flex;
+    flex: 1;
+    height: auto;
+    align-items: center;
+    padding-left: 0;
+    line-height: normal;
+    min-height: auto;
+}
+section.forum #content .program_array .detail p {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
 }
 section.forum #content .program_array .detail p span.bimpact {
+    display: block;
+    margin-bottom: 0px;
     color: #fff;
-    font-size: 16px;
-    line-height: 26px;
+    font-size: 18px;
+    line-height: 28px;
+}
+section.forum #content .program_array .detail p br {
+    display: none;
+}
+section.forum #content .program_array .detail p br + span.impact {
+    padding-top: 3px;
+    box-sizing: border-box;
 }
 section.forum #content .program_array__session {
     font-weight: 700;
@@ -2374,6 +2453,7 @@ section.forum #content .infobox .inner .ttx:last-child {
 }
 section.forum #content .program_array .detail p span.impact {
     color: #6986b2;
+    display: block;
 }
 section.forum #content .gallery_wrap .image_group {
     margin-top: 40px;
@@ -2411,6 +2491,11 @@ section.forum .popup {
 section.forum .popup .wrap {
     position: relative;
     overflow: visible;
+}
+
+section.forum #content .program_array .detail .video_view {
+    margin: 0;
+    margin-top: 10px;
 }
 
 // AI Researcher
@@ -2479,8 +2564,8 @@ p.gray {
 
 .dotlist li {
     margin-top: 10px;
-    font-size: 16px;
-    line-height: 26px;
+    font-size: 18px;
+    line-height: 28px;
 }
 .dotlist li:first-child {
     margin-top: 0;
@@ -2530,6 +2615,8 @@ p.gray {
     color: #fff;
 }
 #content .faq_list li {
+    padding: 0 20px;
+    box-sizing: border-box;
     background-color: #333D50;
     margin-top: 10px;
 }
@@ -2548,7 +2635,22 @@ p.gray {
     column-gap: 10px;
 }
 #content .question:before {
+    position: absolute;
+    top: 20px;
+    left: 0px;
     color: #fff;
+    margin: 0;
+    line-height: 28px;
+}
+#content .answer {
+    position: relative;
+    border-top: 1px solid #333D50;
+}
+#content .answer:before {
+    position: absolute;
+    top: 20px; 
+    left: 0;
+    line-height: 28px;
 }
 #content .faq_list li .question:after {
     border-top: 9px solid #fff;
@@ -2559,10 +2661,12 @@ p.gray {
 }
 #content .question a {
     display: block;
+    width: 100%;
+    padding: 20px 30px;
+    box-sizing: border-box;
     color: #fff;
-}
-#content .faq_list li .question + .answer {
-    border-top: 1px solid #e0e0e0;
+    font-size: 18px;
+    line-height: 28px;
 }
 #content .faq_list li.on .question:before {
     color: #1428A0;
@@ -2571,13 +2675,19 @@ p.gray {
     color: #000;
 }
 #content .faq_list li.on .answer {
-    margin-top: 20px;
-    padding-top: 20px;
+    margin-top: 0px;
+    padding: 20px 30px;
     box-sizing: border-box;
+    border-top: 1px solid #e0e0e0;
+}
+#content .faq_list li.on .answer::before {
+    color: #1428A0;
 }
 #content .faq_list li .answer p {
-    font-size: 16px;
-    line-height: 26px;
+    display: block;
+    width: 100%;
+    font-size: 18px;
+    line-height: 28px;
 }
 .researcher .faq_area .faq_list li.on .answer p a {
     display: inline-block;
@@ -2596,36 +2706,45 @@ section.researcher #content .contbox {
     margin-bottom: 15px;
     color: #fff;
 }
-section.researcher #content .contbox .inner.cont h4 {
-    color: #fff;
-    font-size: 16px;
-    line-height: 26px;
-}
-section.researcher #content .contbox .inner.cont a {
-    display: inline-block;
-    margin-top: 0;
-    color: #fff;
-}
-section.researcher #content .contbox .inner.cont {
-    padding: 20px;
-    box-sizing: border-box;
-}
-section.researcher #content .contbox {
-    border: 1px solid rgba(255, 255, 255, 0.2);
+.contbox h4 {
+    font-size: 20px;
+    line-height: 30px;
 }
 .contbox__title {
     display: inline-block;
     padding-right: 15px;
+    font-size: 16px;
+    line-height: 16px;
     box-sizing: border-box;
     color: #6E7E96;
 }
 .contbox__row {
     margin-top: 15px;
 }
+section.researcher #content .contbox {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+section.researcher #content .contbox .inner.cont {
+    padding: 0px;
+    box-sizing: border-box;
+}
+section.researcher #content .contbox .inner.cont h4 {
+    color: #fff;
+    font-size: 20px;
+    line-height: 30px;
+}
+section.researcher #content .contbox .inner.cont a {
+    display: inline-block;
+    font-size: 16px;
+    line-height: 26px;
+    margin-top: 0;
+    color: #fff;
+}
+
+
 
 #content .person_list .tb {
-    table-layout: fixed;
-    width: 100%;
+    display: flex;
 }
 #content .person_list .tb::after {
     display: none;
@@ -2634,8 +2753,20 @@ section.researcher #content .contbox {
     border-top: 1px solid #fff;
     box-sizing: border-box;
 }
+#content .person_list li:last-child {
+    border-bottom: 1px solid #a8a8a8;
+}
+#content .person_list .tb_cell {
+    display: inline-flex;
+    align-self: flex-start;
+    vertical-align: top;
+}
 #content .person_list .info {
-    width: 75%;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    width: auto;
+    flex: 1;
     padding-left: 25px;
     box-sizing: border-box;
     vertical-align: top;
@@ -2650,11 +2781,10 @@ section.researcher #content .contbox {
     line-height: 28px;
     color: #7D8794;
 }
-#content .person_list .tb_cell {
-    vertical-align: top;
-}
 #content .person_list li .ps_img {
-    max-width: 185px;
+    display: inline-block;
+    float: none;
+    max-width: none !important;
 }
 #content .person_list .chkBtn {
     display: inline-block;
@@ -2710,6 +2840,30 @@ section.researcher #content .contbox {
 #content .person_list .btn-wrap__row:first-child {
     margin-top: 0;
 }
+
+@media screen and (max-width: 400px) {
+    #content .person_list .tb_cell {
+        flex-basis: 30%;
+    }
+}
+@media screen and (max-width: 320px) {
+    #content .person_list .tb {
+        flex-direction: column;
+        row-gap: 20px;
+    }
+    #content .person_list .tb_cell {
+        flex-basis: auto;
+        flex: 1;
+        width: 100%;
+    }
+    #content .person_list .info {
+        padding-left: 0;
+    }
+    #content .person_list li .ps_img {
+        max-width: 120px !important;
+    }
+}
+
 
 #content .contents_box > .video_wrap {
     margin-top: 0;
