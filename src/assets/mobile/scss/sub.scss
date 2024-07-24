@@ -240,7 +240,9 @@ section.forum #content #subTitle h4 {
 // subTab
 #subTab {
     width: 100%;
+    margin-top: 0;
     margin-bottom: 40px;
+    padding: 0;
 }
 #subTab ul {
     padding: 0;
@@ -250,6 +252,7 @@ section.forum #content #subTitle h4 {
     white-space: nowrap;
 }
 #subTab ul li {
+    width: auto;
     float: none;
     display: inline-block;
     padding: 0 3px;
@@ -1778,7 +1781,7 @@ select:focus {
     margin-top: 0;
 }
 .art-content__row {
-    margin-top: 40px;
+    margin-top: 50px;
 }
 .art-content__row:first-child {
     margin-top: 0;
@@ -1801,7 +1804,7 @@ select:focus {
 }
 .art-content__row p {
     font-size: 18px;
-    margin-top: 10px;
+    margin-top: 15px;
     line-height: 28px;
 }
 .art-content__row p.mt40 {
@@ -1812,29 +1815,23 @@ select:focus {
     margin-top: 0px;
 }
 .art-content__row ul {
-    margin-top: 50px;
+    margin-top: 25px;
 }
 .art-content__row ul:first-child {
     margin-top: 0;
 }
 .art-content__row ul li {
-    margin-top: 40px;
+    margin-top: 20px;
 }
 .art-content__row ul li:first-child {
     margin-top: 0;
 }
 .art-content__row ul li small {
     display: block;
-    font-size: 24px;
-    line-height: 34px;
+    font-size: 18px;
+    line-height: 28px;
     font-weight: 700;
     color: #fff;
-}
-.art-content__row ul li > div {
-    margin-top: 20px;
-}
-.art-content__row ul li > div:first-child {
-    margin-top: 0;
 }
 .art-content__figure {
     margin-top: 20px;
@@ -1848,12 +1845,18 @@ select:focus {
     margin-top: 0;
 }
 .what .art-content .changing_list ul li {
+    padding-left: 0;
     margin-top: 40px;
     padding-bottom: 0;
     box-sizing: border-box;
 }
 .what .art-content .changing_list ul li:first-child {
     margin-top: 0;
+}
+.what .art-content .changing_list ul li a {
+    display: block;
+    position: relative;
+    padding-left: 100px;
 }
 .toggle-desc {}
 .toggle-desc__title {
