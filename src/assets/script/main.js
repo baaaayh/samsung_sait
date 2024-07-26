@@ -317,11 +317,39 @@ $(function () {
                 },
             });
             pressSlider.on('slideChange', (v) => this.handleProgress(v));
+
+            const paperSlider = new Swiper('.paper__slider', {
+                slidesPerView: 1,
+                autoplay: {
+                    delay: 7000,
+                    disableOnInteraction: false,
+                },
+                loop: true,
+                hashNavigation: {
+                    watchState: true,
+                },
+                navigation: {
+                    nextEl: '.paper__button--next',
+                    prevEl: '.paper__button--prev',
+                },
+                speed: 1200,
+                on: {
+                    init(v) {
+                        main.handleProgressPeper(v);
+                    },
+                },
+            });
+            paperSlider.on('slideChange', (v) => this.handleProgressPeper(v));
         },
         handleProgress(event) {
             const total = event.slides.length;
             const curr = event.realIndex + 1;
             $('.press__bar').css({ width: (curr / total) * 100 + '%' });
+        },
+        handleProgressPeper(event) {
+            const total = event.slides.length;
+            const curr = event.realIndex + 1;
+            $('.paper__bar').css({ width: (curr / total) * 100 + '%' });
         },
         init() {
             this.mainKvInit();
