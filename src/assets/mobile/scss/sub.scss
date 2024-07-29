@@ -860,7 +860,11 @@ select:focus {
     width: 100%;
     padding: 0;
     display: grid;
+    
     grid-template-rows: auto auto auto minmax(50px, 1fr);
+}
+#content.labs .sait_global .sait_view article .txt_wrap.people_txt .pepl_wrap .pepl_box > * {
+    flex: 1;
 }
 #content.labs .sait_global .sait_view article .txt_wrap.people_txt .pepl_wrap .pepl_box p {
     padding-top: 5px;
