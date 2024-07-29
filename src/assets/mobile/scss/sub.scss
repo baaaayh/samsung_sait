@@ -847,6 +847,7 @@ select:focus {
 .labs .sait_global .sait_view article .txt_wrap.people_txt .pepl_wrap .clear {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    align-items: stretch;
     grid-column-gap: 20px;
     padding-bottom: 0;
     margin-top: 40px;
@@ -858,27 +859,38 @@ select:focus {
     float: none;
     width: 100%;
     padding: 0;
+    display: grid;
+    grid-template-rows: auto auto auto minmax(50px, 1fr);
 }
 #content.labs .sait_global .sait_view article .txt_wrap.people_txt .pepl_wrap .pepl_box p {
+    padding-top: 5px;
+    box-sizing: border-box;
+    margin-top: 0;
     font-size: 14px;
     line-height: 24px;
     color: #fff;
-    margin-top: 15px;
+}
+#content.labs .sait_global .sait_view article .txt_wrap.people_txt .pepl_wrap .pepl_box p.pepl_name {
+    padding-top: 10px;
+    box-sizing: border-box;
 }
 #content.labs .sait_global .sait_view article .txt_wrap.people_txt .pepl_wrap .pepl_box p.skill {
     margin-top: 0;
     color: #6E7E96;
 }
 #content.labs .sait_global .sait_view article .txt_wrap.people_txt .pepl_wrap .pepl_box .btn_area {
-    display: flex;
-    flex-direction: column;
-    row-gap: 5px;
+    align-self: flex-end;
     padding-top: 0;
-    margin-top: 15px;
+    margin-top: 10px;
+    min-height: 40px;
 }
 #content.labs .sait_global .sait_view article .txt_wrap.people_txt .pepl_wrap .pepl_box .btn_area a {
     background-color: transparent;
     margin: 0;
+    margin-top: 5px;
+}
+#content.labs .sait_global .sait_view article .txt_wrap.people_txt .pepl_wrap .pepl_box .btn_area a:first-child {
+    margin-top: 0;
 }
 #content.labs .sait_global .sait_view article .txt_wrap.people_txt .pepl_wrap .pepl_box .btn_area a i {
     right: 25px;
@@ -1796,6 +1808,10 @@ select:focus {
 .art-content__row--title strong {
     font-size: 24px;
     line-height: 34px;
+}
+.art-content__row--title strong.small {
+    font-size: 20px;
+    line-height: 30px;
 }
 .art-content__row--title strong span {
     display: block;

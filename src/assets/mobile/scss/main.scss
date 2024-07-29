@@ -118,6 +118,14 @@ body {
                     opacity: 1;
                     transform: translateX(0)
                 }
+                h3 {
+                    word-break: keep-all;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 4;
+                    -webkit-box-orient: vertical;
+                }
             }
         }
     }
@@ -161,7 +169,7 @@ body {
             display: flex;
             gap: 10px;
             align-items: center;
-            bottom: calc(var(--vh) / 4.5);
+            bottom: 140px;
             z-index: 1;
             padding: 0 20px;
             box-sizing: border-box;

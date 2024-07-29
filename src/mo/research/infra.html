@@ -161,8 +161,7 @@
                     <div class="research_slide_align step04">
                         <div class="fs-20 ta-c research_slide_h1">Hard X-ray photoelectron spectroscopy (HAXPES)</div>
                         <div class="fs-15 ta-c research_slide_h2">
-                            HAXPES analyzes the chemical and electronic structure of the surface by measuring the kinetic energy of photoelectrons emitted by the photoelectric effect. Using high energy X-rays from a Cr K-alpha source,<br />
-                            the information depth is more than twice that of conventional XPS
+                            HAXPES analyzes the chemical and electronic structure of the surface by measuring the kinetic energy of photoelectrons emitted by the photoelectric effect. Using high energy X-rays from a Cr K-alpha source, the information depth is more than twice that of conventional XPS
                         </div>
                     </div>
                     <div class="research_slide_align step05">
@@ -198,8 +197,11 @@
                             var $researchIndi = $('#researchIndi');
                             var $close = $('.cls_icon');
                             $researchSlide.slick();
+                            let idx;
                             $('.research_img_array').click(function () {
+                                idx = $(this).index();
                                 TweenMax.to($('.research_slide_wrap'), 0.3, { top: 0, opacity: 1 });
+                                $researchSlide.slick('goTo', idx);
                             });
 
                             $researchSlide.on('beforeChange', function (event, slick, currentSlide, nextSlide) {

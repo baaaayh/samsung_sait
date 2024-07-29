@@ -169,6 +169,9 @@ body {
 .mb15 {
     margin-bottom: 15px;
 }
+.mb20 {
+    margin-bottom: 20px;
+}
 .mb30 {
     margin-bottom: 30px;
 }
@@ -1786,6 +1789,10 @@ span.impact-desc {
 .art-content__row--title strong {
     font-size: 34px;
     line-height: 44px;
+}
+.art-content__row--title strong.small {
+    font-size: 28px;
+    line-height: 38px;
 }
 .art-content__row p {
     font-size: 18px;
