@@ -1451,6 +1451,9 @@ select:focus {
 .faq_wrap li > .answer > .answer_txt::before {
     color: #fff;
 }
+#content.faq .faq_wrap li.active > .answer {
+    border-top: 1px solid #a8a8a8;
+}
 .faq_wrap li.active > .answer > .answer_txt {
     width: 100%;
     left: auto;
@@ -2693,7 +2696,6 @@ p.gray {
 }
 #content .answer {
     position: relative;
-    padding: 20px 30px;
     padding-left: 0;
     border-top: 1px solid #333D50;
     margin: 0;
@@ -2742,6 +2744,11 @@ p.gray {
     font-size: 18px;
     line-height: 28px;
 }
+#content .faq_list li .answer {
+    padding: 20px 30px;
+    padding-left: 0;
+    box-sizing: border-box;
+}
 #content .faq_list li.on .question:before {
     color: #1428A0;
 }
@@ -2749,8 +2756,7 @@ p.gray {
     color: #000;
 }
 #content .faq_list li.on .answer {
-    box-sizing: border-box;
-    
+    border-top: 1px solid #a8a8a8;
 }
 #content .faq_list li.on .answer p::before {
     color: #1428A0;
