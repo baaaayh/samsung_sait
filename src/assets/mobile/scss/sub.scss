@@ -457,6 +457,9 @@ strong {
     font-weight: 700;
     color: #6E7E96;
 }
+.contbox__row ul li a {
+    display: inline-block;
+}
 @media screen and (max-width: 355px) {
     .contbox__row ul li {
         display: block;
@@ -499,6 +502,11 @@ section.forum #content #subTab ul li a {
     line-height: 40px;
     padding: 0 20px;
     box-sizing: border-box;
+}
+section.forum #content #subTab ul li a:focus,
+section.forum #content #subTab ul li a:hover {
+    background-color: #fff;
+    color: #1428A0;
 }
 section.forum #content .program_wrap {
     margin: 0;
@@ -704,6 +712,22 @@ select:focus {
     border-radius: 50%;
     background-color: #fff;
 }
+.video-box {
+    position: relative;
+    padding-top: 56.25%;
+    background-color: #313d4f;
+    box-sizing: border-box;
+}
+.video-box iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom :0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+
 // history
 .history .history_wrap {
     padding-right: 0;
@@ -1414,6 +1438,7 @@ select:focus {
 }
 .faq_wrap li.active button {
     color: #000;
+    border-bottom: none;
 }
 .faq_wrap li.active button::before {
     position: absolute;
@@ -1433,7 +1458,7 @@ select:focus {
     transform: translateY(-50%);
 }
 .faq_wrap li.active button {
-    border-bottom: 1px solid #e0e0e0;
+    // border-bottom: 1px solid #e0e0e0;
 }
 .faq_wrap li > .answer > .answer_txt {
     position: relative;
@@ -1452,7 +1477,7 @@ select:focus {
     color: #fff;
 }
 #content.faq .faq_wrap li.active > .answer {
-    border-top: 1px solid #a8a8a8;
+    border-top: 1px solid #e0e0e0;
 }
 .faq_wrap li.active > .answer > .answer_txt {
     width: 100%;
@@ -2545,10 +2570,18 @@ section.forum .popup .wrap {
     overflow: visible;
 }
 
+section.forum .popup .arrow_btn .prev,
+section.forum .popup .arrow_btn .next 
+{
+    filter: saturate(0.1) brightness(2.5);
+}
+
 section.forum #content .program_array .detail .video_view {
     margin: 0;
     margin-top: 10px;
 }
+
+
 
 // AI Researcher
 p.gray {
@@ -2756,7 +2789,7 @@ p.gray {
     color: #000;
 }
 #content .faq_list li.on .answer {
-    border-top: 1px solid #a8a8a8;
+    border-top: 1px solid #e0e0e0;
 }
 #content .faq_list li.on .answer p::before {
     color: #1428A0;

@@ -658,10 +658,12 @@ body {
         }
 
         &:hover {
-            &.press__button--prev {
+            &.press__button--prev,
+            &.paper__button--prev {
                 background: #fff url(../images/icons/icon_nav_prev_black.svg) center / auto no-repeat;
             }
-            &.press__button--next {
+            &.press__button--next,
+            &.paper__button--next {
                 background: #fff url(../images/icons/icon_nav_next_black.svg) center / auto no-repeat;
             }
         }
