@@ -53,9 +53,20 @@ a {
         }
     }
 
-    &.active {}
-    
-    
+    &.active {
+        
+        .header__inner {
+            background-color: #fff;
+            border-bottom: 1px solid #a8a8a8;
+        }
+        .header__logo {
+            a {
+                span {
+                    background: url(../images/common/logo_black.svg) center / contain no-repeat;
+                }
+            }
+        }
+    }
 }
 
 #header {
@@ -80,6 +91,8 @@ a {
             }
         }
         .gnb_wrap {
+            padding: 0 20px;
+            box-sizing: border-box;
             nav {
                 padding-top: 50px;
                 box-sizing: border-box;
@@ -87,8 +100,11 @@ a {
             #gnbClose {
                 position: absolute;
                 top: 30px;
-                right: 30px;
+                right: 20px;
                 margin-top: 0;
+            }
+            .gnb_banner {
+                margin-top: 20px;
             }
         }
     }
@@ -202,6 +218,29 @@ a {
                 right: 0;
                 a {
                     display: block;
+                }
+            }
+        }
+    }
+    &.active {
+        .all-menu {
+            button#gnbBtn {
+                &::before,
+                &::after {
+                    background-color: #000;
+                }
+                span {
+                    background-color: #000;
+                }
+            }
+        }
+        .util {
+            button {
+                &#searchBtn {
+                    &::before,
+                    &::after {
+                        background-color: #000;
+                    }
                 }
             }
         }

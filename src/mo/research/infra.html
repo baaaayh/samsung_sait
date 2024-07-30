@@ -202,6 +202,7 @@
                                 idx = $(this).index();
                                 TweenMax.to($('.research_slide_wrap'), 0.3, { top: 0, opacity: 1 });
                                 $researchSlide.slick('goTo', idx);
+                                $('html, body').css({ overflow: 'hidden' });
                             });
 
                             $researchSlide.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
@@ -210,7 +211,15 @@
                                 $('.research_slide_align').hide();
                                 $('.research_slide_align.step0' + nextSlide).show();
                             });
+
+                            $researchIndi.find('li').on('click', function () {
+                                idx = $(this).index();
+                                TweenMax.to($('.research_slide_wrap'), 0.3, { top: 0, opacity: 1 });
+                                $researchSlide.slick('goTo', idx);
+                            });
+
                             $close.click(function () {
+                                $('html, body').css({ overflow: 'unset' });
                                 TweenMax.to($('.research_slide_wrap'), 0.3, { top: '100%', opacity: 0 });
                             });
                         });

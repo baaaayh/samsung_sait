@@ -1852,6 +1852,7 @@ select:focus {
     line-height: 28px;
     font-weight: 700;
     color: #fff;
+    margin-bottom: 10px;
 }
 .art-content__figure {
     margin-top: 20px;
@@ -1931,6 +1932,10 @@ select:focus {
 }
 .toggle-desc__content {
     display: none;
+}
+.toggle-desc__content p {
+    padding-top: 20px;
+    box-sizing: border-box;
 }
 
 // AI Algorithms

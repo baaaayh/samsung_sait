@@ -147,20 +147,11 @@ $(function () {
             const topV = $('.research__contents').offset().top;
             $('html, body').animate({ scrollTop: topV }, { duration: 1000, easing: 'easeInOutCubic' });
         },
-        changeHeader(e) {
-            const st = $(window).scrollTop();
-            if (st > 70) {
-                $('.header').addClass('active');
-            } else {
-                $('.header').removeClass('active');
-            }
-        },
         init() {
             $('.research__control > button').on('click', (e) => this.toggleAccordion(e));
             $('.research__list button').on('click', (e) => this.closeAccordion(e));
             $(document).on('click', (e) => this.closeAccordion(e));
             $('.scroll-down').on('click', () => this.scrollNextSection());
-            $(window).on('scroll', () => this.changeHeader());
             this.mainKvInit();
             this.sliderInit();
         },
