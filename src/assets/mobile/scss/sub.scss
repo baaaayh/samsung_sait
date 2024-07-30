@@ -1797,7 +1797,11 @@ select:focus {
     line-height: 30px;
 }
 .what .changing_list ul li i img {
-    filter: invert(100%) saturate(0%) brightness(2);
+    display: inline-block;
+    width: 71px;
+    height: 60px;
+    object-fit: scale-down;
+    filter: invert(100%) saturate(0%) brightness(1.5);
 }
 .what .changing_list ul li:last-child {
     padding-bottom: 0;
@@ -1906,8 +1910,8 @@ select:focus {
     display: block;
     position: relative;
     padding-left: 100px;
+    box-sizing: border-box;
 }
-.toggle-desc {}
 .toggle-desc__title {
     padding-bottom: 12px;
     box-sizing: border-box;
