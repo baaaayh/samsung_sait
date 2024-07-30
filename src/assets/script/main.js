@@ -10,7 +10,6 @@ $(function () {
 
     if (mainChk) {
         history.scrollRestoration = 'manual';
-
         let $body = $('body'),
             $wrap = $('.wrap'),
             currentIndex = 0,
@@ -342,13 +341,13 @@ $(function () {
             paperSlider.on('slideChange', (v) => this.handleProgressPeper(v));
         },
         handleProgress(event) {
-            const total = event.slides.length;
-            const curr = event.realIndex + 1;
+            const total = event.slides.length - 1;
+            const curr = event.realIndex;
             $('.press__bar').css({ width: (curr / total) * 100 + '%' });
         },
         handleProgressPeper(event) {
-            const total = event.slides.length;
-            const curr = event.realIndex + 1;
+            const total = event.slides.length - 1;
+            const curr = event.realIndex;
             $('.paper__bar').css({ width: (curr / total) * 100 + '%' });
         },
         init() {

@@ -60,6 +60,10 @@ body {
     min-width: 1720px;
     width: 100%;
     margin: 0 auto;
+    font-size: 0;
+}
+#subLocation .location_list > li {
+    display: inline-block;
 }
 #subLocation .location_list > li:after {
     background-color: rgba(#e0e0e0, 0.2);
@@ -78,6 +82,8 @@ body {
 #subLocation .location_list > li .under_depth {
     background-color: #47566C;
 }
+#subLocation .location_list > li button.active + .under_depth {
+}
 
 #subLocation .location_list > li button, 
 #subLocation .location_list > li a {
@@ -87,6 +93,11 @@ body {
     display: inline-block;
     margin-left: 0px;
     background: url(https://www.sait.samsung.co.kr/saithome/images/icon/sub_nav_home_on.png) center / auto no-repeat;
+}
+#subLocation .location_list > li.home a:focus-visible {
+    background-color: #47566C;
+    outline: 1px solid #fff;
+    border: 1px solid #000;
 }
 #subLocation .location_list > li.home a:hover {
     background-color: #47566C;
@@ -238,6 +249,9 @@ body {
 }
 #content.forum #subTitle h4 {
     color: #fff !important;
+}
+#content.forum #subTitle h5 {
+    color: #6E7E96 !important;
 }
 #content #subTab {
     margin-bottom: 60px;
@@ -1725,6 +1739,9 @@ p.mb20 {
 }
 section.what .what_wrap .what_img {
     margin: 0;
+}
+section.what .changing_list ul li a {
+    display: block;
 }
 section.what .changing_list ul li i img {
     filter: invert(100%) saturate(0%) brightness(2);

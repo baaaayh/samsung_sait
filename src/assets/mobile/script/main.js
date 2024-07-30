@@ -115,13 +115,13 @@ $(function () {
             paperSlider.on('slideChange', (v) => this.handleProgressPeper(v));
         },
         handleProgress(event) {
-            const total = event.slides.length;
-            const curr = event.realIndex + 1;
+            const total = event.slides.length - 1;
+            const curr = event.realIndex;
             $('.press__bar').css({ width: (curr / total) * 100 + '%' });
         },
         handleProgressPeper(event) {
-            const total = event.slides.length;
-            const curr = event.realIndex + 1;
+            const total = event.slides.length - 1;
+            const curr = event.realIndex;
             $('.paper__bar').css({ width: (curr / total) * 100 + '%' });
         },
         toggleAccordion(e) {
@@ -151,7 +151,7 @@ $(function () {
             $('.research__control > button').on('click', (e) => this.toggleAccordion(e));
             $('.research__list button').on('click', (e) => this.closeAccordion(e));
             $(document).on('click', (e) => this.closeAccordion(e));
-            $('.scroll-down').on('click', () => this.scrollNextSection());
+            $('.scroll-down').on('click', this.scrollNextSection);
             this.mainKvInit();
             this.sliderInit();
         },
