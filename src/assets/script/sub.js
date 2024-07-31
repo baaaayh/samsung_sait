@@ -31,6 +31,7 @@ $(function () {
 
                 if (isTargetLastChildLink && (event.relatedTarget === null || isRelatedTargetNotInside)) {
                     $list.find('.under_depth').stop().slideUp();
+                    $list.find('button').removeClass('active');
                 }
             });
         },
