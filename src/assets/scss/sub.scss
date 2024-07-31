@@ -64,6 +64,7 @@ body {
 }
 #subLocation .location_list > li {
     display: inline-block;
+    height: auto !important;
 }
 #subLocation .location_list > li:after {
     background-color: rgba(#e0e0e0, 0.2);
@@ -79,12 +80,6 @@ body {
 #subLocation .location_list > li button:hover {
     background-color: #47566C;
 }
-#subLocation .location_list > li .under_depth {
-    background-color: #47566C;
-}
-#subLocation .location_list > li button.active + .under_depth {
-}
-
 #subLocation .location_list > li button, 
 #subLocation .location_list > li a {
     color: #fff;
@@ -130,7 +125,9 @@ body {
 #subLocation .location_box.active .location_list > li.home a {
     background: url(https://www.sait.samsung.co.kr/saithome/images/icon/sub_nav_home.png) center / auto no-repeat;
 }
-#subLocation .location_box.active .location_list > li.home a:hover {
+#subLocation .location_box.active .location_list > li.home a:hover,
+#subLocation .location_box.active .location_list > li.home a:focus-visible
+{
     background: url(https://www.sait.samsung.co.kr/saithome/images/icon/sub_nav_home_on.png) center / auto no-repeat;
     background-color: #47566C;
 }
@@ -148,7 +145,19 @@ body {
 #subLocation .location_box.active .location_list > li button.active:before {
     background: url(../images/icons/icon_nav_arrow.svg) center / auto no-repeat;
 }
-
+#subLocation .location_list > li .under_depth {
+    background-color: #47566C;
+    display: none;
+}
+#subLocation .location_list > li .under_depth li {
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+#subLocation .location_list > li .under_depth li a {
+    display: inline-block;
+    width: auto;
+    margin: 0;
+}
 
 
 // *** common *** //
@@ -417,7 +426,8 @@ strong {
     border-radius: 30px;
     transition: border 0.34s ease, background-color 0.34s ease;
 }
-.btn-default:hover {
+.btn-default:hover,
+.btn-default:focus {
     background-color: #fff;
     border: 1px solid #fff;
 }
@@ -443,15 +453,16 @@ strong {
     height: 18px;
     background: url(../images/sub/btn_default_text_arrow.svg) center / auto no-repeat;
 }
-.btn-default:hover .btn-default__text {
+.btn-default:hover .btn-default__text,
+.btn-default:focus .btn-default__text {
     color: #1D242F;
 }
-.btn-default:hover .btn-default__text--arrow::before {
+.btn-default:hover .btn-default__text--arrow::before,
+.btn-default:focus .btn-default__text--arrow::before {
     background: url(../images/sub/btn_default_text_arrow_black.svg) center / auto no-repeat;
 }
 
 // sub-list
-.sub-list {}
 .sub-list li {
     margin-top: 30px;
 }
@@ -2019,6 +2030,16 @@ span.impact-desc {
 }
 
 // Publications
+.paper_list #paperSearch .submit_wrap {
+    top: 0;
+    right: 0;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+}
+.paper_list #paperSearch .submit_wrap input[type=submit] {
+    height: 100%;
+}
 .paper_list .view_list.rsp .list_box {
     margin-top: 40px;
     border-top: 1px solid #fff;
@@ -2166,6 +2187,7 @@ span.impact-desc {
     width: 100%;
 }
 .filter__list ul li {
+    position: relative;
     display: flex;
     align-items: flex-start;
     width: 25%;
@@ -2180,7 +2202,20 @@ span.impact-desc {
     min-width: 75px;
 }
 .filter__list ul li input[type="checkbox"] {
-    display: none;
+    position: absolute;
+    top: 4px;
+    left: 0;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    -webkit-appearance: none;
+    background-color: #28303E;
+    border: 1px solid #6E7E96;
+    z-index: 1;
+}
+.filter__list ul li input[type="checkbox"]:checked {
+    border: 1px solid #fff;
+    background: url(../images/icons/icon_filter_check.svg) center / auto no-repeat;
 }
 .filter__list ul li label{
     position: relative;
@@ -2190,20 +2225,20 @@ span.impact-desc {
     font-size: 16px;
     line-height: 26px;
 }
-.filter__list ul li label::before {
-    content: "";
-    display: inline-block;
-    position: absolute;
-    top: 3px;
-    left: 0;
-    width: 16px;
-    height: 16px;
-    border: 1px solid #6E7E96;
-}
-.filter__list ul li input[type="checkbox"]:checked + label::before {
-    border: 1px solid #fff;
-    background: url(../images/icons/icon_filter_check.svg) center / auto no-repeat;
-}
+// .filter__list ul li label::before {
+//     content: "";
+//     display: inline-block;
+//     position: absolute;
+//     top: 3px;
+//     left: 0;
+//     width: 16px;
+//     height: 16px;
+//     border: 1px solid #6E7E96;
+// }
+// .filter__list ul li input[type="checkbox"]:checked + label::before {
+//     border: 1px solid #fff;
+//     background: url(../images/icons/icon_filter_check.svg) center / auto no-repeat;
+// }
 .paper_list .item_list .no-matching {
     text-align: center;
     font-size: 24px;
