@@ -14,8 +14,10 @@ $(function () {
 
     const header = {
         focusMenu() {
-            $('.header').addClass('active');
-            $('.dep2').slideDown(350);
+            if (!$('#headerSearch').is(':visible')) {
+                $('.header').addClass('active');
+                $('.dep2').slideDown(350);
+            }
         },
         blurMenu() {
             $('.header').removeClass('active');

@@ -1,6 +1,5 @@
 $(function () {
     // SUBLOCATION - Accessibility & Change toggle type
-    let prevEl = null;
     const subLocation = {
         openSubLocation() {
             $(this).find('.under_depth').slideDown();
@@ -12,8 +11,9 @@ $(function () {
             $(this).removeClass('active');
         },
         closeSubLocationAll() {
-            $('.location_list li button').removeClass('active');
-            $('.location_list li.home a').removeClass('active');
+            const $locationItem = $('.location_list > li');
+            $locationItem.children('button').removeClass('active');
+            $locationItem.children('a').removeClass('active');
             $('.under_depth').stop().slideUp();
         },
         focusSubLocation() {
@@ -22,14 +22,15 @@ $(function () {
             $(this).parents('li').siblings('li').find('button').removeClass('active');
             $(this).parents('li').siblings('li').find('.under_depth').stop().slideUp();
         },
-        setCurrentEl(event) {
-            prevEl = event.target;
-        },
         blurSubLocation(event) {
-            let openLocation = $('.location_list > li').find($(event.target)).length > 0;
             $('.location_list > li').each((index, list) => {
-                if (prevEl === $(list).find('.under_depth li:last-child a')[0] && !openLocation) {
-                    $(list).find('.under_depth').stop().slideUp();
+                const $list = $(list);
+                const $lastChildLink = $list.find('.under_depth li:last-child a')[0];
+                const isTargetLastChildLink = event.target === $lastChildLink;
+                const isRelatedTargetNotInside = !$.contains($('#subLocation')[0], event.relatedTarget);
+
+                if (isTargetLastChildLink && (event.relatedTarget === null || isRelatedTargetNotInside)) {
+                    $list.find('.under_depth').stop().slideUp();
                 }
             });
         },
@@ -38,8 +39,7 @@ $(function () {
             $('.location_list > li').on('mouseleave', this.closeSubLocation);
             $('.location_list button').on('focus', this.focusSubLocation);
             $('.location_list > li.home a').on('focus', this.closeSubLocationAll);
-            $(document).on('focusin', (event) => subLocation.blurSubLocation(event));
-            $(document).on('focusout', (event) => subLocation.setCurrentEl(event));
+            $(document).on('focusout', (event) => subLocation.blurSubLocation(event));
         },
     };
 
