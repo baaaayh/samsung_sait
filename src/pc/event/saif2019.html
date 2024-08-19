@@ -42,35 +42,7 @@
 
             <!-- container-->
             <section id="container" class="forum f2019">
-                <!-- subVisual-->
-                <div id="subVisual"></div>
-                <!-- //subVisual-->
-                <!-- subLocation-->
-                <div id="subLocation">
-                    <div class="location_box">
-                        <ul class="location_list">
-                            <li class="home"><a href="../index.html">main page</a></li>
-                            <li class="depth1">
-                                <button type="button">News & Events</button>
-                                <ul class="under_depth">
-                                    <li><a href="../about/who.html">About SAIT</a></li>
-                                    <li><a href="../research/what.html">Research Areas</a></li>
-                                    <li><a href="../about/press.html">News & Events</a></li>
-                                    <li><a href="../join/application.html">Join Us</a></li>
-                                </ul>
-                            </li>
-                            <li class="depth2">
-                                <button type="button">AI Forum</button>
-                                <ul class="under_depth">
-                                    <li><a href="../about/press.html">Press</a></li>
-                                    <li><a href="../event/saif2023.html" class="active">AI Forum</a></li>
-                                    <li><a href="../event/aiResearcher.html">AI Researcher of the Year</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- //subLocation-->
+                <%- include("../include/subLocation.ejs", {depth1: "News & Events", pageTitle: "AI Forum"}) %>
 
                 <!-- subContent-->
                 <section id="content" class="forum f2019">

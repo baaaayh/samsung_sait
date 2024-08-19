@@ -32,35 +32,7 @@
 
             <!-- container-->
             <section id="container" class="about">
-                <!-- subLocation-->
-                <div id="subLocation">
-                    <div class="location_box">
-                        <ul class="location_list">
-                            <li class="home"><a href="../index.html">main page</a></li>
-                            <li class="depth1">
-                                <button type="button">About SAIT</button>
-                                <ul class="under_depth">
-                                    <li><a href="../about/who.html">About SAIT</a></li>
-                                    <li><a href="../research/what.html">Research Areas</a></li>
-                                    <li><a href="../about/press.html">News & Events</a></li>
-                                    <li><a href="../join/application.html">Join Us</a></li>
-                                </ul>
-                            </li>
-                            <li class="depth2">
-                                <button type="button">Who We Are</button>
-                                <ul class="under_depth">
-                                    <li><a href="../about/who.html" class="active">Who We Are</a></li>
-                                    <li><a href="../about/history.html">History of Progress</a></li>
-                                    <li><a href="../about/labs.html">Global Labs</a></li>
-                                    <li><a href="../about/collabo_overview.html">Global Collaboration</a></li>
-                                    <li><a href="../about/contact.html">Contact us</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- //subLocation-->
-
+                <%- include("../include/subLocation.ejs", {depth1: "About SAIT", pageTitle: "Who We Are"}) %>
                 <!-- subContent-->
                 <section id="content" class="who">
                     <div class="content__container">

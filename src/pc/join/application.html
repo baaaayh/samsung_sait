@@ -31,30 +31,7 @@
 
             <!-- container-->
             <section id="container" class="join">
-                <!-- subLocation-->
-                <div id="subLocation">
-                    <div class="location_box">
-                        <ul class="location_list">
-                            <li class="home"><a href="../index.html">main page</a></li>
-                            <li class="depth1">
-                                <button type="button">Careers</button>
-                                <ul class="under_depth">
-                                    <li><a href="../about/who.html">About SAIT</a></li>
-                                    <li><a href="../research/what.html">Research Areas</a></li>
-                                    <li><a href="../about/press.html">News & Events</a></li>
-                                    <li><a href="../join/application.html">Careers</a></li>
-                                </ul>
-                            </li>
-                            <li class="depth2">
-                                <button type="button">Recruiting Process</button>
-                                <ul class="under_depth">
-                                    <li><a href="../join/application.html" class="active">Recruiting Process</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- //subLocation-->
+                <%- include("../include/subLocation.ejs", {depth1: "Careers", pageTitle: "Recruiting Process"}) %>
 
                 <!-- subContent-->
                 <section id="content" class="application">

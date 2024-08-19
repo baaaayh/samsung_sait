@@ -31,63 +31,7 @@
 
             <!-- container-->
             <section id="container" class="research">
-                <!-- subVisual-->
-                <div id="subVisual" style="background-image: url(https://www.sait.samsung.co.kr/saithome/images/research/research_visual.jpg)">
-                    <div class="tit_wrap">
-                        <h3>
-                            <span>Changing the World through Creative Research</span>
-                        </h3>
-                    </div>
-                </div>
-                <!-- //subVisual-->
-                <!-- subLocation-->
-                <div id="subLocation">
-                    <div class="location_box">
-                        <ul class="location_list">
-                            <li class="home"><a href="../index.html">main page</a></li>
-                            <li class="depth1">
-                                <button type="button">Research Areas</button>
-                                <ul class="under_depth">
-                                    <li><a href="../about/who.html">About SAIT</a></li>
-                                    <li><a href="../research/what.html">Research Areas</a></li>
-                                    <li><a href="../about/press.html">News & Events</a></li>
-                                    <li><a href="../join/application.html">Join Us</a></li>
-                                </ul>
-                            </li>
-                            <li class="depth2">
-                                <button type="button">What We Do</button>
-                                <ul class="under_depth">
-                                    <li class="accent" class="active"><a href="../research/what.html">What We Do</a></li>
-                                    <li>
-                                        <a href="../research/aiAlgorithms.html">AI Algorithms</a>
-                                    </li>
-                                    <li>
-                                        <a href="../research/computingPlatform.html">Computing Platform</a>
-                                    </li>
-                                    <li>
-                                        <a href="../research/metaphotonics.html">Si-Photonics / Meta-Photonics</a>
-                                    </li>
-                                    <li>
-                                        <a href="../research/displayMaterials.html">Display Materials</a>
-                                    </li>
-                                    <li>
-                                        <a href="../research/batteryMaterials.html">Battery Materials</a>
-                                    </li>
-                                    <li>
-                                        <a href="../research/semiconductorMaterials.html">Semiconductor Materials &amp; Devices</a>
-                                    </li>
-                                    <li>
-                                        <a href="../research/environmentalResearch.html">Environmental &amp; Energy </a>
-                                    </li>
-                                    <li class="accent"><a href="../research/paper_list_srt.html">Publications</a></li>
-                                    <li class="accent"><a href="../research/paper_list_wtc.html">Best Research Papers</a></li>
-                                    <li class="accent"><a href="../research/infra.html">Research Infra</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- //subLocation-->
+                <%- include("../include/subLocation.ejs", {depth1: "Research Areas", pageTitle: "What We Do"}) %>
 
                 <!-- subContent-->
                 <section id="content" class="what">

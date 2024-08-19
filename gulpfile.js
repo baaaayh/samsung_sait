@@ -91,7 +91,7 @@ function CompileCSS() {
  */
 function Imagemin() {
     return new Promise((resolve) => {
-        src(CONFIG.workspace.ASSETS.IMAGES + '/**/*.*')
+        src(CONFIG.workspace.ASSETS.IMAGES + '/**/*.*', { encoding: false })
             .pipe(newer(CONFIG.deploy.ASSETS.IMAGES))
             .pipe(
                 imagemin([
@@ -104,7 +104,7 @@ function Imagemin() {
                 ])
             )
             .pipe(dest(CONFIG.deploy.ASSETS.IMAGES));
-        src(CONFIG.workspace.ASSETS.MO_IMAGES + '/**/*.*')
+        src(CONFIG.workspace.ASSETS.MO_IMAGES + '/**/*.*', { encoding: false })
             .pipe(newer(CONFIG.deploy.ASSETS.MO_IMAGES))
             .pipe(
                 imagemin([

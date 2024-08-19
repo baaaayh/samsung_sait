@@ -31,44 +31,8 @@
 
             <!-- container-->
             <section id="container" class="about">
-                <!-- subVisual-->
-                <div id="subVisual" style="background-image: url(https://www.sait.samsung.co.kr/saithome/images/about/about_visual.jpg)">
-                    <div class="tit_wrap">
-                        <h3>
-                            <span>Samsung Advanced Institute of Technology</span>
-                        </h3>
-                    </div>
-                </div>
-                <!-- //subVisual-->
-                <!-- subLocation-->
-                <div id="subLocation">
-                    <div class="location_box">
-                        <ul class="location_list">
-                            <li class="home"><a href="../index.html">main page</a></li>
-                            <li class="depth1">
-                                <button type="button">About SAIT</button>
-                                <ul class="under_depth">
-                                    <li><a href="../about/who.html">About SAIT</a></li>
-                                    <li><a href="../research/what.html">Research Areas</a></li>
-                                    <li><a href="../about/press.html">News & Events</a></li>
-                                    <li><a href="../join/application.html">Join Us</a></li>
-                                </ul>
-                            </li>
-                            <li class="depth2">
-                                <button type="button">Global Collaboration</button>
-                                <ul class="under_depth">
-                                    <li><a href="../about/who.html">Who We Are</a></li>
-                                    <li><a href="../about/history.html">History of Progress</a></li>
-                                    <li><a href="../about/labs.html">Global Labs</a></li>
-                                    <li><a href="../about/collabo_overview.html" class="active">Global Collaboration</a></li>
-                                    <li><a href="../about/contact.html">Contact us</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- //subLocation-->
-
+                <%- include("../include/subLocation.ejs", {depth1: "About SAIT", pageTitle: "Global Collaboration"}) %>
+                <!-- subContent-->
                 <!-- 2023-10-30 작업 : 시작 -->
                 <style type="text/css">
                     .new2022 #subTab ul li a {
