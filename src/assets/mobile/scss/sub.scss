@@ -322,6 +322,10 @@ section.forum #content #subTitle h4 {
     background-color: #fff;
     color: #1428A0;
 }
+.subTab-rt {
+    padding: 0 20px;
+    box-sizing: border-box;
+}
 .subTab-rt select {
     font-size: 14px;
     font-weight: 400;
@@ -1817,7 +1821,7 @@ select:focus {
 
 // Research
 #content.world_research {
-    padding: 40px 20px 80px !important;
+    padding: 40px 0px 80px !important;
     box-sizing: border-box;
 }
 
